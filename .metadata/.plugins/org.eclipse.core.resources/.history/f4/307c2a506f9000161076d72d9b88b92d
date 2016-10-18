@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="norm/Op-WD"/>
+<org.eventb.core.prProof name="separates_points_axm/S-THM"/>
+<org.eventb.core.prProof name="absolute_homogeneity_axm/S-THM"/>
+<org.eventb.core.prProof name="absolute_homogeneity_axm/WD-THM"/>
+<org.eventb.core.prProof name="triangle_inequality_axm/S-THM"/>
+<org.eventb.core.prProof name="triangle_inequality_axm/WD-THM"/>
+<org.eventb.core.prProof name="zero_thm/S-THM"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew1/WD-C/rhs1"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew1/WD-S/rhs1"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew1/S/rhs1"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew2/WD-C/rhs1"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew2/WD-S/rhs1"/>
+<org.eventb.core.prProof name="absolute_homogeneity__rew2/S/rhs1"/>
+<org.eventb.core.prProof name="separates_points_inf/S-INF"/>
+<org.eventb.core.prProof name="triangle_inequality_inf/S-INF"/>
+<org.eventb.core.prProof name="zero_inf/S-INF"/>
+</org.eventb.core.prFile>

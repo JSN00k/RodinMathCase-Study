@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="dot_product/Op-WD"/>
+<org.eventb.core.prProof name="symmetry_axm/S-THM"/>
+<org.eventb.core.prProof name="linearity_axm1/S-THM"/>
+<org.eventb.core.prProof name="linearity_axm1/WD-THM"/>
+<org.eventb.core.prProof name="linearity_axm2/S-THM"/>
+<org.eventb.core.prProof name="linearity_axm2/WD-THM"/>
+<org.eventb.core.prProof name="positive_definiteness_axm1/S-THM"/>
+<org.eventb.core.prProof name="positive_definiteness_axm2/S-THM"/>
+<org.eventb.core.prProof name="vec_zero_thm/S-THM"/>
+<org.eventb.core.prProof name="vec_zero_thm/WD-THM"/>
+<org.eventb.core.prProof name="symmetry_rew/WD-C/rhs1"/>
+<org.eventb.core.prProof name="symmetry_rew/WD-S/rhs1"/>
+<org.eventb.core.prProof name="symmetry_rew/S/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm1_rew/WD-C/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm1_rew/WD-S/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm1_rew/S/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm2_rew/WD-C/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm2_rew/WD-S/rhs1"/>
+<org.eventb.core.prProof name="linearity_axm2_rew/S/rhs1"/>
+<org.eventb.core.prProof name="vec_zero_rew1/WD-C/rhs1"/>
+<org.eventb.core.prProof name="vec_zero_rew1/S/rhs1"/>
+<org.eventb.core.prProof name="vec_zero_rew2/WD-C/rhs1"/>
+<org.eventb.core.prProof name="vec_zero_rew2/S/rhs1"/>
+<org.eventb.core.prProof name="positive_definiteness_axm1_inf/S-INF"/>
+<org.eventb.core.prProof name="positive_definiteness_axm2_inf/S-INF"/>
+</org.eventb.core.prFile>

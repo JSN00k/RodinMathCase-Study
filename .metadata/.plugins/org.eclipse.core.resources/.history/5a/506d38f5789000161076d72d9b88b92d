@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf">
+<org.eventb.theory.core.scTypeParameter name="T" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.typeParameter#'" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.theory.core.scAxiomaticDefinitionsBlock name="U" org.eventb.core.label="xdb1" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.axiomaticDefinitionsBlock#("/>
+</org.eventb.theory.core.scTheoryRoot>

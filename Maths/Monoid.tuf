@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ident ↦ operator ∣ ident ∈ T ∧ operator ∈ T × T → T ∧ ∀x·(operator(ident ↦ x) = x ∧ operator (x↦ident) = x)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="pow" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℕ" org.eventb.core.identifier="n"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="Monoid ⦂ ℙ(T × ℙ((T × T) × T))" org.eventb.core.identifier="m"/>
+<org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="prj2(m) (prj1(m) ↦ a)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+</org.eventb.theory.core.theoryRoot>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="AssociativeOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{op ∣ op ∈ (T × T) → T ∧ ∀x,y,z · op(op(x ↦ y) ↦ z) = op (x ↦ op (y ↦ z))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.comment="This is a hack as I can't find a way of passing a type directly" org.eventb.core.label="AssociativeOpPolly" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ AssociativeOp ⦂ ℙ(ℙ((T × T) × T)) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="opInit" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ((T × T) × T)" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ associativeOp ∣ associativeOp ∈ AssociativeOp ⦂ ℙ(ℙ((T×T)×T)) ∧ associativeOp = op }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ident ↦ operator ∣ ident ∈ T ∧ operator ∈ AssociativeOpPolly(ident) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.comment="A hack as I can't define types properly." org.eventb.core.label="MonoidPolly" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ monoid ∣ monoid ∈ Monoid ⦂ ℙ(T × ℙ((T × T) × T)) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="monInit1" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.comment="AssociativeOpPolly(ident)" org.eventb.core.expression="AssociativeOp ⦂ ℙ(ℙ((T×T)×T))" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ monoid ∣ monoid ∈ MonoidPolly(ident) ∧ monoid = (ident ↦ op) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="monInit2" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ((T × T)× T)" org.eventb.core.identifier="oper"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ monoid ∣ monoid ∈ MonoidPolly(ident) ∧ monoid = ident ↦ oper }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="monIdent" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid ⦂ ℙ(T × ℙ((T × T) × T))" org.eventb.core.identifier="m"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="proj1(m) ⦂ T"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="monOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid ⦂ ℙ(T × ℙ((T × T) × T))" org.eventb.core.identifier="m"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="proj2(op)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+</org.eventb.theory.core.theoryRoot>

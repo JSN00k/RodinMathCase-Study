@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="sum_of_empty_set_axm/WD-AXM"/>
+<org.eventb.core.prProof name="sum_of_singleton_axm/WD-AXM"/>
+<org.eventb.core.prProof name="sum_of_disjoint_sets_axm/WD-AXM"/>
+<org.eventb.core.prProof name="sum_of_subset_thm/S-THM"/>
+<org.eventb.core.prProof name="sum_of_subset_thm/WD-THM"/>
+<org.eventb.core.prProof name="sum_of_positive_reals_thm/S-THM"/>
+<org.eventb.core.prProof name="sum_of_empty_set_rew/S/rhs1"/>
+<org.eventb.core.prProof name="sum_of_singleton_rew/S/rhs1"/>
+<org.eventb.core.prProof name="sum_of_disjoint_sets_rew/WD-S/rhs1"/>
+<org.eventb.core.prProof name="sum_of_disjoint_sets_rew/S/rhs1"/>
+<org.eventb.core.prProof name="sum_of_positive_reals_inf/S-INF"/>
+<org.eventb.core.prProof name="sum_of_positive_reals_zero_inf/S-INF"/>
+</org.eventb.core.prFile>

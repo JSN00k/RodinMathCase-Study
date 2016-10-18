@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="last/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ListTheory/_AuxiliaryDefinitions.bpo|org.eventb.core.poFile#_AuxiliaryDefinitions|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate=" ∀ x⦂List(T)·x ∈  List (T) ⇒ (x ≠ ( nil  ⦂ List(T)) ⇒ ( ∃ head0⦂T,tail1⦂List(T)· reverse (x) =  cons (head0,tail1)))" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tcf|org.eventb.theory.core.scTheoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.scNewOperatorDefinition#X"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ListTheory/_AuxiliaryDefinitions.bpo|org.eventb.core.poFile#_AuxiliaryDefinitions|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/ListTheory/_AuxiliaryDefinitions.bpo|org.eventb.core.poFile#_AuxiliaryDefinitions|org.eventb.core.poSequent#last\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+</org.eventb.core.poFile>

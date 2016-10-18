@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="vec_plus/Op-WD"/>
+<org.eventb.core.prProof name="vec_minus/Op-WD"/>
+<org.eventb.core.prProof name="vec_scale/Op-WD"/>
+<org.eventb.core.prProof name="vec_plus_type_thm/S-THM"/>
+<org.eventb.core.prProof name="vec_zero_type_thm/S-THM"/>
+<org.eventb.core.prProof name="vec_minus_type_thm/S-THM"/>
+<org.eventb.core.prProof name="vec_scale_type_thm/S-THM"/>
+<org.eventb.core.prProof name="vec_plus_type_inf/S-INF"/>
+<org.eventb.core.prProof name="vec_zero_type_inf/S-INF"/>
+<org.eventb.core.prProof name="vec_minus_type_inf/S-INF"/>
+<org.eventb.core.prProof name="vec_scale_type_inf/S-INF"/>
+</org.eventb.core.prFile>

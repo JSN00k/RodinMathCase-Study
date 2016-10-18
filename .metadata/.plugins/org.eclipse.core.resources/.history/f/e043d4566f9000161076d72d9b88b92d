@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="square_type_thm/S-THM"/>
+<org.eventb.core.prProof name="square_of_minus_thm/S-THM"/>
+<org.eventb.core.prProof name="square_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="square_injective_thm/S-THM"/>
+<org.eventb.core.prProof name="square_strict_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="square_pos_thm/S-THM"/>
+<org.eventb.core.prProof name="square_zero_thm/S-THM"/>
+<org.eventb.core.prProof name="square_greater_pos_thm/S-THM"/>
+<org.eventb.core.prProof name="square_greater_neg_thm/S-THM"/>
+<org.eventb.core.prProof name="square_smaller_pos_thm/S-THM"/>
+<org.eventb.core.prProof name="square_smaller_neg_thm/S-THM"/>
+<org.eventb.core.prProof name="square_def_rew/S/rhs1"/>
+<org.eventb.core.prProof name="square_of_minus_rew/S/rhs1"/>
+<org.eventb.core.prProof name="square_zero_rew/S/rhs1"/>
+<org.eventb.core.prProof name="square_one_rew/S/rhs1"/>
+<org.eventb.core.prProof name="square_type_inf/S-INF"/>
+<org.eventb.core.prProof name="square_monotone_inf/S-INF"/>
+<org.eventb.core.prProof name="square_injective_inf/S-INF"/>
+<org.eventb.core.prProof name="square_strict_monotone_inf/S-INF"/>
+<org.eventb.core.prProof name="square_pos_inf/S-INF"/>
+<org.eventb.core.prProof name="square_zero_inf1/S-INF"/>
+<org.eventb.core.prProof name="square_zero_inf2/S-INF"/>
+<org.eventb.core.prProof name="square_greater_pos_inf/S-INF"/>
+<org.eventb.core.prProof name="square_greater_neg_inf/S-INF"/>
+<org.eventb.core.prProof name="square_smaller_pos_inf/S-INF"/>
+<org.eventb.core.prProof name="square_smaller_neg_inf/S-INF"/>
+</org.eventb.core.prFile>

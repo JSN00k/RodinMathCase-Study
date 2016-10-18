@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/PathTheory/Path.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/PathTheory/Path.tuf|org.eventb.theory.core.theoryRoot#Path|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/PathTheory">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/PathTheory/Path.tuf|org.eventb.theory.core.theoryRoot#Path|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/PathTheory/_Paths.dtf|org.eventb.theory.core.deployedTheoryRoot#_Paths"/>
+</org.eventb.theory.core.scImportTheoryProject>
+</org.eventb.theory.core.scTheoryRoot>

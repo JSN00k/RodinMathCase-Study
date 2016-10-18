@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="maximum/Op-WD"/>
+<org.eventb.core.prProof name="minimum/Op-WD"/>
+<org.eventb.core.prProof name="maximum_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_commutative_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_commutative_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_total_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_total_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_left_transitive_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_right_transitive_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_left_transitive_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_right_transitive_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_associative_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_associative_thm/S-THM"/>
+<org.eventb.core.prProof name="maximum_idempotent_thm/S-THM"/>
+<org.eventb.core.prProof name="minimum_idempotent_thm/S-THM"/>
+<org.eventb.core.prProof name="absorption_thm1/S-THM"/>
+<org.eventb.core.prProof name="absorption_thm2/S-THM"/>
+<org.eventb.core.prProof name="maximum_minimum_interchange_thm/S-THM"/>
+<org.eventb.core.prProof name="distributive_thm1/S-THM"/>
+<org.eventb.core.prProof name="distributive_thm2/S-THM"/>
+</org.eventb.core.prFile>

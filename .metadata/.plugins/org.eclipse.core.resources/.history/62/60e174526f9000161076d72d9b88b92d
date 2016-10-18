@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="list_of_subtype_defn/WD-AXM"/>
+<org.eventb.core.prProof name="list_of_empty_type_thm/S-THM"/>
+<org.eventb.core.prProof name="nil_or_cons_thm/S-THM"/>
+<org.eventb.core.prProof name="cons_type_thm/S-THM"/>
+<org.eventb.core.prProof name="append_type_thm/S-THM"/>
+<org.eventb.core.prProof name="reverse_type_thm/S-THM"/>
+<org.eventb.core.prProof name="last_type_thm/S-THM"/>
+</org.eventb.core.prFile>

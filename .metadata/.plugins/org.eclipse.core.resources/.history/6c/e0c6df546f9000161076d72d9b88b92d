@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="trichotomy_thm/S-THM"/>
+<org.eventb.core.prProof name="lt_transitive_left_thm/S-THM"/>
+<org.eventb.core.prProof name="lt_transitive_right_thm/S-THM"/>
+<org.eventb.core.prProof name="zero_lt_one_thm/S-THM"/>
+<org.eventb.core.prProof name="plus_strict_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="sub_strict_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="positive_mult_strict_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="negative_mult_strict_reverses_order_thm/S-THM"/>
+<org.eventb.core.prProof name="positive_div_strict_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="positive_div_strict_monotone_thm/WD-THM"/>
+<org.eventb.core.prProof name="negative_div_strict_reverses_order_thm/S-THM"/>
+<org.eventb.core.prProof name="negative_div_strict_reverses_order_thm/WD-THM"/>
+<org.eventb.core.prProof name="trichotomy_inf/S-INF"/>
+<org.eventb.core.prProof name="lt_transitive_left_inf/S-INF"/>
+<org.eventb.core.prProof name="lt_transitive_right_inf/S-INF"/>
+<org.eventb.core.prProof name="zero_lt_one_inf1/S-INF"/>
+<org.eventb.core.prProof name="zero_lt_one_inf2/S-INF"/>
+<org.eventb.core.prProof name="plus_strict_monotone_left_inf/S-INF"/>
+<org.eventb.core.prProof name="plus_strict_monotone_right_inf/S-INF"/>
+<org.eventb.core.prProof name="sub_strict_monotone_inf/S-INF"/>
+<org.eventb.core.prProof name="positive_mult_strict_monotone_left_inf/S-INF"/>
+<org.eventb.core.prProof name="positive_mult_strict_monotone_right_inf/S-INF"/>
+<org.eventb.core.prProof name="negative_mult_strict_reverses_order_left_inf/S-INF"/>
+<org.eventb.core.prProof name="negative_mult_strict_reverses_order_right_inf/S-INF"/>
+<org.eventb.core.prProof name="positive_div_strict_monotone_inf/S-INF"/>
+<org.eventb.core.prProof name="negative_div_strict_reverses_order_inf/S-INF"/>
+</org.eventb.core.prFile>

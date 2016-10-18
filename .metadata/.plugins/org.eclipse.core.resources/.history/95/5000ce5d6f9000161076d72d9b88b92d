@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/RealTheory/Real.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/RealTheory/Real.tuf|org.eventb.theory.core.theoryRoot#Real|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/RealTheory">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/RealTheory/Real.tuf|org.eventb.theory.core.theoryRoot#Real|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/RealTheory/_StrictOrder.dtf|org.eventb.theory.core.deployedTheoryRoot#_StrictOrder"/>
+<org.eventb.theory.core.scImportTheory name="(" org.eventb.core.source="/RealTheory/Real.tuf|org.eventb.theory.core.theoryRoot#Real|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#(" org.eventb.theory.core.importTheory="/RealTheory/_MaximumAndMinimum.dtf|org.eventb.theory.core.deployedTheoryRoot#_MaximumAndMinimum"/>
+<org.eventb.theory.core.scImportTheory name=")" org.eventb.core.source="/RealTheory/Real.tuf|org.eventb.theory.core.theoryRoot#Real|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#)" org.eventb.theory.core.importTheory="/RealTheory/_FiniteSum.dtf|org.eventb.theory.core.deployedTheoryRoot#_FiniteSum"/>
+<org.eventb.theory.core.scImportTheory name="*" org.eventb.core.source="/RealTheory/Real.tuf|org.eventb.theory.core.theoryRoot#Real|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#*" org.eventb.theory.core.importTheory="/RealTheory/_AbsoluteValue.dtf|org.eventb.theory.core.deployedTheoryRoot#_AbsoluteValue"/>
+</org.eventb.theory.core.scImportTheoryProject>
+</org.eventb.theory.core.scTheoryRoot>

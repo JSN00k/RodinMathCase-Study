@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/EuclideanTheory/Euclidean.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/EuclideanTheory/Euclidean.tuf|org.eventb.theory.core.theoryRoot#Euclidean|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/EuclideanTheory">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/EuclideanTheory/Euclidean.tuf|org.eventb.theory.core.theoryRoot#Euclidean|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/EuclideanTheory/_MetricSpace.dtf|org.eventb.theory.core.deployedTheoryRoot#_MetricSpace"/>
+</org.eventb.theory.core.scImportTheoryProject>
+</org.eventb.theory.core.scTheoryRoot>

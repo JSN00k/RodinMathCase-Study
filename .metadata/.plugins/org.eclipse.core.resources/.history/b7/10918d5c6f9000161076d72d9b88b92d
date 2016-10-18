@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="sup_is_the_least_upper_bound_axm/WD-AXM"/>
+<org.eventb.core.prProof name="inf_is_the_greatest_lower_bound_axm/WD-AXM"/>
+<org.eventb.core.prProof name="sup_is_an_upper_bound_inf/S-INF"/>
+<org.eventb.core.prProof name="sup_is_the_least_upper_bound_inf/S-INF"/>
+<org.eventb.core.prProof name="inf_is_a_lower_bound_inf/S-INF"/>
+<org.eventb.core.prProof name="inf_is_the_greatest_lower_bound_inf/S-INF"/>
+</org.eventb.core.prFile>

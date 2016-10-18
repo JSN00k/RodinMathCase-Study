@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="subtraction_zero_thm/S-THM"/>
+<org.eventb.core.prProof name="subtraction_minus_thm/S-THM"/>
+<org.eventb.core.prProof name="subtraction_equals_zero_thm/S-THM"/>
+<org.eventb.core.prProof name="subtraction_cancellation_thm/S-THM"/>
+<org.eventb.core.prProof name="subtraction_monotone_thm/S-THM"/>
+<org.eventb.core.prProof name="subtraction_zero_rew/S/rhs1"/>
+<org.eventb.core.prProof name="subtraction_minus_rew/S/rhs1"/>
+<org.eventb.core.prProof name="subtraction_equals_zero_inf1/S-INF"/>
+<org.eventb.core.prProof name="subtraction_equals_zero_inf2/S-INF"/>
+<org.eventb.core.prProof name="subtraction_cancellation_inf1/S-INF"/>
+<org.eventb.core.prProof name="subtraction_cancellation_inf2/S-INF"/>
+<org.eventb.core.prProof name="subtraction_monotone_inf/S-INF"/>
+</org.eventb.core.prFile>

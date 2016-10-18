@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="vec_domain_inf/S-INF" org.eventb.core.accurate="true" org.eventb.core.poDesc="Inference Rule Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate=" ∀ i⦂ℤ,n⦂ℤ,x⦂ℙ(ℤ×ℝ)· ⊤  ⇒ (n ∈  ℕ  ∧ i ∈ 1 ‥ n ∧ x ∈  euclidean_space (n) ⇒ i ∈  dom (x))" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tuf|org.eventb.theory.core.theoryRoot#_VectorSpaceWD|org.eventb.theory.core.proofRulesBlock#)|org.eventb.theory.core.inferenceRule#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tcf|org.eventb.theory.core.scTheoryRoot#_VectorSpaceWD|org.eventb.theory.core.scProofRulesBlock#generatedBlocl|org.eventb.theory.core.scInferenceRule#y"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tuf|org.eventb.theory.core.theoryRoot#_VectorSpaceWD|org.eventb.theory.core.proofRulesBlock#)|org.eventb.theory.core.inferenceRule#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poSequent#vec_domain_inf\/S-INF|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="vec_func_inf/S-INF" org.eventb.core.accurate="true" org.eventb.core.poDesc="Inference Rule Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate=" ∀ n⦂ℤ,x⦂ℙ(ℤ×ℝ)· ⊤  ⇒ (n ∈  ℕ  ∧ x ∈  euclidean_space (n) ⇒ x ∈  ℤ  ⇸ ( ℝ  ⦂ ℙ(ℝ)))" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tuf|org.eventb.theory.core.theoryRoot#_VectorSpaceWD|org.eventb.theory.core.proofRulesBlock#)|org.eventb.theory.core.inferenceRule#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tcf|org.eventb.theory.core.scTheoryRoot#_VectorSpaceWD|org.eventb.theory.core.scProofRulesBlock#generatedBlocl|org.eventb.theory.core.scInferenceRule#z"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/EuclideanTheory/_VectorSpaceWD.tuf|org.eventb.theory.core.theoryRoot#_VectorSpaceWD|org.eventb.theory.core.proofRulesBlock#)|org.eventb.theory.core.inferenceRule#+"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/EuclideanTheory/_VectorSpaceWD.bpo|org.eventb.core.poFile#_VectorSpaceWD|org.eventb.core.poSequent#vec_func_inf\/S-INF|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+</org.eventb.core.poFile>

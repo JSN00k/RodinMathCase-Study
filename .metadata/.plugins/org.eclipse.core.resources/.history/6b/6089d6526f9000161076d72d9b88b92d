@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="is_symmetric_predicate/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MiscMathsTheory/_BinaryPredicates.bpo|org.eventb.core.poFile#_BinaryPredicates|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate=" ∀ p⦂ℙ(T×T×BOOL)·p ∈  ℙ (T × T ×  BOOL ) ⇒ (p ∈ T × T ⇸  BOOL  ⇒ ( ∀ t1⦂T,t2⦂T·t1 ↦ t2 ∈  dom (p) ∧ t2 ↦ t1 ∈  dom (p) ⇒ p ∈ T × T ⇸  BOOL ))" org.eventb.core.source="/MiscMathsTheory/_BinaryPredicates.tuf|org.eventb.theory.core.theoryRoot#_BinaryPredicates|org.eventb.theory.core.newOperatorDefinition#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MiscMathsTheory/_BinaryPredicates.tcf|org.eventb.theory.core.scTheoryRoot#_BinaryPredicates|org.eventb.theory.core.scNewOperatorDefinition#U"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MiscMathsTheory/_BinaryPredicates.tuf|org.eventb.theory.core.theoryRoot#_BinaryPredicates|org.eventb.theory.core.newOperatorDefinition#("/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MiscMathsTheory/_BinaryPredicates.bpo|org.eventb.core.poFile#_BinaryPredicates|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/MiscMathsTheory/_BinaryPredicates.bpo|org.eventb.core.poFile#_BinaryPredicates|org.eventb.core.poSequent#is_symmetric_predicate\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+</org.eventb.core.poFile>

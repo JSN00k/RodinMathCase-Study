@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="pow/Op-WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,m,n" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
+<org.eventb.core.lang name="L">
+<org.eventb.theory.core.scNewOperatorDefinition name="Monoid" org.eventb.core.label="Monoid" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T×ℙ(T×T×T))" org.eventb.theory.core.wd=" ∀ ident⦂T,operator⦂ℙ(T×T×T)·(ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( ident ↦ x )  = x ∧ x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( x ↦ ident )  = x ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( x ↦ y )  ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ x ↦ operator ( y ↦ z )  ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( operator ( x ↦ y )  ↦ x )  = operator ( x ↦ operator ( y ↦ z )  ) ))) ∨  ¬ ident ∈ T ∨  ¬ operator ∈ T × T → T ∨ ( ∃ x⦂T·(ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( ident ↦ x )  = x) ∨ (x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( x ↦ ident )  = x) ∨ ( ∃ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( x ↦ y )  ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ x ↦ operator ( y ↦ z )  ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( operator ( x ↦ y )  ↦ x )  = operator ( x ↦ operator ( y ↦ z )  ) ))">
+<org.eventb.theory.core.scDirectOperatorDefinition name=")" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.directOperatorDefinition#)" org.eventb.theory.core.formula=" { ident⦂T,operator⦂ℙ(T×T×T)·ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·(operator ( ident ↦ x )  = x ∧ operator ( x ↦ ident )  = x) ∧ ( ∀ x⦂T,y⦂T,z⦂T·operator ( operator ( x ↦ y )  ↦ x )  = operator ( x ↦ operator ( y ↦ z )  ) )) ∣ ident ↦ operator}"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="pow" org.eventb.core.label="pow" org.eventb.core.predicate="n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T)))" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T" org.eventb.theory.core.wd="m ∈  dom ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∈ T ×  ℙ (T × T × T) ⇸  ℙ (T × T × T) ∧ m ∈  dom ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∈ T ×  ℙ (T × T × T) ⇸ T ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T">
+<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scOperatorArgument name="n" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="ℤ"/>
+<org.eventb.theory.core.scOperatorArgument name="m" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="T×ℙ(T×T×T)"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="*" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.directOperatorDefinition#*" org.eventb.theory.core.formula="( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ( ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ) "/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+</org.eventb.core.lang>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees a,n,m)" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p5,p6">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate=" ∀ a⦂T,n⦂ℤ,m⦂T×ℙ(T×T×T)· ⊤  ∧  ⊤  ∧  ⊤  ⇒ (n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T))) ⇒  ⊤  ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate=" ∀ a⦂T,n⦂ℤ,m⦂T×ℙ(T×T×T)·a ∈ T ∧ n ∈  ℤ  ∧ m ∈ T ×  ℙ (T × T × T) ⇒ (n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T))) ⇒ m ∈  dom ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∈ T ×  ℙ (T × T × T) ⇸  ℙ (T × T × T) ∧ m ∈  dom ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∈ T ×  ℙ (T × T × T) ⇸ T ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate=" ∀ a⦂T,n⦂ℤ,m⦂T×ℙ(T×T×T)·n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T))) ⇒ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T))) ⇒ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="n ∈  ℕ ">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) )">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T)))">
+<org.eventb.core.prIdent name="m" org.eventb.core.type="T×ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate=" ∀ a⦂T,n⦂ℤ,m⦂T×ℙ(T×T×T)·a ∈ T ∧ n ∈  ℤ  ∧ m ∈ T ×  ℙ (T × T × T) ⇒ (n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T))) ⇒ m ∈ T ×  ℙ (T × T × T) ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Monoid/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="ident,x,operator" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
+<org.eventb.core.lang name="L">
+<org.eventb.theory.core.scNewOperatorDefinition name="Monoid" org.eventb.core.label="Monoid" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T×ℙ(T×T×T))" org.eventb.theory.core.wd=" ∀ ident⦂T,operator⦂ℙ(T×T×T)·(ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( ident ↦ x )  = x ∧ x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( x ↦ ident )  = x)) ∨  ¬ ident ∈ T ∨  ¬ operator ∈ T × T → T ∨ ( ∃ x⦂T·(ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( ident ↦ x )  = x) ∨ (x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( x ↦ ident )  = x))">
+<org.eventb.theory.core.scDirectOperatorDefinition name=")" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.directOperatorDefinition#)" org.eventb.theory.core.formula=" { ident⦂T,operator⦂ℙ(T×T×T)·ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ∧ operator ( x ↦ ident )  = x) ∣ ident ↦ operator}"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="pow" org.eventb.core.label="pow" org.eventb.core.predicate="n ∈  ℕ  ∧ m ∈ ( Monoid  ⦂ ℙ(T×ℙ(T×T×T)))" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T" org.eventb.theory.core.wd="m ∈  dom ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ∈ T ×  ℙ (T × T × T) ⇸  ℙ (T × T × T) ∧ m ∈  dom ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ∈ T ×  ℙ (T × T × T) ⇸ T ∧ ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ∈  dom (( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m ) ) ∧ ( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ∈ T × T ⇸ T">
+<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scOperatorArgument name="n" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="ℤ"/>
+<org.eventb.theory.core.scOperatorArgument name="m" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="T×ℙ(T×T×T)"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="*" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.directOperatorDefinition#*" org.eventb.theory.core.formula="( prj2  ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T))) ( m )  ( ( prj1  ⦂ ℙ(T×ℙ(T×T×T)×T)) ( m )  ↦ a ) "/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+</org.eventb.core.lang>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees ident,operator)" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p5">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p14">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate=" ⊤ "/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate=" ∀ ident⦂T,operator⦂ℙ(T×T×T)·operator ∈ T × T → T ⇒ ( ∀ x⦂T·ident ↦ x ∈  dom (operator)) ∧ operator ∈ T × T ⇸ T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="operator ( ident ↦ x )  = x">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="x ↦ ident ∈ T × T">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="operator ∈ T × T → T ⇒ ( ∀ x⦂T·ident ↦ x ∈  dom (operator)) ∧ operator ∈ T × T ⇸ T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator))">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="operator ∈ T × T → T">
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="( ∀ x⦂T·ident ↦ x ∈  dom (operator)) ∧ operator ∈ T × T ⇸ T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator))">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="ident ↦ x ∈ T × T">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="x ↦ ident ∈  dom (operator)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ident ↦ x ∈  dom (operator)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate=" ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate=" ∀ x⦂T·ident ↦ x ∈  dom (operator)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate=" ∀ ident⦂T,operator⦂ℙ(T×T×T)·ident ∈ T ∧ operator ∈ T × T → T ⇒ ( ∀ x⦂T·ident ↦ x ∈  dom (operator)) ∧ operator ∈ T × T ⇸ T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="operator ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="operator" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate=" ⊤  ⇒ ( ⊤  ⇒ ( ∀ ident⦂T,operator⦂ℙ(T×T×T)·ident ∈ T ∧ operator ∈ T × T → T ⇒ ( ∀ x⦂T·ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ (operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator)))))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate=" ∀ ident⦂T,operator⦂ℙ(T×T×T)· ⊤  ∧ operator ∈ T × T → T ⇒ ( ∀ x⦂T·ident ↦ x ∈  dom (operator)) ∧ operator ∈ T × T ⇸ T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ⇒ x ↦ ident ∈  dom (operator))"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="T × T"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="operator/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="op,x,y,z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
+<org.eventb.core.lang name="L">
+<org.eventb.theory.core.scNewOperatorDefinition name="operator" org.eventb.core.label="operator" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#," org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T×T×T))" org.eventb.theory.core.wd=" ∀ op⦂ℙ(T×T×T)·(op ∈ T × T → T ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ x ↦ op ( y ↦ z )  ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) )) ∨  ¬ op ∈ T × T → T ∨ ( ∃ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ x ↦ op ( y ↦ z )  ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧  ¬ op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) )">
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula=" { op⦂ℙ(T×T×T)·op ∈ T × T → T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) ) ∣ op}"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+</org.eventb.core.lang>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees op)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y)" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y,z)" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for op ( x ↦ y ) " org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p12">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y,z)" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for op ( y ↦ z ) " org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p16">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="op ( y ↦ z )  ∈ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="op ( x ↦ y )  ↦ z ∈ T × T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate=" ⊤ "/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="op ( x ↦ y )  ↦ z ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate=" ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate=" ∀ op⦂ℙ(T×T×T)·op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="op ∈ T × T → T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="op ( x ↦ y )  ∈ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate=" ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="x ↦ y ∈ T × T">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x ↦ y ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate=" ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="x ↦ op ( y ↦ z )  ∈ T × T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="x ↦ op ( y ↦ z )  ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate=" ⊤  ⇒ ( ⊤  ⇒ ( ∀ op⦂ℙ(T×T×T)·op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ y ↦ z ∈  dom (op) ∧ x ↦ op ( y ↦ z )  ∈  dom (op))))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="op ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="T × T"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.funImgGoal"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Operator/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="op,x,y,z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
+<org.eventb.core.lang name="L">
+<org.eventb.theory.core.scNewOperatorDefinition name="Monoid" org.eventb.core.label="Monoid" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T×ℙ(T×T×T))" org.eventb.theory.core.wd=" ∀ ident⦂T,operator⦂ℙ(T×T×T)·(ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( ident ↦ x )  = x ∧ x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧ operator ( x ↦ ident )  = x)) ∨  ¬ ident ∈ T ∨  ¬ operator ∈ T × T → T ∨ ( ∃ x⦂T·(ident ↦ x ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( ident ↦ x )  = x) ∨ (x ↦ ident ∈  dom (operator) ∧ operator ∈ T × T ⇸ T ∧  ¬ operator ( x ↦ ident )  = x))">
+<org.eventb.theory.core.scOperatorArgument name="op" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#*" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name=")" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.directOperatorDefinition#)" org.eventb.theory.core.formula=" { ident⦂T,operator⦂ℙ(T×T×T)·ident ∈ T ∧ operator ∈ T × T → T ∧ ( ∀ x⦂T·operator ( ident ↦ x )  = x ∧ operator ( x ↦ ident )  = x) ∣ ident ↦ operator}"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="Operator" org.eventb.core.label="Operator" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#," org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T×T×T))" org.eventb.theory.core.wd=" ∀ op⦂ℙ(T×T×T)·(op ∈ T × T → T ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ x ↦ op ( y ↦ z )  ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) )) ∨  ¬ op ∈ T × T → T ∨ ( ∃ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ y ↦ z ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ x ↦ op ( y ↦ z )  ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧  ¬ op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) )">
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula=" { op⦂ℙ(T×T×T)·op ∈ T × T → T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( op ( x ↦ y )  ↦ z )  = op ( x ↦ op ( y ↦ z )  ) ) ∣ op}"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+</org.eventb.core.lang>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees op)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y)" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y,z)" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for op ( x ↦ y ) " org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p12">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y,z)" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for op ( y ↦ z ) " org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p16">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="op ( y ↦ z )  ∈ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="op ( x ↦ y )  ↦ z ∈ T × T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate=" ⊤ "/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="op ( x ↦ y )  ↦ z ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate=" ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate=" ∀ op⦂ℙ(T×T×T)·op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="op ∈ T × T → T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="op ( x ↦ y )  ∈ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)) ∧ op ∈ T × T ⇸ T ∧ ( ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)) ∧ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ op ( y ↦ z )  ∈  dom (op))">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate=" ∀ x⦂T,y⦂T·x ↦ y ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="x ↦ y ∈ T × T">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x ↦ y ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate=" ∀ x⦂T,y⦂T,z⦂T·op ( x ↦ y )  ↦ z ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="x ↦ op ( y ↦ z )  ∈ T × T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="x ↦ op ( y ↦ z )  ∈  dom (op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate=" ⊤  ⇒ ( ⊤  ⇒ ( ∀ op⦂ℙ(T×T×T)·op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ y ↦ z ∈  dom (op) ∧ x ↦ op ( y ↦ z )  ∈  dom (op))))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="op ∈ T × T ⇸ T">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="T × T"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.funImgGoal"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

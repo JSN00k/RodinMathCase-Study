@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="abs/Op-WD"/>
+<org.eventb.core.prProof name="abs_type_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_of_pos_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_of_neg_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_of_minus_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_zero_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_one_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_pos_thm/S-THM"/>
+<org.eventb.core.prProof name="square_of_abs_thm/S-THM"/>
+<org.eventb.core.prProof name="abs_of_pos_rew/S/rhs1"/>
+<org.eventb.core.prProof name="abs_of_neg_rew/S/rhs1"/>
+<org.eventb.core.prProof name="abs_of_minus_rew/WD-S/rhs1"/>
+<org.eventb.core.prProof name="abs_of_minus_rew/S/rhs1"/>
+<org.eventb.core.prProof name="abs_zero_rew/S/rhs1"/>
+<org.eventb.core.prProof name="abs_one_rew/S/rhs1"/>
+<org.eventb.core.prProof name="square_of_abs_rew/S/rhs1"/>
+<org.eventb.core.prProof name="abs_type_inf/S-INF"/>
+<org.eventb.core.prProof name="abs_pos_inf/S-INF"/>
+</org.eventb.core.prFile>

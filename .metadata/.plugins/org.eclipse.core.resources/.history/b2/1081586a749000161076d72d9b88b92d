@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/Maths/Monoid.tuf">
+<org.eventb.theory.core.scTypeParameter name="T" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.typeParameter#(" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.theory.core.scDatatypeDefinition name="monoid" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.datatypeDefinition#'" org.eventb.theory.core.hasError="false">
+<org.eventb.theory.core.scTypeArgument name="T" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.typeArgument#'" org.eventb.theory.core.givenType="T"/>
+<org.eventb.theory.core.scDatatypeConstructor name="mon" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#(">
+<org.eventb.theory.core.scConstructorArgument name="ident" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#(|org.eventb.theory.core.constructorArgument#'" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scConstructorArgument name="operator" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#(|org.eventb.theory.core.constructorArgument#(" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.theory.core.scDatatypeConstructor>
+</org.eventb.theory.core.scDatatypeDefinition>
+<org.eventb.theory.core.scAxiomaticDefinitionsBlock name="monoie" org.eventb.core.label="left_ident" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.axiomaticDefinitionsBlock#)">
+<org.eventb.theory.core.scAxiomaticOperatorDefinition name="'" org.eventb.core.label="op" org.eventb.core.predicate=" ⊤ " org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.axiomaticDefinitionsBlock#)|org.eventb.theory.core.axiomaticOperatorDefinition#)" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.hasError="true" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T×T×T)" org.eventb.theory.core.wd=" ⊤ ">
+<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.axiomaticDefinitionsBlock#)|org.eventb.theory.core.axiomaticOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scOperatorArgument name="b" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.axiomaticDefinitionsBlock#)|org.eventb.theory.core.axiomaticOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scOperatorArgument name="c" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.axiomaticDefinitionsBlock#)|org.eventb.theory.core.axiomaticOperatorDefinition#)|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="T"/>
+</org.eventb.theory.core.scAxiomaticOperatorDefinition>
+</org.eventb.theory.core.scAxiomaticDefinitionsBlock>
+</org.eventb.theory.core.scTheoryRoot>

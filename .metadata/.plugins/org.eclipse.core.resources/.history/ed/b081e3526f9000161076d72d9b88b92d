@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/MiscMathsTheory/MiscMaths.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/MiscMathsTheory/MiscMaths.tuf|org.eventb.theory.core.theoryRoot#MiscMaths|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/MiscMathsTheory">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/MiscMathsTheory/MiscMaths.tuf|org.eventb.theory.core.theoryRoot#MiscMaths|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/MiscMathsTheory/_BinaryPredicates.dtf|org.eventb.theory.core.deployedTheoryRoot#_BinaryPredicates"/>
+<org.eventb.theory.core.scImportTheory name="(" org.eventb.core.source="/MiscMathsTheory/MiscMaths.tuf|org.eventb.theory.core.theoryRoot#MiscMaths|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#(" org.eventb.theory.core.importTheory="/MiscMathsTheory/_CurriedFunctions.dtf|org.eventb.theory.core.deployedTheoryRoot#_CurriedFunctions"/>
+</org.eventb.theory.core.scImportTheoryProject>
+</org.eventb.theory.core.scTheoryRoot>
