@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf">
-<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.importTheoryProject#)" org.eventb.theory.core.importTheoryProject="/Maths">
-<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.importTheoryProject#)|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/Maths/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
-</org.eventb.theory.core.scImportTheoryProject>
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="7c2afde463ccc9b5472b52b73b41c81a" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.useTheory name="Monoid" org.eventb.core.scTarget="/Maths/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
 <org.eventb.theory.core.scTypeParameter name="T" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.typeParameter#'" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.theory.core.scAxiomaticDefinitionsBlock name="U" org.eventb.core.label="xdb1" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.axiomaticDefinitionsBlock#(">
 <org.eventb.theory.core.scAxiomaticDefinitionAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.axiomaticDefinitionsBlock#(|org.eventb.theory.core.axiomaticDefinitionAxiom#'"/>
 </org.eventb.theory.core.scAxiomaticDefinitionsBlock>
 <org.eventb.theory.core.scTheorem name="axm1" org.eventb.core.generated="true" org.eventb.core.label="axm1" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/_AuxiliaryDefinitions.tcf_tmp|org.eventb.theory.core.scTheoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.scAxiomaticDefinitionsBlock#U|org.eventb.theory.core.scAxiomaticDefinitionAxiom#'" org.eventb.theory.core.order="0"/>
-</org.eventb.theory.core.scTheoryRoot>
+</org.eventb.theory.core.deployedTheoryRoot>

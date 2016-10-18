@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="AssociativeOp/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="7">
+<org.eventb.core.poSequent name="AssociativeOp/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate=" ⊤  ⇒ ( ⊤  ⇒ ( ∀ op⦂ℙ(T×T×T)·op ∈ T × T → T ⇒ ( ∀ x⦂T,y⦂T,z⦂T·x ↦ y ∈  dom (op) ∧ op ∈ T × T ⇸ T ∧ op ( x ↦ y )  ↦ z ∈  dom (op) ∧ y ↦ z ∈  dom (op) ∧ x ↦ op ( y ↦ z )  ∈  dom (op))))" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="⊤⇒(⊤⇒(∀op⦂ℙ(T×T×T)·op∈T × T → T⇒(∀x⦂T,y⦂T,z⦂T·x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧y ↦ z∈dom(op)∧x ↦ op(y ↦ z)∈dom(op))))" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tcf|org.eventb.theory.core.scTheoryRoot#Monoid2|org.eventb.theory.core.scNewOperatorDefinition#U"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#("/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poSequent#AssociativeOp\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="monIdent/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀m⦂T×ℙ(T×T×T)·m∈T × ℙ(T × T × T)⇒(m∈(Monoid ⦂ ℙ(T×ℙ(T×T×T)))⇒m∈dom(prj1 ⦂ ℙ(T×ℙ(T×T×T)×T))∧(prj1 ⦂ ℙ(T×ℙ(T×T×T)×T))∈T × ℙ(T × T × T) ⇸ T)" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tcf|org.eventb.theory.core.scTheoryRoot#Monoid2|org.eventb.theory.core.scNewOperatorDefinition#\\"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poSequent#monIdent\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="monOp/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀m⦂T×ℙ(T×T×T)·m∈T × ℙ(T × T × T)⇒(m∈(Monoid ⦂ ℙ(T×ℙ(T×T×T)))⇒m∈dom(prj2 ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T)))∧(prj2 ⦂ ℙ(T×ℙ(T×T×T)×ℙ(T×T×T)))∈T × ℙ(T × T × T) ⇸ ℙ(T × T × T))" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tcf|org.eventb.theory.core.scTheoryRoot#Monoid2|org.eventb.theory.core.scNewOperatorDefinition#]"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Monoid2.tuf|org.eventb.theory.core.theoryRoot#Monoid2|org.eventb.theory.core.newOperatorDefinition#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Maths/Monoid2.bpo|org.eventb.core.poFile#Monoid2|org.eventb.core.poSequent#monOp\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 </org.eventb.core.poFile>
