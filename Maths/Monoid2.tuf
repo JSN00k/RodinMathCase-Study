@@ -21,20 +21,7 @@
 <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T"/>
 <org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="monInit1" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.comment="AssociativeOpPolly(ident)" org.eventb.core.expression="AssociativeOp ⦂ ℙ(ℙ((T×T)×T))" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.comment="AssociativeOpPolly(ident)" org.eventb.core.expression="AssociativeOpPolly(ident)" org.eventb.core.identifier="op"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ monoid ∣ monoid ∈ MonoidPolly(ident) ∧ monoid = (ident ↦ op) }"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="monInit2" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ((T × T)× T)" org.eventb.core.identifier="oper"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ monoid ∣ monoid ∈ MonoidPolly(ident) ∧ monoid = ident ↦ oper }"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="monIdent" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid ⦂ ℙ(T × ℙ((T × T) × T))" org.eventb.core.identifier="m"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="proj1(m) ⦂ T"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="monOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid ⦂ ℙ(T × ℙ((T × T) × T))" org.eventb.core.identifier="m"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="proj2(op)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>

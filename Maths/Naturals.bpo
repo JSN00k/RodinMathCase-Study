@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="monoidThm/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Maths/Naturals.bpo|org.eventb.core.poFile#Naturals|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="( zero  ⦂ Nat) ↦ ( λ x⦂Nat ↦ y⦂Nat·x ↦ y ∈ ( Nat  ⦂ ℙ(Nat)) × ( Nat  ⦂ ℙ(Nat)) ∣ x nAdd y) ∈  MonoidPolly ( zero  ⦂ Nat)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.theorem#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Naturals.tcf|org.eventb.theory.core.scTheoryRoot#Naturals|org.eventb.theory.core.scTheorem#generatedBlocl"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.theorem#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Maths/Naturals.bpo|org.eventb.core.poFile#Naturals|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Maths/Naturals.bpo|org.eventb.core.poFile#Naturals|org.eventb.core.poSequent#monoidThm\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+</org.eventb.core.poFile>
