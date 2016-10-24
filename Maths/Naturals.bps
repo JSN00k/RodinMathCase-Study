@@ -4,4 +4,8 @@
 <org.eventb.core.psStatus name="nAddP is Ascoiative/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd_P is Associative/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd and zero form a monoid/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="AssociativeLeft/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="AssociativeRight/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="nAdd as monoid/WD-S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="nAdd as monoid/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

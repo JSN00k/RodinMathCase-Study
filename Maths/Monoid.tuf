@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="AssociativeOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.core.comment="Completeness, Associativity" org.eventb.theory.core.formula="{op ∣ op ∈ (T × T) → T ∧ (∀a,b·(a ∈ T ∧ b ∈ T ⇒ a ↦ b ∈ dom (op))) ∧ ∀x,y,z · op(x ↦ op(y ↦ z)) = op(op(x ↦ y) ↦ z)}"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.core.comment="Completeness, Associativity" org.eventb.theory.core.formula="{op ∣ op ∈ (T × T) → T &#10;∧ (∀a,b·(a ∈ T ∧ b ∈ T ⇒ a ↦ b ∈ dom (op))) &#10;∧ ∀x,y,z · op(x ↦ op(y ↦ z)) = op(op(x ↦ y) ↦ z)}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.comment="This is a hack as I can't find a way of passing a type directly" org.eventb.core.label="AssociativeOpPoly" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
@@ -12,7 +12,7 @@
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ associativeOp ∣ associativeOp ∈ AssociativeOp ⦂ ℙ(ℙ((T×T)×T)) ∧ associativeOp = op }"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ident ↦ op ∣ ident ∈ T ∧ op ∈ AssociativeOpPoly(ident) ∧ ∀x·x ↦ ident ↦ x ∈ op ∧ ident ↦ x ↦ x ∈ op ∧ op(x ↦ ident) = x ∧ op(ident ↦ x) = x }"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ident ↦ op ∣ ident ∈ T ∧ op ∈ AssociativeOpPoly(ident) &#10;∧ ∀x·x ↦ ident ↦ x ∈ op ∧ ident ↦ x ↦ x ∈ op &#10;∧ op(x ↦ ident) = x ∧ op(ident ↦ x) = x }"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.comment="A hack as I can't define types properly." org.eventb.core.label="MonoidPoly" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
@@ -37,4 +37,16 @@
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="monPoly" org.eventb.core.predicate="∀x,y·x∈T∧y∈T⇒MonoidPoly(x) = MonoidPoly(y)"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="simpMonIdent" org.eventb.core.predicate="∀ident,op·ident∈T ∧ op∈AssociativeOpPoly(ident) ∧ ident ↦ op ∈ MonoidPoly(ident)⇒ monIdent(monInit(ident, op)) = ident"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="simpMonOp" org.eventb.core.predicate="∀ident,op·ident∈T ∧ op∈AssociativeOpPoly(ident) ∧ ident ↦ op ∈ MonoidPoly(ident)⇒ monOp(monInit(ident, op)) = op"/>
+<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="Associative">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="a" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="b" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="c" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="left" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Left Associativity Rewrite" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op(a ↦ op (b ↦ c))"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="op" org.eventb.theory.core.type="AssociativeOpPoly(a)"/>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="right" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Right Associativity Rewrite" org.eventb.theory.core.formula="op(a ↦ op (b ↦ c))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
