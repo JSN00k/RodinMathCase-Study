@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/MonoidNaturals.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidNaturals"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.proofRulesBlock name=")" org.eventb.core.label="Simplifications">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="zeroMult1" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="multiplying by zero gives zero" org.eventb.theory.core.formula="mPow(x, zero, zero ↦ nAdd_P)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="zeroMult2" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Describe Me!" org.eventb.theory.core.formula="mPow(zero, x, zero ↦ nAdd_P)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="zeroMult3" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="multiplying by zero gives zero" org.eventb.theory.core.formula="mPow2(x, zero, zero, nAdd_P)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="zeroMult4" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Describe Me!" org.eventb.theory.core.formula="mPow2(zero, x, zero, nAdd_P)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>

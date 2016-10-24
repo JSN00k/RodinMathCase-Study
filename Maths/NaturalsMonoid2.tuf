@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="ntimes" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="mPow(x, y, zero ↦ nAdd_P)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMonoid.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMonoid"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>
