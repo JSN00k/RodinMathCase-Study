@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
+<org.eventb.core.psStatus name="monoidThm2/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="monoidThm/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAddP is Ascoiative/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Addition Reduction/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd_P is Associative/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd and zero form a monoid/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="AssociativeLeft/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="AssociativeRight/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="zeroLeft/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="zeroRight/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="AddIsMon/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd as monoid/WD-S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="nAdd as monoid/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucToAddLeft/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucToAddRight/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="rew1/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="rew2/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sucLeft/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucRight/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucIntoAddition/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucIntoAddition2/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="x nAdd y = x nAdd z/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

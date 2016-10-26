@@ -34,7 +34,8 @@
 <org.eventb.theory.core.importTheoryProject name="," org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="MonoidPolly(zero) just creates a Monoid on the natural types i.e Monoid&lt;Nat&gt; &#10;unfortunatoinely there's no event B suntax to pass arround type inofmration so&#10;instead I've passed a variable of the relevent type." org.eventb.core.label="monoidThm" org.eventb.core.predicate="zero ↦ nAdd_P ∈ MonoidPoly(zero)"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="MonoidPolly(zero) just creates a Monoid on the natural types i.e Monoid&lt;Nat&gt; &#10;unfortunatoinely there's no event B suntax to pass arround type inofmration so&#10;instead I've passed a variable of the relevent type." org.eventb.core.label="monoidThm2" org.eventb.core.predicate="zero ↦ nAdd_P ∈ MonoidPoly(zero)"/>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="monoidThm" org.eventb.core.predicate="zero ↦ nAdd_P ∈ Monoid ⦂ ℙ(Nat × ℙ((Nat × Nat) × Nat))"/>
 <org.eventb.theory.core.theorem name="0" org.eventb.core.comment="Check that nAddP is Associative." org.eventb.core.label="nAddP is Ascoiative" org.eventb.core.predicate="nAdd_P ∈ AssociativeOp ⦂ ℙ(ℙ((Nat × Nat) × Nat))"/>
 <org.eventb.theory.core.proofRulesBlock name="1" org.eventb.core.label="Type rewrites">
 <org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="nAdd_P is Associative" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Addition is Associative" org.eventb.theory.core.formula="nAdd_P ∈ AssociativeOp">
@@ -48,11 +49,20 @@
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="a" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="b" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="c" org.eventb.theory.core.type="Nat"/>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="AssociativeLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="AssociativeLeft" org.eventb.theory.core.formula="(a nAdd b) nAdd c">
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="AssociativeLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="AssociativeLeft" org.eventb.theory.core.formula="(a nAdd b) nAdd c">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="a nAdd (b nAdd c)"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="AssociativeRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="AssociativeRight" org.eventb.theory.core.formula="a nAdd (b nAdd c)">
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="AssociativeRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="AssociativeRight" org.eventb.theory.core.formula="a nAdd (b nAdd c)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(a nAdd b) nAdd c"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="zeroLeft" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Adding zero simplification" org.eventb.theory.core.formula="zero nAdd a">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="a"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="zeroRight" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Adding zero simplification" org.eventb.theory.core.formula="a nAdd zero">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="a"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="AddIsMon" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Addition is a Monoid" org.eventb.theory.core.formula="zero ↦ nAdd_P ∈ Monoid ⦂ ℙ(Nat × ℙ((Nat × Nat) × Nat))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.proofRulesBlock name="3" org.eventb.core.label="AddMonoidRewrite">
@@ -60,6 +70,59 @@
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="b" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="nAdd as monoid" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Rewrite Addition as monoid" org.eventb.theory.core.formula="a nAdd b">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="monOp(zero ↦ nAdd_P)(a ↦ b)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="4" org.eventb.core.label="AddOne">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="sucToAddLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Suc To Add One x on left" org.eventb.theory.core.formula="suc(x)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x nAdd suc(zero)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="sucToAddRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Suc To Add One x on Right" org.eventb.theory.core.formula="suc(x)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="suc(zero) nAdd x"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="5" org.eventb.core.label="AssociativeRewrite">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Bracket Left" org.eventb.theory.core.formula="x nAdd y nAdd z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x nAdd y) nAdd z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="rew2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Bracket Right" org.eventb.theory.core.formula="x nAdd y nAdd z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x nAdd (y nAdd z)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.newOperatorDefinition name="7" org.eventb.core.label="nMinus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="y">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="x"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ys)" org.eventb.theory.core.formula="decrement(x) nMinus ys"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="MoveSucArround">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="sucLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="sucOutsideAddition" org.eventb.theory.core.formula="suc(x) nAdd y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="suc(x nAdd y)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="sucRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="sucOutsideAddition" org.eventb.theory.core.formula="x nAdd suc(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="suc(x nAdd y)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="sucIntoAddition" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="sucIntoAdditionLeft" org.eventb.theory.core.formula="suc(x nAdd y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="suc(x) nAdd y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="sucIntoAddition2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="sucIntoAdditionRight" org.eventb.theory.core.formula="suc(x nAdd y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x nAdd suc(y)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Addition Reduction" org.eventb.core.predicate="∀x,y,z·((x nAdd y) = (x nAdd z)) ⇔ y = z"/>
+<org.eventb.theory.core.proofRulesBlock name=":" org.eventb.core.label="AdditionReduction">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="x nAdd y = x nAdd z" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Subtract $1 from Both sides" org.eventb.theory.core.formula="x nAdd y = x nAdd z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y = z"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

@@ -37,16 +37,10 @@
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="monPoly" org.eventb.core.predicate="∀x,y·x∈T∧y∈T⇒MonoidPoly(x) = MonoidPoly(y)"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="simpMonIdent" org.eventb.core.predicate="∀ident,op·ident∈T ∧ op∈AssociativeOpPoly(ident) ∧ ident ↦ op ∈ MonoidPoly(ident)⇒ monIdent(monInit(ident, op)) = ident"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="simpMonOp" org.eventb.core.predicate="∀ident,op·ident∈T ∧ op∈AssociativeOpPoly(ident) ∧ ident ↦ op ∈ MonoidPoly(ident)⇒ monOp(monInit(ident, op)) = op"/>
-<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="Associative">
+<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="MonoidEquality">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="a" org.eventb.theory.core.type="T"/>
-<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="b" org.eventb.theory.core.type="T"/>
-<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="c" org.eventb.theory.core.type="T"/>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="left" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Left Associativity Rewrite" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op(a ↦ op (b ↦ c))"/>
-</org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="op" org.eventb.theory.core.type="AssociativeOpPoly(a)"/>
-<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="right" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Right Associativity Rewrite" org.eventb.theory.core.formula="op(a ↦ op (b ↦ c))">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="MonoidsAreMonoids" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Simplify Monoid Type" org.eventb.theory.core.formula="MonoidPoly(a)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="Monoid ⦂ ℙ(T × ℙ((T × T) × T))"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
