@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
-<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="nTimes" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="mPow(x, y, zero ↦ nAdd_P)"/>
-</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMonoid.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMonoid"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name=")" org.eventb.core.label="distributiveLeft" org.eventb.core.predicate="∀x,y,z·mPow (x nAdd y, z, zero ↦ nAdd_P) = mPow(x, z, zero ↦ nAdd_P) nAdd mPow(y, z, zero ↦ nAdd_P)"/>
 <org.eventb.theory.core.proofRulesBlock name="*" org.eventb.core.label="(1 + x) ∗ y = y + x ∗ y">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>

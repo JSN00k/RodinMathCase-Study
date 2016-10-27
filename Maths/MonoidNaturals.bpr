@@ -745,252 +745,179 @@
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op ∈  AssociativeOpPoly (ident)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ∈ in goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst _)" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op ∈  AssociativeOp " org.eventb.core.prHyps="p11">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst _)" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p12,p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15"/>
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p13">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst x)" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-</org.eventb.core.prRule>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOp"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOpPoly"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p17">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op ∈  AssociativeOpPoly (ident)" org.eventb.core.prHyps="p4">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op ∈  AssociativeOp " org.eventb.core.prHyps="p11">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p12,p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p13"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOp"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOpPoly"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p18">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p20">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op ∈  AssociativeOpPoly (ident)" org.eventb.core.prHyps="p4">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op ∈  AssociativeOp " org.eventb.core.prHyps="p11">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p12,p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15"/>
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p13">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOp"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOpPoly"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="+" org.eventb.core.prGoal="p23">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op ∈  MonoidPoly (ident)" org.eventb.core.prHyps="p5">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p25">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p25"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op ∈  Monoid " org.eventb.core.prHyps="p26">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p27">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p26"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p27"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p28,p29,p30,p23,p31"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p23">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p23">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p23"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p31">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p31">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p31"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p28">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p28">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p28"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p29">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p29">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p29"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op ∈  AssociativeOpPoly (ident)" org.eventb.core.prHyps="p4">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op ∈  AssociativeOp " org.eventb.core.prHyps="p11">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p12,p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _,_,_)" org.eventb.core.prHyps="p14">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p24" org.eventb.core.prHyps="p14,p23,p31,p28,p29,p30,p13,p15">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p16">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p16">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p4,p16,p17,p18,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=",,"/>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p20">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op∈AssociativeOpPoly(ident)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p21">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op∈AssociativeOp" org.eventb.core.prHyps="p22">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p23">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25,p26"/>
+<org.eventb.core.prRule name="r12" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p24"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOp"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOpPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p27">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="p29">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op∈AssociativeOpPoly(ident)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p21">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOp expansion on op∈AssociativeOp" org.eventb.core.prHyps="p22">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p23">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25,p26"/>
+<org.eventb.core.prRule name="r13" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="p24">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p31">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e1"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -1009,16 +936,66 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="+" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="AssociativeOpPoly expansion on op∈AssociativeOpPoly(ident)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p21">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p17">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p17">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="p22,p16,p17,p18,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -1039,41 +1016,102 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="," org.eventb.core.prGoal="p32">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="monInit expansion on goal" org.eventb.core.prGoal="p32" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.AssociativeOpPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on goal" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p9">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op ∈  MonoidPoly (ident)" org.eventb.core.prHyps="p5">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prAnte name="," org.eventb.core.prGoal="p34">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="monInit expansion on goal" org.eventb.core.prGoal="p34" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p25">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p10">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on goal" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p10">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p10">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r14" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p37">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p40">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p18">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p18">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p4,p16,p17,p18,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
 <org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1083,6 +1121,255 @@
 <org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
 <org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p17">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p17">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p19">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p19">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="p4,p16,p17,p18,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p18">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p29">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p18">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p18">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p16">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p16">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="p4,p16,p17,p18,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="MonoidPoly expansion on ident ↦ op∈MonoidPoly(ident)" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p12">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Monoid expansion on ident ↦ op∈Monoid" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p14">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p4,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p19">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p19">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst _)" org.eventb.core.prHyps="p16">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p16">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="p4,p16,p17,p18,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.Monoid"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Monoid"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Monoid.MonoidPoly"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
@@ -1100,43 +1387,55 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="ident∈T∧op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident ↦ x∈op)∧(∀x⦂T·ident ↦ x ↦ x∈op)∧(∀x⦂T·op(x ↦ ident)=x)∧(∀x⦂T·op(ident ↦ x)=x)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀a⦂T,ident⦂T,op⦂ℙ(T×T×T)·op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident∈dom(op))∧op∈T × T ⇸ T∧(∀x⦂T·op(x ↦ ident)=x⇒ident ↦ x∈dom(op))∧(∀x⦂T·op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a)"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ident ↦ x∈T × T">
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="ident ↦ x∈T × T">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀x⦂T,y⦂T,z⦂T·op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)">
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀x⦂T,y⦂T,z⦂T·op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="ident ↦ op∈{monoid⦂T×ℙ(T×T×T)·monoid∈(Monoid ⦂ ℙ(T×ℙ(T×T×T))) ∣ monoid}">
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="ident∈T∧(∀x⦂T·x ↦ ident ↦ x∈op)∧(∀x⦂T·ident ↦ x ↦ x∈op)∧(∀x⦂T·op(x ↦ ident)=x)∧(∀x⦂T·op(ident ↦ x)=x)">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀x⦂T·ident ↦ x ↦ x∈op">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ident ↦ op∈{monoid⦂T×ℙ(T×T×T)·monoid∈(Monoid ⦂ ℙ(T×ℙ(T×T×T))) ∣ monoid}">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="ident ↦ op∈MonoidPoly(a)">
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀x⦂T·ident ↦ x ↦ x∈op">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="ident ↦ op∈MonoidPoly(a)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="op(ident ↦ x)=x">
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="op(ident ↦ x)=x">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀x⦂T·x ↦ ident ↦ x∈op">
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀x⦂T·x ↦ ident ↦ x∈op">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="ident∈T">
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ident∈T">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="op∈(AssociativeOp ⦂ ℙ(ℙ(T×T×T)))">
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="(∀x⦂T·x ↦ ident ↦ x∈op)∧(∀x⦂T·ident ↦ x ↦ x∈op)∧(∀x⦂T·op(x ↦ ident)=x)∧(∀x⦂T·op(ident ↦ x)=x)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="op∈T × T ⇸ T">
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="op∈(AssociativeOp ⦂ ℙ(ℙ(T×T×T)))">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="op∈T × T ⇸ T">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="x ↦ ident∈dom(op)">
@@ -1144,12 +1443,24 @@
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂T,ident⦂T,op⦂ℙ(T×T×T)·⊤∧⊤∧⊤∧⊤⇒(op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·⊤⇒x ↦ ident∈dom(op)∧op∈T × T ⇸ T∧(op(x ↦ ident)=x⇒ident ↦ x∈dom(op)))∧(∀x⦂T·⊤⇒op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a))"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂T,n⦂Nat,ident⦂T,op⦂ℙ(T×T×T)·a∈T∧n∈(Nat ⦂ ℙ(Nat))∧ident∈T∧op∈ℙ(T × T × T)⇒(op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·x∈T⇒x ↦ ident∈dom(op)∧op∈T × T ⇸ T∧(op(x ↦ ident)=x⇒ident ↦ x∈dom(op)))∧(∀x⦂T·x∈T⇒op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a))"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀x⦂T·op(ident ↦ x)=x">
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="ident∈T∧⊤∧(∀x⦂T·x ↦ ident ↦ x∈op)∧(∀x⦂T·ident ↦ x ↦ x∈op)∧(∀x⦂T·op(x ↦ ident)=x)∧(∀x⦂T·op(ident ↦ x)=x)">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂T,ident⦂T,op⦂ℙ(T×T×T)·⊤∧⊤∧⊤∧⊤⇒(op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·⊤⇒x ↦ ident∈dom(op)∧op∈T × T ⇸ T∧(op(x ↦ ident)=x⇒ident ↦ x∈dom(op)))∧(∀x⦂T·⊤⇒op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀a⦂T,b⦂T·⊤∧⊤⇒a ↦ b∈dom(op)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂T,n⦂Nat,ident⦂T,op⦂ℙ(T×T×T)·a∈T∧n∈(Nat ⦂ ℙ(Nat))∧ident∈T∧op∈ℙ(T × T × T)⇒(op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·x∈T⇒x ↦ ident∈dom(op)∧op∈T × T ⇸ T∧(op(x ↦ ident)=x⇒ident ↦ x∈dom(op)))∧(∀x⦂T·x∈T⇒op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a))"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀x⦂T·op(ident ↦ x)=x">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="x ↦ ident ↦ x∈op">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="op∈AssociativeOpPoly(ident)∧ident ↦ op∈MonoidPoly(ident)⇒op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident∈dom(op))∧op∈T × T ⇸ T∧(∀x⦂T·op(x ↦ ident)=x⇒ident ↦ x∈dom(op))∧(∀x⦂T·op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
@@ -1160,35 +1471,36 @@
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="op(x ↦ ident)=x⇒ident ↦ x∈dom(op)">
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="op(x ↦ ident)=x⇒ident ↦ x∈dom(op)">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀x⦂T·op(x ↦ ident)=x⇒ident ↦ x∈dom(op)">
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀x⦂T·op(x ↦ ident)=x⇒ident ↦ x∈dom(op)">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="op∈T × T → T">
-<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="x ↦ ident∈T × T">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∃x0⦂T·x ↦ ident ↦ x0∈op">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×T)·op∈T × T → T∧(∀a⦂T,b⦂T·a∈T∧b∈T⇒a ↦ b∈dom(op))∧(∀x⦂T,y⦂T,z⦂T·op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)) ∣ op}">
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="op∈T × T → T">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="monInit(ident,op)∈MonoidPoly(a)">
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×T)·op∈T × T → T∧(∀a⦂T,b⦂T·a∈T∧b∈T⇒a ↦ b∈dom(op))∧(∀x⦂T,y⦂T,z⦂T·op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)) ∣ op}">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="monInit(ident,op)∈MonoidPoly(a)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ident ↦ op∈{ident⦂T,op⦂ℙ(T×T×T)·ident∈T∧op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident ↦ x∈op∧ident ↦ x ↦ x∈op∧op(x ↦ ident)=x∧op(ident ↦ x)=x) ∣ ident ↦ op}">
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="ident ↦ op∈{ident⦂T,op⦂ℙ(T×T×T)·ident∈T∧op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident ↦ x∈op∧ident ↦ x ↦ x∈op∧op(x ↦ ident)=x∧op(ident ↦ x)=x) ∣ ident ↦ op}">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="op(x ↦ ident)=x">
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="op(x ↦ ident)=x">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
@@ -1197,23 +1509,32 @@
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ident ↦ op∈(Monoid ⦂ ℙ(T×ℙ(T×T×T)))">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ident ↦ op∈(Monoid ⦂ ℙ(T×ℙ(T×T×T)))">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀x⦂T·op(x ↦ ident)=x">
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀x⦂T·op(x ↦ ident)=x">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="⊤∧(∀x⦂T·x ↦ ident ↦ x∈op)∧(∀x⦂T·ident ↦ x ↦ x∈op)∧(∀x⦂T·op(x ↦ ident)=x)∧(∀x⦂T·op(ident ↦ x)=x)">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="ident ↦ x ↦ x∈op">
+<org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="op∈AssociativeOpPoly(ident)∧(∀x⦂T·x ↦ ident∈dom(op))∧op∈T × T ⇸ T∧(∀x⦂T·op(x ↦ ident)=x⇒ident ↦ x∈dom(op))∧(∀x⦂T·op(ident ↦ x)=x)∧monInit(ident,op)∈MonoidPoly(a)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×T)·op∈(AssociativeOp ⦂ ℙ(ℙ(T×T×T))) ∣ op}">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×T)·op∈(AssociativeOp ⦂ ℙ(ℙ(T×T×T))) ∣ op}">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="ident ↦ x∈dom(op)">
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="ident ↦ x∈dom(op)">
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
@@ -1222,21 +1543,27 @@
 <org.eventb.core.prIdent name="ident" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀a⦂T,b⦂T·a∈T∧b∈T⇒a ↦ b∈dom(op)">
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀a⦂T,b⦂T·a∈T∧b∈T⇒a ↦ b∈dom(op)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prExpr name="e0" org.eventb.core.expression="T × T"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r11" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prExpr name="e1" org.eventb.core.expression="T × T"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="x">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prExpr>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.rmL1"/>
+<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r11" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.exI"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
