@@ -12,7 +12,7 @@
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="nTimes_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·x↦y∈Nat×Nat ∣ x nTimes y"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="toNat" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="nat" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℕ" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.core.comment="Convert the first 10 numberals" org.eventb.theory.core.formula="COND(a = 0, zero, COND(a = 1, suc(zero), COND(a = 2, suc(suc(zero)), COND(a = 3, suc(suc(suc(zero))), &#10;COND(a = 4, suc(suc(suc(suc(zero)))),COND(a = 5, suc(suc(suc(suc(suc(zero))))), &#10;COND(a = 6, suc(suc(suc(suc(suc(suc(zero)))))), COND(a = 7, suc(suc(suc(suc(suc(suc(suc(zero))))))), &#10;COND(a = 8, suc(suc(suc(suc(suc(suc(suc(suc(zero)))))))), &#10;suc(suc(suc(suc(suc(suc(suc(suc(suc(zero))))))))))))))))))"/>
 <org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="a &lt; 10"/>
@@ -20,8 +20,8 @@
 <org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="'" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="left"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℕ" org.eventb.core.identifier="right"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.core.comment="10 * left + toNat(right)" org.eventb.theory.core.formula="(left nTimes suc(suc(suc(suc(suc(suc(suc(suc(suc(suc(zero))))))))))) nAdd toNat(right)"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.core.comment="10 * left + toNat(right)" org.eventb.theory.core.formula="(left nTimes suc(suc(suc(suc(suc(suc(suc(suc(suc(suc(zero))))))))))) nAdd nat(right)"/>
 <org.eventb.theory.core.operatorWDcondition name="*" org.eventb.core.predicate="right &lt; 10 ∧ 0 ≤ right"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Testing Numbers" org.eventb.core.predicate="((zero ' 5) ' 2) nAdd (zero ' 8) = ((zero ' 6) ' 0)"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="This worked very well, but proving it needed to be more automatic. &#10;The best approach was to re-write the multiplications as little as possible &#10;until they were equal, then I could cancel out all of the remaining &#10;multiplication. I need more re-write rules to make this easier. " org.eventb.core.label="Testing Numbers" org.eventb.core.predicate="(nat(5) ' 2) nAdd nat(8) = nat(6) ' 0"/>
 </org.eventb.theory.core.theoryRoot>
