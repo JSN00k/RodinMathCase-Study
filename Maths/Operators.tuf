@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="AssocOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ (T×T) → T ∧ ∀x,y,z · op(x ↦ op(y ↦ z)) = op(op(x ↦ y) ↦ z)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.proofRulesBlock name=")" org.eventb.core.label="AssocRules">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="op" org.eventb.theory.core.type="ℙ(T×T×T)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="a" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="b" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="Assoc" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Associative Rewrite" org.eventb.theory.core.formula="op(a ↦ op(b ↦ c))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="op ∈ AssocOp(T)" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="c" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="Assoc2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Associative Rewrite" org.eventb.theory.core.formula="op(op(a ↦ b) ↦ c)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="op ∈ AssocOp(T)" org.eventb.theory.core.formula="op(a ↦ op(b ↦ c))"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="AssocOpTypeRewrite" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="AssocOp(T) = AssocOp_T" org.eventb.theory.core.formula="AssocOp(T)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="AssocOp_T ⦂ ℙ(ℙ(T×T×T))"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="Assoc Domain" org.eventb.core.predicate="∀x, y, op · x ∈ T ∧ y ∈ T ∧  op ∈ AssocOp(T) ⇒ x ↦ y ∈ dom(op)"/>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="AssocOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ (T × T) → T ∧ ∀x,y,z · op(x ↦ op(y ↦ z)) = op(op(x ↦ y) ↦ z)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="Assoc Type Rewrite" org.eventb.core.predicate="AssocOp(T) = AssocOp_T ⦂ ℙ(ℙ(T×T×T))"/>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="CommOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ (T × T) → T ∧ ∀ x, y · op(x ↦ y) = op (y ↦ x) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.label="CommOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ (T × T) → T ∧ ∀ x, y · op(x ↦ y) = op (y ↦ x) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="Comm Type Rewrite" org.eventb.core.predicate="CommOp(T) = CommOp_T"/>
+<org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="CommRules">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="op" org.eventb.theory.core.type="ℙ(T × T × T)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="a" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="b" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="Commutative" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="op(a ↦ b)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="Comm" org.eventb.core.predicate="op ∈ CommOp(T)" org.eventb.theory.core.formula="op(b ↦ a)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="AbelianOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ AssocOp(T) ∧ op ∈ CommOp(T) }"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="a"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="AbelianOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ CommOp(T) ∧ op ∈ AssocOp(T) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="thm1" org.eventb.core.predicate="⊤"/>
+</org.eventb.theory.core.theoryRoot>
