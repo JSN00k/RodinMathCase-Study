@@ -65,12 +65,6 @@
 <org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="zeroRight" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Adding zero simplification" org.eventb.theory.core.formula="a nAdd zero">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="a"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="AddIsMon" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Addition is a Monoid" org.eventb.theory.core.formula="zero ↦ nAdd_P ∈ Monoid(Nat)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
-</org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="AddIsAbelian" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="Describe Me!" org.eventb.theory.core.formula="nAdd_P ∈ AbelianOp(Nat)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
-</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.proofRulesBlock name="3" org.eventb.core.label="AddMonoidRewrite">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="a" org.eventb.theory.core.type="Nat"/>
@@ -141,6 +135,7 @@
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name=";" org.eventb.core.label="AddZeroRight" org.eventb.core.predicate="∀x·x nAdd zero = x"/>
+<org.eventb.theory.core.theorem name="T" org.eventb.core.label="suc(x) ≠ x" org.eventb.core.predicate="∀x· suc(x) ≠ x"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="sucInAddition1" org.eventb.core.predicate="∀x, y· suc(x) nAdd y = suc(x nAdd y)"/>
 <org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="sucInAddition2" org.eventb.core.predicate="∀x, y· x nAdd suc(y) = suc(x nAdd y)"/>
 <org.eventb.theory.core.theorem name="?" org.eventb.core.label="sucSwapAddition3" org.eventb.core.predicate="∀x, y· suc(x) nAdd y = x nAdd suc(y)"/>
