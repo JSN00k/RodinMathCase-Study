@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/MonoidPOW.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidPOW"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Group" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ m ∣ m ∈ Monoid(t) ∧ ∀x·∃xInv·mOp(m)(x ↦ xInv) = mIdent(m) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="gReverseInverse" org.eventb.core.predicate="∀m, x, y,z· m ∈ Monoid(T) ⇒ (mOp(m)(x ↦ y) = z ⇒ mOp(m)(y ↦ x) = mOp(m)(y ↦ x))"/>
+</org.eventb.theory.core.theoryRoot>
