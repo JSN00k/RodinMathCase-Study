@@ -6,13 +6,6 @@
 <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="prev" org.eventb.theory.core.type="Nat"/>
 </org.eventb.theory.core.datatypeConstructor>
 </org.eventb.theory.core.datatypeDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="increment" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="suc(zero)"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="suc(suc(xs))"/>
-</org.eventb.theory.core.recursiveOperatorDefinition>
-</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="nAdd" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
@@ -167,6 +160,9 @@
 <org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="addMinus2" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x + y - y = x" org.eventb.theory.core.formula="(x nAdd y) nMinus y">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="decrement(suc(x)) = x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="decrement(suc(x)) = x" org.eventb.theory.core.formula="decrement(suc(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.axiomaticDefinitionsBlock name="L" org.eventb.core.label="xdb1"/>
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· x nAdd y = zero ⇔ x = zero ∧ y = zero"/>
@@ -181,4 +177,16 @@
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="S" org.eventb.core.label="x ≠ 0 ⇒ x + y ≠ 0" org.eventb.core.predicate="∀x, y·x ≠ zero ∨ y ≠ zero ⇔ (x nAdd y) ≠ zero"/>
+<org.eventb.theory.core.newOperatorDefinition name="U" org.eventb.core.label="divMod" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="n">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="c ↦ zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.theory.core.formula="COND(suc(ns) = d, suc(c) ↦ zero, &#10;COND(suc(ns) nMinus d = zero, c ↦ suc(ns),&#10; divMod(suc(ns) nMinus d, d, suc(c))))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="n"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="Nat" org.eventb.core.identifier="d"/>
+<org.eventb.theory.core.operatorArgument name="*" org.eventb.core.expression="Nat" org.eventb.core.identifier="c"/>
+<org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="d ≠ zero"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="V" org.eventb.core.label="Check Minus" org.eventb.core.predicate="∀x·suc(suc(suc(suc(suc(x))))) nMinus suc(suc(x)) = suc(suc(suc(zero)))"/>
+<org.eventb.theory.core.theorem name="W" org.eventb.core.label="CheckDivMod" org.eventb.core.predicate="divMod(suc(suc(zero)), one, zero) = suc(suc(zero)) ↦ zero"/>
 </org.eventb.theory.core.theoryRoot>

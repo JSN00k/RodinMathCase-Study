@@ -1,94 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.theoryRoot org.eventb.core.comment="This needs to be in a new file as we need to import MonoidPow and this would cause a inheritence problem if we didn't create a new file." org.eventb.core.configuration="org.eventb.theory.core.thy">
-<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Maths">
-<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/MonoidPOW.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidPOW"/>
-</org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="nTimes" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="nTimes" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="natPow (x, y)"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="natPow(x, y)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.label="nTimes_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y· ⊤ ∣ x nTimes y"/>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/MonoidPOW.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidPOW"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="nTimes_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·x↦y∈Nat×Nat ∣ x nTimes y"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="9" org.eventb.core.label="nat" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℕ" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="COND(a = 0, zero, COND(a = 1, suc(zero), COND(a = 2, suc(suc(zero)), COND(a = 3, suc(suc(suc(zero))), &#10;COND(a = 4, suc(suc(suc(suc(zero)))),COND(a = 5, suc(suc(suc(suc(suc(zero))))), &#10;COND(a = 6, suc(suc(suc(suc(suc(suc(zero)))))), COND(a = 7, suc(suc(suc(suc(suc(suc(suc(zero))))))), &#10;COND(a = 8, suc(suc(suc(suc(suc(suc(suc(suc(zero)))))))), &#10;suc(suc(suc(suc(suc(suc(suc(suc(suc(zero))))))))))))))))))"/>
-<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="a &lt; 10"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name=":" org.eventb.core.label="'" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="left"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℕ" org.eventb.core.identifier="right"/>
-<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="right &lt; 10"/>
-<org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="(left nTimes ten) nAdd nat(right)"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="MultiplicationRules">
+<org.eventb.theory.core.proofRulesBlock name="*" org.eventb.core.comment="These match the theorems in MonoidPOW for the natural multiplication" org.eventb.core.label="Rewrites">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="Nat"/>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="T−TimesZero" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * 0 = 0" org.eventb.theory.core.formula="x nTimes zero">
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="TTimesZero" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * 0 = 0" org.eventb.theory.core.formula="x nTimes zero">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="T−zeroTimes" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="0 * x = 0" org.eventb.theory.core.formula="zero nTimes x">
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="TZeroTimes" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="0 * x = 0" org.eventb.theory.core.formula="zero nTimes x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="T−TimesOne" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * 1 = x" org.eventb.theory.core.formula="x nTimes one">
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="TTimesOne" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * 1 = x" org.eventb.theory.core.formula="x nTimes one">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="T−oneTimes" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="1 * x = x" org.eventb.theory.core.formula="one nTimes x">
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="TOneTimes" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="1 * x = x" org.eventb.theory.core.formula="one nTimes x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="T−(1 + x) ∗ y" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="(1 + x) ∗ y = y + y * x" org.eventb.theory.core.formula="suc(x) nTimes y">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y nAdd (y nTimes x)"/>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="T(1 + x) ∗ y" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="(1 + x) ∗ y = y + y * x" org.eventb.theory.core.formula="suc(x) nTimes y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y nAdd (x nTimes y)"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="T−x ∗ (1 + y)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x ∗ (1 + y) = x + x * y" org.eventb.theory.core.formula="x nTimes suc(y) ">
+<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="Tx ∗ (1 + y)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x ∗ (1 + y) = x + x * y" org.eventb.theory.core.formula="x nTimes suc(y)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x nAdd (x nTimes y)"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="T−Distributive1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * (y + z) = x * y + x * z" org.eventb.theory.core.formula="x nTimes (y nAdd z)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x nTimes y) nAdd (x nTimes z)"/>
-</org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="T−Distributive2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="(x + y) * z = x * z + y * z" org.eventb.theory.core.formula="(x nAdd y) nTimes z">
+<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="T(x + y) ∗ z" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="(x + y) ∗ z = x * z + y * z" org.eventb.theory.core.formula="(x nAdd y) nTimes z">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x nTimes z) nAdd (y nTimes z)"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="AssocRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x * y * z = x * (y * z)" org.eventb.theory.core.formula="x nTimes y nTimes z">
+<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="Tx ∗ (y + z)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * (y + z) = x * y + x * z" org.eventb.theory.core.formula="x nTimes (y nAdd z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x nTimes y) nAdd (x nTimes z)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="TAssocRight" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Bracket Right" org.eventb.theory.core.formula="x nTimes y nTimes z">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x nTimes (y nTimes z)"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="3" org.eventb.core.label="AssocLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x * y * z = (x * y) * z" org.eventb.theory.core.formula="x nTimes y nTimes z">
+<org.eventb.theory.core.rewriteRule name="3" org.eventb.core.label="TAssocLeft" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Bracket Left" org.eventb.theory.core.formula="x nTimes y nTimes z">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x nTimes y) nTimes z"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="4" org.eventb.core.label="T−Commutative" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x nTimes y">
+<org.eventb.theory.core.rewriteRule name="4" org.eventb.core.label="TCommutative" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x nTimes y">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y nTimes x"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="5" org.eventb.core.comment="x * y = 0 =&gt; x = 0 or y = 0" org.eventb.core.label="multZero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x * y = 0 =&gt; x = 0 or y = 0" org.eventb.theory.core.formula="x nTimes y = zero">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x = zero ∨ y = zero"/>
-</org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="6" org.eventb.core.label="DivideThrough" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x * y = x * z =&gt; y = z (x /= 0)" org.eventb.theory.core.formula="x nTimes y = x nTimes z">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="x ≠ zero" org.eventb.theory.core.formula="y = z"/>
-</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.theorem name="1" org.eventb.core.label="T−MultIsMonoid" org.eventb.core.predicate="one ↦ nTimes_P ∈ Monoid(Nat)"/>
-<org.eventb.theory.core.theorem name="4" org.eventb.core.label="T−AssocRight" org.eventb.core.predicate="∀x, y, z·x nTimes y nTimes z = x nTimes (y nTimes z)"/>
-<org.eventb.theory.core.theorem name="5" org.eventb.core.label="T−AssocLeft" org.eventb.core.predicate="∀x, y, z·x nTimes y nTimes z = (x nTimes y) nTimes z"/>
-<org.eventb.theory.core.theorem name="7" org.eventb.core.label="T−x ∗ y = 0 ⇒ x = 0 ∨ y = 0" org.eventb.core.predicate="∀x, y·x nTimes y = zero ⇔ (x = zero) ∨ (y = zero)"/>
-<org.eventb.theory.core.theorem name="6" org.eventb.core.label="T−DivideThrough" org.eventb.core.predicate="∀x, y, z·x ≠ zero ∧ (x nTimes y = x nTimes z) ⇒ y = z "/>
-<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="nToThe" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="p"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="Pow(one, nTimes_P, a, p)"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="type Rewrites">
-<org.eventb.theory.core.rewriteRule name="'" org.eventb.core.label="T−Assoc" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes_P ∈ AssocOp(Nat)" org.eventb.theory.core.formula="nTimes_P ∈ AssocOp(Nat)">
+<org.eventb.theory.core.proofRulesBlock name="+" org.eventb.core.label="Type Rewrites">
+<org.eventb.theory.core.rewriteRule name="'" org.eventb.core.label="TAssoc" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes is Assoc" org.eventb.theory.core.formula="nTimes_P ∈ AssocOp(Nat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="T−Comm" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes_P ∈ CommOp(Nat)" org.eventb.theory.core.formula="nTimes_P ∈ CommOp(Nat)">
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="TComm" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes is Comm" org.eventb.theory.core.formula="nTimes_P ∈ CommOp(Nat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="T−Abelian" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes_P ∈ AbelianOp(Nat)" org.eventb.theory.core.formula="nTimes_P ∈ AbelianOp(Nat)">
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="TAbelian" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nTimes is Abelian" org.eventb.theory.core.formula="nTimes_P ∈ AbelianOp(Nat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="T−Monoid" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="one ↦ nTimes_P ∈ Monoid(Nat)" org.eventb.theory.core.formula="one ↦ nTimes_P ∈ Monoid(Nat)">
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="one, nTimes Monoid" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="zero|-&gt;nTimes is a monoid" org.eventb.theory.core.formula="one ↦ nTimes_P ∈ Monoid(Nat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.theorem name=";" org.eventb.core.comment="This worked very well, but proving it needed to be more automatic. &#10;The best approach was to re-write the multiplications as little as possible &#10;until they were equal, then I could cancel out all of the remaining &#10;multiplication. I need more re-write rules to make this easier. " org.eventb.core.label="Testing Numbers" org.eventb.core.predicate="(nat(5) ' 2) nAdd nat(8) = nat(6) ' 0"/>
 </org.eventb.theory.core.theoryRoot>

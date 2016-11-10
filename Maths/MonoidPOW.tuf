@@ -21,14 +21,14 @@
 <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="Nat" org.eventb.core.identifier="p"/>
 <org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="Pow(mIdent(m), mOp(m), a, p)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="+" org.eventb.core.label="TimesZero" org.eventb.core.predicate="∀ x·natPow(x, zero) = zero "/>
-<org.eventb.theory.core.theorem name="," org.eventb.core.label="zeroTimes" org.eventb.core.predicate="∀ x·natPow(zero, x) = zero "/>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="TimesOne" org.eventb.core.predicate="∀ x·natPow(x, one) = x "/>
-<org.eventb.theory.core.theorem name="." org.eventb.core.label="OneTimes" org.eventb.core.predicate="∀ x·natPow(one, x) = x "/>
-<org.eventb.theory.core.theorem name="/" org.eventb.core.label="(1 + x) ∗ y" org.eventb.core.predicate="∀x, y· natPow(suc(x), y) = y nAdd natPow(x, y)"/>
-<org.eventb.theory.core.theorem name="0" org.eventb.core.label="x ∗ (1 + y)" org.eventb.core.predicate="∀x, y· natPow(x, suc(y)) = x nAdd natPow(x, y)"/>
-<org.eventb.theory.core.theorem name="1" org.eventb.core.label="Distributive1" org.eventb.core.predicate="∀x, y, z·natPow(x, y nAdd z) = natPow(x, y) nAdd natPow(x, z)"/>
-<org.eventb.theory.core.theorem name="2" org.eventb.core.label="Distributive2" org.eventb.core.predicate="∀x, y, z·natPow(x nAdd y, z) = natPow(x, z) nAdd natPow(y, z)"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="mTimesZero" org.eventb.core.predicate="∀ x·natPow(x, zero) = zero "/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="mzeroTimes" org.eventb.core.predicate="∀ x·natPow(zero, x) = zero "/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="mTimesOne" org.eventb.core.predicate="∀ x·natPow(x, one) = x "/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="mOneTimes" org.eventb.core.predicate="∀ x·natPow(one, x) = x "/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="m(1 + x) ∗ y" org.eventb.core.predicate="∀x, y· natPow(suc(x), y) = y nAdd natPow(x, y)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="mx ∗ (1 + y)" org.eventb.core.predicate="∀x, y· natPow(x, suc(y)) = x nAdd natPow(x, y)"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="mDistributive1" org.eventb.core.predicate="∀x, y, z·natPow(x, y nAdd z) = natPow(x, y) nAdd natPow(x, z)"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="mDistributive2" org.eventb.core.predicate="∀x, y, z·natPow(x nAdd y, z) = natPow(x, z) nAdd natPow(y, z)"/>
 <org.eventb.theory.core.newOperatorDefinition name="5" org.eventb.core.label="natPow" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
@@ -37,8 +37,8 @@
 <org.eventb.theory.core.newOperatorDefinition name="6" org.eventb.core.label="natPow_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y· ⊤ ∣ natPow(x, y)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="7" org.eventb.core.label="Associative" org.eventb.core.predicate="natPow_P ∈ AssocOp(Nat)"/>
-<org.eventb.theory.core.theorem name="8" org.eventb.core.label="Commutative" org.eventb.core.predicate="natPow_P ∈ CommOp(Nat)"/>
-<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Abelian" org.eventb.core.predicate="natPow_P ∈ AbelianOp(Nat)"/>
-<org.eventb.theory.core.theorem name=":" org.eventb.core.label="one ↦ times Monoid" org.eventb.core.predicate="one ↦ natPow_P ∈ Monoid(Nat)"/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="mAssociative" org.eventb.core.predicate="natPow_P ∈ AssocOp(Nat)"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="mCommutative" org.eventb.core.predicate="natPow_P ∈ CommOp(Nat)"/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="mAbelian" org.eventb.core.predicate="natPow_P ∈ AbelianOp(Nat)"/>
+<org.eventb.theory.core.theorem name=":" org.eventb.core.label="mone ↦ times Monoid" org.eventb.core.predicate="one ↦ natPow_P ∈ Monoid(Nat)"/>
 </org.eventb.theory.core.theoryRoot>
