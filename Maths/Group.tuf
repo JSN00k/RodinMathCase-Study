@@ -5,8 +5,17 @@
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Group" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ m ∣ m ∈ Monoid(t) ∧ ∀x·∃xInv·mOp(m)(x ↦ xInv) = mIdent(m) }"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ m ∣ m ∈ Monoid(t) ∧ ∀x·∃xInv·mOp(m)(x ↦ xInv) = mIdent(m) ∧ mOp(m)(xInv ↦ x) = mIdent(m) }"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.theorem name="*" org.eventb.core.label="gReverseInverse" org.eventb.core.predicate="∀m, x, y,z· m ∈ Monoid(T) ⇒ (mOp(m)(x ↦ y) = z ⇒ mOp(m)(y ↦ x) = mOp(m)(y ↦ x))"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="gInvUniqueThm" org.eventb.core.predicate="∀g, x, y, z·g ∈ Group(T) ∧ mOp(g)(x ↦ y) = mIdent(g) ∧ mOp(g)(x ↦ z) = mIdent(g) ⇒ y = z"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="gReverseInverse" org.eventb.core.predicate="∀g, x, y· g ∈ Group(T) ⇒ (mOp(g)(x ↦ y) = mIdent(g) ⇒ mOp(g)(x ↦ y) = mOp(g)(y ↦ x))"/>
+<org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="inverseRules">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="invX" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="inverseCommutes" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x commutes with it's inverse" org.eventb.theory.core.formula="mOp(g)(x ↦ invX)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="g ∈ Group(T) ∧ mOp(g)(x ↦ invX) = mIdent(g)" org.eventb.theory.core.formula="mOp(g)(invX ↦ x)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="g" org.eventb.theory.core.type="T×ℙ(T×T×T)"/>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

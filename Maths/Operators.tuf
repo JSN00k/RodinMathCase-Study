@@ -48,5 +48,4 @@
 <org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="AbelianOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ CommOp(T) ∧ op ∈ AssocOp(T) }"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="3" org.eventb.core.label="thm1" org.eventb.core.predicate="⊤"/>
 </org.eventb.theory.core.theoryRoot>
