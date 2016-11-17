@@ -100,6 +100,9 @@
 <org.eventb.theory.core.newOperatorDefinition name="O" org.eventb.core.label="one" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="suc(zero)"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="Z" org.eventb.core.comment="Used in the binary representation of numbers." org.eventb.core.label="two" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="suc(suc(zero))"/>
+</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="P" org.eventb.core.label="ten" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="suc(suc(suc(suc(suc(suc(suc(suc(suc(suc(zero))))))))))"/>
 </org.eventb.theory.core.newOperatorDefinition>
@@ -190,4 +193,11 @@
 <org.eventb.theory.core.theorem name="V" org.eventb.core.label="Check Minus" org.eventb.core.predicate="∀x·suc(suc(suc(suc(suc(x))))) nMinus suc(suc(x)) = suc(suc(suc(zero)))"/>
 <org.eventb.theory.core.theorem name="W" org.eventb.core.label="CheckDivMod" org.eventb.core.predicate="divMod(suc(suc(zero)), one, zero) = suc(suc(zero)) ↦ zero"/>
 <org.eventb.theory.core.theorem name="X" org.eventb.core.label="CheckDivMod2" org.eventb.core.predicate="divMod(ten, suc(suc(suc(zero))), zero) = suc(suc(suc(zero))) ↦ suc(zero)"/>
+<org.eventb.theory.core.proofRulesBlock name="[" org.eventb.core.label="y + y = z + z ⇔ y = z">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="y + y = z + z ⇔ y = z" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="y + y = z + z ⇔ y = z" org.eventb.theory.core.formula="y nAdd y = z nAdd z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y = z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="Nat"/>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

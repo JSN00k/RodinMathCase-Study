@@ -17,9 +17,6 @@
 <org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="inverseRules">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="T"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="invX" org.eventb.theory.core.type="T"/>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="inverseCommutes" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x commutes with it's inverse" org.eventb.theory.core.formula="gOp(g)(x ↦ invX)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="g ∈ Group(T) ∧ gOp(g)(x ↦ invX) = gIdent(g)" org.eventb.theory.core.formula="gOp(g)(invX ↦ x)"/>
-</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="g" org.eventb.theory.core.type="T×ℙ(T×T×T)"/>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.label="gOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">

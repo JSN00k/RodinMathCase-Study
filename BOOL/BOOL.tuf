@@ -4,43 +4,126 @@
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="a = TRUE"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="ANDP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="BOOLP(a) ∧ BOOLP(b)"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="ORP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="BOOLP(a) ∨ BOOLP(b)"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="NOTP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="a = FALSE"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="xORP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="a ≠ b"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
-</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="AND" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="bool(a ANDP b)"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="COND(a = TRUE ∧ b = TRUE, TRUE, FALSE)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="OR" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="bool(a ORP b)"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(a = TRUE ∨ b = TRUE, TRUE, FALSE)"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.label="NOT" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="bool(NOTP(a))"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(a = FALSE, TRUE, FALSE)"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.label="xOR" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="bool(a xORP b)"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(a ≠ b, TRUE, FALSE)"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="0" org.eventb.core.label="P_AND_Assoc" org.eventb.core.predicate="∀x, y, z·x AND (y AND z) = (x AND y) AND z"/>
+<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="ANDP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="a AND b = TRUE"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="ORP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="a OR b = TRUE"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="3" org.eventb.core.label="NOTP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="a = FALSE"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="4" org.eventb.core.label="xORP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="a ≠ b"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.proofRulesBlock name="5" org.eventb.core.label="BOOL_Associcative">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="B_AND_Assoc" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="x AND (y AND z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x AND y) AND z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="B_AND_Assoc2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="(x AND y) AND z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x AND (y AND z)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="B_OR_Assoc" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="x OR (y OR z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x OR y) OR z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="B_OR_Assoc2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="(x OR y) OR z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x OR (y OR z)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="B_XOR_Assoc" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="x xOR (y xOR z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x xOR y) xOR z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="B_XOR_Assoc2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Swap Brackets" org.eventb.theory.core.formula="(x xOR y) xOR z">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x xOR (y xOR z)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="6" org.eventb.core.label="BOOL_Commutative">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="B_AND_Comm" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x AND y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y AND x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="B_OR_Comm" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x OR y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y OR x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="B_xOR_Comm" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x xOR y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y xOR x"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="7" org.eventb.core.label="BOOL_Simplifications">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="TRUE_AND" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="TRUE AND x" org.eventb.theory.core.formula="TRUE AND x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="AND_TRUE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x AND TRUE" org.eventb.theory.core.formula="x AND TRUE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="FALSE_AND" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="FALSE AND x" org.eventb.theory.core.formula="FALSE AND x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="FALSE"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="x AND FALSE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x AND FALSE" org.eventb.theory.core.formula="x AND FALSE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="FALSE AND x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="TRUE OR x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="TRUE OR x" org.eventb.theory.core.formula="TRUE OR x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="TRUE"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="x OR TRUE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x OR TRUE" org.eventb.theory.core.formula="x OR TRUE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="TRUE"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="FALSE OR x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="FALSE OR x" org.eventb.theory.core.formula="FALSE OR x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="x OR FALSE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x OR FALSE" org.eventb.theory.core.formula="x OR FALSE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="TRUE xOR x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="TRUE xOR x = NOT(x)" org.eventb.theory.core.formula="TRUE xOR x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="NOT(x)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="x xOR TRUE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x xOR TRUE = NOT(x)" org.eventb.theory.core.formula="x xOR TRUE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="NOT(x)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="FALSE xOR x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="FALSE xOR x = x" org.eventb.theory.core.formula="FALSE xOR x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="3" org.eventb.core.label="x xOR FALSE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x xOR FALSE" org.eventb.theory.core.formula="x xOR FALSE">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="4" org.eventb.core.label="NOT(TRUE)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="NOT(TRUE) = FALSE" org.eventb.theory.core.formula="NOT(TRUE)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="FALSE"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="5" org.eventb.core.label="NOT(FALSE)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="NOT(FALSE)" org.eventb.theory.core.formula="NOT(FALSE)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="TRUE"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="6" org.eventb.core.label="NOT(NOT(x))" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="NOT(NOT(x)) = x" org.eventb.theory.core.formula="NOT(NOT(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

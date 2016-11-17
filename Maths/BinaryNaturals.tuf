@@ -3,14 +3,16 @@
 <org.eventb.theory.core.newOperatorDefinition name="F" org.eventb.core.label="bOne" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="cons(TRUE, nil)"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="T" org.eventb.core.label="equalsZero" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="aB = FALSE ∧ equalsZero(as)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.label="boolP" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="a = TRUE"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="xOR" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(a ≠ b, TRUE, FALSE)"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BOOL" org.eventb.core.identifier="a"/>
-<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BOOL" org.eventb.core.identifier="b"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="&gt;" org.eventb.core.comment="Least Significant Bit" org.eventb.core.label="LSB" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
@@ -24,6 +26,14 @@
 <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="a">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="xs"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="S" org.eventb.core.label="≗" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="b"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="equalsZero(b)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="aB = LSB(b) ∧ (as = shiftLeft1(b))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="A" org.eventb.core.label="isNil" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
@@ -48,6 +58,18 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(topBit, xTail)" org.eventb.theory.core.formula="cons(topBit, appendList(xTail, y))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="R" org.eventb.core.label="rem_trailing_zeros_int" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="COND(aB = TRUE, cons(aB, appendList(store, rem_trailing_zeros_int(as, nil))), cons(FALSE, store))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="store"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="V" org.eventb.core.label="remZeros" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="rem_trailing_zeros_int(a, nil)"/>
+</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name=";" org.eventb.core.label="bn_add_int" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
@@ -65,7 +87,28 @@
 <org.eventb.theory.core.importTheoryProject name="9" org.eventb.theory.core.importTheoryProject="/ListTheory">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name="G" org.eventb.core.label="xOR False" org.eventb.core.predicate="∀x·x xOR FALSE = x"/>
-<org.eventb.theory.core.theorem name="C" org.eventb.core.label="appendList" org.eventb.core.predicate="∀x· appendList(x, nil) = x"/>
 <org.eventb.theory.core.theorem name="D" org.eventb.core.label="bnAddZero" org.eventb.core.predicate="∀x·bn_add_int(x, nil, FALSE) = x"/>
+<org.eventb.theory.core.theorem name="C" org.eventb.core.label="appendList" org.eventb.core.predicate="∀x· appendList(x, nil) = x"/>
+<org.eventb.theory.core.theorem name="Q" org.eventb.core.label="incrementReduction" org.eventb.core.predicate="∀x, y· increment(x) = increment(y) ⇔ x = y"/>
+<org.eventb.theory.core.theorem name="I" org.eventb.core.label="carryToIncrementBase" org.eventb.core.predicate="∀x·bn_add_int(x, nil, TRUE) = increment(x)"/>
+<org.eventb.theory.core.theorem name="P" org.eventb.core.label="CarryToIncrement x + y" org.eventb.core.predicate="∀x, y·bn_add_int(x, y, TRUE) = increment(bn_add_int(x, y, FALSE))"/>
+<org.eventb.theory.core.theorem name="M" org.eventb.core.label="isomorphic Corrally" org.eventb.core.predicate="∀x·toNat(cons(FALSE, x)) = toNat(x) nTimes two "/>
+<org.eventb.theory.core.theorem name="N" org.eventb.core.label="isomorphic Corrally2" org.eventb.core.predicate="∀x·toNat(cons(TRUE, x)) = (toNat(x) nTimes two) nAdd one "/>
+<org.eventb.theory.core.theorem name="O" org.eventb.core.label="isomorphic Corrally3" org.eventb.core.predicate="∀x· toNat(increment(x)) = one nAdd toNat(x)"/>
+<org.eventb.theory.core.theorem name="L" org.eventb.core.label="isomorphicToNats" org.eventb.core.predicate="∀x, y·toNat(bn_add_int(x, y, FALSE)) = toNat(x) nAdd toNat(y)"/>
+<org.eventb.theory.core.importTheoryProject name="G" org.eventb.theory.core.importTheoryProject="/BOOL">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="H" org.eventb.core.label="carryToIncrement" org.eventb.core.predicate="∀x, y·bn_add_int(x, y, TRUE) = increment(bn_add_int(x, y, FALSE))"/>
+<org.eventb.theory.core.newOperatorDefinition name="J" org.eventb.core.label="toNat" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(xB = TRUE, one, zero) nAdd (suc(suc(zero)) nTimes toNat(xs))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="K" org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMultiply.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMultiply"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="U" org.eventb.core.label="reductionEquality" org.eventb.core.predicate="∀x, y·x ≗ y ⇔  remZeros(x) = remZeros(y)"/>
 </org.eventb.theory.core.theoryRoot>
