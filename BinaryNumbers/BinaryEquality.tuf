@@ -38,7 +38,6 @@
 <org.eventb.theory.core.theorem name="2" org.eventb.core.label="remZeroImpl2" org.eventb.core.predicate="∀a, b·bn_remTrailingZeros(cons(a,b)) ≠ nil ⇔ a = TRUE ∨ ¬bn_isZero(b)"/>
 <org.eventb.theory.core.theorem name=";" org.eventb.core.label="leftShift1(zero) = zero" org.eventb.core.predicate="∀x·bn_isZero(x) ⇒ bn_isZero(bn_shiftLeft1(x))"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="RemoveZerosPreservesEquality" org.eventb.core.predicate="∀x·x bn_Eq bn_remTrailingZeros(x)"/>
-<org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="isZero(x) ⇔ bn_remTrailingZeros(x) = nil" org.eventb.core.predicate="∀x·bn_isZero(x) ⇔ bn_remTrailingZeros(x) = nil"/>
 <org.eventb.theory.core.theorem name="S" org.eventb.core.label="isZero(x) ⇔ isZero(remZeros(x))" org.eventb.core.predicate="∀x·bn_isZero(x) ⇔ bn_isZero(bn_remTrailingZeros(x))"/>
 <org.eventb.theory.core.theorem name="?" org.eventb.core.label="remZero(cons(xB, x)) = cons(xB, x) ⇒ remZero(x) = x" org.eventb.core.predicate="∀xB, x·bn_remTrailingZeros(cons(xB,x))=cons(xB,x) ⇒ bn_remTrailingZeros(x) = x"/>
 <org.eventb.theory.core.theorem name="A" org.eventb.core.label="bn_Eq reverse Expand" org.eventb.core.predicate="∀x, xB, xs·x bn_Eq cons(xB,xs) ⇒ bn_shiftLeft1(x) bn_Eq xs ∧ bn_LSB(x) = xB"/>
@@ -69,9 +68,6 @@
 <org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="x bn_Eq x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x = x" org.eventb.theory.core.formula="x bn_Eq x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="x = y ⇒ x bn_Eq y" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x = y =&gt; x bn_Eq y" org.eventb.theory.core.formula="x = y">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bn_Eq y"/>
-</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="Eq nil ⇒ isZero(x)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Eq nil =&gt; isZero(x)" org.eventb.theory.core.formula="x bn_Eq nil">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bn_isZero(x)"/>
 </org.eventb.theory.core.rewriteRule>
@@ -93,9 +89,6 @@
 <org.eventb.theory.core.rewriteRule name="4" org.eventb.core.label="Strip Cons" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Strip Cons" org.eventb.theory.core.formula="cons(xB, x) bn_Eq cons(yB, y)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="xB = yB ∧ x bn_Eq y"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="6" org.eventb.core.label="¬(x bn_Eq y) ⇒ x ≠ y" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="¬(x bn_Eq y) ⇒ x ≠ y" org.eventb.theory.core.formula="¬(x bn_Eq y)">
-<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x ≠ y"/>
-</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="7" org.eventb.core.label="cons(TRUE, x) ≠ zero" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="isZero(cons(TRUE, x)) is False" org.eventb.theory.core.formula="bn_isZero(cons(TRUE, x))">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
 </org.eventb.theory.core.rewriteRule>
@@ -116,6 +109,15 @@
 </org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="&gt;" org.eventb.core.label="remZeros(x) bn_Eq x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remZeros(x) bn_Eq x" org.eventb.theory.core.formula="bn_remTrailingZeros(x) bn_Eq x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="?" org.eventb.core.label="remZeros(remZeros(x)) = remZeros(x)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remZeros(remZeros(x)) = remZeros(x)" org.eventb.theory.core.formula="bn_remTrailingZeros(bn_remTrailingZeros(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bn_remTrailingZeros(x)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="@" org.eventb.core.label="remZerosToEquality" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remZerosToEquality" org.eventb.theory.core.formula="x bn_Eq y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bn_remTrailingZeros(x) = bn_remTrailingZeros(y)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="A" org.eventb.core.label="Commutivity" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutitive Sqap" org.eventb.theory.core.formula="x bn_Eq y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y bn_Eq x"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
