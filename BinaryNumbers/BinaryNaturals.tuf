@@ -35,8 +35,14 @@
 <org.eventb.theory.core.theorem name="C" org.eventb.core.label="bn_appendList" org.eventb.core.predicate="∀x· bn_concatonate(x, nil) = x"/>
 <org.eventb.theory.core.theorem name="I" org.eventb.core.label="bn_carryToIncrementBase" org.eventb.core.predicate="∀x·bn_add_int(x, nil, TRUE) = bn_increment(x)"/>
 <org.eventb.theory.core.theorem name="X" org.eventb.core.label="bn_carryToIncrementBase2" org.eventb.core.predicate="∀x·bn_add_int(nil, x, TRUE) = bn_increment(x)"/>
+<org.eventb.theory.core.theorem name="]" org.eventb.core.label="increment ¬zero" org.eventb.core.predicate="∀x· ¬bn_isZero(bn_increment(x))"/>
+<org.eventb.theory.core.theorem name="^" org.eventb.core.label="IncrementFlipLowBit" org.eventb.core.predicate="∀x·bn_LSB(x) ≠ bn_LSB(bn_increment(x)) "/>
+<org.eventb.theory.core.theorem name="_" org.eventb.core.label="IncrementZero = One" org.eventb.core.predicate="∀x·bn_isZero(x)⇒ bn_increment(x) bn_Eq bnOne"/>
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="bn_incrementReduction" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇔ x bn_Eq y"/>
+<org.eventb.theory.core.theorem name="a" org.eventb.core.label="carryCorrally" org.eventb.core.predicate="∀x, y·¬(bn_add_int(x, y, TRUE) bn_Eq bn_add_int(x, y, FALSE))"/>
+<org.eventb.theory.core.theorem name="b" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· bn_isZero(bn_add_int(x, y, FALSE)) ⇔ bn_isZero(x) ∧ bn_isZero(y)"/>
 <org.eventb.theory.core.theorem name="P" org.eventb.core.label="bn_CarryToIncrement x + y" org.eventb.core.predicate="∀x, y·bn_add_int(x, y, TRUE) bn_Eq bn_increment(bn_add_int(x, y, FALSE))"/>
+<org.eventb.theory.core.theorem name="`" org.eventb.core.label="addCarry Not Zero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(bn_add_int(x,y,TRUE)))"/>
 <org.eventb.theory.core.theorem name="M" org.eventb.core.label="bn_isomorphic Corrally" org.eventb.core.predicate="∀x·bn_toNat(cons(FALSE, x)) = bn_toNat(x) nTimes two "/>
 <org.eventb.theory.core.theorem name="N" org.eventb.core.label="bn_isomorphic Corrally2" org.eventb.core.predicate="∀x·bn_toNat(cons(TRUE, x)) = (bn_toNat(x) nTimes two) nAdd one "/>
 <org.eventb.theory.core.theorem name="O" org.eventb.core.label="bn_isomorphic Corrally3" org.eventb.core.predicate="∀x· bn_toNat(bn_increment(x)) = one nAdd bn_toNat(x)"/>

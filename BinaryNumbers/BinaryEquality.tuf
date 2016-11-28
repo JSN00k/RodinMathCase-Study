@@ -74,6 +74,9 @@
 <org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="nil Eq ⇒ isZero(x)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nil Eq =&gt; isZero(x)" org.eventb.theory.core.formula="nil bn_Eq x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bn_isZero(x)"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="B" org.eventb.core.label="cons(TRUE ≠ cons(FALSE" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="cons(TRUE ≠ cons(FALSE" org.eventb.theory.core.formula="cons(TRUE, x) bn_Eq cons(FALSE, y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="remZero(isZero(x)) = nil" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="isZero(x) =&gt; remZeros(x) = nil" org.eventb.theory.core.formula="bn_remTrailingZeros(x)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="bn_isZero(x)" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
 </org.eventb.theory.core.rewriteRule>
