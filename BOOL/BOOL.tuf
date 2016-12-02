@@ -125,5 +125,8 @@
 <org.eventb.theory.core.rewriteRule name="6" org.eventb.core.label="NOT(NOT(x))" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="NOT(NOT(x)) = x" org.eventb.theory.core.formula="NOT(NOT(x))">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="7" org.eventb.core.label="¬(NOT Equality)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="not(x = NOT(x))" org.eventb.theory.core.formula="NOT(x) = x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

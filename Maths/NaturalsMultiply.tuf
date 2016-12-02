@@ -30,6 +30,9 @@
 <org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="TOneTimes" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="1 * x = x" org.eventb.theory.core.formula="one nTimes x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="F" org.eventb.core.label="OneTimeOne" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="only 1 * 1 = 1" org.eventb.theory.core.formula="x nTimes y = one">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x = one ∧ y = one"/>
+</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="T(1 + x) ∗ y" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="(1 + x) ∗ y = y + y * x" org.eventb.theory.core.formula="suc(x) nTimes y">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y nAdd (x nTimes y)"/>
 </org.eventb.theory.core.rewriteRule>
@@ -91,4 +94,6 @@
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="TZeroResult" org.eventb.core.predicate="∀x, y· x nTimes y = zero ⇔ x = zero ∨ y = zero"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="TOneTimeOne = One" org.eventb.core.predicate="∀x, y· x = one ∧ y = one ⇔ x nTimes y = one"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="zeroImpl" org.eventb.core.predicate="∀x, y· x = zero ∨ y = zero ⇔ x nTimes y = zero"/>
 </org.eventb.theory.core.theoryRoot>

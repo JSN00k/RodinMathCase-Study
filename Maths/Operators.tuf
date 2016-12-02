@@ -24,7 +24,7 @@
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="AssocOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ (T × T) → T ∧ ∀x,y,z · op(x ↦ op(y ↦ z)) = op(op(x ↦ y) ↦ z)}"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="," org.eventb.core.label="Assoc Type Rewrite" org.eventb.core.predicate="AssocOp(T) = AssocOp_T ⦂ ℙ(ℙ(T×T×T))"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="Assoc Type Rewrite" org.eventb.core.predicate="AssocOp(T) = AssocOp_T"/>
 <org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="CommOp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="a"/>
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ (T × T) → T ∧ ∀ x, y · op(x ↦ y) = op (y ↦ x) }"/>
@@ -46,6 +46,6 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="a"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="AbelianOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ CommOp(T) ∧ op ∈ AssocOp(T) }"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ CommOp(T)  ∧ op ∈ AssocOp(T) }"/>
 </org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>
