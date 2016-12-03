@@ -14,6 +14,7 @@
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="IncrementZero = One" org.eventb.core.predicate="∀x·bn_isZero(x) ⇒ bn_increment(x) bn_Eq bn_One"/>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="increment ¬zero" org.eventb.core.predicate="∀x· ¬bn_isZero(bn_increment(x))"/>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.label="IncrementFlipsLowBit" org.eventb.core.predicate="∀x·bn_LSB(x) ≠ bn_LSB(bn_increment(x)) "/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="incr(x) ≠ x" org.eventb.core.predicate="∀x · bn_increment(x) ≠ x"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="incrementReductionPart1" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇒ x bn_Eq y"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="incrementReductionPart2" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇒ bn_increment(x) bn_Eq bn_increment(y)"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="bn_incrementReduction" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇔ x bn_Eq y"/>
@@ -26,8 +27,31 @@
 <org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="incrFlipsLSB" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="incrementFlipsLSB" org.eventb.theory.core.formula="bn_LSB(bn_increment(x))">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="NOT(bn_LSB(x))"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="incr(x) ≠ x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="incr(x) notEq x" org.eventb.theory.core.formula="bn_increment(x) = x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="¬(incr(x) bn_Eq x)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="incr(x) notEq x" org.eventb.theory.core.formula="bn_increment(x) bn_Eq x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="incrReduction" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Remove Increments" org.eventb.theory.core.formula="bn_increment(x) bn_Eq bn_increment(y)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bn_Eq y"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="." org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="drecr(incr(zero)) = zero">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bn_isZero(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bn_isZero(bn_decrement(bn_increment(x)))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="/" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="not(drecr(incr(zero))) = not(zero)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬(bn_isZero(x))" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="¬bn_isZero(bn_decrement(bn_increment(x)))"/>
+</org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="bn_decrement" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="COND(xB = TRUE, cons(FALSE, xT), COND(bn_isZero(xT), nil, cons(TRUE, bn_decrement(xT))))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="decr(incr(x)) = x" org.eventb.core.predicate="∀x · bn_decrement(bn_increment(x)) bn_Eq x"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="decr(x) ≠ x except zero" org.eventb.core.predicate="∀x· ¬bn_isZero(x) ⇔  bn_decrement(x) ≠ x"/>
 </org.eventb.theory.core.theoryRoot>

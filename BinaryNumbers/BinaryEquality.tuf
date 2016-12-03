@@ -45,6 +45,8 @@
 <org.eventb.theory.core.theorem name="G" org.eventb.core.label="Reduce_bn_remTrailingRightLeft" org.eventb.core.predicate="∀x, y·bn_remTrailingZeros(x) = x ∧ x bn_Eq y ⇒  x = bn_remTrailingZeros(y)"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="RemZerosToEquality" org.eventb.core.predicate="∀x, y·x bn_Eq y ⇔ bn_remTrailingZeros(x) = bn_remTrailingZeros(y)"/>
 <org.eventb.theory.core.theorem name="9" org.eventb.core.label="zeroIszero" org.eventb.core.predicate="∀x, y·bn_isZero(x) ∧ bn_isZero(y) ⇒ x bn_Eq y "/>
+<org.eventb.theory.core.theorem name="[" org.eventb.core.label="zeroEqZero" org.eventb.core.predicate="∀x, y·bn_isZero(x) ∧ x bn_Eq y ⇒ bn_isZero(y)"/>
+<org.eventb.theory.core.theorem name="\" org.eventb.core.label="notZeroEqNotZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x)) ∧ x bn_Eq y ⇒ ¬(bn_isZero(y))"/>
 <org.eventb.theory.core.theorem name="B" org.eventb.core.label="Commutivity" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇔ y bn_Eq x"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="Transitivity" org.eventb.core.predicate="∀x, y, z·x bn_Eq y ∧ y bn_Eq z ⇒ x bn_Eq z"/>
 <org.eventb.theory.core.proofRulesBlock name="W" org.eventb.core.label="re−writes">

@@ -40,10 +40,5 @@
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="isIsomorphic" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid(T)" org.eventb.core.identifier="m"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid(U)" org.eventb.core.identifier="n"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="∀x,y·∃f·f∈T⤖U ∧ f(mOp(m)(x↦y)) = mOp(n)(f(x) ↦ f(y))"/>
-</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name="1" org.eventb.core.identifier="U"/>
 </org.eventb.theory.core.theoryRoot>
