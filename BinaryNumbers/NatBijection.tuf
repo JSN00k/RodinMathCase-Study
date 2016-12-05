@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNumbers">
-<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/IncrementNaturals.dtf|org.eventb.theory.core.deployedTheoryRoot#IncrementNaturals"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryNaturals.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryNaturals"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="bn_toNat" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
@@ -24,14 +24,12 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="bn_increment(bn_toBin(xs))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.importTheoryProject name="*" org.eventb.theory.core.importTheoryProject="/Maths">
-<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMultiply.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMultiply"/>
-</org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="toNat(zero) = zero" org.eventb.core.predicate="∀x·bn_isZero(x) ⇔ bn_toNat(x) = zero"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="alternate toNat" org.eventb.core.predicate="∀x·bn_toNat(cons(TRUE, x)) = suc(bn_toNat(bn_decrement(cons(TRUE, x))))"/>
-<org.eventb.theory.core.theorem name="2" org.eventb.core.label="alternate toNat2" org.eventb.core.predicate="∀x·bn_toNat(cons(FALSE, x)) = suc(bn_toNat(cons(TRUE, bn_decrement(x))))"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="alternate toNat2" org.eventb.core.predicate="∀x·¬bn_isZero(x) ⇔ bn_toNat(cons(FALSE, x)) = suc(bn_toNat(cons(TRUE, bn_decrement(x))))"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="increment to suc" org.eventb.core.predicate="∀x·bn_toNat(bn_increment(x)) = suc(bn_toNat(x))"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="suc to incremnet" org.eventb.core.predicate="∀x· bn_toBin(suc(x)) bn_Eq bn_increment(bn_toBin(x))"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="Addition Homomorphism" org.eventb.core.predicate="∀x, y· bn_toBin(x nAdd y) bn_Eq bn_toBin(x) bn_Add bn_toBin(y)"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="bijection1" org.eventb.core.predicate="∀x·bn_toNat(bn_toBin(x)) = x"/>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="bijection2" org.eventb.core.predicate="∀x·bn_toBin(bn_toNat(x)) = x"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="bijection2" org.eventb.core.predicate="∀x·x = bn_remTrailingZeros(x) ⇒ bn_toBin(bn_toNat(x)) = x"/>
 </org.eventb.theory.core.theoryRoot>

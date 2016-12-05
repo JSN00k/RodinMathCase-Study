@@ -12,6 +12,10 @@
 <org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇒ y bn_Add x = x"/>
 <org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· y bn_Add x = x ⇒  bn_isZero(y)"/>
 <org.eventb.theory.core.theorem name="z" org.eventb.core.label="zero bn_add x = x" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇔ y bn_Add x = x"/>
+<org.eventb.theory.core.theorem name="'(" org.eventb.core.label="zero Add Zero = zero" org.eventb.core.predicate="∀x, y · bn_isZero(x) ∧ bn_isZero(y) ⇔ bn_isZero(x bn_Add y)"/>
+<org.eventb.theory.core.theorem name="'*" org.eventb.core.label="add Equality" org.eventb.core.predicate="∀x, y, z · x bn_Eq y ⇔ z bn_Add x bn_Eq z bn_Add y"/>
+<org.eventb.theory.core.theorem name="')" org.eventb.core.label="bn_Add zero" org.eventb.core.predicate="∀x, y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
+<org.eventb.theory.core.theorem name="''" org.eventb.core.label="incrementOutAddition" org.eventb.core.predicate="∀x, y·bn_increment(x) bn_Add y bn_Eq bn_increment(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="~" org.eventb.core.label="EqualNumsAddToSame" org.eventb.core.predicate="∀x, y, z·y bn_Eq z ⇒ x bn_Add y bn_Eq x bn_Add z"/>
 <org.eventb.theory.core.theorem name="y" org.eventb.core.label="AdditionReduction" org.eventb.core.predicate="∀x, y, z · x bn_Add y bn_Eq x bn_Add z ⇒ y bn_Eq z"/>
 <org.eventb.theory.core.theorem name="x" org.eventb.core.label="ReverseExpand" org.eventb.core.predicate="∀x, yB, yT· x bn_Add cons(yB, yT) bn_Eq COND(bn_isZero(cons(yB, yT)), x, &#10;  COND(yB = TRUE ∧ bn_LSB(x) = TRUE, cons(FALSE, bn_increment(yT bn_Add bn_shiftLeft1(x))),&#10;    COND(¬(yB = TRUE) ∧ ¬(bn_LSB(x) = TRUE), cons(FALSE, yT bn_Add bn_shiftLeft1(x)),&#10;    cons(TRUE, yT bn_Add bn_shiftLeft1(x)))))"/>
@@ -29,11 +33,6 @@
 <org.eventb.theory.core.theorem name="e" org.eventb.core.label="bn_add_intBitCount" org.eventb.core.predicate="∀x, y·bn_countBits(x) ≥ bn_countBits(y) ⇒ bn_countBits(x bn_Add y) ≥ bn_countBits(x)"/>
 <org.eventb.theory.core.theorem name="d" org.eventb.core.label="shiftLeftZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x bn_Add bn_shiftLeft1(y))) ⇒ ¬(bn_isZero(x bn_Add y))"/>
 <org.eventb.theory.core.theorem name="b" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· bn_isZero(x bn_Add y) ⇔ bn_isZero(x) ∧ bn_isZero(y)"/>
-<org.eventb.theory.core.theorem name="M" org.eventb.core.label="bn_isomorphic Corrally" org.eventb.core.predicate="∀x·bn_toNat(cons(FALSE, x)) = bn_toNat(x) nTimes two "/>
-<org.eventb.theory.core.theorem name="N" org.eventb.core.label="bn_isomorphic Corrally2" org.eventb.core.predicate="∀x·bn_toNat(cons(TRUE, x)) = (bn_toNat(x) nTimes two) nAdd one "/>
-<org.eventb.theory.core.theorem name="O" org.eventb.core.label="bn_isomorphic Corrally3" org.eventb.core.predicate="∀x· bn_toNat(bn_increment(x)) = one nAdd bn_toNat(x)"/>
-<org.eventb.theory.core.theorem name="w" org.eventb.core.label="toNat(zero) = zero" org.eventb.core.predicate="∀x·bn_isZero(x) ⇔ bn_toNat(x) = zero"/>
-<org.eventb.theory.core.theorem name="L" org.eventb.core.label="bn_isomorphicToNats" org.eventb.core.predicate="∀x, y·bn_toNat(x bn_Add y) = bn_toNat(x) nAdd bn_toNat(y)"/>
 <org.eventb.theory.core.importTheoryProject name="K" org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMultiply.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMultiply"/>
 </org.eventb.theory.core.importTheoryProject>
@@ -44,6 +43,5 @@
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/BitwiseOps.dtf|org.eventb.theory.core.deployedTheoryRoot#BitwiseOps"/>
 <org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryEquality.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryEquality"/>
 <org.eventb.theory.core.importTheory name="*" org.eventb.theory.core.importTheory="/BinaryNumbers/IncrementNaturals.dtf|org.eventb.theory.core.deployedTheoryRoot#IncrementNaturals"/>
-<org.eventb.theory.core.importTheory name="+" org.eventb.theory.core.importTheory="/BinaryNumbers/NatBijection.dtf|org.eventb.theory.core.deployedTheoryRoot#NatBijection"/>
 </org.eventb.theory.core.importTheoryProject>
 </org.eventb.theory.core.theoryRoot>
