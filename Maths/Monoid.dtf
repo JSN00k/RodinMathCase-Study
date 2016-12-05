@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="075a05ef6922025e2adaf5de339ce97f" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="075a05ef6922025e2adaf5de339ce97f" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="Operators" org.eventb.core.scTarget="/Maths/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
 <org.eventb.theory.core.scTypeParameter name="T" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.typeParameter#)" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.theory.core.scTypeParameter name="U" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.typeParameter#1" org.eventb.core.type="ℙ(U)"/>

@@ -132,6 +132,7 @@
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name=";" org.eventb.core.label="AddZeroRight" org.eventb.core.predicate="∀x·x nAdd zero = x"/>
 <org.eventb.theory.core.theorem name="T" org.eventb.core.label="suc(x) ≠ x" org.eventb.core.predicate="∀x· suc(x) ≠ x"/>
+<org.eventb.theory.core.theorem name="d" org.eventb.core.label="sucEquality" org.eventb.core.predicate="∀x, y·x = y ⇔ suc(x) = suc(y)"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="sucInAddition1" org.eventb.core.predicate="∀x, y· suc(x) nAdd y = suc(x nAdd y)"/>
 <org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="sucInAddition2" org.eventb.core.predicate="∀x, y· x nAdd suc(y) = suc(x nAdd y)"/>
 <org.eventb.theory.core.theorem name="?" org.eventb.core.label="sucSwapAddition3" org.eventb.core.predicate="∀x, y· suc(x) nAdd y = x nAdd suc(y)"/>
@@ -140,11 +141,18 @@
 <org.eventb.theory.core.theorem name="N" org.eventb.core.label="nAddP is Commutative" org.eventb.core.predicate="nAdd_P ∈ CommOp(Nat)"/>
 <org.eventb.theory.core.theorem name="A" org.eventb.core.comment="Check that nAddP is Abelian." org.eventb.core.label="nAddP is Abelian" org.eventb.core.predicate="nAdd_P ∈ AbelianOp(Nat)"/>
 <org.eventb.theory.core.theorem name="B" org.eventb.core.label="Addition Reduction" org.eventb.core.predicate="∀x,y,z·((x nAdd y) = (x nAdd z)) ⇔ y = z"/>
+<org.eventb.theory.core.theorem name="`" org.eventb.core.label="decr(suc(x)) = x" org.eventb.core.predicate="∀x·decrement(suc(x)) = x"/>
+<org.eventb.theory.core.theorem name="a" org.eventb.core.label="suc(decr(x)) = x" org.eventb.core.predicate="∀x·x≠zero ⇔ suc(decrement(x)) = x"/>
+<org.eventb.theory.core.theorem name="c" org.eventb.core.label="decrEquality oneway" org.eventb.core.predicate="∀x, y·x = y ⇒ decrement(x) = decrement(y)"/>
+<org.eventb.theory.core.theorem name="b" org.eventb.core.label="decreEquality" org.eventb.core.predicate="∀x, y·x ≠ zero ∧ y ≠ zero ⇒ (x = y ⇔ decrement(x) = decrement(y))"/>
 <org.eventb.theory.core.theorem name="G" org.eventb.core.label="MinusZero" org.eventb.core.predicate="∀x· x nMinus zero = x"/>
 <org.eventb.theory.core.theorem name="J" org.eventb.core.label="zeroMinus" org.eventb.core.predicate="∀x·zero nMinus x = zero"/>
 <org.eventb.theory.core.theorem name="H" org.eventb.core.label="x − x" org.eventb.core.predicate="∀x· x nMinus x = zero"/>
 <org.eventb.theory.core.theorem name="C" org.eventb.core.label="AddMinus" org.eventb.core.predicate="∀x, y·(x nAdd y) nMinus y = x"/>
 <org.eventb.theory.core.theorem name="D" org.eventb.core.label="AddMinus2" org.eventb.core.predicate="∀x, y·(x nAdd y) nMinus x = y"/>
+<org.eventb.theory.core.theorem name="f" org.eventb.core.label="suc(x) nMinus x ≠ zero" org.eventb.core.predicate="∀x·suc(x) nMinus x ≠ zero "/>
+<org.eventb.theory.core.theorem name="g" org.eventb.core.label="suc(x) nMinus x = one" org.eventb.core.predicate="∀x·suc(x) nMinus x = one"/>
+<org.eventb.theory.core.theorem name="h" org.eventb.core.label="x − (x + a) = zero" org.eventb.core.predicate="∀x, a·x nMinus (x nAdd a) = zero"/>
 <org.eventb.theory.core.proofRulesBlock name="K" org.eventb.core.label="Minus">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
@@ -167,7 +175,10 @@
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.axiomaticDefinitionsBlock name="L" org.eventb.core.label="xdb1"/>
+<org.eventb.theory.core.theorem name="e" org.eventb.core.label="suc(x) − y = 0 ⇒ x − y = 0" org.eventb.core.predicate="∀x, y·suc(x) nMinus y = zero ⇒ x nMinus y = zero"/>
+<org.eventb.theory.core.theorem name="i" org.eventb.core.label="notEq implication" org.eventb.core.predicate="∀x, y·x ≠ y ⇔ (∃a·a ≠ zero ∧ (x nAdd a = y ∨ y nAdd a = x))"/>
+<org.eventb.theory.core.theorem name="_" org.eventb.core.label="minusToDecrement" org.eventb.core.predicate="∀x, y·decrement(x) nMinus y = decrement(x nMinus y)"/>
+<org.eventb.theory.core.theorem name="^" org.eventb.core.label="suc(x − y) = suc(x) − y" org.eventb.core.predicate="∀x, y·x nMinus y ≠ zero  ∨ x = y ⇔suc(x) nMinus y = suc(x nMinus y)"/>
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· x nAdd y = zero ⇔ x = zero ∧ y = zero"/>
 <org.eventb.theory.core.proofRulesBlock name="R" org.eventb.core.label="Adding Zeros">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>

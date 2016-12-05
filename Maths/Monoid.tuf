@@ -12,7 +12,7 @@
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AssocOp(T)" org.eventb.core.identifier="op"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="ident ↦ op"/>
-<org.eventb.theory.core.operatorWDcondition name="*" org.eventb.core.predicate="∀x·x∈T ⇒ op(x ↦ ident) = x ∧ op (ident ↦ x) = x"/>
+<org.eventb.theory.core.operatorWDcondition name="*" org.eventb.core.predicate="ident ↦ op ∈ Monoid(T)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="mIdent" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid(T)" org.eventb.core.identifier="m"/>
@@ -39,6 +39,9 @@
 <org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="mOp(m) = op2" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Get Op" org.eventb.theory.core.formula="mOp(mInit(ident, op))">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="mInit Creates a Monoid" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="mInit creates a monoid" org.eventb.theory.core.formula="mInit(ident, op) ∈ Monoid(T)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="ident↦op∈Monoid(T)" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.typeParameter name="1" org.eventb.core.identifier="U"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="mInit in Monoid" org.eventb.core.predicate="∀ident,op·ident ↦ op ∈ Monoid(T) ⇒ mInit(ident, op) ∈ Monoid(T)"/>
 </org.eventb.theory.core.theoryRoot>
