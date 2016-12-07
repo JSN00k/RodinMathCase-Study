@@ -6,6 +6,17 @@
 <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="prev" org.eventb.theory.core.type="Nat"/>
 </org.eventb.theory.core.datatypeConstructor>
 </org.eventb.theory.core.datatypeDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="k" org.eventb.core.label="nAdd_internal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="y"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="suc(xs nAdd_internal y)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="m" org.eventb.core.label="nAdd_int_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·x↦y∈Nat×Nat ∣ x nAdd_internal y"/>
+</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="nAdd" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Nat" org.eventb.core.identifier="y"/>
@@ -27,7 +38,8 @@
 <org.eventb.theory.core.importTheoryProject name="," org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="monoidThm" org.eventb.core.predicate="zero ↦ nAdd_P ∈ Monoid(Nat)"/>
+<org.eventb.theory.core.theorem name="l" org.eventb.core.label="monoidThm_corrollary" org.eventb.core.predicate="zero ↦ nAdd_int_P ∈ Monoid(Nat)"/>
+<org.eventb.theory.core.theorem name="n" org.eventb.core.label="add_int = add" org.eventb.core.predicate="nAdd_int_P = nAdd_P"/>
 <org.eventb.theory.core.proofRulesBlock name="1" org.eventb.core.label="Type rewrites">
 <org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="nAdd_P is Abelian" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Addition is Abelian" org.eventb.theory.core.formula="nAdd_P ∈ AbelianOp(Nat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
@@ -130,6 +142,7 @@
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y = z"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="monoidThm" org.eventb.core.predicate="zero ↦ nAdd_P ∈ Monoid(Nat)"/>
 <org.eventb.theory.core.theorem name=";" org.eventb.core.label="AddZeroRight" org.eventb.core.predicate="∀x·x nAdd zero = x"/>
 <org.eventb.theory.core.theorem name="T" org.eventb.core.label="suc(x) ≠ x" org.eventb.core.predicate="∀x· suc(x) ≠ x"/>
 <org.eventb.theory.core.theorem name="d" org.eventb.core.label="sucEquality" org.eventb.core.predicate="∀x, y·x = y ⇔ suc(x) = suc(y)"/>
@@ -206,6 +219,7 @@
 <org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="d ≠ zero"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="V" org.eventb.core.label="Check Minus" org.eventb.core.predicate="∀x·suc(suc(suc(suc(suc(x))))) nMinus suc(suc(x)) = suc(suc(suc(zero)))"/>
+<org.eventb.theory.core.theorem name="j" org.eventb.core.label="x &lt; y ⇒ mod(x, y) = x" org.eventb.core.predicate="∀x, y, z· y ≠ zero ∧ x nMinus y = zero ∧ x ≠ y ⇒ divMod(x, y, z) = z ↦ x"/>
 <org.eventb.theory.core.theorem name="]" org.eventb.core.label="ModReduction" org.eventb.core.predicate="∀x, y·y ≠ zero ⇒ ((x nMinus y ≠ zero ∨ x = y) ⇒ prj2(divMod(x, y, zero)) = prj2(divMod(x nMinus y, y, zero)))"/>
 <org.eventb.theory.core.theorem name="W" org.eventb.core.label="CheckDivMod" org.eventb.core.predicate="divMod(suc(suc(zero)), one, zero) = suc(suc(zero)) ↦ zero"/>
 <org.eventb.theory.core.theorem name="X" org.eventb.core.label="CheckDivMod2" org.eventb.core.predicate="divMod(ten, suc(suc(suc(zero))), zero) = suc(suc(suc(zero))) ↦ suc(zero)"/>
