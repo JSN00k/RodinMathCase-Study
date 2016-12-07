@@ -7991,4 +7991,5 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="testing/S-THM"/>
+<org.eventb.core.prProof name="timesMonoid2/S-THM"/>
 </org.eventb.core.prFile>

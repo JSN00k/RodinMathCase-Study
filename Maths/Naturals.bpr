@@ -4174,7 +4174,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -4209,17 +4209,14 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
-</org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂Nat,b⦂Nat,c⦂Nat·a nAdd b nAdd c=a nAdd (b nAdd c)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂Nat,b⦂Nat,c⦂Nat·a nAdd b nAdd c=a nAdd (b nAdd c)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
@@ -4289,7 +4286,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -4323,9 +4320,6 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="zero ⦂ Nat" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="c ↦ (zero ⦂ Nat)"/>
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -5750,7 +5744,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -5784,9 +5778,6 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="zero ⦂ Nat" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="c ↦ (zero ⦂ Nat)"/>
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -5865,7 +5856,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -5900,17 +5891,14 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
-</org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·x nAdd y nAdd z=x nAdd (y nAdd z)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·x nAdd y nAdd z=x nAdd (y nAdd z)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
@@ -7597,7 +7585,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -7632,9 +7620,6 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
-</org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
@@ -7650,8 +7635,8 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Adding Zeros to Conjuction/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
@@ -7874,7 +7859,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -7909,9 +7894,6 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#U|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(suc(ns)=d,suc(c) ↦ (zero ⦂ Nat),COND(suc(ns) nMinus d=(zero ⦂ Nat),c ↦ suc(ns),divMod(suc(ns) nMinus d,d,suc(c))))"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="NatMinuszero" org.eventb.core.label="NatMinuszero" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat)" org.eventb.theory.core.wd="∀x⦂Nat·(x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat))∨¬x∈(Nat ⦂ ℙ(Nat))∨¬x≠(zero ⦂ Nat)">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#o|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="{x⦂Nat·x∈(Nat ⦂ ℙ(Nat))∧x≠(zero ⦂ Nat) ∣ x}"/>
-</org.eventb.theory.core.scNewOperatorDefinition>
 </org.eventb.core.lang>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
@@ -7932,8 +7914,8 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Not equal to Zero/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
@@ -9884,7 +9866,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -9925,8 +9907,8 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="suc(suc(suc(zero ⦂ Nat)))≠(zero ⦂ Nat)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
@@ -10710,7 +10692,7 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="ModReduction/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y,p_prev0,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="ModReduction/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
 <org.eventb.theory.core.scNewOperatorDefinition name="AssocOp" org.eventb.core.label="AssocOp" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T×T×T))" org.eventb.theory.core.wd="∀op⦂ℙ(T×T×T)·(op∈T × T → T∧(∀x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)))∨¬op∈T × T → T∨(∃x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧¬op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z))">
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(T)"/>
@@ -10776,7 +10758,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -10821,135 +10803,7 @@
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p3">
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p5">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p7">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p8"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p12"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p3,p5"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="nMinus expansion on goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="nMinus expansion on ¬x nMinus suc(p_prev)=zero∨x=suc(p_prev)" org.eventb.core.prHyps="p12">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p16,p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p16"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p17">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=zero" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p17">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p18"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p19"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p16,p10"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on goal" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="decrement expansion on goal" org.eventb.core.prGoal="p24" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p26">
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst p_prev)" org.eventb.core.prHyps="p26">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p27">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p26"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with zero nMinus p_prev=zero" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p27">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p29">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p18" org.eventb.core.prInfHyps="p28"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p28"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on goal" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.divMod case 0"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x·zero nMinus x=zero"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.decrement case 0"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1.0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.divMod case 0"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1"/>
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -10957,381 +10811,33 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p31,p32">
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev0)" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p31">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p16,p10"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="decrement expansion on goal" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="decrement expansion on ¬decrement(suc(p_prev0)) nMinus p_prev=zero∨p_prev0=p_prev" org.eventb.core.prHyps="p36">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p38,p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p36"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p38"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on prj2(divMod(suc(p_prev0),p_prev,zero))=prj2(divMod(suc(p_prev0) nMinus p_prev,p_prev,zero))" org.eventb.core.prHyps="p33">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p39,p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p33"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p39"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on goal" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p14">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r11" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dc (p_prev0=p_prev)" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p42">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="p42">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p44">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p43"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p44" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p45">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p43"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_prev0=p_prev" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p42">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p49">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p31" org.eventb.core.prInfHyps="p46"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p32" org.eventb.core.prInfHyps="p47"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p39" org.eventb.core.prInfHyps="p48"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p31,p39,p32"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p50"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p50"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p51">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="p51">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p53">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p51" org.eventb.core.prInfHyps="p52"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p53" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p55">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p52" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prPredRef name=".pred" org.eventb.core.prRef="p42"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.divMod case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.divMod case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.decrement case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.decrement case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1.0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.nMinus case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Naturals.nMinus case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.1.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(zero ⦂ Nat,p_prev,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod((zero ⦂ Nat) nMinus p_prev,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(zero ⦂ Nat,suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(zero ⦂ Nat) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="(zero ⦂ Nat) nMinus p_prev=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p53" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(⊥,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev0) nMinus suc(p_prev)=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus suc(p_prev),suc(p_prev),suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬decrement(suc(p_prev0)) nMinus p_prev=(zero ⦂ Nat)∨suc(p_prev0)=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(p_prev0=p_prev,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev0) nMinus suc(p_prev)=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus suc(p_prev),suc(p_prev),suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p54" org.eventb.core.predicate="¬p_prev0 nMinus p_prev=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev0),suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(x) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(suc(p_prev0) nMinus suc(p_prev)=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus suc(p_prev),suc(p_prev),suc(zero ⦂ Nat))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(zero ⦂ Nat) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(zero ⦂ Nat,p_prev,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(zero ⦂ Nat,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬y=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p50" org.eventb.core.predicate="¬decrement(x) nMinus p_prev=(zero ⦂ Nat)∨⊤">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat))">
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬x nMinus y=(zero ⦂ Nat)∨x=y">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀x⦂Nat·(zero ⦂ Nat) nMinus x=(zero ⦂ Nat)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·y≠(zero ⦂ Nat)⇒(x nMinus y≠(zero ⦂ Nat)∨x=y⇒(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat)))"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus suc(p_prev),suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬x nMinus suc(p_prev)=(zero ⦂ Nat)∨x=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬x nMinus y=(zero ⦂ Nat)∨x=y⇒(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat))">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="x=(zero ⦂ Nat)">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat))">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="x=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬decrement(x) nMinus p_prev=(zero ⦂ Nat)∨x=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="p_prev0=p_prev">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))((zero ⦂ Nat) ↦ (zero ⦂ Nat))"/>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(⊤,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev0) nMinus suc(p_prev)=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus suc(p_prev),suc(p_prev),suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬p_prev0 nMinus p_prev=(zero ⦂ Nat)∨p_prev0=p_prev">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p52" org.eventb.core.predicate="¬p_prev0 nMinus p_prev=(zero ⦂ Nat)∨⊥">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·y≠(zero ⦂ Nat)⇒(x nMinus y≠(zero ⦂ Nat)∨x=y⇒(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat)))"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="y≠(zero ⦂ Nat)⇒(x nMinus y≠(zero ⦂ Nat)∨x=y⇒(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat)))">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,p_prev,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus p_prev,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬decrement(zero ⦂ Nat) nMinus p_prev=(zero ⦂ Nat)∨⊥">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(suc(p_prev0)=suc(p_prev),suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev0) nMinus suc(p_prev)=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus suc(p_prev),suc(p_prev),suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬p_prev0 nMinus p_prev=(zero ⦂ Nat)∨⊤">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬decrement(zero ⦂ Nat) nMinus p_prev=(zero ⦂ Nat)∨(zero ⦂ Nat)=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0,suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(p_prev0) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev0),p_prev,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev0) nMinus p_prev,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬p_prev0=p_prev">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(suc(p_prev0)=p_prev,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev0) nMinus p_prev=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev0),divMod(suc(p_prev0) nMinus p_prev,p_prev,suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev0) nMinus p_prev,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊥"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod((zero ⦂ Nat) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬x nMinus y=(zero ⦂ Nat)∨x=y">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev0 nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="y=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="y=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬decrement(zero ⦂ Nat) nMinus p_prev=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(p_prev,suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(p_prev) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(COND(suc(p_prev)=p_prev,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev) nMinus p_prev=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev),divMod(suc(p_prev) nMinus p_prev,p_prev,suc(zero ⦂ Nat)))))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev) nMinus p_prev,p_prev,zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(suc(p_prev0),suc(p_prev),zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(suc(p_prev0)) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬decrement(suc(p_prev0)) nMinus p_prev=(zero ⦂ Nat)∨p_prev0=p_prev">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="x=suc(p_prev0)">
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="(prj2 ⦂ ℙ(Nat×Nat×Nat))((zero ⦂ Nat) ↦ (zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(decrement(zero ⦂ Nat) nMinus p_prev,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="(zero ⦂ Nat)=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(zero ⦂ Nat,suc(p_prev),zero ⦂ Nat))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬y=(zero ⦂ Nat)⇒(¬x nMinus y=(zero ⦂ Nat)∨x=y⇒(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x,y,zero ⦂ Nat))=(prj2 ⦂ ℙ(Nat×Nat×Nat))(divMod(x nMinus y,y,zero ⦂ Nat)))">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬suc(p_prev)=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬y=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prExpr name="e0" org.eventb.core.expression="p_prev">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prExpr>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
-<org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ModReduction/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L">
@@ -11399,7 +10905,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -11448,10 +10954,10 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·¬y=(zero ⦂ Nat)∧(¬x nMinus y=(zero ⦂ Nat)∨x=y)⇒divMod(x,y,zero ⦂ Nat)∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat))∧divMod(x nMinus y,y,zero ⦂ Nat)∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat))"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·y≠(zero ⦂ Nat)∧(x nMinus y≠(zero ⦂ Nat)∨x=y)⇒divMod(x,y,zero ⦂ Nat)∈dom(prj2 ⦂ ℙ(Nat×Nat×Nat))∧(prj2 ⦂ ℙ(Nat×Nat×Nat))∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ⇸ (Nat ⦂ ℙ(Nat))∧divMod(x nMinus y,y,zero ⦂ Nat)∈dom(prj2 ⦂ ℙ(Nat×Nat×Nat))"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·¬y=(zero ⦂ Nat)∧(¬x nMinus y=(zero ⦂ Nat)∨x=y)⇒⊤∧⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·y≠(zero ⦂ Nat)∧(x nMinus y≠(zero ⦂ Nat)∨x=y)⇒divMod(x,y,zero ⦂ Nat)∈dom(prj2 ⦂ ℙ(Nat×Nat×Nat))∧(prj2 ⦂ ℙ(Nat×Nat×Nat))∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ⇸ (Nat ⦂ ℙ(Nat))∧divMod(x nMinus y,y,zero ⦂ Nat)∈dom(prj2 ⦂ ℙ(Nat×Nat×Nat))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·¬y=(zero ⦂ Nat)∧(¬x nMinus y=(zero ⦂ Nat)∨x=y)⇒divMod(x,y,zero ⦂ Nat)∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat))∧divMod(x nMinus y,y,zero ⦂ Nat)∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat))"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -15013,7 +14519,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -15072,24 +14578,24 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x=y⇒decrement(x)=decrement(y)">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="decrement(y)=decrement(y)">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="decrement(x)=decrement(y)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="decrement(y)=decrement(y)">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·x=y⇒decrement(x)=decrement(y)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x=y⇒decrement(x)=decrement(y)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·x=y⇒decrement(x)=decrement(y)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="sucEquality/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L">
@@ -15157,7 +14663,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -18932,7 +18438,7 @@
 <org.eventb.core.prReas name="r16" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
 <org.eventb.core.prReas name="r19" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="x &lt; y ⇒ mod(x, y) = x/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y,z,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="x &lt; y ⇒ mod(x, y) = x/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y,z,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
 <org.eventb.theory.core.scNewOperatorDefinition name="AssocOp" org.eventb.core.label="AssocOp" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T×T×T))" org.eventb.theory.core.wd="∀op⦂ℙ(T×T×T)·(op∈T × T → T∧(∀x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)))∨¬op∈T × T → T∨(∃x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧¬op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z))">
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(T)"/>
@@ -18998,7 +18504,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -19063,9 +18569,8 @@
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p12">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p12"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -19081,25 +18586,24 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p14,p15">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p15,p16">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p14">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p15">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p18"/>
 <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p4,p5"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="divMod expansion on goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p12">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p12">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p16,p17">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p18,p17">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -19121,19 +18625,13 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="divMod(p_prev,y,z)=z ↦ p_prev">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="divMod(p_prev,y,zero ⦂ Nat)=z ↦ p_prev">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬y=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="z ↦ (zero ⦂ Nat)=z ↦ (zero ⦂ Nat)">
-<org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="COND(suc(p_prev)=y,suc(z) ↦ (zero ⦂ Nat),COND(suc(p_prev) nMinus y=(zero ⦂ Nat),z ↦ suc(p_prev),divMod(suc(p_prev) nMinus y,y,suc(z))))=z ↦ suc(p_prev)">
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="divMod(suc(p_prev),y,zero ⦂ Nat)=z ↦ suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
@@ -19142,54 +18640,63 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="suc(p_prev) nMinus y=(zero ⦂ Nat)">
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="x=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·¬y=(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧¬x=y⇒divMod(x,y,z)=z ↦ x"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="x nMinus y=(zero ⦂ Nat)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬suc(p_prev)=y">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="divMod(suc(p_prev),y,z)=z ↦ suc(p_prev)">
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="COND(suc(p_prev)=y,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(suc(p_prev) nMinus y=(zero ⦂ Nat),(zero ⦂ Nat) ↦ suc(p_prev),divMod(suc(p_prev) nMinus y,y,suc(zero ⦂ Nat))))=z ↦ suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="divMod(zero ⦂ Nat,y,z)=z ↦ (zero ⦂ Nat)">
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="suc(p_prev) nMinus y=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="COND(⊥,suc(zero ⦂ Nat) ↦ (zero ⦂ Nat),COND(⊤,(zero ⦂ Nat) ↦ suc(p_prev),divMod(suc(p_prev) nMinus y,y,suc(zero ⦂ Nat))))=z ↦ suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬⊥"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·y≠(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧x≠y⇒divMod(x,y,z)=z ↦ x"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬y=(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧¬x=y⇒divMod(x,y,z)=z ↦ x">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·¬y=(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧¬x=y⇒divMod(x,y,zero ⦂ Nat)=z ↦ x"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬y=(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧¬x=y⇒divMod(x,y,zero ⦂ Nat)=z ↦ x">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="COND(⊥,suc(z) ↦ (zero ⦂ Nat),COND(⊤,z ↦ suc(p_prev),divMod(suc(p_prev) nMinus y,y,suc(z))))=z ↦ suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="(zero ⦂ Nat) nMinus y=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="x=(zero ⦂ Nat)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="x=suc(p_prev)">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="divMod(zero ⦂ Nat,y,zero ⦂ Nat)=z ↦ (zero ⦂ Nat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬⊥"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬suc(p_prev)=y">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬(zero ⦂ Nat)=y">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="divMod(x,y,z)=z ↦ x">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="x nMinus y=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="(zero ⦂ Nat) nMinus y=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat,z⦂Nat·y≠(zero ⦂ Nat)∧x nMinus y=(zero ⦂ Nat)∧x≠y⇒divMod(x,y,zero ⦂ Nat)=z ↦ x"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬y=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(zero ⦂ Nat) ↦ (zero ⦂ Nat)=z ↦ (zero ⦂ Nat)">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="(zero ⦂ Nat)=z">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="divMod(x,y,zero ⦂ Nat)=z ↦ x">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Nat"/>
@@ -19197,11 +18704,11 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="x &lt; y ⇒ mod(x, y) = x/WD-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L">

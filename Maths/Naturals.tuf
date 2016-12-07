@@ -26,7 +26,7 @@
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.comment="Anything ending in P is a passable form of the operator above." org.eventb.core.label="nAdd_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.core.comment="Maybe this will make passing round operators easy." org.eventb.theory.core.formula="λx ↦ y·x↦y∈Nat×Nat ∣ x nAdd y"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.core.comment="Maybe this will make passing round operators easy." org.eventb.theory.core.formula="λx ↦ y · ⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="decrement" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Nat" org.eventb.core.identifier="x"/>
@@ -219,7 +219,7 @@
 <org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="d ≠ zero"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="V" org.eventb.core.label="Check Minus" org.eventb.core.predicate="∀x·suc(suc(suc(suc(suc(x))))) nMinus suc(suc(x)) = suc(suc(suc(zero)))"/>
-<org.eventb.theory.core.theorem name="j" org.eventb.core.label="x &lt; y ⇒ mod(x, y) = x" org.eventb.core.predicate="∀x, y, z· y ≠ zero ∧ x nMinus y = zero ∧ x ≠ y ⇒ divMod(x, y, z) = z ↦ x"/>
+<org.eventb.theory.core.theorem name="j" org.eventb.core.label="x &lt; y ⇒ mod(x, y) = x" org.eventb.core.predicate="∀x, y, z· y ≠ zero ∧ x nMinus y = zero ∧ x ≠ y ⇒ divMod(x, y, zero) = z ↦ x"/>
 <org.eventb.theory.core.theorem name="]" org.eventb.core.label="ModReduction" org.eventb.core.predicate="∀x, y·y ≠ zero ⇒ ((x nMinus y ≠ zero ∨ x = y) ⇒ prj2(divMod(x, y, zero)) = prj2(divMod(x nMinus y, y, zero)))"/>
 <org.eventb.theory.core.theorem name="W" org.eventb.core.label="CheckDivMod" org.eventb.core.predicate="divMod(suc(suc(zero)), one, zero) = suc(suc(zero)) ↦ zero"/>
 <org.eventb.theory.core.theorem name="X" org.eventb.core.label="CheckDivMod2" org.eventb.core.predicate="divMod(ten, suc(suc(suc(zero))), zero) = suc(suc(suc(zero))) ↦ suc(zero)"/>
