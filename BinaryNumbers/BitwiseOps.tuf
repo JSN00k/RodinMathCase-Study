@@ -49,9 +49,6 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="COND(aB = FALSE ∧ bn_isZero(as), 0, 1 + bn_countBits(as))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="8" org.eventb.core.label="And Rev Expand" org.eventb.core.predicate="∀ x, yB, yT·x bn_And cons(yB, yT) = COND(x = nil, nil, cons(bn_LSB(x) AND yB, bn_shiftLeft1(x) bn_And yT)) "/>
-<org.eventb.theory.core.theorem name="7" org.eventb.core.label="And nil = nil" org.eventb.core.predicate="∀x·x bn_And nil = nil"/>
-<org.eventb.theory.core.theorem name="/" org.eventb.core.label="bn_Add is Commutative" org.eventb.core.predicate="bn_And_P ∈ CommOp(List(BOOL))"/>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="countBits ≥ 0" org.eventb.core.predicate="∀x·bn_countBits(x) ≥ 0"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="n + countBits ≠ 0" org.eventb.core.predicate="∀a, n·n &gt;0 ⇒ n + bn_countBits(a) ≠ 0"/>
 <org.eventb.theory.core.proofRulesBlock name="2" org.eventb.core.label="rulesBlock1">
@@ -67,17 +64,6 @@
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="n &gt; 0" org.eventb.theory.core.formula="⊥"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.newOperatorDefinition name="4" org.eventb.core.label="bn_And" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
-<org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="COND(y = nil, nil, cons(xB AND bn_LSB(y), xT bn_And bn_shiftLeft1(y)))"/>
-</org.eventb.theory.core.recursiveOperatorDefinition>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="5" org.eventb.core.label="bn_And_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y · ⊤ ∣ x bn_And y"/>
-</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.importTheoryProject name="6" org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
 </org.eventb.theory.core.importTheoryProject>

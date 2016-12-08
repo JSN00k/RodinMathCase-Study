@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNumbers">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryEquality.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryEquality"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bn_nat_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ x ∣ x ∈ List(BOOL) ∧ bn_remTrailingZeros(x) = x } "/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="2" org.eventb.core.label="bn_Or" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="y"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="cons(xB OR bn_LSB(y), xT bn_Or bn_shiftLeft1(y))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="bn_And" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="COND(y = nil, nil, bn_remTrailingZeros(cons(xB AND bn_LSB(y), xT bn_And bn_shiftLeft1(y))))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bn_And_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λ x ↦ y · x ∈ bn_nat_T ∧ y ∈ bn_nat_T ∣ x bn_And y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="AND closedness" org.eventb.core.predicate="∀x, y· (x bn_And y) ∈ bn_nat_T"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="And Rev Expand" org.eventb.core.predicate="∀ x, yB, yT·x bn_And cons(yB, yT) = bn_remTrailingZeros(COND(x = nil, nil, cons(bn_LSB(x) AND yB, bn_shiftLeft1(x) bn_And yT))) "/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="And nil = nil" org.eventb.core.predicate="∀x·x bn_And nil = nil"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="isZero nil Equivilence" org.eventb.core.predicate="∀x, y · bn_isZero(x bn_And y) ⇔ x bn_And y = nil"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="nil = nil" org.eventb.core.predicate="∀x, y· x bn_And y = nil ⇔ y bn_And x = nil"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="I do bn_And_P : CommOp because I made the mistake of declaring CommOp as a total function." org.eventb.core.label="bn_And is Commutative" org.eventb.core.predicate="∀x, y· x bn_And y = y bn_And x"/>
+<org.eventb.theory.core.importTheoryProject name="." org.eventb.theory.core.importTheoryProject="/Maths">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>
