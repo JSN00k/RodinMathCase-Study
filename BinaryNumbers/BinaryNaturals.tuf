@@ -9,6 +9,7 @@
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="v" org.eventb.core.label="x bn_Add nil bn_Eq x" org.eventb.core.predicate="∀x·x bn_Add nil bn_Eq x"/>
+<org.eventb.theory.core.theorem name="'+" org.eventb.core.label="hasSetBit(x) ⇒ hasSetBit(x bn_Add y)" org.eventb.core.predicate="∀x, y·bn_hasSetBit(x) ⇒ bn_hasSetBit(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇒ y bn_Add x = x"/>
 <org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· y bn_Add x = x ⇒  bn_isZero(y)"/>
 <org.eventb.theory.core.theorem name="z" org.eventb.core.label="zero bn_add x = x" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇔ y bn_Add x = x"/>

@@ -7204,7 +7204,7 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eqvRewrites"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="Addition Homomorphism/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y,p_prev0,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="Addition Homomorphism/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,y,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
 <org.eventb.theory.core.scNewOperatorDefinition name="BOOLP" org.eventb.core.label="BOOLP" org.eventb.core.predicate="⊤" org.eventb.core.source="/BOOL/BOOL.tuf|org.eventb.theory.core.theoryRoot#BOOL|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/BOOL/BOOL.tuf|org.eventb.theory.core.theoryRoot#BOOL|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="BOOL"/>
@@ -7248,47 +7248,6 @@
 <org.eventb.theory.core.scOperatorArgument name="b" org.eventb.core.source="/BOOL/BOOL.tuf|org.eventb.theory.core.theoryRoot#BOOL|org.eventb.theory.core.newOperatorDefinition#4|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="BOOL"/>
 <org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/BOOL/BOOL.tuf|org.eventb.theory.core.theoryRoot#BOOL|org.eventb.theory.core.newOperatorDefinition#4|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="a≠b"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scDatatypeDefinition name="List">
-<org.eventb.theory.core.scTypeArgument name="T" org.eventb.theory.core.givenType="T"/>
-<org.eventb.theory.core.scDatatypeConstructor name="nil"/>
-<org.eventb.theory.core.scDatatypeConstructor name="cons">
-<org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="T"/>
-<org.eventb.theory.core.scConstructorArgument name="tail" org.eventb.core.type="List"/>
-</org.eventb.theory.core.scDatatypeConstructor>
-</org.eventb.theory.core.scDatatypeDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="length" org.eventb.core.label="length" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℤ" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
-<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="0"/>
-<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="1+length(xs)"/>
-</org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="append" org.eventb.core.label="append" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(T)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
-<org.eventb.theory.core.scOperatorArgument name="t" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="T"/>
-<org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="cons(t,nil ⦂ List(T))"/>
-<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="cons(x0,append(xs,t))"/>
-</org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="reverse" org.eventb.core.label="reverse" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(T)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
-<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="nil ⦂ List(T)"/>
-<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="append(reverse(xs),x0)"/>
-</org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="last" org.eventb.core.label="last" org.eventb.core.predicate="x≠(nil ⦂ List(T))" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#," org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T" org.eventb.theory.core.wd="∃head0⦂T,tail1⦂List(T)·reverse(x)=cons(head0,tail1)">
-<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
-<org.eventb.theory.core.scDirectOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.directOperatorDefinition#(" org.eventb.theory.core.formula="head(reverse(x))"/>
-</org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="elements" org.eventb.core.label="elements" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
-<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="∅ ⦂ ℙ(T)"/>
-<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="{x0}∪elements(xs)"/>
-</org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="AssocOp" org.eventb.core.label="AssocOp" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T×T×T))" org.eventb.theory.core.wd="∀op⦂ℙ(T×T×T)·(op∈T × T → T∧(∀x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)))∨¬op∈T × T → T∨(∃x⦂T,y⦂T,z⦂T·y ↦ z∈dom(op)∧op∈T × T ⇸ T∧x ↦ op(y ↦ z)∈dom(op)∧op∈T × T ⇸ T∧x ↦ y∈dom(op)∧op∈T × T ⇸ T∧op(x ↦ y) ↦ z∈dom(op)∧op∈T × T ⇸ T∧¬op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z))">
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.theory.core.scDirectOperatorDefinition name="(" org.eventb.core.source="/Maths/Operators.tuf|org.eventb.theory.core.theoryRoot#Operators|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.directOperatorDefinition#(" org.eventb.theory.core.formula="{op⦂ℙ(T×T×T)·op∈T × T → T∧(∀x⦂T,y⦂T,z⦂T·op(x ↦ op(y ↦ z))=op(op(x ↦ y) ↦ z)) ∣ op}"/>
@@ -7314,7 +7273,7 @@
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#'|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.theory.core.scDirectOperatorDefinition name="(" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#'|org.eventb.theory.core.directOperatorDefinition#(" org.eventb.theory.core.formula="{ident⦂T,op⦂ℙ(T×T×T)·ident∈T∧op∈AssocOp(T)∧(∀x⦂T·x∈T⇒op(ident ↦ x)=x∧op(x ↦ ident)=x) ∣ ident ↦ op}"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="mInit" org.eventb.core.label="mInit" org.eventb.core.predicate="op∈AssocOp(T)∧((∀x⦂T·x∈T⇒x ↦ ident∈dom(op)∧op∈T × T ⇸ T∧(op(x ↦ ident)=x⇒ident ↦ x∈dom(op)))∧(∀x⦂T·x∈T⇒op(x ↦ ident)=x∧op(ident ↦ x)=x))" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T×ℙ(T×T×T)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scNewOperatorDefinition name="mInit" org.eventb.core.label="mInit" org.eventb.core.predicate="op∈AssocOp(T)∧ident ↦ op∈Monoid(T)" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T×ℙ(T×T×T)" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="ident" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="T"/>
 <org.eventb.theory.core.scOperatorArgument name="op" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="ℙ(T×T×T)"/>
 <org.eventb.theory.core.scDirectOperatorDefinition name=")" org.eventb.core.source="/Maths/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.directOperatorDefinition#)" org.eventb.theory.core.formula="ident ↦ op"/>
@@ -7333,6 +7292,17 @@
 <org.eventb.theory.core.scConstructorArgument name="prev" org.eventb.core.type="Nat"/>
 </org.eventb.theory.core.scDatatypeConstructor>
 </org.eventb.theory.core.scDatatypeDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="nAdd_internal" org.eventb.core.label="nAdd_internal" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
+<org.eventb.theory.core.scOperatorArgument name="y" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="Nat"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="zero ⦂ Nat" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="y"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#k|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="suc(xs nAdd_internal y)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="nAdd_int_P" org.eventb.core.label="nAdd_int_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#m" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#m|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd_internal y"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd" org.eventb.core.label="nAdd" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="true" org.eventb.theory.core.commutative="true" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
 <org.eventb.theory.core.scOperatorArgument name="y" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="Nat"/>
@@ -7342,7 +7312,7 @@
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="nAdd_P" org.eventb.core.label="nAdd_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nAdd y"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#\/|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·⊤ ∣ x nAdd y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="decrement" org.eventb.core.label="decrement" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Nat" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/Maths/Naturals.tuf|org.eventb.theory.core.theoryRoot#Naturals|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Nat"/>
@@ -7409,6 +7379,47 @@
 <org.eventb.theory.core.scNewOperatorDefinition name="nTimes_P" org.eventb.core.label="nTimes_P" org.eventb.core.predicate="⊤" org.eventb.core.source="/Maths/NaturalsMultiply.tuf|org.eventb.theory.core.theoryRoot#NaturalsMultiply|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Nat×Nat×Nat)" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/Maths/NaturalsMultiply.tuf|org.eventb.theory.core.theoryRoot#NaturalsMultiply|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="λx⦂Nat ↦ y⦂Nat·x ↦ y∈(Nat ⦂ ℙ(Nat)) × (Nat ⦂ ℙ(Nat)) ∣ x nTimes y"/>
 </org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scDatatypeDefinition name="List">
+<org.eventb.theory.core.scTypeArgument name="T" org.eventb.theory.core.givenType="T"/>
+<org.eventb.theory.core.scDatatypeConstructor name="nil"/>
+<org.eventb.theory.core.scDatatypeConstructor name="cons">
+<org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scConstructorArgument name="tail" org.eventb.core.type="List"/>
+</org.eventb.theory.core.scDatatypeConstructor>
+</org.eventb.theory.core.scDatatypeDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="length" org.eventb.core.label="length" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℤ" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="0"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="1+length(xs)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="append" org.eventb.core.label="append" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(T)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
+<org.eventb.theory.core.scOperatorArgument name="t" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="T"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="cons(t,nil ⦂ List(T))"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="cons(x0,append(xs,t))"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="reverse" org.eventb.core.label="reverse" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(T)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="nil ⦂ List(T)"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="append(reverse(xs),x0)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="last" org.eventb.core.label="last" org.eventb.core.predicate="x≠(nil ⦂ List(T))" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#," org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="T" org.eventb.theory.core.wd="∃head0⦂T,tail1⦂List(T)·reverse(x)=cons(head0,tail1)">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
+<org.eventb.theory.core.scDirectOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#,|org.eventb.theory.core.directOperatorDefinition#(" org.eventb.theory.core.formula="head(reverse(x))"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="elements" org.eventb.core.label="elements" org.eventb.core.predicate="⊤" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(T)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(T)"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(T)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="∅ ⦂ ℙ(T)"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0,xs)" org.eventb.core.source="/ListTheory/_AuxiliaryDefinitions.tuf|org.eventb.theory.core.theoryRoot#_AuxiliaryDefinitions|org.eventb.theory.core.newOperatorDefinition#-|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="{x0}∪elements(xs)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="map" org.eventb.core.label="map" org.eventb.core.predicate="f∈S ⇸ T∧elements(x)⊆dom(f)" org.eventb.core.source="/ListTheory/_Map.tuf|org.eventb.theory.core.theoryRoot#_Map|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(T)" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="f" org.eventb.core.source="/ListTheory/_Map.tuf|org.eventb.theory.core.theoryRoot#_Map|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(S×T)"/>
 <org.eventb.theory.core.scOperatorArgument name="x" org.eventb.core.source="/ListTheory/_Map.tuf|org.eventb.theory.core.theoryRoot#_Map|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="List(S)"/>
@@ -7463,18 +7474,25 @@
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB,as)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.recursiveOperatorDefinition#'|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="aB"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
-<org.eventb.theory.core.scNewOperatorDefinition name="bn_shiftLeft1" org.eventb.core.label="bn_shiftLeft1" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(BOOL)" org.eventb.theory.core.wd="⊤">
-<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="a">
-<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(BOOL)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
-<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB,as)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="as"/>
-</org.eventb.theory.core.scRecursiveOperatorDefinition>
-</org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="bn_isZero" org.eventb.core.label="bn_isZero" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#." org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
 <org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#.|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#.|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="a">
 <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(BOOL)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#.|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊤"/>
 <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB,as)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#.|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="aB=FALSE∧bn_isZero(as)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="bn_hasSetBit" org.eventb.core.label="bn_hasSetBit" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#7" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#7|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#7|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(BOOL)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#7|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB,aT)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#7|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="aB=TRUE∨bn_hasSetBit(aT)"/>
+</org.eventb.theory.core.scRecursiveOperatorDefinition>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="bn_shiftLeft1" org.eventb.core.label="bn_shiftLeft1" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(BOOL)" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scOperatorArgument name="a" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="nil ⦂ List(BOOL)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB,as)" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="COND(bn_isZero(cons(aB,as)),nil ⦂ List(BOOL),as)"/>
 </org.eventb.theory.core.scRecursiveOperatorDefinition>
 </org.eventb.theory.core.scNewOperatorDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="bn_concatonate" org.eventb.core.label="bn_concatonate" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNumbers/BitwiseOps.tuf|org.eventb.theory.core.theoryRoot#BitwiseOps|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="List(BOOL)" org.eventb.theory.core.wd="⊤">
@@ -7594,11 +7612,6 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p4">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p8">
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="x = x  (auto rewrite)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
@@ -7610,27 +7623,6 @@
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
 <org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="BinaryEquality"/>
 <org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="x bn_Eq x"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p9,p10">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="x = x  (auto rewrite)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="BinaryEquality"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="x bn_Eq x"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
@@ -7656,338 +7648,55 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p11,p12">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p8,p9">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p11">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p8">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=zero" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p8">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p15"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Adding zero simplification  (auto rewrite)" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p17"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p20">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst bn_increment(bn_toBin(p_prev)))" org.eventb.core.prHyps="p20">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p21">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p20"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on bn_toBin(p_prev) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(zero)" org.eventb.core.prHyps="p17">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p23,p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p23"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ah (bn_increment(bn_toBin(p_prev)) bn_Add nil bn_Eq bn_increment(bn_toBin(p_prev)))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p21">
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p21"/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p21">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p20">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Commutitive Sqap on goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p21"/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="BinaryEquality"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Commutivity"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x·x bn_Add nil bn_Eq x"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prPredRef name=".pred" org.eventb.core.prRef="p21"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 0"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x·x bn_Add nil bn_Eq x"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 0"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="zeroRight"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p24,p25">
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev0)" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p25">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p26"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on bn_toBin(p_prev nAdd suc(p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(suc(p_prev0))" org.eventb.core.prHyps="p26">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p4,p28">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p26"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p28"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sucOutsideAddition on bn_toBin(p_prev nAdd suc(p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_increment(bn_toBin(p_prev0))" org.eventb.core.prHyps="p28">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p4,p29">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p28"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p29"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bn_toBin expansion on bn_toBin(suc(p_prev nAdd p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_increment(bn_toBin(p_prev0))" org.eventb.core.prHyps="p29">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p4,p30">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p29"/>
-<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p30"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="Maths"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="Naturals"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="sucRight"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="BinaryNumbers"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="NatBijection"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="NatBijection.bn_toBin case 1"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·bn_toBin(x nAdd y) bn_Eq bn_toBin(x) bn_Add bn_toBin(y)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀x⦂List(BOOL)·x bn_Add (nil ⦂ List(BOOL)) bn_Eq x"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="x=suc(p_prev)">
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="x=(zero ⦂ Nat)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="x=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="bn_toBin(p_prev nAdd suc(p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(suc(p_prev0))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="bn_toBin(y) bn_Eq bn_toBin(zero ⦂ Nat) bn_Add bn_toBin(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="bn_toBin(y) bn_Eq (nil ⦂ List(BOOL)) bn_Add bn_toBin(y)">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Nat,y⦂Nat·bn_toBin(x nAdd y) bn_Eq bn_toBin(x) bn_Add bn_toBin(y)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="bn_toBin((zero ⦂ Nat) nAdd y) bn_Eq bn_toBin(zero ⦂ Nat) bn_Add bn_toBin(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bn_toBin(p_prev nAdd y) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(y)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="bn_toBin(x nAdd y) bn_Eq bn_toBin(x) bn_Add bn_toBin(y)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="x=(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="bn_toBin(p_prev) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd y) bn_Eq bn_toBin(suc(p_prev)) bn_Add bn_toBin(y)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="bn_toBin(suc(p_prev)) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add (nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="bn_toBin(p_prev nAdd (zero ⦂ Nat)) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="bn_increment(bn_toBin(p_prev)) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add (nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd p_prev0) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add bn_toBin(p_prev0)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="bn_increment(bn_toBin(p_prev nAdd p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_increment(bn_toBin(p_prev0))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="bn_toBin(p_prev nAdd y) bn_Eq bn_toBin(p_prev) bn_Add bn_toBin(y)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bn_toBin(p_prev) bn_Eq bn_toBin(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="bn_toBin(suc(p_prev)) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add bn_toBin(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="bn_toBin(suc(p_prev nAdd p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_increment(bn_toBin(p_prev0))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd (zero ⦂ Nat)) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add bn_toBin(zero ⦂ Nat)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd suc(p_prev0)) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add bn_toBin(suc(p_prev0))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd y) bn_Eq bn_increment(bn_toBin(p_prev)) bn_Add bn_toBin(y)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="y=suc(p_prev0)">
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="bn_toBin(p_prev nAdd suc(p_prev0)) bn_Eq bn_toBin(p_prev) bn_Add bn_increment(bn_toBin(p_prev0))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="y=suc(p_prev)">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="bn_toBin((zero ⦂ Nat) nAdd y) bn_Eq bn_toBin(zero ⦂ Nat) bn_Add bn_toBin(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="bn_increment(bn_toBin(p_prev)) bn_Add (nil ⦂ List(BOOL)) bn_Eq bn_increment(bn_toBin(p_prev))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bn_toBin(y) bn_Eq bn_toBin(y)">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="bn_toBin(y) bn_Eq bn_toBin(zero ⦂ Nat) bn_Add bn_toBin(y)">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="bn_toBin(y) bn_Eq (nil ⦂ List(BOOL)) bn_Add bn_toBin(y)">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="bn_toBin(p_prev) bn_Eq bn_toBin(p_prev) bn_Add (nil ⦂ List(BOOL))">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bn_toBin(suc(p_prev) nAdd y) bn_Eq bn_toBin(suc(p_prev)) bn_Add bn_toBin(y)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="y=(zero ⦂ Nat)">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="Nat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prExpr name="e0" org.eventb.core.expression="bn_increment(bn_toBin(p_prev))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="Nat"/>
-</org.eventb.core.prExpr>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.theory.rbp.autoRewriteReasoner"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.theory.rbp.autoRewriteReasoner"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="testing/S-THM"/>

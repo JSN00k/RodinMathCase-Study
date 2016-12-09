@@ -158,6 +158,7 @@
 <org.eventb.theory.core.theorem name="a" org.eventb.core.label="suc(decr(x)) = x" org.eventb.core.predicate="∀x·x≠zero ⇔ suc(decrement(x)) = x"/>
 <org.eventb.theory.core.theorem name="c" org.eventb.core.label="decrEquality oneway" org.eventb.core.predicate="∀x, y·x = y ⇒ decrement(x) = decrement(y)"/>
 <org.eventb.theory.core.theorem name="b" org.eventb.core.label="decreEquality" org.eventb.core.predicate="∀x, y·x ≠ zero ∧ y ≠ zero ⇒ (x = y ⇔ decrement(x) = decrement(y))"/>
+<org.eventb.theory.core.theorem name="o" org.eventb.core.label="decr(x) ≠ 0 ⇒ x ≠ 0" org.eventb.core.predicate="∀x·decrement(x) ≠ zero ⇒ x ≠ zero"/>
 <org.eventb.theory.core.theorem name="G" org.eventb.core.label="MinusZero" org.eventb.core.predicate="∀x· x nMinus zero = x"/>
 <org.eventb.theory.core.theorem name="J" org.eventb.core.label="zeroMinus" org.eventb.core.predicate="∀x·zero nMinus x = zero"/>
 <org.eventb.theory.core.theorem name="H" org.eventb.core.label="x − x" org.eventb.core.predicate="∀x· x nMinus x = zero"/>
@@ -219,6 +220,8 @@
 <org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="d ≠ zero"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="V" org.eventb.core.label="Check Minus" org.eventb.core.predicate="∀x·suc(suc(suc(suc(suc(x))))) nMinus suc(suc(x)) = suc(suc(suc(zero)))"/>
+<org.eventb.theory.core.theorem name="p" org.eventb.core.label="x≠y ∧ x − y= 0 ⇒ notZero(y − x)" org.eventb.core.predicate="∀x, y·x ≠ y ∧ x nMinus y = zero ⇔ y nMinus x ≠ zero"/>
+<org.eventb.theory.core.theorem name="q" org.eventb.core.label="x − y = zero ⇒ y = x + a" org.eventb.core.predicate="∀x, y· x nMinus y = zero ⇒ (∃a · x nAdd a = y)"/>
 <org.eventb.theory.core.theorem name="j" org.eventb.core.label="x &lt; y ⇒ mod(x, y) = x" org.eventb.core.predicate="∀x, y, z· y ≠ zero ∧ x nMinus y = zero ∧ x ≠ y ⇒ divMod(x, y, zero) = z ↦ x"/>
 <org.eventb.theory.core.theorem name="]" org.eventb.core.label="ModReduction" org.eventb.core.predicate="∀x, y·y ≠ zero ⇒ ((x nMinus y ≠ zero ∨ x = y) ⇒ prj2(divMod(x, y, zero)) = prj2(divMod(x nMinus y, y, zero)))"/>
 <org.eventb.theory.core.theorem name="W" org.eventb.core.label="CheckDivMod" org.eventb.core.predicate="divMod(suc(suc(zero)), one, zero) = suc(suc(zero)) ↦ zero"/>
