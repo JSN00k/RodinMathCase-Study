@@ -17,7 +17,8 @@
 <org.eventb.theory.core.theorem name="U" org.eventb.core.label="bn_Eq_Equal_length(x, x) = ⊤" org.eventb.core.predicate="∀x·bn_Eq_Equal_length(x, x)"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="equality" org.eventb.core.predicate="∀x· x bn_Eq x"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="x−yEquality" org.eventb.core.predicate="∀x, y·x = y ⇒ x bn_Eq y"/>
-<org.eventb.theory.core.theorem name="_" org.eventb.core.label="EqualityEquality" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇔ bn_Eq_Equal_length(x, y)"/>
+<org.eventb.theory.core.theorem name="`" org.eventb.core.label="Eq ⇒ Equal_Length" org.eventb.core.predicate="∀x, y·x bn_Eq y ⇒ bn_Eq_Equal_length(x, y)"/>
+<org.eventb.theory.core.theorem name="_" org.eventb.core.label="EqualityEquality" org.eventb.core.predicate="∀x, y· bn_countBits(x) = bn_countBits(y) ⇒ (x bn_Eq y ⇔ bn_Eq_Equal_length(x, y))"/>
 <org.eventb.theory.core.theorem name="O" org.eventb.core.label="countBits(x) = 0 ⇔ x = 0" org.eventb.core.predicate="∀x·bn_countBits(x) = 0 ⇔ bn_isZero(x)"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Eq nil ⇒ bn_isZero()" org.eventb.core.predicate="∀x·x bn_Eq nil ⇔ bn_isZero(x)"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="nil Eq  ⇒ bn_isZero()" org.eventb.core.predicate="∀x·nil bn_Eq x ⇔ bn_isZero(x)"/>
@@ -49,10 +50,11 @@
 <org.eventb.theory.core.theorem name="9" org.eventb.core.label="zeroIszero" org.eventb.core.predicate="∀x, y·bn_isZero(x) ∧ bn_isZero(y) ⇒ x bn_Eq y "/>
 <org.eventb.theory.core.theorem name="[" org.eventb.core.label="zeroEqZero" org.eventb.core.predicate="∀x, y·bn_isZero(x) ∧ x bn_Eq y ⇒ bn_isZero(y)"/>
 <org.eventb.theory.core.theorem name="\" org.eventb.core.label="notZeroEqNotZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x)) ∧ x bn_Eq y ⇒ ¬(bn_isZero(y))"/>
+<org.eventb.theory.core.theorem name="a" org.eventb.core.label="CommCororally" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇒ y bn_Eq x"/>
 <org.eventb.theory.core.theorem name="B" org.eventb.core.label="Commutivity" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇔ y bn_Eq x"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="Transitivity" org.eventb.core.predicate="∀x, y, z·x bn_Eq y ∧ y bn_Eq z ⇒ x bn_Eq z"/>
 <org.eventb.theory.core.theorem name="]" org.eventb.core.label="Transitivity2" org.eventb.core.predicate="∀x, y, z·x bn_Eq y ⇒ (y bn_Eq z ⇔ x bn_Eq z)"/>
-<org.eventb.theory.core.theorem name="^" org.eventb.core.label="Transitivity Internal" org.eventb.core.predicate="∀x, y, z· x bn_Eq y ⇒ (bn_Eq_Equal_length(x, z) ⇔ bn_Eq_Equal_length(y, z))"/>
+<org.eventb.theory.core.theorem name="^" org.eventb.core.label="Transitivity Internal" org.eventb.core.predicate="∀x, y, z· x bn_Eq y ∧ bn_countBits(z) = bn_countBits(x) ⇒ (bn_Eq_Equal_length(x, z) ⇔ bn_Eq_Equal_length(y, z))"/>
 <org.eventb.theory.core.proofRulesBlock name="W" org.eventb.core.label="re−writes">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
 <org.eventb.theory.core.metaVariable name="2" org.eventb.core.identifier="xB" org.eventb.theory.core.type="BOOL"/>

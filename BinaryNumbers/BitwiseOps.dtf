@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="f48d62e3841953d7593ec17e5fe7d2b1" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="f48d62e3841953d7593ec17e5fe7d2b1" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="BOOL" org.eventb.core.scTarget="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
 <org.eventb.theory.core.useTheory name="List" org.eventb.core.scTarget="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
 <org.eventb.theory.core.useTheory name="Operators" org.eventb.core.scTarget="/Maths/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
