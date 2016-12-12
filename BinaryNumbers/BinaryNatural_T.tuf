@@ -3,12 +3,12 @@
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/ListTheory">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="bn_isNormal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="bn_isNormal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="a">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="(as = nil ∧ aB = TRUE) ∨ (as ≠ nil ∧ bn_isNormal(as))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bn_Zero" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>

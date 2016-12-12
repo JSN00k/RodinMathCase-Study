@@ -5,21 +5,25 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="+" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="y"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(bn_isZero(cons(xB, xs)), y, &#10;  COND(xB = TRUE ∧ bn_LSB(y) = TRUE, cons(FALSE, bn_increment(xs bn_Add bn_shiftLeft1(y))),&#10;    COND(¬(xB = TRUE) ∧ ¬(bn_LSB(y) = TRUE), cons(FALSE, xs bn_Add bn_shiftLeft1(y)),&#10;    cons(TRUE, xs bn_Add bn_shiftLeft1(y)))))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.comment="The initial COND (y = nil) makes the operator symetric" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(y = nil, cons(xB, xs),&#10;  COND(xB = TRUE ∧ bn_LSB(y) = TRUE, cons(FALSE, bn_increment(xs bn_Add bn_shiftLeft1(y))),&#10;    COND(¬(xB = TRUE) ∧ ¬(bn_LSB(y) = TRUE), cons(FALSE, xs bn_Add bn_shiftLeft1(y)),&#10;    cons(TRUE, xs bn_Add bn_shiftLeft1(y)))))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="v" org.eventb.core.label="x bn_Add nil bn_Eq x" org.eventb.core.predicate="∀x·x bn_Add nil bn_Eq x"/>
+<org.eventb.theory.core.theorem name="v" org.eventb.core.label="x bn_Add nil = x" org.eventb.core.predicate="∀x·x bn_Add nil = x"/>
+<org.eventb.theory.core.theorem name="x" org.eventb.core.label="ReverseExpand" org.eventb.core.predicate="∀x, yB, yT· x bn_Add cons(yB, yT) =  &#10;  COND(yB = TRUE ∧ bn_LSB(x) = TRUE, cons(FALSE, bn_increment(bn_shiftLeft1(x) bn_Add yT)),&#10;    COND(¬(yB = TRUE) ∧ ¬(bn_LSB(x) = TRUE), cons(FALSE, bn_shiftLeft1(x) bn_Add yT),&#10;    cons(TRUE, bn_shiftLeft1(x) bn_Add yT)))"/>
+<org.eventb.theory.core.theorem name="'." org.eventb.core.label="expand cons" org.eventb.core.predicate="∀x·cons(FALSE, x) bn_Eq x bn_Add x"/>
+<org.eventb.theory.core.theorem name="'/" org.eventb.core.label="expand Cons TRUE" org.eventb.core.predicate="∀x·cons(TRUE, x) bn_Eq bn_increment(x bn_Add x)"/>
 <org.eventb.theory.core.theorem name="'+" org.eventb.core.label="hasSetBit(x) ⇒ hasSetBit(x bn_Add y)" org.eventb.core.predicate="∀x, y·bn_hasSetBit(x) ⇒ bn_hasSetBit(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇒ y bn_Add x = x"/>
-<org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· y bn_Add x = x ⇒  bn_isZero(y)"/>
+<org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(x) ⇒ x bn_Add y bn_Eq y"/>
+<org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· x bn_Add y = y ⇒  bn_isZero(x)"/>
 <org.eventb.theory.core.theorem name="z" org.eventb.core.label="zero bn_add x = x" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇔ y bn_Add x = x"/>
 <org.eventb.theory.core.theorem name="'(" org.eventb.core.label="zero Add Zero = zero" org.eventb.core.predicate="∀x, y · bn_isZero(x) ∧ bn_isZero(y) ⇔ bn_isZero(x bn_Add y)"/>
+<org.eventb.theory.core.theorem name="'-" org.eventb.core.label="CountBitsImpl1" org.eventb.core.predicate="∀x, y·bn_countBits(x bn_Add y) ≥ bn_countBits(x) "/>
+<org.eventb.theory.core.theorem name="'," org.eventb.core.label="add nil" org.eventb.core.predicate="∀x·x bn_Add nil bn_Eq nil"/>
 <org.eventb.theory.core.theorem name="'*" org.eventb.core.label="add Equality" org.eventb.core.predicate="∀x, y, z · x bn_Eq y ⇔ z bn_Add x bn_Eq z bn_Add y"/>
 <org.eventb.theory.core.theorem name="')" org.eventb.core.label="bn_Add zero" org.eventb.core.predicate="∀x, y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
 <org.eventb.theory.core.theorem name="''" org.eventb.core.label="incrementOutAddition" org.eventb.core.predicate="∀x, y·bn_increment(x) bn_Add y bn_Eq bn_increment(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="~" org.eventb.core.label="EqualNumsAddToSame" org.eventb.core.predicate="∀x, y, z·y bn_Eq z ⇒ x bn_Add y bn_Eq x bn_Add z"/>
 <org.eventb.theory.core.theorem name="y" org.eventb.core.label="AdditionReduction" org.eventb.core.predicate="∀x, y, z · x bn_Add y bn_Eq x bn_Add z ⇒ y bn_Eq z"/>
-<org.eventb.theory.core.theorem name="x" org.eventb.core.label="ReverseExpand" org.eventb.core.predicate="∀x, yB, yT· x bn_Add cons(yB, yT) bn_Eq COND(bn_isZero(cons(yB, yT)), x, &#10;  COND(yB = TRUE ∧ bn_LSB(x) = TRUE, cons(FALSE, bn_increment(yT bn_Add bn_shiftLeft1(x))),&#10;    COND(¬(yB = TRUE) ∧ ¬(bn_LSB(x) = TRUE), cons(FALSE, yT bn_Add bn_shiftLeft1(x)),&#10;    cons(TRUE, yT bn_Add bn_shiftLeft1(x)))))"/>
 <org.eventb.theory.core.theorem name="}" org.eventb.core.label="add xOR LSBs" org.eventb.core.predicate="∀x, y· bn_LSB(x) xOR bn_LSB(y) = bn_LSB(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="u" org.eventb.core.label="x + zero = x" org.eventb.core.predicate="∀x, y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
 <org.eventb.theory.core.theorem name="t" org.eventb.core.label="zero + zero = zero" org.eventb.core.predicate="∀x, y· bn_isZero(x) ∧ bn_isZero(y) ⇔ bn_isZero(x bn_Add y)"/>

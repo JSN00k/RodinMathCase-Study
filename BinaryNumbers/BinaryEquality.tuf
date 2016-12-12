@@ -23,6 +23,7 @@
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Eq nil ⇒ bn_isZero()" org.eventb.core.predicate="∀x·x bn_Eq nil ⇔ bn_isZero(x)"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="nil Eq  ⇒ bn_isZero()" org.eventb.core.predicate="∀x·nil bn_Eq x ⇔ bn_isZero(x)"/>
 <org.eventb.theory.core.theorem name="P" org.eventb.core.label="EqualNumbersSameBitCount" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇒ bn_countBits(x) = bn_countBits(y)"/>
+<org.eventb.theory.core.theorem name="b" org.eventb.core.label="Cons equality" org.eventb.core.predicate="∀xB, x, y·x bn_Eq y ⇔ cons(xB, x) bn_Eq cons(xB, y)"/>
 <org.eventb.theory.core.theorem name="R" org.eventb.core.label="remZeros(zero) = nil" org.eventb.core.predicate="∀x·bn_isZero(x) ⇔ bn_remTrailingZeros(x) = nil"/>
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="countBits(remZeros(x)) = countBits(x))" org.eventb.core.predicate="∀x·bn_countBits(bn_remTrailingZeros(x)) = bn_countBits(x)"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="isZeroImpl" org.eventb.core.predicate="∀aB, b·bn_isZero(cons(aB, b)) ⇔ aB = FALSE ∧ bn_isZero(b)"/>
@@ -124,6 +125,10 @@
 <org.eventb.theory.core.rewriteRule name="A" org.eventb.core.label="Commutivity" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutitive Sqap" org.eventb.theory.core.formula="x bn_Eq y">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y bn_Eq x"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="D" org.eventb.core.label="Same Bit Count" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Same bit count">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bn_Eq y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bn_countBits(x) = bn_countBits(y)"/>
+</org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.importTheoryProject name="X" org.eventb.theory.core.importTheoryProject="/BOOL">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>

@@ -11,8 +11,10 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="COND(aB = TRUE, cons(FALSE, bn_increment(as)), cons(TRUE, as))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="incrementMaintainsNormality" org.eventb.core.predicate="∀x·bn_isNormal(x) ⇒ bn_isNormal(bn_increment(x))"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="IncrementZero = One" org.eventb.core.predicate="∀x·bn_isZero(x) ⇒ bn_increment(x) bn_Eq bn_One"/>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="increment ¬zero" org.eventb.core.predicate="∀x· ¬bn_isZero(bn_increment(x))"/>
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="hasSetBit(incr) =⊤ " org.eventb.core.predicate="∀x · bn_hasSetBit(bn_increment(x))"/>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.label="IncrementFlipsLowBit" org.eventb.core.predicate="∀x·bn_LSB(x) ≠ bn_LSB(bn_increment(x)) "/>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="incr(x) ≠ x" org.eventb.core.predicate="∀x · bn_increment(x) ≠ x"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="incrementReductionPart1" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇒ x bn_Eq y"/>
@@ -35,6 +37,9 @@
 </org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="incrReduction" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Remove Increments" org.eventb.theory.core.formula="bn_increment(x) bn_Eq bn_increment(y)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bn_Eq y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="hasSetBits(incr) = ⊤" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="hasSetBits(incr)) = true" org.eventb.theory.core.formula="bn_hasSetBit(bn_increment(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.inferenceRule name="." org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="drecr(incr(zero)) = zero">
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="bn_isZero(x)" org.eventb.theory.core.hyp="true"/>
