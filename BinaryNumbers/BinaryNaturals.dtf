@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="60e581cd5043bc4acbee02e8aab72a61" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="60e581cd5043bc4acbee02e8aab72a61" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="NaturalsMultiply" org.eventb.core.scTarget="/Maths/NaturalsMultiply.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMultiply"/>
 <org.eventb.theory.core.useTheory name="BOOL" org.eventb.core.scTarget="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
 <org.eventb.theory.core.useTheory name="BitwiseOps" org.eventb.core.scTarget="/BinaryNumbers/BitwiseOps.dtf|org.eventb.theory.core.deployedTheoryRoot#BitwiseOps"/>

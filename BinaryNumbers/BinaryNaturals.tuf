@@ -5,7 +5,7 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="+" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="y"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.comment="The initial COND (y = nil) makes the operator symetric" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(y = nil, cons(xB, xs),&#10;  COND(xB = TRUE ∧ bn_LSB(y) = TRUE, cons(FALSE, bn_increment(xs bn_Add bn_shiftLeft1(y))),&#10;    COND(¬(xB = TRUE) ∧ ¬(bn_LSB(y) = TRUE), cons(FALSE, xs bn_Add bn_shiftLeft1(y)),&#10;    cons(TRUE, xs bn_Add bn_shiftLeft1(y)))))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(xB = TRUE ∧ bn_LSB(y) = TRUE, cons(FALSE, bn_increment(xs bn_Add bn_shiftLeft1(y))),&#10;  COND(¬(xB = TRUE) ∧ ¬(bn_LSB(y) = TRUE), cons(FALSE, xs bn_Add bn_shiftLeft1(y)),&#10;  cons(TRUE, xs bn_Add bn_shiftLeft1(y))))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="v" org.eventb.core.label="x bn_Add nil = x" org.eventb.core.predicate="∀x·x bn_Add nil = x"/>
@@ -13,6 +13,8 @@
 <org.eventb.theory.core.theorem name="'0" org.eventb.core.label="nil add nil = nil" org.eventb.core.predicate="∀x, y· x = nil ∧ y = nil ⇔ x bn_Add y = nil"/>
 <org.eventb.theory.core.theorem name="'." org.eventb.core.label="expand cons" org.eventb.core.predicate="∀x·cons(FALSE, x) bn_Eq x bn_Add x"/>
 <org.eventb.theory.core.theorem name="'/" org.eventb.core.label="expand Cons TRUE" org.eventb.core.predicate="∀x·cons(TRUE, x) bn_Eq bn_increment(x bn_Add x)"/>
+<org.eventb.theory.core.theorem name="'2" org.eventb.core.label="Add maintains Normality" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ bn_isNormal(x bn_Add y)"/>
+<org.eventb.theory.core.theorem name="'1" org.eventb.core.label="Eq Nums same addition" org.eventb.core.predicate="∀x, x1, y· x bn_Eq x1 ⇔ x bn_Add y bn_Eq x1 bn_Add y"/>
 <org.eventb.theory.core.theorem name="'+" org.eventb.core.label="hasSetBit(x) ⇒ hasSetBit(x bn_Add y)" org.eventb.core.predicate="∀x, y·bn_hasSetBit(x) ⇒ bn_hasSetBit(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(x) ⇒ x bn_Add y bn_Eq y"/>
 <org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· x bn_Add y = y ⇒  bn_isZero(x)"/>

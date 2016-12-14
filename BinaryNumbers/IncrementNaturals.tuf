@@ -20,6 +20,7 @@
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="incrementReductionPart1" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇒ x bn_Eq y"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="incrementReductionPart2" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇒ bn_increment(x) bn_Eq bn_increment(y)"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="bn_incrementReduction" org.eventb.core.predicate="∀x, y· bn_increment(x) bn_Eq bn_increment(y) ⇔ x bn_Eq y"/>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="True Eq increment Reduction" org.eventb.core.predicate="∀x, y·x ≠ nil ∧ y ≠ nil ⇒ (x = y ⇔ bn_increment(x) = bn_increment(y))"/>
 <org.eventb.theory.core.proofRulesBlock name="/" org.eventb.core.label="rewrites">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
