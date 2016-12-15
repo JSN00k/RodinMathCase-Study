@@ -36,7 +36,8 @@
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Normal incrementOutsideAddition" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ bn_increment(x) bn_Add y = bn_increment(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="9" org.eventb.core.label="equivelenceMaitained" org.eventb.core.predicate="∀x, y·x bn_Eq y ⇔ bn_toNat(x) = bn_toNat(y)"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="Addition Homomorphism" org.eventb.core.predicate="∀x, y· bn_toBin(x nAdd y) bn_Eq bn_toBin(x) bn_Add bn_toBin(y)"/>
-<org.eventb.theory.core.theorem name="6" org.eventb.core.label="Addition Homomorphism normal" org.eventb.core.predicate="∀x, y· bn_toBin(x nAdd y) = bn_toBin(x) bn_Add bn_toBin(y)"/>
+<org.eventb.theory.core.theorem name=":" org.eventb.core.label="toNat addition Homomorphism" org.eventb.core.predicate="∀x, y · bn_toNat(x bn_Add y) = bn_toNat(x) nAdd bn_toNat(y)"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="bijection1" org.eventb.core.predicate="∀x·bn_toNat(bn_toBin(x)) = x"/>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="Addition Homomorphism normal" org.eventb.core.predicate="∀x, y· bn_toBin(x nAdd y) = bn_toBin(x) bn_Add bn_toBin(y)"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="bijection2" org.eventb.core.predicate="∀x·bn_isNormal(x) ⇒ bn_toBin(bn_toNat(x)) = x"/>
 </org.eventb.theory.core.theoryRoot>
