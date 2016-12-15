@@ -2,7 +2,6 @@
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNumbers">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryEquality.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryEquality"/>
-<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryNatural_T.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryNatural_T"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bn_nat_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ x ∣ x ∈ List(BOOL) ∧ bn_isNormal(x) } "/>
@@ -27,6 +26,7 @@
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λ x ↦ y · x ∈ bn_nat_T ∧ y ∈ bn_nat_T ∣ x bn_And y"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Normalized is stripped" org.eventb.core.predicate="∀x· bn_remTrailingZeros(x) = x ⇔ bn_isNormal(x)"/>
+<org.eventb.theory.core.theorem name=":" org.eventb.core.label="when normal Eq ⇔ =" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ (x bn_Eq y ⇔ x = y)"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="remZeros is normal" org.eventb.core.predicate="∀x · bn_isNormal(bn_remTrailingZeros(x))"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="AND closedness" org.eventb.core.predicate="∀x, y· (x bn_And y) ∈ bn_nat_T"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="And nil = nil" org.eventb.core.predicate="∀x·x bn_And nil = nil"/>
