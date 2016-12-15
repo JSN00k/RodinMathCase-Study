@@ -96,4 +96,5 @@
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="TZeroResult" org.eventb.core.predicate="∀x, y· x nTimes y = zero ⇔ x = zero ∨ y = zero"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="TOneTimeOne = One" org.eventb.core.predicate="∀x, y· x = one ∧ y = one ⇔ x nTimes y = one"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="zeroImpl" org.eventb.core.predicate="∀x, y· x = zero ∨ y = zero ⇔ x nTimes y = zero"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="x = x ∗ y Implication" org.eventb.core.predicate="∀x, y·x ≠ zero ⇒ (x = x nTimes y ⇒ one = y)"/>
 </org.eventb.theory.core.theoryRoot>

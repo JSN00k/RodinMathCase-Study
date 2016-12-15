@@ -2,6 +2,7 @@
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNumbers">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryEquality.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryEquality"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryNatural_T.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryNatural_T"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bn_nat_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ x ∣ x ∈ List(BOOL) ∧ bn_isNormal(x) } "/>
@@ -34,6 +35,7 @@
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="zero and zero" org.eventb.core.predicate="∀x, y· bn_isZero(x) ∧ bn_isZero(y) ⇒ x bn_And y = nil"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="isZero(x)" org.eventb.core.predicate="∀x, y · bn_isZero(x) ⇒ x bn_And y = nil"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="isZero(y)" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇒ x bn_And y = nil"/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Corrollary x and y = nil = y and x" org.eventb.core.predicate="∀x, y·  x bn_And y = nil ⇒ y bn_And x = nil"/>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="nil = nil" org.eventb.core.predicate="∀x, y·  x bn_And y = nil ⇔ y bn_And x = nil"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.comment="I do bn_And_P : CommOp because I made the mistake of declaring CommOp as a total function." org.eventb.core.label="bn_And is Commutative" org.eventb.core.predicate="∀x, y· x bn_And y = y bn_And x"/>
 </org.eventb.theory.core.theoryRoot>

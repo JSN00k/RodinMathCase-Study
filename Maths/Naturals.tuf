@@ -194,6 +194,7 @@
 <org.eventb.theory.core.theorem name="_" org.eventb.core.label="minusToDecrement" org.eventb.core.predicate="∀x, y·decrement(x) nMinus y = decrement(x nMinus y)"/>
 <org.eventb.theory.core.theorem name="^" org.eventb.core.label="suc(x − y) = suc(x) − y" org.eventb.core.predicate="∀x, y·x nMinus y ≠ zero  ∨ x = y ⇔suc(x) nMinus y = suc(x nMinus y)"/>
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· x nAdd y = zero ⇔ x = zero ∧ y = zero"/>
+<org.eventb.theory.core.theorem name="r" org.eventb.core.label="x = x + y ⇒ y = zero" org.eventb.core.predicate="∀x, y·x = x nAdd y ⇒ y = zero"/>
 <org.eventb.theory.core.proofRulesBlock name="R" org.eventb.core.label="Adding Zeros">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="Nat"/>
