@@ -19,7 +19,7 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="COND(y = nil, nil, bn_remTrailingZeros(cons(xB AND bn_LSB(y), xT bn_And bn_shiftLeft1(y))))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xT)" org.eventb.theory.core.formula="COND(y = nil, nil, cons(xB AND bn_LSB(y), xT bn_And bn_shiftLeft1(y)))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bn_And_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
@@ -28,14 +28,4 @@
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Normalized is stripped" org.eventb.core.predicate="∀x· bn_remTrailingZeros(x) = x ⇔ bn_isNormal(x)"/>
 <org.eventb.theory.core.theorem name=":" org.eventb.core.label="when normal Eq ⇔ =" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ (x bn_Eq y ⇔ x = y)"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="remZeros is normal" org.eventb.core.predicate="∀x · bn_isNormal(bn_remTrailingZeros(x))"/>
-<org.eventb.theory.core.theorem name="+" org.eventb.core.label="AND closedness" org.eventb.core.predicate="∀x, y· (x bn_And y) ∈ bn_nat_T"/>
-<org.eventb.theory.core.theorem name="/" org.eventb.core.label="And nil = nil" org.eventb.core.predicate="∀x·x bn_And nil = nil"/>
-<org.eventb.theory.core.theorem name="," org.eventb.core.label="And Rev Expand" org.eventb.core.predicate="∀ x, yB, yT·x bn_And cons(yB, yT) = COND(x = nil, nil, bn_remTrailingZeros(cons(bn_LSB(x) AND yB, bn_shiftLeft1(x) bn_And yT))) "/>
-<org.eventb.theory.core.theorem name="0" org.eventb.core.label="isZero nil Equivilence" org.eventb.core.predicate="∀x, y · bn_isZero(x bn_And y) ⇔ x bn_And y = nil"/>
-<org.eventb.theory.core.theorem name="4" org.eventb.core.label="zero and zero" org.eventb.core.predicate="∀x, y· bn_isZero(x) ∧ bn_isZero(y) ⇒ x bn_And y = nil"/>
-<org.eventb.theory.core.theorem name="3" org.eventb.core.label="isZero(x)" org.eventb.core.predicate="∀x, y · bn_isZero(x) ⇒ x bn_And y = nil"/>
-<org.eventb.theory.core.theorem name="5" org.eventb.core.label="isZero(y)" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇒ x bn_And y = nil"/>
-<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Corrollary x and y = nil = y and x" org.eventb.core.predicate="∀x, y·  x bn_And y = nil ⇒ y bn_And x = nil"/>
-<org.eventb.theory.core.theorem name="1" org.eventb.core.label="nil = nil" org.eventb.core.predicate="∀x, y·  x bn_And y = nil ⇔ y bn_And x = nil"/>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="I do bn_And_P : CommOp because I made the mistake of declaring CommOp as a total function." org.eventb.core.label="bn_And is Commutative" org.eventb.core.predicate="∀x, y· x bn_And y = y bn_And x"/>
 </org.eventb.theory.core.theoryRoot>

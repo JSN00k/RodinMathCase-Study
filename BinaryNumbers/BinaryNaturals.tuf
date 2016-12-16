@@ -14,33 +14,8 @@
 <org.eventb.theory.core.theorem name="'." org.eventb.core.label="expand cons" org.eventb.core.predicate="∀x·cons(FALSE, x) bn_Eq x bn_Add x"/>
 <org.eventb.theory.core.theorem name="'/" org.eventb.core.label="expand Cons TRUE" org.eventb.core.predicate="∀x·cons(TRUE, x) bn_Eq bn_increment(x bn_Add x)"/>
 <org.eventb.theory.core.theorem name="'2" org.eventb.core.label="Add maintains Normality" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ bn_isNormal(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="'1" org.eventb.core.label="Eq Nums same addition" org.eventb.core.predicate="∀x, x1, y· x bn_Eq x1 ⇔ x bn_Add y bn_Eq x1 bn_Add y"/>
-<org.eventb.theory.core.theorem name="'+" org.eventb.core.label="hasSetBit(x) ⇒ hasSetBit(x bn_Add y)" org.eventb.core.predicate="∀x, y·bn_hasSetBit(x) ⇒ bn_hasSetBit(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="{" org.eventb.core.label="zero bn_add Corrally1" org.eventb.core.predicate="∀x, y·bn_isZero(x) ⇒ x bn_Add y bn_Eq y"/>
-<org.eventb.theory.core.theorem name="|" org.eventb.core.label="zero bn_add Corrally2" org.eventb.core.predicate="∀x, y· x bn_Add y = y ⇒  bn_isZero(x)"/>
-<org.eventb.theory.core.theorem name="z" org.eventb.core.label="zero bn_add x = x" org.eventb.core.predicate="∀x, y·bn_isZero(y) ⇔ y bn_Add x = x"/>
-<org.eventb.theory.core.theorem name="'(" org.eventb.core.label="zero Add Zero = zero" org.eventb.core.predicate="∀x, y · bn_isZero(x) ∧ bn_isZero(y) ⇔ bn_isZero(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="'-" org.eventb.core.label="CountBitsImpl1" org.eventb.core.predicate="∀x, y·bn_countBits(x bn_Add y) ≥ bn_countBits(x) "/>
-<org.eventb.theory.core.theorem name="'," org.eventb.core.label="add nil" org.eventb.core.predicate="∀x·x bn_Add nil bn_Eq nil"/>
-<org.eventb.theory.core.theorem name="'*" org.eventb.core.label="add Equality" org.eventb.core.predicate="∀x, y, z · x bn_Eq y ⇔ z bn_Add x bn_Eq z bn_Add y"/>
-<org.eventb.theory.core.theorem name="')" org.eventb.core.label="bn_Add zero" org.eventb.core.predicate="∀x, y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
-<org.eventb.theory.core.theorem name="''" org.eventb.core.label="incrementOutAddition" org.eventb.core.predicate="∀x, y·bn_increment(x) bn_Add y bn_Eq bn_increment(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="~" org.eventb.core.label="EqualNumsAddToSame" org.eventb.core.predicate="∀x, y, z·y bn_Eq z ⇒ x bn_Add y bn_Eq x bn_Add z"/>
-<org.eventb.theory.core.theorem name="y" org.eventb.core.label="AdditionReduction" org.eventb.core.predicate="∀x, y, z · x bn_Add y bn_Eq x bn_Add z ⇒ y bn_Eq z"/>
-<org.eventb.theory.core.theorem name="}" org.eventb.core.label="add xOR LSBs" org.eventb.core.predicate="∀x, y· bn_LSB(x) xOR bn_LSB(y) = bn_LSB(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="u" org.eventb.core.label="x + zero = x" org.eventb.core.predicate="∀x, y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
-<org.eventb.theory.core.theorem name="t" org.eventb.core.label="zero + zero = zero" org.eventb.core.predicate="∀x, y· bn_isZero(x) ∧ bn_isZero(y) ⇔ bn_isZero(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="q" org.eventb.core.label="notZero add isNotZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x)) ⇒ ¬bn_isZero(x bn_Add y)"/>
-<org.eventb.theory.core.theorem name="p" org.eventb.core.label="add increment ¬zero" org.eventb.core.predicate="∀x, y· ¬bn_isZero(x bn_Add bn_increment(y))"/>
-<org.eventb.theory.core.theorem name="D" org.eventb.core.label="bn_AddZero" org.eventb.core.predicate="∀x·x bn_Add nil bn_Eq x"/>
-<org.eventb.theory.core.theorem name="j" org.eventb.core.label="NotAddingZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x)) ∧ ¬(bn_isZero(y)) ⇔ ¬(bn_isZero(x bn_Add y))"/>
-<org.eventb.theory.core.theorem name="h" org.eventb.core.label="bn_AddAllZeros" org.eventb.core.predicate="∀x,y· bn_isZero(y) ⇔ x bn_Add y bn_Eq x"/>
-<org.eventb.theory.core.theorem name="i" org.eventb.core.label="AdditionEquality" org.eventb.core.predicate="∀x, y, z·x bn_Eq y ⇔ x bn_Add z = y bn_Add z"/>
+<org.eventb.theory.core.theorem name="}" org.eventb.core.label="'Eq' add xOR LSBs" org.eventb.core.predicate="∀x, y· bn_LSB(x) xOR bn_LSB(y) = bn_LSB(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="C" org.eventb.core.label="bn_appendList" org.eventb.core.predicate="∀x· bn_concatonate(x, nil) = x"/>
-<org.eventb.theory.core.theorem name="g" org.eventb.core.label="Commutivity" org.eventb.core.predicate="∀x, y·(x bn_Add y) bn_Eq (y bn_Add x)"/>
-<org.eventb.theory.core.theorem name="e" org.eventb.core.label="bn_add_intBitCount" org.eventb.core.predicate="∀x, y·bn_countBits(x) ≥ bn_countBits(y) ⇒ bn_countBits(x bn_Add y) ≥ bn_countBits(x)"/>
-<org.eventb.theory.core.theorem name="d" org.eventb.core.label="shiftLeftZero" org.eventb.core.predicate="∀x, y·¬(bn_isZero(x bn_Add bn_shiftLeft1(y))) ⇒ ¬(bn_isZero(x bn_Add y))"/>
-<org.eventb.theory.core.theorem name="b" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y· bn_isZero(x bn_Add y) ⇔ bn_isZero(x) ∧ bn_isZero(y)"/>
 <org.eventb.theory.core.importTheoryProject name="K" org.eventb.theory.core.importTheoryProject="/Maths">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/NaturalsMultiply.dtf|org.eventb.theory.core.deployedTheoryRoot#NaturalsMultiply"/>
 </org.eventb.theory.core.importTheoryProject>

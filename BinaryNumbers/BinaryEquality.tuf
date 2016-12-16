@@ -28,6 +28,7 @@
 <org.eventb.theory.core.theorem name="Q" org.eventb.core.label="countBits(remZeros(x)) = countBits(x))" org.eventb.core.predicate="∀x·bn_countBits(bn_remTrailingZeros(x)) = bn_countBits(x)"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="isZeroImpl" org.eventb.core.predicate="∀aB, b·bn_isZero(cons(aB, b)) ⇔ aB = FALSE ∧ bn_isZero(b)"/>
 <org.eventb.theory.core.theorem name=":" org.eventb.core.label="LSB(zero) = FALSE" org.eventb.core.predicate="∀x·bn_isZero(x) ⇒ bn_LSB(x) = FALSE"/>
+<org.eventb.theory.core.theorem name="d" org.eventb.core.label="=SameLSB" org.eventb.core.predicate="∀x, y· x = y ⇒ bn_LSB(x) = bn_LSB(y)"/>
 <org.eventb.theory.core.theorem name="V" org.eventb.core.label="EquSameLSB" org.eventb.core.predicate="∀x, y· x bn_Eq y ⇒ bn_LSB(x) = bn_LSB(y)"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="Strip cons" org.eventb.core.predicate="∀yB, zB, y, z·cons(yB, y) bn_Eq cons(zB, z) ⇔ y bn_Eq z ∧ yB = zB"/>
 <org.eventb.theory.core.theorem name="T" org.eventb.core.label="¬(x bn_Eq y) ⇒ x ≠ y" org.eventb.core.predicate="∀x, y· ¬(x bn_Eq y) ⇒ x ≠ y"/>

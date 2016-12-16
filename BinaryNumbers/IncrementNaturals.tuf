@@ -2,7 +2,6 @@
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNumbers">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryEquality.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryEquality"/>
-<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNumbers/BinaryNatural_T.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryNatural_T"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bn_increment" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="a"/>

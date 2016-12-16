@@ -129,4 +129,13 @@
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="BOOL implications">
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="x" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="y" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.metaVariable name="*" org.eventb.core.identifier="z" org.eventb.theory.core.type="BOOL"/>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="xOR swap" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="xOR swap">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x xOR y = z" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x = y xOR z"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
