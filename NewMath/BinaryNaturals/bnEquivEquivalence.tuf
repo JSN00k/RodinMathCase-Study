@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.theorem name="'" org.eventb.core.label="Transitivity" org.eventb.core.predicate="∀x, y, z·x bnEquiv y ∧ y bnEquiv z ⇒ x bnEquiv z"/>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bnEquivZeros.dtf|org.eventb.theory.core.deployedTheoryRoot#bnEquivZeros"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Equivalence" org.eventb.core.predicate="bnEquivB_P ∈ EquivRel(List(BOOL))"/>
+<org.eventb.theory.core.importTheoryProject name="*" org.eventb.theory.core.importTheoryProject="/Relations">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Relations/EquivRel.dtf|org.eventb.theory.core.deployedTheoryRoot#EquivRel"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.proofRulesBlock name="+" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="z" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="symetry" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Commutative Swap" org.eventb.theory.core.formula="x bnEquiv y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y bnEquiv x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Transitivity 1">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.given name="(" org.eventb.core.predicate="y bnEquiv z" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name=")" org.eventb.core.predicate="x bnEquiv z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="-" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Transitivity">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.given name="(" org.eventb.core.predicate="y bnEquiv z" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name=")" org.eventb.core.predicate="x bnEquiv z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="." org.eventb.core.label="inf4" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="∀z · x bnEquiv z ⇔  y bnEquiv z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="∀z · x bnEquiv z ⇔  y bnEquiv z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="/" org.eventb.core.label="inf5" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="∀z · x bnEquiv z ⇔  y bnEquiv z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="∀z · x bnEquiv z ⇔  y bnEquiv z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x Equiv y =&gt; (x Equiv z &lt;=&gt; y Equiv z)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x bnEquiv z ⇔ y bnEquiv z"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>

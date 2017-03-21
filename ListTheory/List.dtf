@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="1f41357cee2f8fa2ede0cbc5343a50d5" org.eventb.theory.core.outdated="false">
-<org.eventb.theory.core.useTheory name="_Map" org.eventb.core.scTarget="/ListTheory/_Map.dtf|org.eventb.theory.core.deployedTheoryRoot#_Map"/>
-<org.eventb.theory.core.useTheory name="_Predicates" org.eventb.core.scTarget="/ListTheory/_Predicates.dtf|org.eventb.theory.core.deployedTheoryRoot#_Predicates"/>
-</org.eventb.theory.core.deployedTheoryRoot>

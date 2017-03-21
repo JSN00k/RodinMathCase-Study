@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Monoid">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoid/Monoid_T.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid_T"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>

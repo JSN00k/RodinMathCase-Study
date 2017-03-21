@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="leq" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ order ∣ order ∈ t × t → BOOL ∧ order ∈ AntiSymmetry(t) ∧ order ∈ Transitivity(t) ∧ order ∈ Totality(t) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/Relations">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Relations/RelationProperties.dtf|org.eventb.theory.core.deployedTheoryRoot#RelationProperties"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>

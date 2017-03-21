@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="Reflexivity" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ t×t → BOOL ∧ ∀x· x ∈ t ⇒ op(x↦x) = TRUE }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Symmetry" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ t × t → BOOL ∧ ∀x, y·x ∈ t ∧ y ∈ t ⇒ op(x ↦ y) = op(y ↦ x) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="AntiSymmetry" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ t × t → BOOL ∧ ∀x, y·x ∈ t ∧ y ∈ t ⇒ (op(x ↦ y) = TRUE ∧ op(y ↦ x) = TRUE ⇔ x = y) }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Transitivity" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ op ∣ op ∈ t × t → BOOL ∧ ∀x, y, z· x ∈ t ∧ y ∈ t ∧ z ∈ t ∧ op(x ↦ y) = TRUE ∧ op(y ↦ z) = TRUE ⇒ op(x ↦ z) = TRUE } "/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="Totality" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ op ∣ op ∈ t × t → BOOL ∧ ∀x, y·x ∈ t ∧ y ∈ t ⇒ op(x ↦ y) = TRUE ∨ op(y ↦ x) = TRUE }"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name="," org.eventb.core.identifier="T"/>
+</org.eventb.theory.core.theoryRoot>

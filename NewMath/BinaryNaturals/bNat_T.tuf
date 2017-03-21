@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/ListTheory">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bnIsNormal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="(xs = nil ∧ xB = TRUE) ∨ (xs ≠ nil ∧ bnIsNormal(xs))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="bnZero" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/BOOL">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bnOne" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="cons(TRUE, nil)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="x ≠ nil expansion" org.eventb.core.predicate="∀x· x∈ List(BOOL) ⇒ (x ≠ nil ⇔ (∃xB, xs· x = cons(xB, xs)))"/>
+</org.eventb.theory.core.theoryRoot>

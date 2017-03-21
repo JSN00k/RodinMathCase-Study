@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/BitwiseOps.dtf|org.eventb.theory.core.deployedTheoryRoot#BitwiseOps"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bnEquiv" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="bnIsZero(y)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="xB = bnLSB(y) ∧ xs bnEquiv bnShiftLeft(y)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="bnEquivB" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="bool(x bnEquiv y)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bnEquivB_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y · ⊤ ∣ x bnEquivB y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="bnEquiv ⇔ bnEquivB = TRUE" org.eventb.core.predicate="∀x, y · x bnEquiv y ⇔ x bnEquivB y = TRUE"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="reflexivity" org.eventb.core.predicate="∀x· x bnEquiv x"/>
+<org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="basic rewrites">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="reflexive" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="reflexive" org.eventb.theory.core.formula="x bnEquiv x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="= ⇒ equiv" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="= =&gt; equiv">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x = y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x bnEquiv y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.metaVariable name="*" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Equiv to EquivB">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x bnEquivB y = TRUE"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="EquivB to Equiv TRUE">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquivB y = TRUE" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x bnEquiv y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="-" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="EquivB to Equiv FALSE">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquivB y = FALSE" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="¬(x bnEquiv y)"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="= ⇒ Equiv" org.eventb.core.predicate="∀x, y· x = y ⇒ x bnEquiv y"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="Equiv ⇒ same bit count" org.eventb.core.predicate="∀x, y · x bnEquiv y ⇒ bnCountBits(x) = bnCountBits(y)"/>
+<org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="Equiv countBits">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="x Equiv y ⇒ same bit count" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="countBits(x) = countBits(y)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnCountBits(x) = bnCountBits(y)"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="x Equiv y ⇒ same bit count in hyp" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="countBits(x) = countBits(y)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x bnEquiv y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnCountBits(x) = bnCountBits(y)"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>

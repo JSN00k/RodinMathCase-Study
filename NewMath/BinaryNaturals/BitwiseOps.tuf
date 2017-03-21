@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BOOL">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bnLSB" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="FALSE"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(aB, as)" org.eventb.theory.core.formula="aB"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/ListTheory">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.label="bnIsZero" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="xB = FALSE ∧ bnIsZero(xs)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="7" org.eventb.core.label="bnHasSetBit" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊥"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="xB = TRUE ∨ bnHasSetBit(xs)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="bnShiftLeft" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="xs"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="bnConcatonate" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="y"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="cons(xB, bnConcatonate(xs, y))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="bnRemTrailingZeros" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(xB = TRUE ∨ ¬bnIsZero(xs), cons(xB, bnRemTrailingZeros(xs)), nil)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.comment="floor(log2(x))" org.eventb.core.label="bnCountBits" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(xB = FALSE ∧ bnIsZero(xs), zero, suc(bnCountBits(xs)))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="countBits ≥ 0" org.eventb.core.predicate="∀x·zero pLeq bnCountBits(x)"/>
+<org.eventb.theory.core.proofRulesBlock name="2" org.eventb.core.label="countBits Theorems">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name="1" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="n" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="coutbits ≥ 0" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="countbits &gt;= 0" org.eventb.theory.core.formula="zero pLeq bnCountBits(x)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="coutbits ≥ 02" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="n + countbits &gt;= n" org.eventb.theory.core.formula="n pLeq (n pAdd bnCountBits(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="-" org.eventb.core.label="countBits(x) ≥ 0" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="countBits ≥ 0">
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="zero pLeq bnCountBits(x)"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="countBits(remZeros(x)) = countBits(x)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="countBits(remZeros(x)) = countBits(x)" org.eventb.theory.core.formula="bnCountBits(bnRemTrailingZeros(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnCountBits(x)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="/" org.eventb.core.label="countbits of shift left" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="countbits(x) - 1">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬bnIsZero(x)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name=")" org.eventb.core.predicate="suc(bnCountBits(bnShiftLeft(x))) = bnCountBits(x)"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.importTheoryProject name="6" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bNat_T.dtf|org.eventb.theory.core.deployedTheoryRoot#bNat_T"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="hasSetBit ⇒ notZero" org.eventb.core.predicate="∀x·bnHasSetBit(x) ⇔ ¬bnIsZero(x)"/>
+<org.eventb.theory.core.proofRulesBlock name=":" org.eventb.core.label="zero implications">
+<org.eventb.theory.core.inferenceRule name="'" org.eventb.core.label="zero has no set bits" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Zero No Set Bits">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="¬(bnHasSetBit(x))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="remZeros(zero) = nil" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="remZeros(zero) = nil">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnRemTrailingZeros(x) = nil"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="LSB(zero) = FALSE" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="LSB(zero) = FALSE">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnLSB(x) = FALSE"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="shiftLeft(zero) is zero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="zero &lt;&lt; 1 is zero">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnIsZero(bnShiftLeft(x))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="zero ⇒ countBits = zero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="zero ⇒ countBits = zero" org.eventb.theory.core.formula="bnIsZero(x)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnCountBits(x) = zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="countBits = zero ⇒ zero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="countBits = zero ⇒ zero" org.eventb.theory.core.formula="bnCountBits(x) = zero">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnIsZero(x)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name=";" org.eventb.core.label="remZeros(zero) = nil" org.eventb.core.predicate="∀x· bnIsZero(x) ⇔ bnRemTrailingZeros(x) = nil"/>
+<org.eventb.theory.core.theorem name="?" org.eventb.core.label="isZero(remZeros(zero))" org.eventb.core.predicate="∀x·bnIsZero(x) ⇔ bnIsZero(bnRemTrailingZeros(x))"/>
+<org.eventb.theory.core.theorem name="=" org.eventb.core.label="coutbits(zero) = zero" org.eventb.core.predicate="∀x· bnIsZero(x) ⇔ bnCountBits(x) = zero"/>
+<org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="countBits(x) = countBits(remZero(x))" org.eventb.core.predicate="∀x· bnCountBits(x) = bnCountBits(bnRemTrailingZeros(x))"/>
+<org.eventb.theory.core.theorem name="@" org.eventb.core.label="countBits(shiftLeft(x)) = countBits(x) − 1" org.eventb.core.predicate="∀x·¬ bnIsZero(x) ⇔ bnCountBits(x) = suc(bnCountBits(bnShiftLeft(x)))"/>
+</org.eventb.theory.core.theoryRoot>

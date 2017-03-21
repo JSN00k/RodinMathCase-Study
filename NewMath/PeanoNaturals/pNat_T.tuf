@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.datatypeDefinition name="'" org.eventb.core.identifier="pNat">
+<org.eventb.theory.core.datatypeConstructor name="'" org.eventb.core.identifier="zero"/>
+<org.eventb.theory.core.datatypeConstructor name="(" org.eventb.core.identifier="suc">
+<org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="prev" org.eventb.theory.core.type="pNat"/>
+</org.eventb.theory.core.datatypeConstructor>
+</org.eventb.theory.core.datatypeDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="one" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="suc(zero)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="two" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="suc(suc(zero))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="suc(x) ≠ x" org.eventb.core.predicate="∀x·suc(x) ≠ x"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="This comes up a lot!" org.eventb.core.label="suc(suc(x)) ≠ x" org.eventb.core.predicate="∀x·suc(suc(x)) ≠ x"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="suc Equality" org.eventb.core.predicate="∀x, y· x = y ⇔ suc(x) = suc(y)"/>
+<org.eventb.theory.core.proofRulesBlock name="," org.eventb.core.label="suc rules">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="suc(x) ≠ x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(x) /= x" org.eventb.theory.core.formula="suc(x) = x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="suc(suc(x)) ≠ x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(suc(x)) ≠ x" org.eventb.theory.core.formula="suc(suc(x)) = x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>

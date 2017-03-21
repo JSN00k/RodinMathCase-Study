@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="1368ece0ae5acf31a9ea5aa287651471" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.useTheory name="Monoid_T" org.eventb.core.scTarget="/Monoid/Monoid_T.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid_T"/>
+</org.eventb.theory.core.deployedTheoryRoot>

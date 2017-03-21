@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.theorem name="'" org.eventb.core.label="Bijection peano lemma" org.eventb.core.predicate="∀x·bnToPNat(pToBnNat(x)) = x"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="pToBn equiv cons" org.eventb.core.predicate="∀x·pToBnNat(two pTimes bnToPNat(x)) bnEquiv cons(FALSE,x)"/>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bnIncrementPMorphism.dtf|org.eventb.theory.core.deployedTheoryRoot#bnIncrementPMorphism"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Bijection binary lemma" org.eventb.core.predicate="∀x·pToBnNat(bnToPNat(x)) bnEquiv x"/>
+</org.eventb.theory.core.theoryRoot>

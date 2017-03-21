@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Operators">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Operators/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Monoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ ident ↦ op ∣ ident ∈ t ∧ op ∈ AssocOp(t) ∧ ∀x·x ∈ t ⇒ op(ident ↦ x) = x ∧ op(x ↦ ident) = x }"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="mk_monoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="type"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="ℙ(T×T×T)" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.operatorWDcondition name="*" org.eventb.core.predicate="ident ∈ type ∧ op ∈ AssocOp(type)"/>
+<org.eventb.theory.core.directOperatorDefinition name="+" org.eventb.theory.core.formula="ident ↦ op"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name="*" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="get_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid(ℙ(T))" org.eventb.core.identifier="m"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="prj1(m)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="get_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Monoid(ℙ(T))" org.eventb.core.identifier="m"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="prj2(m)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="Simplifications">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="ident" org.eventb.theory.core.type="ℙ(T)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="op" org.eventb.theory.core.type="ℙ(ℙ(T)×ℙ(T)×ℙ(T))"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="get_ident(m)=ident" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="GetIdent" org.eventb.theory.core.formula="get_ident(ident ↦ op)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="ident"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="get_op(m) = op" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="GetOp" org.eventb.theory.core.formula="get_op(ident ↦ op)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="op"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="," org.eventb.core.identifier="type" org.eventb.theory.core.type="ℙ(T)"/>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>

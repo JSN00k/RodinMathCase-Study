@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.theorem name="'" org.eventb.core.label="diff_length_implies_not_equal" org.eventb.core.predicate="∀x, y·x ∈ List(T) ⇒ (length(x) ≠ length(y) ⇒ x ≠ y)"/>
+<org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/ListTheory">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_AuxiliaryDefinitions.dtf|org.eventb.theory.core.deployedTheoryRoot#_AuxiliaryDefinitions"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.comment="An example that I was struggling with without the theorem above." org.eventb.core.label="x_not_eqaul_cons(cons(a, cons(b, x))" org.eventb.core.predicate="∀x, a, b·x ∈ List(T)⇒x ≠ cons(a, cons(b, x))"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="append nil equality" org.eventb.core.predicate="∀x·x ∈ List(T) ⇒ appendList(x, nil) = x"/>
+</org.eventb.theory.core.theoryRoot>

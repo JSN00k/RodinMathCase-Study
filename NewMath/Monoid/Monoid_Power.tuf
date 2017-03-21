@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Addition.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Addition"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Power" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T" org.eventb.core.identifier="ident"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AssocOp(T)" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="T" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="*" org.eventb.core.expression="pNat" org.eventb.core.identifier="p"/>
+<org.eventb.theory.core.operatorWDcondition name="." org.eventb.core.predicate="ident ↦ op ∈ Monoid(T)"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="/" org.eventb.theory.core.inductiveArgument="p">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="ident"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ps)" org.eventb.theory.core.formula="op(x ↦ Power(ident, op, x, ps))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="Power aritmentic" org.eventb.core.predicate="∀ ident, op, x, p, q·ident ↦ op ∈ Monoid(T) ⇒ op(Power(ident, op, x, p) ↦ Power(ident, op, x, q)) = Power(ident, op, x, p pAdd q)"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="PowerSubset is closed" org.eventb.core.predicate="∀t, ident, op, x, p·t∈ℙ(T) ∧ ident ↦ op ∈ Monoid(t) ∧ x ∈ t ⇒ PowerSubset(t, ident, op, x, p) ∈ t"/>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="PowerSubset" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.operatorArgument name="-" org.eventb.core.expression="t" org.eventb.core.identifier="ident"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AssocOp(t)" org.eventb.core.identifier="op"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="T" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="*" org.eventb.core.expression="pNat" org.eventb.core.identifier="p"/>
+<org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="x∈t ∧ ident↦op ∈ Monoid(t)"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="," org.eventb.theory.core.inductiveArgument="p">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="ident"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ps)" org.eventb.theory.core.formula="op(x ↦ PowerSubset(t, ident, op, x, ps))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="PowerSubset arithmetic" org.eventb.core.predicate="∀t, ident, op, x, p, q·t∈ℙ(T) ∧ ident ↦ op ∈ Monoid(t) ∧ x ∈ t ⇒ op(PowerSubset(t, ident, op, x, p) ↦ PowerSubset(t, ident, op, x, q)) = PowerSubset(t, ident, op, x, p pAdd q)"/>
+</org.eventb.theory.core.theoryRoot>
