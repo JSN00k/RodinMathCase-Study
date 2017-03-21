@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="654501b10e7fc577ea0ab47643287468" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="654501b10e7fc577ea0ab47643287468" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="BOOL" org.eventb.core.scTarget="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
 <org.eventb.theory.core.useTheory name="BitwiseOps" org.eventb.core.scTarget="/BinaryNumbers/BitwiseOps.dtf|org.eventb.theory.core.deployedTheoryRoot#BitwiseOps"/>
 <org.eventb.theory.core.useTheory name="BinaryNatural_T" org.eventb.core.scTarget="/BinaryNumbers/BinaryNatural_T.dtf|org.eventb.theory.core.deployedTheoryRoot#BinaryNatural_T"/>

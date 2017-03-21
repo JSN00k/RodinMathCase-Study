@@ -28,4 +28,18 @@
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Normalized is stripped" org.eventb.core.predicate="∀x· bn_remTrailingZeros(x) = x ⇔ bn_isNormal(x)"/>
 <org.eventb.theory.core.theorem name=":" org.eventb.core.label="when normal Eq ⇔ =" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ (x bn_Eq y ⇔ x = y)"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="remZeros is normal" org.eventb.core.predicate="∀x · bn_isNormal(bn_remTrailingZeros(x))"/>
+<org.eventb.theory.core.proofRulesBlock name=";" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="remZeros(X) is normal" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Describe Me!" org.eventb.theory.core.formula="bn_isNormal(bn_remTrailingZeros(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="x = remZeros(x) ⇒ bn_isNormal(x)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="bn_isNormal(x)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bn_remTrailingZeros(x) = x" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bn_isNormal(x)"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="normalized ⇒ rmZeros(x) = x" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="remZero(x) = x">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bn_isNormal(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bn_remTrailingZeros(x) = x"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

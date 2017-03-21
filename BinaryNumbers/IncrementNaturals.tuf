@@ -13,6 +13,7 @@
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="incrementMaintainsNormality" org.eventb.core.predicate="∀x·bn_isNormal(x) ⇒ bn_isNormal(bn_increment(x))"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="IncrementZero = One" org.eventb.core.predicate="∀x·bn_isZero(x) ⇒ bn_increment(x) bn_Eq bn_One"/>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="increment ¬zero" org.eventb.core.predicate="∀x· ¬bn_isZero(bn_increment(x))"/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="increment ¬ nil" org.eventb.core.predicate="∀x· bn_increment(x) ≠ nil"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="hasSetBit(incr) =⊤ " org.eventb.core.predicate="∀x · bn_hasSetBit(bn_increment(x))"/>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.label="IncrementFlipsLowBit" org.eventb.core.predicate="∀x·bn_LSB(x) ≠ bn_LSB(bn_increment(x)) "/>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="incr(x) ≠ x" org.eventb.core.predicate="∀x · bn_increment(x) ≠ x"/>

@@ -12,6 +12,7 @@
 <org.eventb.theory.core.theorem name="x" org.eventb.core.label="ReverseExpand" org.eventb.core.predicate="∀x, yB, yT· x bn_Add cons(yB, yT) =  &#10;  COND(yB = TRUE ∧ bn_LSB(x) = TRUE, cons(FALSE, bn_increment(bn_shiftLeft1(x) bn_Add yT)),&#10;    COND(¬(yB = TRUE) ∧ ¬(bn_LSB(x) = TRUE), cons(FALSE, bn_shiftLeft1(x) bn_Add yT),&#10;    cons(TRUE, bn_shiftLeft1(x) bn_Add yT)))"/>
 <org.eventb.theory.core.theorem name="'0" org.eventb.core.label="nil add nil = nil" org.eventb.core.predicate="∀x, y· x = nil ∧ y = nil ⇔ x bn_Add y = nil"/>
 <org.eventb.theory.core.theorem name="'." org.eventb.core.label="expand cons" org.eventb.core.predicate="∀x·cons(FALSE, x) bn_Eq x bn_Add x"/>
+<org.eventb.theory.core.theorem name="'3" org.eventb.core.label="expandConsNormal" org.eventb.core.predicate="∀x·x ≠ nil ⇒ (x bn_Add x = cons(FALSE, x))"/>
 <org.eventb.theory.core.theorem name="'/" org.eventb.core.label="expand Cons TRUE" org.eventb.core.predicate="∀x·cons(TRUE, x) bn_Eq bn_increment(x bn_Add x)"/>
 <org.eventb.theory.core.theorem name="'2" org.eventb.core.label="Add maintains Normality" org.eventb.core.predicate="∀x, y·bn_isNormal(x) ∧ bn_isNormal(y) ⇒ bn_isNormal(x bn_Add y)"/>
 <org.eventb.theory.core.theorem name="}" org.eventb.core.label="'Eq' add xOR LSBs" org.eventb.core.predicate="∀x, y· bn_LSB(x) xOR bn_LSB(y) = bn_LSB(x bn_Add y)"/>

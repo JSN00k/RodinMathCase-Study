@@ -9,7 +9,7 @@
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Maths/MonoidPOW.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidPOW"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="nTimes_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·x↦y∈Nat×Nat ∣ x nTimes y"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·⊤ ∣ x nTimes y"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.proofRulesBlock name="*" org.eventb.core.comment="These match the theorems in MonoidPOW for the natural multiplication" org.eventb.core.label="Rewrites">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="Nat"/>
