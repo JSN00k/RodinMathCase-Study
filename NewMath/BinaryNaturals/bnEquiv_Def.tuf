@@ -58,4 +58,5 @@
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnCountBits(x) = bnCountBits(y)"/>
 </org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="Removing Zeros maintains equivalence" org.eventb.core.predicate="∀x· bnRemTrailingZeros(x) bnEquiv x"/>
 </org.eventb.theory.core.theoryRoot>

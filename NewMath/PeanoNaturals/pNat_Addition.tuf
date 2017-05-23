@@ -113,6 +113,9 @@
 <org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="CancelZero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="cancel to zero" org.eventb.theory.core.formula="x pAdd y = x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y = zero"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="CancelToZero2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="cancel to zero" org.eventb.theory.core.formula="x = x pAdd y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y = zero"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="non−zero addition" org.eventb.core.predicate="∀x, y·x ≠ zero ∨ y ≠ zero ⇔ x pAdd y ≠ zero"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="x + y = x ⇔ y = 0" org.eventb.core.predicate="∀x, y·x pAdd y = x ⇔ y = zero"/>

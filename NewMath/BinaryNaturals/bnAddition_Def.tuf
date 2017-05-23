@@ -20,7 +20,10 @@
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="Add maintains Normality" org.eventb.core.predicate="∀x, y·bnIsNormal(x) ∧ bnIsNormal(y) ⇒ bnIsNormal(x bnAdd y)"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="'Eq' add xOR LSBs" org.eventb.core.predicate="∀x, y· bnLSB(x) xOR bnLSB(y) = bnLSB(x bnAdd y)"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="increment ¬ zero lemm" org.eventb.core.predicate="∀x, y· ¬bnIsZero(bnIncrement(x) bnAdd y)"/>
-<org.eventb.theory.core.theorem name="2" org.eventb.core.label="incr out of addition Lemma" org.eventb.core.predicate="∀x, y·bnCountBits(bnIncrement(x) bnAdd y)=bnCountBits(bnIncrement(x bnAdd y))"/>
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y·bnIsZero(x) ∧ bnIsZero(y) ⇔ bnIsZero(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="x bnEquiv x bnAdd  zero" org.eventb.core.predicate="∀x, y·bnIsZero(y) ⇒ x bnEquiv x bnAdd y"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="Add Zero same bit count" org.eventb.core.predicate="∀x, y·bnIsZero(y)⇒ bnCountBits(x) = bnCountBits(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="increment addition not zero" org.eventb.core.predicate="∀x, y·¬bnIsZero(bnIncrement(x) bnAdd y)"/>
 <org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="rulesBlock1">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
 <org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="x add nil" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x add nil = x" org.eventb.theory.core.formula="x bnAdd nil">

@@ -7,4 +7,11 @@
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.comment="An example that I was struggling with without the theorem above." org.eventb.core.label="x_not_eqaul_cons(cons(a, cons(b, x))" org.eventb.core.predicate="∀x, a, b·x ∈ List(T)⇒x ≠ cons(a, cons(b, x))"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="append nil equality" org.eventb.core.predicate="∀x·x ∈ List(T) ⇒ appendList(x, nil) = x"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="heads not eaqual" org.eventb.core.predicate="∀x, y· x∈ List(T) ∧ x ≠ nil ∧ y ∈ List(T) ∧ y ≠ nil ∧ head(x) ≠ head(y) ⇒ x ≠ y"/>
+<org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="l" org.eventb.theory.core.type="List(T)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="appendList(l, nil) = l" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="appendList(l, nil) = l" org.eventb.theory.core.formula="appendList(l, nil)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="l"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

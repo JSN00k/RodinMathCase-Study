@@ -96,6 +96,10 @@
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnLSB(x) = FALSE"/>
 </org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="/" org.eventb.core.label="LSB(zero) = FALSE2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="LSB(zero) = FALSE">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnLSB(x) = FALSE"/>
+</org.eventb.theory.core.inferenceRule>
 <org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="shiftLeft(zero) is zero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="zero &lt;&lt; 1 is zero">
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsZero(x)" org.eventb.theory.core.hyp="true"/>
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnIsZero(bnShiftLeft(x))"/>
@@ -112,4 +116,7 @@
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="coutbits(zero) = zero" org.eventb.core.predicate="∀x· bnIsZero(x) ⇔ bnCountBits(x) = zero"/>
 <org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="countBits(x) = countBits(remZero(x))" org.eventb.core.predicate="∀x· bnCountBits(x) = bnCountBits(bnRemTrailingZeros(x))"/>
 <org.eventb.theory.core.theorem name="@" org.eventb.core.label="countBits(shiftLeft(x)) = countBits(x) − 1" org.eventb.core.predicate="∀x·¬ bnIsZero(x) ⇔ bnCountBits(x) = suc(bnCountBits(bnShiftLeft(x)))"/>
+<org.eventb.theory.core.theorem name="A" org.eventb.core.label="LSB(zero) = FALSE" org.eventb.core.predicate="∀x·bnIsZero(x) ⇒ bnLSB(x) = FALSE"/>
+<org.eventb.theory.core.theorem name="B" org.eventb.core.label="shiftLeft maintains zero" org.eventb.core.predicate="∀x·bnIsZero(x) ⇒ bnIsZero(bnShiftLeft(x))"/>
+<org.eventb.theory.core.theorem name="C" org.eventb.core.label="shiftLeft reduces bit count" org.eventb.core.predicate="∀x·¬bnIsZero(x)⇒ suc(bnCountBits(bnShiftLeft(x))) = bnCountBits(x)"/>
 </org.eventb.theory.core.theoryRoot>

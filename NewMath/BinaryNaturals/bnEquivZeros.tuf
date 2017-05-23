@@ -18,6 +18,7 @@
 <org.eventb.theory.core.importTheoryProject name="*" org.eventb.theory.core.importTheoryProject="/ListTheory">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_ListTheorems.dtf|org.eventb.theory.core.deployedTheoryRoot#_ListTheorems"/>
 </org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="B" org.eventb.core.label="zeros on end of number" org.eventb.core.predicate="∀x·∃n·length(bnRemTrailingZeros(x)) pAdd n = length(x)"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="mkZero makes zeros" org.eventb.core.predicate="∀n· bnIsZero(bnMkZero(n))"/>
 <org.eventb.theory.core.theorem name=":" org.eventb.core.label="MkZeroEqu" org.eventb.core.predicate="∀n,m · bnMkZero(n) = bnMkZero(m) ⇔ n = m"/>
 <org.eventb.theory.core.theorem name=";" org.eventb.core.label="MkZero Arithmetic" org.eventb.core.predicate="∀n, m· bnMkZero(n pAdd m) = appendList(bnMkZero(n), bnMkZero(m))"/>
@@ -28,6 +29,7 @@
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="AppendZeros to zero is zero" org.eventb.core.predicate="∀x, n · bnIsZero(x) ⇔ bnIsZero(bnAppendZeros(x, n))"/>
 <org.eventb.theory.core.theorem name="2" org.eventb.core.label="AppendZerosSameBitCount" org.eventb.core.predicate="∀x, n· bnCountBits(x) = bnCountBits(bnAppendZeros(x, n))"/>
 <org.eventb.theory.core.theorem name="0" org.eventb.core.label="appendZerosEquality" org.eventb.core.predicate="∀x, y· x bnEquiv y ⇔ (∃n· x = bnAppendZeros(y, n) ∨ bnAppendZeros(x, n) = y)"/>
+<org.eventb.theory.core.theorem name="A" org.eventb.core.label="removeZeros not equal" org.eventb.core.predicate="∀x·∃n· x = bnAppendZeros(bnRemTrailingZeros(x), n)"/>
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="Append(Append(x, n), m) = Append(x, n + m)" org.eventb.core.predicate="∀x, n, m·bnAppendZeros(bnAppendZeros(x, n), m) = bnAppendZeros(x, n pAdd m)"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="zero Equiv zero" org.eventb.core.predicate="∀x, y · bnIsZero(x) ∧ bnIsZero(y) ⇒ x bnEquiv y"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="zero Equiv y ⇒ y is zero" org.eventb.core.predicate="∀x, y·bnIsZero(x) ∧ x bnEquiv y ⇒ bnIsZero(y)"/>

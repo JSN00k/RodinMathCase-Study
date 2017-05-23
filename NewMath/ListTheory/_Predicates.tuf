@@ -25,7 +25,7 @@
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="for_all_in_cons_pairs" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T × T ⇸ BOOL" org.eventb.core.identifier="p"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(T)" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="cons_pairs(x) ⊆ dom(p)"/>
+<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="cons_pairs(T, x) ⊆ dom(p)"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="*" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0, xs)" org.eventb.theory.core.formula="(xs = nil) ∨ ( p(x0 ↦ head(xs)) = TRUE ∧ for_all_in_cons_pairs(p, xs) )"/>
@@ -34,7 +34,7 @@
 <org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="exists_in_cons_pairs" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="T × T ⇸ BOOL" org.eventb.core.identifier="p"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(T)" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="cons_pairs(x) ⊆ dom(p)"/>
+<org.eventb.theory.core.operatorWDcondition name=")" org.eventb.core.predicate="cons_pairs(T, x) ⊆ dom(p)"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="*" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊥"/>
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0, xs)" org.eventb.theory.core.formula="(xs ≠ nil) ∧ ( p(x0 ↦ head(xs)) = TRUE ∨ exists_in_cons_pairs(p, xs) )"/>

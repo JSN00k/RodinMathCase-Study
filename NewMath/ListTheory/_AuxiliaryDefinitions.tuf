@@ -3,18 +3,11 @@
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/ListTheory">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_ListType.dtf|org.eventb.theory.core.deployedTheoryRoot#_ListType"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="length" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(T)" org.eventb.core.identifier="x"/>
-<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
-<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="0"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0, xs)" org.eventb.theory.core.formula="1 + length(xs)"/>
-</org.eventb.theory.core.recursiveOperatorDefinition>
-</org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.label="pLength" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="/" org.eventb.core.label="length" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(T)" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="zero"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0, xs)" org.eventb.theory.core.formula="suc(pLength(xs))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(x0, xs)" org.eventb.theory.core.formula="suc(length(xs))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="append" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
