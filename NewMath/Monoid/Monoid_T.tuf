@@ -34,4 +34,9 @@
 </org.eventb.theory.core.rewriteRule>
 <org.eventb.theory.core.metaVariable name="," org.eventb.core.identifier="type" org.eventb.theory.core.type="ℙ(T)"/>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="identity is unique" org.eventb.core.predicate="∀t, x, ident, op·x∈ t ∧ t ∈ ℙ(T) ∧ ident ↦ op ∈ Monoid(t) ⇒ (op(x ↦ ident) = ident ⇔ x = ident)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="2 left ident no right ident" org.eventb.core.predicate="∀t, l1, l2, ident, op·&#10;t ∈ ℙ(T) ∧ l1 ∈ t ∧ l2 ∈ t ∧ ident↦op ∈ Monoid(t) ∧ (∀x·x ∈ t ⇒ op(l1 ↦ x) = x) ∧ (∀y·y ∈ t⇒op(l2 ↦ y) = y) ∧ l1 ≠ l2 ⇒ ¬(∃r1·r1 ∈ t ∧ (∀z·z ∈ t ⇒ op(z↦r1) = z)) "/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="2 right ident no left ident" org.eventb.core.predicate="∀t, r1, r2, ident, op·&#10;t ∈ ℙ(T) ∧ r1 ∈ t ∧ r2 ∈ t ∧ ident↦op ∈ Monoid(t) ∧ (∀x·x ∈ t ⇒ op(x ↦ r1) = x) ∧ (∀y·y ∈ t ⇒ op(y ↦ r2) = y) ∧ r1 ≠ r2 ⇒ ¬(∃ l1·l1 ∈ t ∧ ∀z·z∈t ⇒op(l1 ↦ z) = z) "/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="left ident is the ident" org.eventb.core.predicate="∀t, l1, ident, op·t ∈ ℙ(T) ∧ l1 ∈ t ∧ ident↦op ∈ Monoid(t) ∧ (∀x· x ∈ t ⇒ op(l1 ↦ x) = x) ⇒ l1 = ident"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="right ident is the ident" org.eventb.core.predicate="∀t, r1, ident, op·t ∈ ℙ(T) ∧ r1 ∈ t ∧ ident↦op ∈ Monoid(t) ∧ (∀x·x ∈ t ⇒ op(x ↦ r1) = x) ⇒ r1 = ident"/>
 </org.eventb.theory.core.theoryRoot>

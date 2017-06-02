@@ -49,7 +49,7 @@
 <org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="pAdd is Associative" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="pAdd is Associative" org.eventb.theory.core.formula="pAdd_P ∈ AssocOp(pNat)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
-<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="pAdd and zero form a monoid" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="zero |-&gt; pAdd is a monid" org.eventb.theory.core.formula="zero ↦ pAdd_P ∈ Monoid(pNat) ">
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="pAdd and zero form a monoid" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="zero |-&gt; pAdd is a monoid" org.eventb.theory.core.formula="zero ↦ pAdd_P ∈ Monoid(pNat) ">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>

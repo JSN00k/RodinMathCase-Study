@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="7891d34fd7922fa19d65cc016d8a8646" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="4530b16c9491f4c71d5cd0381b80b4cf" org.eventb.theory.core.outdated="false">
 <org.eventb.theory.core.scDatatypeDefinition name="pNat" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.datatypeDefinition#'" org.eventb.theory.core.hasError="false">
 <org.eventb.theory.core.scDatatypeConstructor name="zero" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#'"/>
 <org.eventb.theory.core.scDatatypeConstructor name="suc" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#(">
@@ -30,6 +30,9 @@
 </org.eventb.theory.core.scRewriteRule>
 <org.eventb.theory.core.scRewriteRule name="z" org.eventb.core.accurate="true" org.eventb.core.label="suc(suc(x)) ≠ x" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.rewriteRule#)" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(suc(x)) ≠ x" org.eventb.theory.core.formula="suc(suc(x))=x">
 <org.eventb.theory.core.scRewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.rewriteRule#)|org.eventb.theory.core.rewriteRuleRHS#'" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.scRewriteRule>
+<org.eventb.theory.core.scRewriteRule name="{" org.eventb.core.accurate="true" org.eventb.core.label="suc(zero) = one" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.rewriteRule#*" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(zero) = one" org.eventb.theory.core.formula="suc(zero ⦂ pNat)">
+<org.eventb.theory.core.scRewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.rewriteRule#*|org.eventb.theory.core.rewriteRuleRHS#'" org.eventb.theory.core.formula="one ⦂ pNat"/>
 </org.eventb.theory.core.scRewriteRule>
 </org.eventb.theory.core.scProofRulesBlock>
 </org.eventb.theory.core.deployedTheoryRoot>

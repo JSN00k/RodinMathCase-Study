@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="S"/>
+<org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.importTheoryProject name="+" org.eventb.theory.core.importTheoryProject="/Operators">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Operators/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="ident maps to ident" org.eventb.core.predicate="∀s, t, fIdent, f, gIdent, g, hom·s∈ℙ(S) ∧ t ∈ ℙ(T) ∧ hom ↦ (fIdent ↦ f) ↦ (gIdent ↦ g) ∈ Homomorphisms(s, t)&#10;⇒ hom(fIdent) = gIdent"/>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="Homomorphisms" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(S)" org.eventb.core.identifier="s"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ hom ↦ (fIdent ↦ f) ↦ (gIdent ↦ g) ∣ hom ∈ s → t ∧ fIdent ↦ f ∈ Monoid(s) ∧ gIdent ↦ g ∈ Monoid(t)&#10;∧ ∀x, y·hom(f(x ↦ y)) = g(hom(x) ↦ hom(y))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="Homomorphism2" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(S)" org.eventb.core.identifier="s"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="ℙ(T)" org.eventb.core.identifier="t"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ hom ∣ hom ∈ s → t ∧ ∀x, y·hom(f(x ↦ y)) = g(hom(x) ↦ hom(y)) }"/>
+<org.eventb.theory.core.operatorArgument name="*" org.eventb.core.expression="AssocOp(s)" org.eventb.core.identifier="f"/>
+<org.eventb.theory.core.operatorArgument name="+" org.eventb.core.expression="AssocOp(t)" org.eventb.core.identifier="g"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="." org.eventb.theory.core.importTheoryProject="/Monoid">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoid/Monoid_T.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid_T"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="thm1" org.eventb.core.predicate="∀s, t, f, g, hom1, hom2, x·hom1∈S→T ∧ hom2 ∈ T→ S ∧ hom1 ↦ f ↦ g∈Homomorphisms(s, t) ∧ hom2 ↦ g ↦ f∈Homomorphisms(t, s) ∧ x ∈ s&#10;⇒ hom2(hom1(x)) = x"/>
+</org.eventb.theory.core.theoryRoot>

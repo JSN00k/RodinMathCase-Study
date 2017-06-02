@@ -12,6 +12,12 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xB, xs)" org.eventb.theory.core.formula="COND(xB = TRUE ∧ bnLSB(y) = TRUE, cons(FALSE, bnIncrement(xs bnAdd bnShiftLeft(y))),&#10;  COND(¬(xB = TRUE) ∧ ¬(bnLSB(y) = TRUE), cons(FALSE, xs bnAdd bnShiftLeft(y)),&#10;  cons(TRUE, xs bnAdd bnShiftLeft(y))))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=";" org.eventb.core.label="bnAddNorm" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="x bnAdd y"/>
+<org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="x ∈ bnNatNorm ∧ y ∈ bnNatNorm"/>
+</org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="x bn_Add nil = x" org.eventb.core.predicate="∀x·x bnAdd nil = x"/>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.label="nil add nil = nil" org.eventb.core.predicate="∀x, y· x = nil ∧ y = nil ⇔ x bnAdd y = nil"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="expand cons" org.eventb.core.predicate="∀x·cons(FALSE, x) bnEquiv x bnAdd x"/>
@@ -19,11 +25,9 @@
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="expand Cons TRUE" org.eventb.core.predicate="∀x·cons(TRUE, x) bnEquiv bnIncrement(x bnAdd x)"/>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="Add maintains Normality" org.eventb.core.predicate="∀x, y·bnIsNormal(x) ∧ bnIsNormal(y) ⇒ bnIsNormal(x bnAdd y)"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="'Eq' add xOR LSBs" org.eventb.core.predicate="∀x, y· bnLSB(x) xOR bnLSB(y) = bnLSB(x bnAdd y)"/>
-<org.eventb.theory.core.theorem name="3" org.eventb.core.label="increment ¬ zero lemm" org.eventb.core.predicate="∀x, y· ¬bnIsZero(bnIncrement(x) bnAdd y)"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="zero add zero = zero" org.eventb.core.predicate="∀x, y·bnIsZero(x) ∧ bnIsZero(y) ⇔ bnIsZero(x bnAdd y)"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="x bnEquiv x bnAdd  zero" org.eventb.core.predicate="∀x, y·bnIsZero(y) ⇒ x bnEquiv x bnAdd y"/>
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="Add Zero same bit count" org.eventb.core.predicate="∀x, y·bnIsZero(y)⇒ bnCountBits(x) = bnCountBits(x bnAdd y)"/>
-<org.eventb.theory.core.theorem name="8" org.eventb.core.label="increment addition not zero" org.eventb.core.predicate="∀x, y·¬bnIsZero(bnIncrement(x) bnAdd y)"/>
 <org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="rulesBlock1">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
 <org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="x add nil" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x add nil = x" org.eventb.theory.core.formula="x bnAdd nil">
@@ -54,5 +58,11 @@
 </org.eventb.theory.core.inferenceRule>
 <org.eventb.theory.core.metaVariable name="." org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
 </org.eventb.theory.core.proofRulesBlock>
-<org.eventb.theory.core.theorem name="1" org.eventb.core.label="incr out of addition" org.eventb.core.predicate="∀x, y·bnIncrement(x) bnAdd y bnEquiv bnIncrement(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="LSB(x add x) = FALSE" org.eventb.core.predicate="∀x·bnLSB(x bnAdd x) = FALSE"/>
+<org.eventb.theory.core.newOperatorDefinition name="9" org.eventb.core.label="bnAdd_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·⊤ ∣ x bnAdd y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=":" org.eventb.core.label="bnAddNorm_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y· x ∈ bnNatNorm ∧ y ∈ bnNatNorm ∣ x bnAddNorm y"/>
+</org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>

@@ -39,7 +39,9 @@
 <org.eventb.theory.core.theorem name="@" org.eventb.core.label="symetric" org.eventb.core.predicate="∀x, y· x bnEquiv y ⇔ y bnEquiv x"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="AppendZeros Preserves Equiv Lemma1" org.eventb.core.predicate="∀x, y, n · x bnEquiv y ⇒ bnAppendZeros(x, n) bnEquiv y ∧ x bnEquiv bnAppendZeros(y, n)"/>
 <org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="AppendZeros Preserves Equiv Lemma2" org.eventb.core.predicate="∀x, y, n · bnAppendZeros(x, n) bnEquiv y ⇒ x bnEquiv y"/>
+<org.eventb.theory.core.theorem name="D" org.eventb.core.label="AppendZeros Preserves Equiv Lemma3" org.eventb.core.predicate="∀x, y, n · bnAppendZeros(x, n) bnEquiv y ⇔ x bnEquiv y"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="AppendZeros Preserves Equiv" org.eventb.core.predicate="∀x, y, n · x bnEquiv y ⇔  bnAppendZeros(x, n) bnEquiv y ∧ x bnEquiv bnAppendZeros(y, n)"/>
+<org.eventb.theory.core.theorem name="E" org.eventb.core.label="AppendZeros Preserves Equiv2" org.eventb.core.predicate="∀x, y, n, m · x bnEquiv y ⇔  bnAppendZeros(x, n) bnEquiv bnAppendZeros(y, m)"/>
 <org.eventb.theory.core.proofRulesBlock name="5" org.eventb.core.label="rulesBlock1">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
@@ -62,5 +64,17 @@
 <org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="equivToSelf2" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x equiv to self" org.eventb.theory.core.formula="bnAppendZeros(x, n) bnEquiv x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="AppendZerosMaintainsEquiv1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="AppendZeros(x, n) equiv y =&gt; x equiv y" org.eventb.theory.core.formula="bnAppendZeros(x, n) bnEquiv y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤ " org.eventb.theory.core.formula="x bnEquiv y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="AppendZerosMaintainsEquiv2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x equiv AppendZeros(y, n) =&gt; x equiv y" org.eventb.theory.core.formula="x bnEquiv bnAppendZeros(y, n)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bnEquiv y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="AppendZerosMaintainsEquivSymetric" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="AppendZeros(x, n) equiv AppendZeros(y, n) =&gt; x eqiv y" org.eventb.theory.core.formula="bnAppendZeros(x, n) bnEquiv bnAppendZeros(y, m)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bnEquiv y"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="C" org.eventb.core.label="x has normal x1 s.t x1 Equiv x and x = bnAppendZeros(x1)" org.eventb.core.predicate="∀x·∃ x1, n·bnIsNormal(x1) ∧ x = bnAppendZeros(x1, n)"/>
+<org.eventb.theory.core.theorem name="G" org.eventb.core.label="remZeros(AppendZeros(norm(x))) = x" org.eventb.core.predicate="∀x, n·bnIsNormal(x) ⇒ bnRemTrailingZeros(bnAppendZeros(x, n)) = x"/>
+<org.eventb.theory.core.theorem name="F" org.eventb.core.label="find Normal to x and y" org.eventb.core.predicate="∀x, y·x bnEquiv y ⇒ (∃z, n, m·bnIsNormal(z) ∧ x = bnAppendZeros(z, n) ∧ y = bnAppendZeros(z, m))"/>
 </org.eventb.theory.core.theoryRoot>

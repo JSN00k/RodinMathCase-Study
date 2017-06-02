@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="Commutativity" org.eventb.core.predicate="∀x, y·bnIsNormal(x) ∧ bnIsNormal(y) ⇒ x bnAdd y = y bnAdd x"/>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="Commutativity Equiv" org.eventb.core.predicate="∀x, y·x bnAdd y bnEquiv y bnAdd x"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="Pull Increment Out of Addition right" org.eventb.core.predicate="∀x, y·bnIsNormal(x) ∧ bnIsNormal(y) ⇒ x bnAdd bnIncrement(y) = bnIncrement(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="Pull Increment Out of Addition right Equiv" org.eventb.core.predicate="∀x, y· x bnAdd bnIncrement(y) bnEquiv bnIncrement(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="Swap suc in Addition" org.eventb.core.predicate="∀x,y·bnIsNormal(x) ∧ bnIsNormal(y) ⇒ bnIncrement(x) bnAdd y = x bnAdd bnIncrement(y)"/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="Swap suc in Addition Equiv" org.eventb.core.predicate="∀x,y·bnIncrement(x) bnAdd y bnEquiv x bnAdd bnIncrement(y)"/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Associative Equiv" org.eventb.core.predicate="∀x, y, z· x bnAdd (y bnAdd z) bnEquiv (x bnAdd y) bnAdd z"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="bnAddNorm is Associative lemma" org.eventb.core.predicate="∀x, y, z·x ∈ bnNatNorm ∧ y ∈ bnNatNorm ∧ z ∈ bnNatNorm ⇒ x bnAddNorm (y bnAddNorm z) = (x bnAddNorm y) bnAddNorm z"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="bnAdd is Associative" org.eventb.core.predicate="bnAddNorm_P ∈ AssocOp(bnNatNorm)"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="pAdd is Commutative" org.eventb.core.predicate="bnAddNorm_P ∈ CommOp(bnNatNorm)"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="pAdd is Abelian" org.eventb.core.predicate="bnAddNorm_P ∈ AbelianOp(bnNatNorm)"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="Add is a monoid" org.eventb.core.predicate="bnZero ↦ bnAddNorm_P ∈ Monoid(bnNatNorm)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="Addition Reduction Equiv" org.eventb.core.predicate="∀x, y, z·x bnAdd y bnEquiv x bnAdd z ⇔ y bnEquiv z"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="Addition Reduction Normal" org.eventb.core.predicate="∀x, y, z·x ∈ bnNatNorm ∧ y ∈ bnNatNorm ∧ z ∈ bnNatNorm ⇒ (x bnAdd y = x bnAdd z ⇔ y = z)"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="non−zero addition" org.eventb.core.predicate="∀x, y·¬bnIsZero(x) ∨ ¬bnIsZero(y) ⇔ ¬bnIsZero(x bnAdd y)"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="x + y = x ⇔ y = 0" org.eventb.core.predicate="∀x, y·x bnAdd y bnEquiv x ⇔ bnIsZero(y)"/>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bn_to_pBijection.dtf|org.eventb.theory.core.deployedTheoryRoot#bn_to_pBijection"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNaturals/bnEquivIso.dtf|org.eventb.theory.core.deployedTheoryRoot#bnEquivIso"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>

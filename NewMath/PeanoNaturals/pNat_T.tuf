@@ -23,5 +23,8 @@
 <org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="suc(suc(x)) ≠ x" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(suc(x)) ≠ x" org.eventb.theory.core.formula="suc(suc(x)) = x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="suc(zero) = one" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(zero) = one" org.eventb.theory.core.formula="suc(zero)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="one"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

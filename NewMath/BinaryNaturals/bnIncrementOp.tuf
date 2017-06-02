@@ -26,7 +26,7 @@
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsNormal(x)" org.eventb.theory.core.hyp="true"/>
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnIsNormal(bnIncrement(x))"/>
 </org.eventb.theory.core.inferenceRule>
-<org.eventb.theory.core.inferenceRule name="(" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.inferenceRule name="(" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="isNormal(increment(x))">
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsNormal(x)" org.eventb.theory.core.hyp="false"/>
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnIsNormal(bnIncrement(x))"/>
 </org.eventb.theory.core.inferenceRule>
@@ -50,6 +50,10 @@
 <org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="remove increments" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="remove increments" org.eventb.theory.core.formula="bnIncrement(x) = bnIncrement(y)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="(x≠nil∧y≠nil) ∨ (x = nil ∧ y = nil)" org.eventb.theory.core.formula="x = y"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="1" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="isNormal(increment(x)">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="bnIsNormal(x)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="bnIsNormal(bnIncrement(x))"/>
+</org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="increment equiv cons(TRUE, y)" org.eventb.core.predicate="∀x, y·bnIncrement(x) bnEquiv cons(TRUE, y) ⇔ x bnEquiv cons(FALSE, y)"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="Equality Increment Reduction" org.eventb.core.predicate="∀x, y·(x≠nil∧y≠nil) ∨ (x = nil ∧ y = nil) ⇒ (x = y ⇔ bnIncrement(x) = bnIncrement(y))"/>

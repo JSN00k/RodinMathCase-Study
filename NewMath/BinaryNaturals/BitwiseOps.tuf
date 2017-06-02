@@ -119,4 +119,11 @@
 <org.eventb.theory.core.theorem name="A" org.eventb.core.label="LSB(zero) = FALSE" org.eventb.core.predicate="∀x·bnIsZero(x) ⇒ bnLSB(x) = FALSE"/>
 <org.eventb.theory.core.theorem name="B" org.eventb.core.label="shiftLeft maintains zero" org.eventb.core.predicate="∀x·bnIsZero(x) ⇒ bnIsZero(bnShiftLeft(x))"/>
 <org.eventb.theory.core.theorem name="C" org.eventb.core.label="shiftLeft reduces bit count" org.eventb.core.predicate="∀x·¬bnIsZero(x)⇒ suc(bnCountBits(bnShiftLeft(x))) = bnCountBits(x)"/>
+<org.eventb.theory.core.theorem name="D" org.eventb.core.label="remZeros makes normal" org.eventb.core.predicate="∀x·bnIsNormal(bnRemTrailingZeros(x))"/>
+<org.eventb.theory.core.proofRulesBlock name="E" org.eventb.core.label="remZerosNormality">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="isNormal(remZeros(x)) true" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="isNormal(remZeros(x)) true" org.eventb.theory.core.formula="bnIsNormal(bnRemTrailingZeros(x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤ "/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

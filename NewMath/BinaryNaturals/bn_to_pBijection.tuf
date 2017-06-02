@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.theorem name="'" org.eventb.core.label="Bijection peano lemma" org.eventb.core.predicate="∀x·bnToPNat(pToBnNat(x)) = x"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="pToBn equiv cons normal" org.eventb.core.predicate="∀x·x ≠ nil ⇒ pToBnNat(two pTimes bnToPNat(x)) = cons(FALSE,x)"/>
 <org.eventb.theory.core.theorem name="*" org.eventb.core.label="pToBn equiv cons" org.eventb.core.predicate="∀x·pToBnNat(two pTimes bnToPNat(x)) bnEquiv cons(FALSE,x)"/>
 <org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bnIncrementPMorphism.dtf|org.eventb.theory.core.deployedTheoryRoot#bnIncrementPMorphism"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNaturals/bn_to_pAdditionHomomorphism.dtf|org.eventb.theory.core.deployedTheoryRoot#bn_to_pAdditionHomomorphism"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Bijection binary lemma" org.eventb.core.predicate="∀x·pToBnNat(bnToPNat(x)) bnEquiv x"/>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Bijection binary Equiv" org.eventb.core.predicate="∀x·pToBnNat(bnToPNat(x)) bnEquiv x"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="Bijection binary normal" org.eventb.core.predicate="∀x·bnIsNormal(x) ⇒ pToBnNat(bnToPNat(x)) = x"/>
+<org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="Contract Bijection">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Remove bijection" org.eventb.theory.core.formula="pToBnNat(bnToPNat(x)) bnEquiv y">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x bnEquiv y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

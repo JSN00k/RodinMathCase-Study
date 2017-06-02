@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
-<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bnAddition_Def.dtf|org.eventb.theory.core.deployedTheoryRoot#bnAddition_Def"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/BinaryNaturals/bnAdditionIncrement.dtf|org.eventb.theory.core.deployedTheoryRoot#bnAdditionIncrement"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="pToBnHomomorphism" org.eventb.core.predicate="∀x,y· pToBnNat(x pAdd y) = pToBnNat(x) bnAdd pToBnNat(y)"/>
 <org.eventb.theory.core.theorem name="(" org.eventb.core.label="bnToPHomomorphism" org.eventb.core.predicate="∀x, y·bnToPNat(x bnAdd y) = bnToPNat(x) pAdd bnToPNat(y)"/>
+<org.eventb.theory.core.proofRulesBlock name="*" org.eventb.core.label="Apply bnToP Homomorphisms">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="bnToPNat(x bnAdd y) = bnToPNat(x) pAdd ..." org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Expand Homophism" org.eventb.theory.core.formula="bnToPNat(x bnAdd y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnToPNat(x) pAdd bnToPNat(y)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="bnToPNat(x) pAdd bnToNat(y) = bnToPNat(x bnAdd y)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="factor homomorphism" org.eventb.theory.core.formula="bnToPNat(x) pAdd bnToPNat(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnToPNat(x bnAdd y)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="+" org.eventb.core.label="Apply pToBn Homomorphism">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="pToBnNat(x pAdd y) = pToBnNat(x) pAdd ..." org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Expand Homophism" org.eventb.theory.core.formula="pToBnNat(x pAdd y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="pToBnNat(x) bnAdd pToBnNat(y)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="pToBnNat(x) bnAdd pToBnNat(y) = pToBnAdd(x pAdd..." org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="factor homomorphism" org.eventb.theory.core.formula="pToBnNat(x) bnAdd pToBnNat(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="pToBnNat(x pAdd y)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

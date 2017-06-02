@@ -318,4 +318,44 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="suc(zero) = one/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L">
+<org.eventb.theory.core.scDatatypeDefinition name="pNat">
+<org.eventb.theory.core.scDatatypeConstructor name="zero"/>
+<org.eventb.theory.core.scDatatypeConstructor name="suc">
+<org.eventb.theory.core.scConstructorArgument name="prev" org.eventb.core.type="pNat"/>
+</org.eventb.theory.core.scDatatypeConstructor>
+</org.eventb.theory.core.scDatatypeDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="one" org.eventb.core.label="one" org.eventb.core.predicate="⊤" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="pNat" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="suc(zero ⦂ pNat)"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+<org.eventb.theory.core.scNewOperatorDefinition name="two" org.eventb.core.label="two" org.eventb.core.predicate="⊤" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.atomicExpr" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="pNat" org.eventb.theory.core.wd="⊤">
+<org.eventb.theory.core.scDirectOperatorDefinition name="'" org.eventb.core.source="/PeanoNaturals/pNat_T.tuf|org.eventb.theory.core.theoryRoot#pNat_T|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.directOperatorDefinition#'" org.eventb.theory.core.formula="suc(suc(zero ⦂ pNat))"/>
+</org.eventb.theory.core.scNewOperatorDefinition>
+</org.eventb.core.lang>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="one expansion on goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_T"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_T.one"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="suc(zero ⦂ pNat)=(one ⦂ pNat)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="suc(zero ⦂ pNat)=suc(zero ⦂ pNat)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

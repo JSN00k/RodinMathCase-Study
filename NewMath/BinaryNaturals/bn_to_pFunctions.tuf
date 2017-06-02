@@ -17,4 +17,15 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="bnIncrement(pToBnNat(xs))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="toBnIsNormal" org.eventb.core.predicate="∀x·bnIsNormal(pToBnNat(x))"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="bnIsZero(x) &lt;=&gt; bnToPNat(x) = zero" org.eventb.core.predicate="∀x · bnIsZero(x) ⇔ bnToPNat(x) = zero"/>
+<org.eventb.theory.core.proofRulesBlock name="," org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(BOOL)"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="bnIsZero(x) =&gt; bnToPNat(x) = zero" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="bnIsZero(x) =&gt; bnToPNat(x) = zero" org.eventb.theory.core.formula="bnIsZero(x)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnToPNat(x) = zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="bnToPNat(x) = zero =&gt; bnIsZero(x)" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="bnToPNat(x) = zero =&gt; bnIsZero(x)" org.eventb.theory.core.formula="bnToPNat(x) = zero">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="bnIsZero(x)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
