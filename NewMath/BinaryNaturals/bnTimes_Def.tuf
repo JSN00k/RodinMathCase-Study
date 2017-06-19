@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="bnTimesMonoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.directOperatorDefinition name="*" org.eventb.theory.core.formula="mPowFast(bnNatNorm, nil, bnAddNorm_P, x, y)"/>
+<org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="x ∈ bnNatNorm"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/BinaryNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BinaryNaturals/bnAdditionIsomorphismProofs.dtf|org.eventb.theory.core.deployedTheoryRoot#bnAdditionIsomorphismProofs"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.comment="This is true by definition" org.eventb.core.label="TimesMonoid is Normal" org.eventb.core.predicate="∀x, y·x∈bnNatNorm⇒ x bnTimesMonoid y ∈ bnNatNorm"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="LSB(x) = zero =&gt; LSB(x bnTimes y) = zero" org.eventb.core.predicate="∀x, y·bnLSB(x) = FALSE ⇒ bnLSB(x bnTimes y) = FALSE"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="Times y Maintains Normality Cororally" org.eventb.core.predicate="∀x, y·bnIsNormal(x) ∧ ¬bnIsZero(y) ∧ x ≠ nil ⇒ cons(FALSE, x) bnTimes y = cons(FALSE, x bnTimes y)"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="Times Maintains Normality" org.eventb.core.predicate="∀x, y·x ∈ bnNatNorm ∧ y ∈ bnNatNorm ⇒ x bnTimes y ∈ bnNatNorm"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="nil monTimes is nil" org.eventb.core.predicate="∀x·nil bnTimesMonoid x = nil"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="nil times is nil" org.eventb.core.predicate="∀x·nil bnTimes x = nil"/>
+<org.eventb.theory.core.importTheoryProject name="+" org.eventb.theory.core.importTheoryProject="/Monoid">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoid/MonoidPowFast.dtf|org.eventb.theory.core.deployedTheoryRoot#MonoidPowFast"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="bnTimes" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(BOOL)" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="y">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(BOOL)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.comment="Don't remove the initial COND it won't work." org.eventb.core.expression="cons(pH, pT)" org.eventb.theory.core.formula="COND(x = nil, nil, &#10;  COND(pH = TRUE, x bnAdd cons(FALSE, x bnTimes pT),&#10;    cons(FALSE, x bnTimes pT)))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="times are the same" org.eventb.core.predicate="∀x, y·x ∈ bnNatNorm ∧ y ∈ bnNatNorm ⇒ x bnTimesMonoid y = x bnTimes y"/>
+</org.eventb.theory.core.theoryRoot>

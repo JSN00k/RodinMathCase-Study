@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="28f5700c82a304df4a7e2e3e06c967ef" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="69a7ed9fb12244c79acd522a00eb421e" org.eventb.theory.core.outdated="false">
 <org.eventb.theory.core.useTheory name="List" org.eventb.core.scTarget="/ListTheory/List.dtf|org.eventb.theory.core.deployedTheoryRoot#List"/>
 <org.eventb.theory.core.useTheory name="BOOL" org.eventb.core.scTarget="/BOOL/BOOL.dtf|org.eventb.theory.core.deployedTheoryRoot#BOOL"/>
 <org.eventb.theory.core.scNewOperatorDefinition name=")" org.eventb.core.label="bnIsNormal" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
@@ -37,6 +37,11 @@
 </org.eventb.theory.core.scRewriteRule>
 <org.eventb.theory.core.scRewriteRule name="bNat_T.bnNatNorm" org.eventb.core.accurate="true" org.eventb.core.label="bNat_T.bnNatNorm" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.newOperatorDefinition#-" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.definitional="true" org.eventb.theory.core.desc="bnNatNorm expansion" org.eventb.theory.core.formula="bnNatNorm ⦂ ℙ(List(BOOL))">
 <org.eventb.theory.core.scRewriteRuleRHS name="bnNatNorm rhs" org.eventb.core.label="bnNatNorm rhs" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.newOperatorDefinition#-" org.eventb.theory.core.formula="{x⦂List(BOOL)·bnIsNormal(x) ∣ x}"/>
+</org.eventb.theory.core.scRewriteRule>
+</org.eventb.theory.core.scProofRulesBlock>
+<org.eventb.theory.core.scProofRulesBlock name="generatedBlocm" org.eventb.core.label="rulesBlock1" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.proofRulesBlock#.">
+<org.eventb.theory.core.scRewriteRule name="'" org.eventb.core.accurate="true" org.eventb.core.label="rew1" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.proofRulesBlock#.|org.eventb.theory.core.rewriteRule#'" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nil is normal" org.eventb.theory.core.formula="bnIsNormal(nil ⦂ List(BOOL))">
+<org.eventb.theory.core.scRewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.core.source="/BinaryNaturals/bNat_T.tuf|org.eventb.theory.core.theoryRoot#bNat_T|org.eventb.theory.core.proofRulesBlock#.|org.eventb.theory.core.rewriteRule#'|org.eventb.theory.core.rewriteRuleRHS#'" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.scRewriteRule>
 </org.eventb.theory.core.scProofRulesBlock>
 </org.eventb.theory.core.deployedTheoryRoot>

@@ -23,4 +23,9 @@
 <org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="bnNatNorm" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ x ∣ bnIsNormal(x) }"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.proofRulesBlock name="." org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.rewriteRule name="'" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="automatic" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nil is normal" org.eventb.theory.core.formula="bnIsNormal(nil)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
