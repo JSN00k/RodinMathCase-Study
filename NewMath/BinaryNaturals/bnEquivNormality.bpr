@@ -599,7 +599,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p46"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p44" org.eventb.core.prInfHyps="p47"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p48"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p42,p44,p14"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p44,p14,p42"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnIsNormal expansion on bnIsNormal(cons(p_head,y))" org.eventb.core.prHyps="p48">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
@@ -630,19 +630,19 @@
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p43" org.eventb.core.prInfHyps="p25"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p55"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p47" org.eventb.core.prInfHyps="p56"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p2,p43,p46,p47"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p47,p2,p43,p46"/>
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p57" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_head=TRUE" org.eventb.core.prHyps="p53">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p55" org.eventb.core.prInfHyps="p58"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p59"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p56,p55"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p55,p56"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnEquiv expansion on cons(TRUE,nil) bnEquiv nil" org.eventb.core.prHyps="p59">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p60">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p60,p10">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p59"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p60"/>
@@ -722,7 +722,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p69"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p47" org.eventb.core.prInfHyps="p70"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p64" org.eventb.core.prInfHyps="p71"/>
-<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p2,p43,p46,p64,p47"/>
+<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p47,p2,p43,p46,p64"/>
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p71"/>
@@ -753,14 +753,14 @@
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p30" org.eventb.core.prInfHyps="p79"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p69" org.eventb.core.prInfHyps="p80"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p70" org.eventb.core.prInfHyps="p81"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p67,p30,p70,p69"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p30,p69,p70,p67"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_head0=TRUE" org.eventb.core.prGoal="p82" org.eventb.core.prHyps="p75">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p87">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p78" org.eventb.core.prInfHyps="p83"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p79" org.eventb.core.prInfHyps="p84"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p80" org.eventb.core.prInfHyps="p85"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p81" org.eventb.core.prInfHyps="p86"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p78,p81,p80,p79"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p78,p79,p81,p80"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnIsZero expansion on goal" org.eventb.core.prGoal="p87" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
@@ -821,7 +821,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p30" org.eventb.core.prInfHyps="p40"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p69" org.eventb.core.prInfHyps="p99"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p70" org.eventb.core.prInfHyps="p100"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p67,p30,p70,p69"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p30,p69,p70,p67"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p97" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p97" org.eventb.core.prHyps="p76">
 <org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
@@ -842,7 +842,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p40" org.eventb.core.prInfHyps="p106"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p99" org.eventb.core.prInfHyps="p107"/>
 <org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p100" org.eventb.core.prInfHyps="p108"/>
-<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p90,p40,p99,p89,p100,p98"/>
+<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p40,p99,p98,p90,p89,p100"/>
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p103"/>
@@ -933,7 +933,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p113,p10">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p113">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p112"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p113"/>
@@ -1051,10 +1051,22 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p88" org.eventb.core.predicate="¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="bnIsZero(cons(p_head,p_tail))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="bnIsNormal(cons(p_head,p_tail))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="bnIsZero(nil ⦂ List(BOOL))"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="p_head0=FALSE∧bnIsZero(p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="y=cons(FALSE,p_tail)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p77" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail0))">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
@@ -1062,60 +1074,12 @@
 <org.eventb.core.prPred name="p102" org.eventb.core.predicate="¬bnIsZero(p_tail1)">
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p69" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p116" org.eventb.core.predicate="bnCountBits(y) pAdd (one ⦂ pNat)=bnCountBits(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p117" org.eventb.core.predicate="(one ⦂ pNat)=(zero ⦂ pNat)"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬((cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))∧FALSE=TRUE)∨(cons(p_head0,p_tail0)≠(nil ⦂ List(BOOL))∧bnIsNormal(cons(p_head0,p_tail0))))">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,nil ⦂ List(BOOL)))"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="y=cons(FALSE,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p109" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(nil ⦂ List(BOOL))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p51" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(y≠(nil ⦂ List(BOOL))∧⊤)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="y=cons(FALSE,p_tail)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬bnIsZero(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p70" org.eventb.core.predicate="cons(p_head,cons(p_head0,p_tail0)) bnEquiv cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="(nil ⦂ List(BOOL))=y">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="bnIsZero(p_tail)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x=y">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="y=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p90" org.eventb.core.predicate="bnIsNormal(p_tail0)">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="x=cons(p_head,p_tail)">
@@ -1123,19 +1087,339 @@
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬bnIsZero(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="x=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="bnIsZero(p_tail)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="y=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x=y">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p68" org.eventb.core.predicate="bnIsNormal(cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p90" org.eventb.core.predicate="bnIsNormal(p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="cons(p_head,nil ⦂ List(BOOL)) bnEquiv (nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="bnIsZero(cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="cons(p_head,p_tail)=y">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p83" org.eventb.core.predicate="y=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p79" org.eventb.core.predicate="p_tail=cons(p_head0,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="bnIsNormal(x)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p108" org.eventb.core.predicate="cons(p_head,cons(FALSE,cons(p_head1,p_tail1))) bnEquiv cons(FALSE,cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p73" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(p_tail0≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p78" org.eventb.core.predicate="y=cons(p_head0,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="y=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p112" org.eventb.core.predicate="bnCountBits(cons(p_head,y))=bnCountBits(y)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p54" org.eventb.core.predicate="(⊤∧⊤)∨¬⊤"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="cons(TRUE,nil ⦂ List(BOOL)) bnEquiv (nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p100" org.eventb.core.predicate="cons(p_head,cons(FALSE,p_tail0)) bnEquiv cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬⊥"/>
+<org.eventb.core.prPred name="p94" org.eventb.core.predicate="p_head0=TRUE∨¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p92" org.eventb.core.predicate="¬(p_head0=FALSE∧bnIsZero(p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="cons(p_head,y) bnEquiv y">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p72" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p106" org.eventb.core.predicate="p_tail=cons(FALSE,cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="TRUE=bnLSB(nil ⦂ List(BOOL))∧(nil ⦂ List(BOOL)) bnEquiv bnShiftLeft(nil ⦂ List(BOOL))"/>
 <org.eventb.core.prPred name="p113" org.eventb.core.predicate="COND(p_head=FALSE∧bnIsZero(y),zero ⦂ pNat,suc(bnCountBits(y)))=bnCountBits(y)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="bnIsZero(p_tail0)">
+<org.eventb.core.prPred name="p109" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="p_head0=FALSE">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="p_tail=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p96" org.eventb.core.predicate="p_head0=FALSE⇒¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p69" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p75" org.eventb.core.predicate="p_head0=TRUE">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="y=cons(FALSE,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p52" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨¬y=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x bnEquiv y∧bnIsNormal(x)∧bnIsNormal(y)⇒x=y">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬(((nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))∧FALSE=TRUE)∨((nil ⦂ List(BOOL))≠(nil ⦂ List(BOOL))∧bnIsNormal(nil ⦂ List(BOOL))))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bnIsNormal(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="p_tail=y">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="bnIsZero(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,p_tail))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p99" org.eventb.core.predicate="x=cons(p_head,cons(FALSE,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p105" org.eventb.core.predicate="y=cons(FALSE,cons(p_head1,p_tail1))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="bnIsNormal(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p110" org.eventb.core.predicate="¬(p_head1=FALSE∧bnIsZero(p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p76" org.eventb.core.predicate="p_tail0=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="x bnEquiv y">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p111" org.eventb.core.predicate="¬(p_head1=FALSE∧⊥)">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬bnIsNormal(cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂List(BOOL),y⦂List(BOOL)·x bnEquiv y∧bnIsNormal(x)∧bnIsNormal(y)⇒x=y"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="bnIsNormal(cons(FALSE,p_tail))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p63" org.eventb.core.predicate="TRUE=FALSE"/>
+<org.eventb.core.prPred name="p98" org.eventb.core.predicate="y=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p89" org.eventb.core.predicate="¬p_tail0=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p93" org.eventb.core.predicate="¬p_head0=FALSE∨¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p118" org.eventb.core.predicate="suc(zero ⦂ pNat)=(zero ⦂ pNat)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(nil ⦂ List(BOOL)) bnEquiv y">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="bnIsNormal(cons(p_head,y))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p67" org.eventb.core.predicate="y=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p62" org.eventb.core.predicate="(nil ⦂ List(BOOL)) bnEquiv bnShiftLeft(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p70" org.eventb.core.predicate="cons(p_head,cons(p_head0,p_tail0)) bnEquiv cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p53" org.eventb.core.predicate="p_head=TRUE">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,cons(p_head0,p_tail0)))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(y≠(nil ⦂ List(BOOL))∧bnIsNormal(y))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p101" org.eventb.core.predicate="p_tail0=cons(p_head1,p_tail1)">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬y=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p114" org.eventb.core.predicate="COND(p_head=FALSE∧⊥,zero ⦂ pNat,suc(bnCountBits(y)))=bnCountBits(y)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="y=cons(FALSE,cons(FALSE,p_tail0))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p57" org.eventb.core.predicate="cons(p_head,nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="p_head=FALSE">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="p_tail=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p82" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="p_head=FALSE∧bnIsZero(p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p85" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="cons(p_head,p_tail) bnEquiv y">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p84" org.eventb.core.predicate="p_tail=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p65" org.eventb.core.predicate="(⊥∧p_head=TRUE)∨¬⊥">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p86" org.eventb.core.predicate="cons(p_head,cons(TRUE,nil ⦂ List(BOOL))) bnEquiv cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p97" org.eventb.core.predicate="¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(y≠(nil ⦂ List(BOOL))∧⊤)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(nil ⦂ List(BOOL))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="x=cons(p_head,y)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p87" org.eventb.core.predicate="¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="(nil ⦂ List(BOOL))=y">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p103" org.eventb.core.predicate="¬cons(p_head1,p_tail1)=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="TRUE=bnLSB(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p81" org.eventb.core.predicate="cons(p_head,cons(p_head0,nil ⦂ List(BOOL))) bnEquiv cons(p_head0,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="cons(p_head,y)=y">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p95" org.eventb.core.predicate="¬p_head0=TRUE⇒¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p115" org.eventb.core.predicate="suc(bnCountBits(y))=bnCountBits(y)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="y=cons(FALSE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="x=cons(p_head,nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
@@ -1146,331 +1430,47 @@
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="bnIsZero(nil ⦂ List(BOOL))"/>
 <org.eventb.core.prPred name="p74" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(¬p_tail0=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="bnIsNormal(x)">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(nil ⦂ List(BOOL)) bnEquiv y">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="y=cons(FALSE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p54" org.eventb.core.predicate="(⊤∧⊤)∨¬⊤"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="p_tail=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p57" org.eventb.core.predicate="cons(p_head,nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬⊥"/>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="y=cons(FALSE,cons(FALSE,p_tail0))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p94" org.eventb.core.predicate="p_head0=TRUE∨¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p92" org.eventb.core.predicate="¬(p_head0=FALSE∧bnIsZero(p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="y=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="p_tail=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p84" org.eventb.core.predicate="p_tail=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬bnIsNormal(cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,cons(p_head0,p_tail0)))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="p_head0=FALSE">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p117" org.eventb.core.predicate="(one ⦂ pNat)=(zero ⦂ pNat)"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊥"/>
-<org.eventb.core.prPred name="p96" org.eventb.core.predicate="p_head0=FALSE⇒¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p103" org.eventb.core.predicate="¬cons(p_head1,p_tail1)=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p118" org.eventb.core.predicate="suc(zero ⦂ pNat)=(zero ⦂ pNat)"/>
-<org.eventb.core.prPred name="p81" org.eventb.core.predicate="cons(p_head,cons(p_head0,nil ⦂ List(BOOL))) bnEquiv cons(p_head0,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p76" org.eventb.core.predicate="p_tail0=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p75" org.eventb.core.predicate="p_head0=TRUE">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="cons(TRUE,nil ⦂ List(BOOL)) bnEquiv (nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p114" org.eventb.core.predicate="COND(p_head=FALSE∧⊥,zero ⦂ pNat,suc(bnCountBits(y)))=bnCountBits(y)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="x bnEquiv y∧bnIsNormal(x)∧bnIsNormal(y)⇒x=y">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="cons(p_head,p_tail) bnEquiv y">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bnIsNormal(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p67" org.eventb.core.predicate="y=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="p_tail=y">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p99" org.eventb.core.predicate="x=cons(p_head,cons(FALSE,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="bnIsZero(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬((cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))∧FALSE=TRUE)∨(cons(p_head0,p_tail0)≠(nil ⦂ List(BOOL))∧bnIsNormal(cons(p_head0,p_tail0))))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p73" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(p_tail0≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p83" org.eventb.core.predicate="y=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p110" org.eventb.core.predicate="¬(p_head1=FALSE∧bnIsZero(p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p100" org.eventb.core.predicate="cons(p_head,cons(FALSE,p_tail0)) bnEquiv cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="x bnEquiv y">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p111" org.eventb.core.predicate="¬(p_head1=FALSE∧⊥)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p80" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,nil ⦂ List(BOOL)))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p116" org.eventb.core.predicate="bnCountBits(y) pAdd (one ⦂ pNat)=bnCountBits(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p62" org.eventb.core.predicate="(nil ⦂ List(BOOL)) bnEquiv bnShiftLeft(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,p_tail))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬(((nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))∧FALSE=TRUE)∨((nil ⦂ List(BOOL))≠(nil ⦂ List(BOOL))∧bnIsNormal(nil ⦂ List(BOOL))))"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂List(BOOL),y⦂List(BOOL)·x bnEquiv y∧bnIsNormal(x)∧bnIsNormal(y)⇒x=y"/>
-<org.eventb.core.prPred name="p63" org.eventb.core.predicate="TRUE=FALSE"/>
-<org.eventb.core.prPred name="p87" org.eventb.core.predicate="¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL)))"/>
-<org.eventb.core.prPred name="p93" org.eventb.core.predicate="¬p_head0=FALSE∨¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p101" org.eventb.core.predicate="p_tail0=cons(p_head1,p_tail1)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p52" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨¬y=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="bnIsNormal(cons(p_head,y))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p85" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p115" org.eventb.core.predicate="suc(bnCountBits(y))=bnCountBits(y)">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p89" org.eventb.core.predicate="¬p_tail0=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p53" org.eventb.core.predicate="p_head=TRUE">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,p_tail0))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p61" org.eventb.core.predicate="TRUE=bnLSB(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="TRUE=bnLSB(nil ⦂ List(BOOL))∧(nil ⦂ List(BOOL)) bnEquiv bnShiftLeft(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p106" org.eventb.core.predicate="p_tail=cons(FALSE,cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="p_head=FALSE">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="cons(p_head,y)=y">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="cons(p_head,nil ⦂ List(BOOL)) bnEquiv (nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="p_head=FALSE∧bnIsZero(p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p104" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="p_tail=cons(FALSE,p_tail0)">
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p112" org.eventb.core.predicate="bnCountBits(cons(p_head,y))=bnCountBits(y)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p65" org.eventb.core.predicate="(⊥∧p_head=TRUE)∨¬⊥">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p97" org.eventb.core.predicate="¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p108" org.eventb.core.predicate="cons(p_head,cons(FALSE,cons(p_head1,p_tail1))) bnEquiv cons(FALSE,cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="bnIsNormal(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p104" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail1))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p79" org.eventb.core.predicate="p_tail=cons(p_head0,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="bnIsNormal(cons(p_head,p_tail))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="bnIsZero(cons(p_head,p_tail))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p86" org.eventb.core.predicate="cons(p_head,cons(TRUE,nil ⦂ List(BOOL))) bnEquiv cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="cons(p_head,y) bnEquiv y">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p50" org.eventb.core.predicate="(y=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(y≠(nil ⦂ List(BOOL))∧bnIsNormal(y))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p72" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p98" org.eventb.core.predicate="y=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p95" org.eventb.core.predicate="¬p_head0=TRUE⇒¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="x=cons(p_head,y)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="bnIsNormal(cons(FALSE,p_tail))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p68" org.eventb.core.predicate="bnIsNormal(cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="x=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p82" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="cons(p_head,p_tail)=y">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p78" org.eventb.core.predicate="y=cons(p_head0,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="bnIsZero(cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬y=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="y" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p91" org.eventb.core.predicate="(⊥∧p_head0=TRUE)∨(¬⊥∧⊤)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬bnIsNormal(cons(FALSE,p_tail0))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r16" org.eventb.core.prRID="org.eventb.theory.rbp.manualInferenceReasoner:2"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
-<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.disjE"/>
-<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.core.seqprover.disjToImplRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.dtDistinctCase"/>
-<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.contrL1"/>
+<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.core.seqprover.disjToImplRewrites"/>
+<org.eventb.core.prReas name="r16" org.eventb.core.prRID="org.eventb.theory.rbp.manualInferenceReasoner:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.dtDistinctCase"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.disjE"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Equivalence =&gt; remZeros equality/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="n0,x,x1,y,x2,n" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
@@ -4899,7 +4899,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p28" org.eventb.core.prInfHyps="p51"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p45" org.eventb.core.prInfHyps="p52"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p53"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p45,p46,p28,p24"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p45,p28,p46,p24"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p52"/>
@@ -4929,13 +4929,13 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p60"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p50" org.eventb.core.prInfHyps="p61"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p51" org.eventb.core.prInfHyps="p62"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p50,p49"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p49,p50"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_head0=TRUE" org.eventb.core.prGoal="p63" org.eventb.core.prHyps="p57">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p67">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p60" org.eventb.core.prInfHyps="p64"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p61" org.eventb.core.prInfHyps="p65"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p62" org.eventb.core.prInfHyps="p66"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p61,p60,p62"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p60,p61,p62"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnIsZero expansion on goal" org.eventb.core.prGoal="p67" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
@@ -5051,7 +5051,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p83,p8">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p8,p83">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p51"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p83"/>
@@ -5084,7 +5084,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p8,p86">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p86,p8">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p85"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p86"/>
@@ -5208,12 +5208,12 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p98"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p50" org.eventb.core.prInfHyps="p99"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p51" org.eventb.core.prInfHyps="p100"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p50,p49"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p49,p50"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnAppendZeros expansion on bnRemTrailingZeros(bnAppendZeros(cons(TRUE,p_tail0),zero))=cons(TRUE,p_tail0)" org.eventb.core.prHyps="p100">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p8,p101">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p101,p8">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p100"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p101"/>
@@ -5391,12 +5391,12 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p121"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p51" org.eventb.core.prInfHyps="p122"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p120" org.eventb.core.prInfHyps="p123"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p120,p49"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p51,p49,p120"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnAppendZeros expansion on bnRemTrailingZeros(bnAppendZeros(cons(FALSE,p_tail0),zero))=cons(FALSE,p_tail0)" org.eventb.core.prHyps="p122">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p124,p8">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p8,p124">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p122"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p124"/>
@@ -5418,7 +5418,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p126,p8">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p8,p126">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p125"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p126"/>
@@ -5583,7 +5583,7 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="p129,p16">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="p16,p129">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with n=suc(p_prev)" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="p16">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p131">
@@ -5615,7 +5615,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p24" org.eventb.core.prInfHyps="p42"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p129" org.eventb.core.prInfHyps="p132"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p130" org.eventb.core.prInfHyps="p133"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p24,p129,p130"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p130,p24,p129"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_head=TRUE" org.eventb.core.prGoal="p134" org.eventb.core.prHyps="p37">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p136">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p44"/>
@@ -5827,7 +5827,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p45" org.eventb.core.prInfHyps="p52"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p46" org.eventb.core.prInfHyps="p53"/>
 <org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p146" org.eventb.core.prInfHyps="p150"/>
-<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p130,p45,p46,p146,p24,p129"/>
+<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p130,p45,p146,p46,p24,p129"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p52"/>
@@ -5839,14 +5839,14 @@
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p148" org.eventb.core.prInfHyps="p156"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p149" org.eventb.core.prInfHyps="p157"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p53" org.eventb.core.prInfHyps="p158"/>
-<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p53,p149,p49,p148,p50"/>
+<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p49,p53,p50,p149,p148"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_tail0=p_tail1" org.eventb.core.prGoal="p159" org.eventb.core.prHyps="p152">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p164">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p155" org.eventb.core.prInfHyps="p160"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p156" org.eventb.core.prInfHyps="p161"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p157" org.eventb.core.prInfHyps="p162"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p158" org.eventb.core.prInfHyps="p163"/>
-<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p155,p157,p154,p156,p158"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p156,p155,p158,p157,p154"/>
 <org.eventb.core.prHypAction name="SELECT5" org.eventb.core.prHyps="p146"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnIsNormal expansion on bnIsNormal(cons(p_head1,p_tail1))" org.eventb.core.prHyps="p163">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
@@ -5877,7 +5877,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p161" org.eventb.core.prInfHyps="p172"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p162" org.eventb.core.prInfHyps="p173"/>
 <org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p146" org.eventb.core.prInfHyps="p174"/>
-<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p152,p160,p161,p146,p147,p162"/>
+<org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p152,p146,p160,p161,p147,p162"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p_head1=TRUE" org.eventb.core.prGoal="p175" org.eventb.core.prHyps="p167">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p177">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p153" org.eventb.core.prInfHyps="p57"/>
@@ -5885,7 +5885,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p172" org.eventb.core.prInfHyps="p176"/>
 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p173" org.eventb.core.prInfHyps="p136"/>
 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p174" org.eventb.core.prInfHyps="p64"/>
-<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p172,p171,p173,p153,p174"/>
+<org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p174,p173,p172,p171,p153"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="bnIsZero expansion on goal" org.eventb.core.prGoal="p177" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
@@ -6121,73 +6121,66 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p79" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,p_tail0))=cons(p_head0,p_tail0)">
+<org.eventb.core.prPred name="p87" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p109" org.eventb.core.predicate="∀x⦂List(BOOL)·bnIsNormal(x)⇔x=bnRemTrailingZeros(x)"/>
-<org.eventb.core.prPred name="p129" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),p_prev))=cons(p_head,p_tail)">
+<org.eventb.core.prPred name="p133" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),suc(p_prev)))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p144" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(appendList(p_tail,bnMkZero(suc(p_prev)))),cons(p_head,bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p97" org.eventb.core.predicate="COND(⊤∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="COND(⊤∨¬bnIsZero(p_tail),cons(p_head,bnRemTrailingZeros(p_tail)),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p185" org.eventb.core.predicate="∀x⦂List(BOOL),n⦂pNat·bnIsZero(x)⇔bnIsZero(bnAppendZeros(x,n))"/>
-<org.eventb.core.prPred name="p127" org.eventb.core.predicate="COND(FALSE=TRUE∨¬bnIsZero(p_tail0),cons(FALSE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="COND(FALSE=TRUE∨¬bnIsZero(bnMkZero(p_prev)),cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prPred name="p132" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,nil ⦂ List(BOOL)),p_prev))=cons(p_head,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p50" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p128" org.eventb.core.predicate="COND(FALSE=TRUE∨¬⊤,cons(FALSE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p124" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(FALSE,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="bnRemTrailingZeros(cons(FALSE,bnMkZero(p_prev)))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="x=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p158" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail0))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p99" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p101" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(p_tail,n))=p_tail">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p132" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,nil ⦂ List(BOOL)),p_prev))=cons(p_head,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="x=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p137" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,nil ⦂ List(BOOL)),bnMkZero(suc(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p134" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,nil ⦂ List(BOOL)),suc(p_prev)))=cons(p_head,nil ⦂ List(BOOL))">
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="(p_tail=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(¬p_tail=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p52" org.eventb.core.predicate="¬cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))">
+<org.eventb.core.prPred name="p53" org.eventb.core.predicate="bnIsNormal(cons(p_head0,p_tail0))">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p72" org.eventb.core.predicate="bnIsNormal(p_tail0)">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(n))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="bnIsNormal(x)⇔bnRemTrailingZeros(bnAppendZeros(x,n))=x">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="n=(zero ⦂ pNat)">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bnIsNormal(x)⇒bnRemTrailingZeros(bnAppendZeros(x,n))=x">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
@@ -6196,112 +6189,70 @@
 <org.eventb.core.prPred name="p117" org.eventb.core.predicate="bnIsZero(p_tail0)">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="bnIsNormal(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="x=cons(p_head,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p173" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,nil ⦂ List(BOOL)),suc(p_prev)))=cons(p_head1,nil ⦂ List(BOOL))">
+<org.eventb.core.prPred name="p174" org.eventb.core.predicate="p_tail=cons(p_head1,nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p133" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),suc(p_prev)))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p172" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,nil ⦂ List(BOOL))),p_prev))=cons(p_head,cons(p_head1,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p108" org.eventb.core.predicate="COND(p_head0=TRUE∨¬⊥,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p111" org.eventb.core.predicate="⊤⇔⊥"/>
 <org.eventb.core.prPred name="p131" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),suc(p_prev)))=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p139" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,appendList(nil ⦂ List(BOOL),cons(FALSE,bnMkZero(p_prev)))))=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p111" org.eventb.core.predicate="⊤⇔⊥"/>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="p_tail=cons(p_head0,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bnIsNormal(x)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p98" org.eventb.core.predicate="p_tail=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p85" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,appendList(p_tail0,nil ⦂ List(BOOL))))=cons(p_head0,p_tail0)">
+<org.eventb.core.prPred name="p75" org.eventb.core.predicate="COND(p_head=TRUE∨(¬p_head0=FALSE∨¬bnIsZero(p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p130" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(p_tail,suc(p_prev)))=p_tail">
+<org.eventb.core.prPred name="p186" org.eventb.core.predicate="bnIsZero(p_tail)⇔bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p192" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(x,n))=x⇒bnIsNormal(x)">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="p_tail=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(p_tail),cons(p_head,bnRemTrailingZeros(p_tail)),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
+<org.eventb.core.prPred name="p78" org.eventb.core.predicate="COND(⊤,cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p116" org.eventb.core.predicate="¬¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p168" org.eventb.core.predicate="p_tail1=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p128" org.eventb.core.predicate="COND(FALSE=TRUE∨¬⊤,cons(FALSE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="COND(⊤∨¬bnIsZero(p_tail),cons(p_head,bnRemTrailingZeros(p_tail)),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="⊥"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(x,n))=x">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(p_prev))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p66" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),zero ⦂ pNat))=cons(TRUE,nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂List(BOOL),n⦂pNat·bnIsNormal(x)⇔bnRemTrailingZeros(bnAppendZeros(x,n))=x"/>
-<org.eventb.core.prPred name="p122" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(FALSE,p_tail0),zero ⦂ pNat))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p165" org.eventb.core.predicate="(p_tail1=(nil ⦂ List(BOOL))∧p_head1=TRUE)∨(p_tail1≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p144" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(appendList(p_tail,bnMkZero(suc(p_prev)))),cons(p_head,bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p94" org.eventb.core.predicate="COND(⊥,cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p170" org.eventb.core.predicate="¬bnIsZero(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bnRemTrailingZeros(appendList(nil ⦂ List(BOOL),bnMkZero(n)))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(p_tail0≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p156" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,p_tail0)),p_prev))=cons(p_head,cons(p_head1,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p183" org.eventb.core.predicate="¬(p_head1=FALSE∧bnIsZero(p_tail1))">
+<org.eventb.core.prPred name="p122" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(FALSE,p_tail0),zero ⦂ pNat))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p192" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(x,n))=x⇒bnIsNormal(x)">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p135" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),p_prev))=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(p_tail,zero ⦂ pNat))=p_tail">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p159" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,p_tail0))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p162" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,p_tail1),suc(p_prev)))=cons(p_head1,p_tail1)">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p76" org.eventb.core.predicate="COND(p_head=TRUE∨p_head0=TRUE∨¬bnIsZero(p_tail0),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
@@ -6309,261 +6260,36 @@
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p125" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(FALSE,p_tail0),nil ⦂ List(BOOL)))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(suc(p_prev)))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p190" org.eventb.core.predicate="COND(p_head=TRUE∨¬⊥,cons(p_head,bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p112" org.eventb.core.predicate="¬(p_head=TRUE∨p_head0=TRUE∨¬bnIsZero(p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p87" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p153" org.eventb.core.predicate="p_head0=p_head1">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="(⊥∧p_head=TRUE)∨(¬⊥∧⊤)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀n⦂pNat·bnIsZero(bnMkZero(n))"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="p_head=TRUE">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p89" org.eventb.core.predicate="COND(⊤,cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p166" org.eventb.core.predicate="(p_tail1=(nil ⦂ List(BOOL))∧p_head1=TRUE)∨(¬p_tail1=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p70" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(nil ⦂ List(BOOL)),cons(TRUE,bnRemTrailingZeros(nil ⦂ List(BOOL))),nil ⦂ List(BOOL))=cons(TRUE,nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p193" org.eventb.core.predicate="bnIsNormal(bnRemTrailingZeros(bnAppendZeros(x,n)))">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p146" org.eventb.core.predicate="p_tail=cons(p_head1,p_tail1)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p113" org.eventb.core.predicate="COND(⊥,cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p118" org.eventb.core.predicate="p_head=FALSE">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p167" org.eventb.core.predicate="p_head1=TRUE">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p138" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,nil ⦂ List(BOOL)),cons(FALSE,bnMkZero(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p163" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p124" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(FALSE,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p121" org.eventb.core.predicate="p_tail=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p182" org.eventb.core.predicate="(⊥∧p_head1=TRUE)∨(¬⊥∧⊤)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="p_tail=cons(p_head0,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p107" org.eventb.core.predicate="p_head=TRUE∨p_head0=TRUE∨¬⊥">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p136" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),suc(p_prev)))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p149" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,p_tail0),suc(p_prev)))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p100" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,p_tail0),zero ⦂ pNat))=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="(nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="(p_tail=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(¬p_tail=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p151" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p115" org.eventb.core.predicate="¬p_head0=TRUE">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p140" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,cons(FALSE,bnMkZero(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="x=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p96" org.eventb.core.predicate="p_head=TRUE∨⊤∨¬bnIsZero(p_tail0)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p95" org.eventb.core.predicate="COND(⊥,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p105" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(p_tail0),cons(TRUE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(p_tail,zero ⦂ pNat))=p_tail">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p139" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,appendList(nil ⦂ List(BOOL),cons(FALSE,bnMkZero(p_prev)))))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="bnRemTrailingZeros(cons(FALSE,bnMkZero(p_prev)))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p161" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,p_tail1)),p_prev))=cons(p_head,cons(p_head1,p_tail1))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p154" org.eventb.core.predicate="p_tail=cons(p_head1,p_tail0)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p178" org.eventb.core.predicate="¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL)))"/>
-<org.eventb.core.prPred name="p86" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(appendList(p_tail0,nil ⦂ List(BOOL))),cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p179" org.eventb.core.predicate="¬(TRUE=FALSE∧⊥)"/>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail0))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p155" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p158" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail0))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬p_tail=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p127" org.eventb.core.predicate="COND(FALSE=TRUE∨¬bnIsZero(p_tail0),cons(FALSE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p147" org.eventb.core.predicate="¬bnIsZero(p_tail1)">
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p91" org.eventb.core.predicate="bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))=p_tail0">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="(p_tail=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(p_tail≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p116" org.eventb.core.predicate="¬¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p108" org.eventb.core.predicate="COND(p_head0=TRUE∨¬⊥,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p164" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,p_tail1))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="bnIsNormal(p_tail)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p181" org.eventb.core.predicate="bnIsNormal(p_tail1)">
-<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p189" org.eventb.core.predicate="¬bnIsZero(appendList(p_tail,bnMkZero(suc(p_prev))))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p92" org.eventb.core.predicate="bnRemTrailingZeros(p_tail0)=p_tail0">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="bnRemTrailingZeros(nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p159" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,p_tail0))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p141" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(cons(FALSE,bnMkZero(p_prev))),cons(TRUE,bnRemTrailingZeros(cons(FALSE,bnMkZero(p_prev)))),nil ⦂ List(BOOL))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(zero ⦂ pNat))=(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="x=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(¬p_tail0=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
+<org.eventb.core.prPred name="p85" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,appendList(p_tail0,nil ⦂ List(BOOL))))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,p_tail))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p187" org.eventb.core.predicate="⊥⇔bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
+<org.eventb.core.prPred name="p140" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,cons(FALSE,bnMkZero(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p188" org.eventb.core.predicate="¬bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,appendList(p_tail,nil ⦂ List(BOOL))))=cons(p_head,p_tail)">
+<org.eventb.core.prPred name="p73" org.eventb.core.predicate="COND(p_head=TRUE∨¬(p_head0=FALSE∧bnIsZero(p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p157" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,p_tail0),suc(p_prev)))=cons(p_head1,p_tail0)">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p120" org.eventb.core.predicate="x=cons(FALSE,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p54" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(p_head0,p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),zero ⦂ pNat))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p103" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,appendList(p_tail0,nil ⦂ List(BOOL))))=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p110" org.eventb.core.predicate="bnIsNormal(p_tail0)⇔p_tail0=bnRemTrailingZeros(p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p143" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,appendList(p_tail,bnMkZero(suc(p_prev)))))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p88" org.eventb.core.predicate="p_head0=TRUE∨¬bnIsZero(p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
@@ -6572,17 +6298,81 @@
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p102" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,p_tail0),nil ⦂ List(BOOL)))=cons(TRUE,p_tail0)">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p191" org.eventb.core.predicate="bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))=p_tail">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(x,n))=x">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂List(BOOL),n⦂pNat·bnIsNormal(x)⇔bnRemTrailingZeros(bnAppendZeros(x,n))=x"/>
+<org.eventb.core.prPred name="p141" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(cons(FALSE,bnMkZero(p_prev))),cons(TRUE,bnRemTrailingZeros(cons(FALSE,bnMkZero(p_prev)))),nil ⦂ List(BOOL))=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p69" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))=cons(TRUE,nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(suc(p_prev)))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p86" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(appendList(p_tail0,nil ⦂ List(BOOL))),cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p145" org.eventb.core.predicate="¬bnIsZero(p_tail)">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p64" org.eventb.core.predicate="p_tail=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p73" org.eventb.core.predicate="COND(p_head=TRUE∨¬(p_head0=FALSE∧bnIsZero(p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p148" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head0,p_tail0)),p_prev))=cons(p_head,cons(p_head0,p_tail0))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p183" org.eventb.core.predicate="¬(p_head1=FALSE∧bnIsZero(p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="p_tail0=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p161" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,p_tail1)),p_prev))=cons(p_head,cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(p_prev))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p160" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p170" org.eventb.core.predicate="¬bnIsZero(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p190" org.eventb.core.predicate="COND(p_head=TRUE∨¬⊥,cons(p_head,bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p79" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,p_tail0))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p112" org.eventb.core.predicate="¬(p_head=TRUE∨p_head0=TRUE∨¬bnIsZero(p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p52" org.eventb.core.predicate="¬cons(p_head0,p_tail0)=(nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
@@ -6592,31 +6382,236 @@
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p51" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,p_tail0),zero ⦂ pNat))=cons(p_head0,p_tail0)">
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,appendList(p_tail,nil ⦂ List(BOOL))))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p153" org.eventb.core.predicate="p_head0=p_head1">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="(⊥∧p_head=TRUE)∨(¬⊥∧⊤)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p120" org.eventb.core.predicate="x=cons(FALSE,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(p_tail),cons(p_head,bnRemTrailingZeros(p_tail)),nil ⦂ List(BOOL))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀n⦂pNat·bnIsZero(bnMkZero(n))"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),nil ⦂ List(BOOL)))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="p_head=TRUE">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p97" org.eventb.core.predicate="COND(⊤∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p193" org.eventb.core.predicate="bnIsNormal(bnRemTrailingZeros(bnAppendZeros(x,n)))">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p118" org.eventb.core.predicate="p_head=FALSE">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="COND(FALSE=TRUE∨¬bnIsZero(bnMkZero(p_prev)),cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p178" org.eventb.core.predicate="¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p167" org.eventb.core.predicate="p_head1=TRUE">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="(p_tail=(nil ⦂ List(BOOL))∧p_head=TRUE)∨(p_tail≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p65" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p62" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,nil ⦂ List(BOOL)),zero ⦂ pNat))=cons(p_head0,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p105" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(p_tail0),cons(TRUE,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p64" org.eventb.core.predicate="p_tail=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(n))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p95" org.eventb.core.predicate="COND(⊥,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p171" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p103" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,appendList(p_tail0,nil ⦂ List(BOOL))))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p104" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,p_tail0))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p182" org.eventb.core.predicate="(⊥∧p_head1=TRUE)∨(¬⊥∧⊤)">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p107" org.eventb.core.predicate="p_head=TRUE∨p_head0=TRUE∨¬⊥">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬p_tail=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="n=suc(p_prev)">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p82" org.eventb.core.predicate="x=cons(TRUE,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p113" org.eventb.core.predicate="COND(⊥,cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p115" org.eventb.core.predicate="¬p_head0=TRUE">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p54" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(p_head0,p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p96" org.eventb.core.predicate="p_head=TRUE∨⊤∨¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(¬p_tail0=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p163" org.eventb.core.predicate="bnIsNormal(cons(p_head1,p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="bnIsNormal(cons(p_head,p_tail))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p98" org.eventb.core.predicate="p_tail=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p179" org.eventb.core.predicate="¬(TRUE=FALSE∧⊥)"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail0))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p102" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,p_tail0),nil ⦂ List(BOOL)))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p126" org.eventb.core.predicate="bnRemTrailingZeros(cons(FALSE,p_tail0))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p147" org.eventb.core.predicate="¬bnIsZero(p_tail1)">
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),n))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="bnIsNormal(p_tail)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p181" org.eventb.core.predicate="bnIsNormal(p_tail1)">
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="n=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p92" org.eventb.core.predicate="bnRemTrailingZeros(p_tail0)=p_tail0">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p134" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,nil ⦂ List(BOOL)),suc(p_prev)))=cons(p_head,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p173" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,nil ⦂ List(BOOL)),suc(p_prev)))=cons(p_head1,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p189" org.eventb.core.predicate="¬bnIsZero(appendList(p_tail,bnMkZero(suc(p_prev))))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p157" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,p_tail0),suc(p_prev)))=cons(p_head1,p_tail0)">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="bnRemTrailingZeros(bnMkZero(zero ⦂ pNat))=(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p130" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(p_tail,suc(p_prev)))=p_tail">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="(p_tail0=(nil ⦂ List(BOOL))∧p_head0=TRUE)∨(p_tail0≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p110" org.eventb.core.predicate="bnIsNormal(p_tail0)⇔p_tail0=bnRemTrailingZeros(p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),zero ⦂ pNat))=(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p129" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),p_prev))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="p_head0=TRUE∨¬bnIsZero(p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p145" org.eventb.core.predicate="¬bnIsZero(p_tail)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p151" org.eventb.core.predicate="¬bnIsZero(cons(p_head0,p_tail0))">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p83" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head0,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p119" org.eventb.core.predicate="p_head0=FALSE">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p123" org.eventb.core.predicate="x=cons(FALSE,cons(FALSE,p_tail0))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p126" org.eventb.core.predicate="bnRemTrailingZeros(cons(FALSE,p_tail0))=cons(FALSE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p152" org.eventb.core.predicate="p_tail0=p_tail1">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p78" org.eventb.core.predicate="COND(⊤,cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p68" org.eventb.core.predicate="COND(p_head=TRUE∨¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="p_tail0=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),n))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="p_head0=TRUE">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
@@ -6625,30 +6620,26 @@
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p160" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,p_tail1))">
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),zero ⦂ pNat))=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p66" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),zero ⦂ pNat))=cons(TRUE,nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),bnMkZero(zero ⦂ pNat)))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p168" org.eventb.core.predicate="p_tail1=(nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p82" org.eventb.core.predicate="x=cons(TRUE,cons(p_head0,p_tail0))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),zero ⦂ pNat))=(nil ⦂ List(BOOL))"/>
-<org.eventb.core.prPred name="p75" org.eventb.core.predicate="COND(p_head=TRUE∨(¬p_head0=FALSE∨¬bnIsZero(p_tail0)),cons(p_head,bnRemTrailingZeros(cons(p_head0,p_tail0))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p142" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),bnMkZero(suc(p_prev))))=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p80" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p63" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(p_head0,nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(p_head0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="bnRemTrailingZeros(nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bnRemTrailingZeros(appendList(nil ⦂ List(BOOL),bnMkZero(n)))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p93" org.eventb.core.predicate="¬(p_head0=TRUE∨¬bnIsZero(p_tail0))">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
@@ -6657,60 +6648,60 @@
 <org.eventb.core.prPred name="p184" org.eventb.core.predicate="¬(p_head1=FALSE∧⊥)">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p61" org.eventb.core.predicate="x=cons(p_head,cons(p_head0,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,p_tail0),zero ⦂ pNat))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p174" org.eventb.core.predicate="p_tail=cons(p_head1,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p100" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,p_tail0),zero ⦂ pNat))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p91" org.eventb.core.predicate="bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))=p_tail0">
+<org.eventb.core.prPred name="p84" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,appendList(p_tail0,bnMkZero(zero ⦂ pNat))))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="bnIsZero(bnMkZero(p_prev))">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),bnMkZero(zero ⦂ pNat)))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p175" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p177" org.eventb.core.predicate="¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL)))"/>
-<org.eventb.core.prPred name="p191" org.eventb.core.predicate="bnRemTrailingZeros(appendList(p_tail,bnMkZero(suc(p_prev))))=p_tail">
+<org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬p_tail0=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p187" org.eventb.core.predicate="⊥⇔bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p135" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),p_prev))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p176" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(TRUE,nil ⦂ List(BOOL))),p_prev))=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p67" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
+<org.eventb.core.prPred name="p143" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,appendList(p_tail,bnMkZero(suc(p_prev)))))=cons(p_head,p_tail)">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p175" org.eventb.core.predicate="¬bnIsZero(cons(p_head1,nil ⦂ List(BOOL)))">
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head,p_tail))=cons(p_head,p_tail)">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p188" org.eventb.core.predicate="¬bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p136" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(TRUE,nil ⦂ List(BOOL)),suc(p_prev)))=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p155" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p90" org.eventb.core.predicate="COND(⊤,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p65" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬p_tail0=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p104" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,p_tail0))=cons(TRUE,p_tail0)">
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p162" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head1,p_tail1),suc(p_prev)))=cons(p_head1,p_tail1)">
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="(nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p146" org.eventb.core.predicate="p_tail=cons(p_head1,p_tail1)">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p77" org.eventb.core.predicate="p_head=TRUE∨p_head0=TRUE∨¬bnIsZero(p_tail0)">
@@ -6721,19 +6712,20 @@
 <org.eventb.core.prPred name="p114" org.eventb.core.predicate="¬p_head=TRUE">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p62" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,nil ⦂ List(BOOL)),zero ⦂ pNat))=cons(p_head0,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="COND(¬bnIsZero(bnMkZero(p_prev)),cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p171" org.eventb.core.predicate="x=cons(p_head,cons(p_head1,nil ⦂ List(BOOL)))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p165" org.eventb.core.predicate="(p_tail1=(nil ⦂ List(BOOL))∧p_head1=TRUE)∨(p_tail1≠(nil ⦂ List(BOOL))∧bnIsNormal(p_tail1))">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p125" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(FALSE,p_tail0),nil ⦂ List(BOOL)))=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p99" org.eventb.core.predicate="x=cons(p_head,cons(TRUE,p_tail0))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="COND(¬⊤,cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="p_tail=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="bnRemTrailingZeros(p_tail)=p_tail">
 <org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
@@ -6741,106 +6733,114 @@
 <org.eventb.core.prPred name="p169" org.eventb.core.predicate="(⊤∧⊤)∨(¬⊤∧bnIsNormal(p_tail1))">
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,p_tail),n))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prPred name="p123" org.eventb.core.predicate="x=cons(FALSE,cons(FALSE,p_tail0))">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p149" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head0,p_tail0),suc(p_prev)))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p106" org.eventb.core.predicate="¬bnIsZero(p_tail0)">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p84" org.eventb.core.predicate="bnRemTrailingZeros(cons(p_head0,appendList(p_tail0,bnMkZero(zero ⦂ pNat))))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p186" org.eventb.core.predicate="bnIsZero(p_tail)⇔bnIsZero(bnAppendZeros(p_tail,suc(p_prev)))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p142" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),bnMkZero(suc(p_prev))))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="bnIsNormal(cons(p_head,p_tail))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head,p_tail),nil ⦂ List(BOOL)))=cons(p_head,p_tail)">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p69" org.eventb.core.predicate="bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))=cons(TRUE,nil ⦂ List(BOOL))"/>
 <org.eventb.core.prPred name="p180" org.eventb.core.predicate="¬p_tail1=(nil ⦂ List(BOOL))">
 <org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(nil ⦂ List(BOOL),n))=(nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prPred name="p177" org.eventb.core.predicate="¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL)))"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="COND(¬⊤,cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p148" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head0,p_tail0)),p_prev))=cons(p_head,cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p63" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(p_head0,nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(p_head0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(p_head0,nil ⦂ List(BOOL)))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p89" org.eventb.core.predicate="COND(⊤,cons(p_head0,bnRemTrailingZeros(appendList(p_tail0,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p156" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,p_tail0)),p_prev))=cons(p_head,cons(p_head1,p_tail0))">
-<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="COND(¬bnIsZero(bnMkZero(p_prev)),cons(FALSE,bnRemTrailingZeros(bnMkZero(p_prev))),nil ⦂ List(BOOL))=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x=(nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p101" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(TRUE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p154" org.eventb.core.predicate="p_tail=cons(p_head1,p_tail0)">
 <org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p53" org.eventb.core.predicate="bnIsNormal(cons(p_head0,p_tail0))">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="x=cons(p_head,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p166" org.eventb.core.predicate="(p_tail1=(nil ⦂ List(BOOL))∧p_head1=TRUE)∨(¬p_tail1=(nil ⦂ List(BOOL))∧bnIsNormal(p_tail1))">
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail1" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p121" org.eventb.core.predicate="p_tail=cons(FALSE,p_tail0)">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="bnIsNormal(nil ⦂ List(BOOL))"/>
+<org.eventb.core.prPred name="p67" org.eventb.core.predicate="COND(p_head=TRUE∨¬bnIsZero(cons(TRUE,nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
+<org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p80" org.eventb.core.predicate="COND(p_head0=TRUE∨¬bnIsZero(p_tail0),cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="n=suc(p_prev)">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p137" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,nil ⦂ List(BOOL)),bnMkZero(suc(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prPred name="p90" org.eventb.core.predicate="COND(⊤,cons(p_head0,bnRemTrailingZeros(p_tail0)),nil ⦂ List(BOOL))=cons(p_head0,p_tail0)">
+<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p74" org.eventb.core.predicate="(⊥∧p_head0=TRUE)∨(¬⊥∧⊤)">
 <org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p68" org.eventb.core.predicate="COND(p_head=TRUE∨¬(TRUE=FALSE∧bnIsZero(nil ⦂ List(BOOL))),cons(p_head,bnRemTrailingZeros(cons(TRUE,nil ⦂ List(BOOL)))),nil ⦂ List(BOOL))=cons(p_head,cons(TRUE,nil ⦂ List(BOOL)))">
+<org.eventb.core.prPred name="p138" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(TRUE,nil ⦂ List(BOOL)),cons(FALSE,bnMkZero(p_prev))))=cons(TRUE,nil ⦂ List(BOOL))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p172" org.eventb.core.predicate="bnRemTrailingZeros(bnAppendZeros(cons(p_head,cons(p_head1,nil ⦂ List(BOOL))),p_prev))=cons(p_head,cons(p_head1,nil ⦂ List(BOOL)))">
 <org.eventb.core.prIdent name="p_head" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_head1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p83" org.eventb.core.predicate="bnRemTrailingZeros(appendList(cons(p_head0,p_tail0),bnMkZero(zero ⦂ pNat)))=cons(p_head0,p_tail0)">
-<org.eventb.core.prIdent name="p_head0" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p70" org.eventb.core.predicate="COND(TRUE=TRUE∨¬bnIsZero(nil ⦂ List(BOOL)),cons(TRUE,bnRemTrailingZeros(nil ⦂ List(BOOL))),nil ⦂ List(BOOL))=cons(TRUE,nil ⦂ List(BOOL))"/>
 <org.eventb.core.prExpr name="e1" org.eventb.core.expression="p_tail0">
 <org.eventb.core.prIdent name="p_tail0" org.eventb.core.type="List(BOOL)"/>
 </org.eventb.core.prExpr>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="p_prev">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prExpr>
-<org.eventb.core.prExpr name="e2" org.eventb.core.expression="p_tail">
-<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
-</org.eventb.core.prExpr>
 <org.eventb.core.prExpr name="e3" org.eventb.core.expression="suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prExpr>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
-<org.eventb.core.prReas name="r16" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r17" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
-<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.disjE"/>
-<org.eventb.core.prReas name="r18" org.eventb.core.prRID="org.eventb.core.seqprover.locEq"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.dtDistinctCase"/>
-<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+<org.eventb.core.prExpr name="e2" org.eventb.core.expression="p_tail">
+<org.eventb.core.prIdent name="p_tail" org.eventb.core.type="List(BOOL)"/>
+</org.eventb.core.prExpr>
 <org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
+<org.eventb.core.prReas name="r18" org.eventb.core.prRID="org.eventb.core.seqprover.locEq"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eqvRewrites"/>
+<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+<org.eventb.core.prReas name="r17" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
+<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
 <org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
+<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.dtDistinctCase"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.disjE"/>
+<org.eventb.core.prReas name="r16" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Equiv to Equality/S/rhs1" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
-<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Monoid">
-<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoid/Monoid_Power.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid_Power"/>
-</org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="pNatMult" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="y"/>
@@ -126,4 +123,7 @@
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="?" org.eventb.core.label="One is the identity" org.eventb.core.predicate="∀x, y·y ≠ zero ⇒ (x pTimes y = y ⇔ x = one)"/>
 <org.eventb.theory.core.theorem name="@" org.eventb.core.label="x * y = y if y is zero" org.eventb.core.predicate="∀x, y·x pTimes y = y ⇔ x = one ∨ y = zero"/>
+<org.eventb.theory.core.importTheoryProject name="B" org.eventb.theory.core.importTheoryProject="/Monoid">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoid/Monoid_Power.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid_Power"/>
+</org.eventb.theory.core.importTheoryProject>
 </org.eventb.theory.core.theoryRoot>

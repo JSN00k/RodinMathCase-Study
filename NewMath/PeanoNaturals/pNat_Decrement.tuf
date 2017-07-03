@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="pDecrement" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="xs"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_T.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_T"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/PeanoNaturals/Ordering.dtf|org.eventb.theory.core.deployedTheoryRoot#Ordering"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Decrement decrements" org.eventb.core.predicate="∀x·x ≠ zero ⇒ pDecrement(x) pLeq x"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="Only Zero doesn't decrement" org.eventb.core.predicate="∀x· pDecrement(x) = x ⇔ x = zero"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="x &lt;= y =&gt; decr(x) &lt;= y" org.eventb.core.predicate="∀x, y· x pLeq y ⇒ pDecrement(x) pLeq y"/>
+<org.eventb.theory.core.proofRulesBlock name="," org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.inferenceRule name="'" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x &lt;= y =&gt; decr(x) &lt;= y">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pLeq y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="pDecrement(x) pLeq y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x &lt;= y =&gt; decr(x) &lt;= y">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pLeq y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="pDecrement(x) pLeq y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Decr(x) = 0 =&gt; x = 0 or x = 1">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="pDecrement(x) = zero" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x = zero ∨ x = one"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf4" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Decr(x) = 0 =&gt; x = 0 or x = 1">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="pDecrement(x) = zero" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x = zero ∨ x = one"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="-" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="suc(x) = y" org.eventb.theory.core.formula="x = pDecrement(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="y ≠ zero" org.eventb.theory.core.formula="suc(x) = y"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Decr(x) = zero &lt;=&gt; x = one or x = zero" org.eventb.core.predicate="∀x·pDecrement(x) = zero ⇔ x = zero ∨ x = one"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="x = decr(y) &lt;=&gt; suc(x) = y" org.eventb.core.predicate="∀x, y· y ≠ zero ⇒ (x = pDecrement(y) ⇔ suc(x) = y)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="suc(x) = y =&gt; x = decr(y)" org.eventb.core.predicate="∀x, y·suc(x) = y ⇒ x = pDecrement(y)"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="suc(decr(x)) = x" org.eventb.core.predicate="∀x·x ≠ zero ⇒ suc(pDecrement(x)) = x"/>
+</org.eventb.theory.core.theoryRoot>

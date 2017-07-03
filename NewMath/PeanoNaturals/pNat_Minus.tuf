@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Decrement.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Decrement"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="pMinus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="y">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="x"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ys)" org.eventb.theory.core.formula="pDecrement(x pMinus ys)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="zero minus is zero" org.eventb.core.predicate="∀x·zero pMinus x = zero"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="suc out of minus" org.eventb.core.predicate="∀x, y·x pMinus suc(y) = pDecrement(x pMinus y)"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="suc out of minus 2" org.eventb.core.predicate="∀x, y· x pMinus y ≠ zero ⇒ suc(x) pMinus y = suc(x pMinus y)"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="reducing left reduces result cororally" org.eventb.core.predicate="∀x, y·suc(x) pMinus y = zero ⇒ x pMinus y = zero"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Decr into minus" org.eventb.core.predicate="∀x, y·pDecrement(x pMinus y) = pDecrement(x) pMinus y"/>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="leq minus thm" org.eventb.core.predicate="∀x, y· x pLeq y ⇔ x pMinus y = zero"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="minus Inv Addition" org.eventb.core.predicate="∀x, y· (x pAdd y) pMinus y = x"/>
+</org.eventb.theory.core.theoryRoot>
