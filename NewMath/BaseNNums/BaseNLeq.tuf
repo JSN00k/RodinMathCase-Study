@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="BNumLeqMinus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="x = y &#10;  ∨ (BNumList(x) = nil ∧ BNumList(y) = nil)&#10;  ∨ (BNumList(x) = BNumList(y) ∧ BNumBase(x) pLeq BNumBase(y))&#10;  ∨  x BNumMinus y = nil ↦ BNumBase(x)"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="BNum" org.eventb.core.identifier="y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BaseNNums">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BaseNNums/BaseNMinus.dtf|org.eventb.theory.core.deployedTheoryRoot#BaseNMinus"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="BNumLeqRevInternal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(pNat)" org.eventb.core.identifier="xL"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="List(pNat)" org.eventb.core.identifier="yL"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="xL">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="⊤"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xH, xT)" org.eventb.theory.core.formula="xH pLt BNumLSDInternal(yL) ∨ (xH = BNumLSDInternal(yL) ∧ BNumLeqRevInternal(xT, BNumShiftLeftInternal(yL)))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="BNumLeq" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BNum" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="y"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="x = y &#10;  ∨ (BNumList(x) = nil ∧ BNumList(y) = nil)&#10;  ∨ (BNumList(x) = BNumList(y) ∧ BNumBase(x) pLt BNumBase(y))&#10;  ∨ length(BNumList(x)) pLt length(BNumList(y)) &#10;  ∨ (length(BNumList(x)) = length(BNumList(y)) ∧ BNumLeqRevInternal(reverse(BNumList(x)), reverse(BNumList(y))))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="Leqs are equivalent" org.eventb.core.predicate="∀x, y· x ∈ BNumNorm ∧ y ∈ BNumNorm ⇒ (x BNumLeq y ⇔ x BNumLeqMinus y)"/>
+</org.eventb.theory.core.theoryRoot>

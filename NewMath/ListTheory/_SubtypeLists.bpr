@@ -743,10 +743,10 @@
 <org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="cons_type_thm/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,t,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
 <org.eventb.core.lang name="L">
@@ -1011,10 +1011,10 @@
 <org.eventb.core.prIdent name="t" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="append_type_thm/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,t,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
 <org.eventb.core.lang name="L">
@@ -1279,10 +1279,10 @@
 <org.eventb.core.prIdent name="t" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="reverse_type_thm/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
 <org.eventb.core.lang name="L">
@@ -1540,10 +1540,10 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂ℙ(T),x⦂List(T)·a⊆T∧x∈List(a)⇒reverse(x)∈List(a)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(T),x⦂List(T)·⊤∧x∈List(a)⇒reverse(x)∈List(a)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="last_type_thm/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
 <org.eventb.core.lang name="L">
@@ -1809,9 +1809,9 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(T),x⦂List(T)·a⊆T∧x∈List(a)∧¬x=(nil ⦂ List(T))⇒last(x)∈a"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

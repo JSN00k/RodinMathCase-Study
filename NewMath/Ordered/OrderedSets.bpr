@@ -4300,13 +4300,13 @@
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17,p18,p19"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="leqInfim expansion on Leq ↦ infim∈leqInfim(t)" org.eventb.core.prHyps="p19">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="leqInfim expansion on Leq ↦ infim∈leqInfim(t)" org.eventb.core.prHyps="p17">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p9,p20">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p20"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -4417,7 +4417,7 @@
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p44"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p43" org.eventb.core.prInfHyps="p45"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p41,p26,p43"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p26,p41,p43"/>
 <org.eventb.core.prHypAction name="SELECT3" org.eventb.core.prHyps="p33"/>
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -4630,6 +4630,14 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∃y⦂T·decrN(t,Leq ↦ infim ↦ decr,x,n)=y">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="Leq(y ↦ infim)=TRUE">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
@@ -4639,24 +4647,13 @@
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="⊤∧infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="⊤∧⊤⇒decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="⊤⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="Leq ↦ infim∈leqInfim(t)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀x⦂T·x∈t⇒Leq(infim ↦ x)=TRUE">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
@@ -4667,48 +4664,24 @@
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·LeqOp ↦ infim ↦ decr∈Decrementer(t)∧(∀x⦂T,y⦂T·x∈t∧y∈t⇒(∃n⦂pNat·LeqOp(decrN(t,LeqOp ↦ infim ↦ decr,x,n) ↦ y)=TRUE)) ∣ LeqOp ↦ infim ↦ decr}">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·decr∈t → t∧LeqOp ↦ infim∈leqInfim(t)∧(∀x⦂T·x∈t∧x≠infim⇒LeqOp(decr(x) ↦ x)=TRUE∧decr(x)≠x) ∣ LeqOp ↦ infim ↦ decr}">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="⊤⇒⊤"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·⊤∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈StrongDecr(t)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="∀x⦂T,y⦂T·x∈t∧y∈t⇒(Leq(x ↦ y)=TRUE∧Leq(y ↦ x)=TRUE⇔x=y)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="⊤⇒⊤"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="∀x⦂T,y⦂T·x∈t∧y∈t⇒(Leq(x ↦ y)=TRUE∧Leq(y ↦ x)=TRUE⇔x=y)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="Leq∈Totality(t)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="decr∈t → t">
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="decr∈t → t">
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
@@ -4726,113 +4699,9 @@
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="Leq(infim ↦ decrN(t,Leq ↦ infim ↦ decr,x,n))=TRUE">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="Leq∈leq(t)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p42" org.eventb.core.predicate="⊤⇒Leq(infim ↦ decrN(t,Leq ↦ infim ↦ decr,x,n))=TRUE">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)∧x∈t">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="y=infim">
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="Leq∈AntiSymmetry(t)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∃y⦂T·decrN(t,Leq ↦ infim ↦ decr,x,n)=y">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="⊤∧⊤⇒decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="Leq∈Transitivity(t)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·⊤∧Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="x∈t∧Leq ↦ infim ↦ decr∈Decrementer(t)⇒decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀x⦂T·x∈t∧¬x=infim⇒Leq(decr(x) ↦ x)=TRUE∧¬decr(x)=x">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)=y">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
@@ -4843,12 +4712,69 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="Leq ↦ infim∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T·infim∈t∧LeqOp∈leq(t)∧(∀x⦂T·x∈t⇒LeqOp(infim ↦ x)=TRUE) ∣ LeqOp ↦ infim}">
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)∧⊤">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂T,y⦂T·x∈t∧y∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ y)=TRUE)">
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="⊤⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="y=infim">
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="Leq∈AntiSymmetry(t)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·⊤∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="x∈t∧infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="Leq∈Transitivity(t)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)=infim">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈StrongDecr(t)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
@@ -4860,6 +4786,61 @@
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀x⦂T·x∈t∧¬x=infim⇒Leq(decr(x) ↦ x)=TRUE∧¬decr(x)=x">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="Leq ↦ infim∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T·infim∈t∧LeqOp∈leq(t)∧(∀x⦂T·x∈t⇒LeqOp(infim ↦ x)=TRUE) ∣ LeqOp ↦ infim}">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="Leq(infim ↦ decrN(t,Leq ↦ infim ↦ decr,x,n))=TRUE">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·LeqOp ↦ infim ↦ decr∈Decrementer(t)∧(∀x⦂T,y⦂T·x∈t∧y∈t⇒(∃n⦂pNat·LeqOp(decrN(t,LeqOp ↦ infim ↦ decr,x,n) ↦ y)=TRUE)) ∣ LeqOp ↦ infim ↦ decr}">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)=decrN(t,Leq ↦ infim ↦ decr,x,n)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="∀x⦂T,y⦂T·x∈t∧y∈t⇒Leq(x ↦ y)=TRUE∨Leq(y ↦ x)=TRUE">
@@ -4874,10 +4855,30 @@
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂T,y⦂T·x∈t∧y∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ y)=TRUE)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈{LeqOp⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·decr∈t → t∧LeqOp ↦ infim∈leqInfim(t)∧(∀x⦂T·x∈t∧x≠infim⇒LeqOp(decr(x) ↦ x)=TRUE∧decr(x)≠x) ∣ LeqOp ↦ infim ↦ decr}">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="Leq∈{order⦂ℙ(T×T×BOOL)·order∈t × t → BOOL∧order∈AntiSymmetry(t)∧order∈Transitivity(t)∧order∈Totality(t) ∣ order}">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·t∈ℙ(T)∧Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="Leq∈{op⦂ℙ(T×T×BOOL)·op∈t × t → BOOL∧(∀x⦂T,y⦂T·x∈t∧y∈t⇒op(x ↦ y)=TRUE∨op(y ↦ x)=TRUE) ∣ op}">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
@@ -4886,7 +4887,20 @@
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="x∈t∧infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="Leq ↦ infim∈leqInfim(t)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="x∈t∧Leq ↦ infim ↦ decr∈Decrementer(t)⇒decrN(t,Leq ↦ infim ↦ decr,x,n)∈t">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="⊤∧infim∈t⇒(∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE)">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
@@ -4897,13 +4911,14 @@
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)∧⊤">
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Leq ↦ infim ↦ decr∈Decrementer(t)∧x∈t">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)=infim">
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="⊤⇒Leq(infim ↦ decrN(t,Leq ↦ infim ↦ decr,x,n))=TRUE">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
@@ -4917,35 +4932,12 @@
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∃n⦂pNat·Leq(decrN(t,Leq ↦ infim ↦ decr,x,n) ↦ infim)=TRUE">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·t∈ℙ(T)∧Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀t⦂ℙ(T),Leq⦂ℙ(T×T×BOOL),infim⦂T,decr⦂ℙ(T×T)·⊤∧Leq ↦ infim ↦ decr∈StrongDecr(t)⇒(∀x⦂T·x∈t⇒(∃n⦂pNat·decrN(t,Leq ↦ infim ↦ decr,x,n)=infim))"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="Leq(infim ↦ y)=TRUE">
 <org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="decrN(t,Leq ↦ infim ↦ decr,x,n)=decrN(t,Leq ↦ infim ↦ decr,x,n)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prExpr name="e0" org.eventb.core.expression="decrN(t,Leq ↦ infim ↦ decr,x,n)">
-<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
-<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prExpr>
 <org.eventb.core.prExpr name="e4" org.eventb.core.expression="t">
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prExpr>
@@ -4963,25 +4955,33 @@
 <org.eventb.core.prExpr name="e2" org.eventb.core.expression="y">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prExpr>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="decrN(t,Leq ↦ infim ↦ decr,x,n)">
+<org.eventb.core.prIdent name="Leq" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="decr" org.eventb.core.type="ℙ(T×T)"/>
+<org.eventb.core.prIdent name="infim" org.eventb.core.type="T"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+</org.eventb.core.prExpr>
 <org.eventb.core.prExpr name="e1" org.eventb.core.expression="n">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 </org.eventb.core.prExpr>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.exF"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.exI"/>
-<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
-<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
-<org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.exF"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DecrToZero/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="t,x,Leq,infim,decr" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
@@ -5555,7 +5555,7 @@
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p4,p10,p5">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p4,p5,p10">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -5575,29 +5575,23 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="x∈t">
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀n⦂pNat·∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·⊤∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="decrN(t,set,x,n)∈t">
-<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="set" org.eventb.core.type="ℙ(T×T×BOOL)×T×ℙ(T×T)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="set" org.eventb.core.type="ℙ(T×T×BOOL)×T×ℙ(T×T)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="set∈Decrementer(t)">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀n⦂pNat·∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="set" org.eventb.core.type="ℙ(T×T×BOOL)×T×ℙ(T×T)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
@@ -5605,19 +5599,25 @@
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="set∈Decrementer(t)">
+<org.eventb.core.prIdent name="set" org.eventb.core.type="ℙ(T×T×BOOL)×T×ℙ(T×T)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="decrN(t,set,x,n)∈t">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="set" org.eventb.core.type="ℙ(T×T×BOOL)×T×ℙ(T×T)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T,n⦂pNat·t∈ℙ(T)∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀n⦂pNat,t⦂ℙ(T),set⦂ℙ(T×T×BOOL)×T×ℙ(T×T),x⦂T·⊤∧x∈t∧set∈Decrementer(t)⇒decrN(t,set,x,n)∈t"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="DecrN in t/WD-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="set,t,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
 <org.eventb.core.lang name="L">

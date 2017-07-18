@@ -4221,7 +4221,7 @@
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="minus Inv Addition/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="minus Inv Addition/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y,p_prev0,p_prev" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
 <org.eventb.theory.core.scDatatypeDefinition name="pNat">
 <org.eventb.theory.core.scDatatypeConstructor name="zero"/>
@@ -4365,9 +4365,9 @@
 <org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p2">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=zero" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p2">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=zero" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p2">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="add zero implification on goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pAdd expansion on goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
@@ -4376,13 +4376,17 @@
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=zero" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p6">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p4">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
@@ -4397,53 +4401,36 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
-<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
-<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Add zero"/>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p7,p8">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p9,p10">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p8">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Suc out of Addition on goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev)" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p9">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p4">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p4">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p12">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst suc(x pAdd p_prev),p_prev)" org.eventb.core.prHyps="p12">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p13">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst suc(p_prev),p_prev)" org.eventb.core.prHyps="p13">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p13">
-<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with pDecrement(suc(x pAdd p_prev) pMinus p_prev)=pDecrement(suc(x pAdd p_prev)) pMinus p_prev" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p13">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pDecrement expansion on goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p14">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with pDecrement(suc(p_prev) pMinus p_prev)=pDecrement(suc(p_prev)) pMinus p_prev" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p14">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pDecrement expansion on goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p4">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p10"/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
 <org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Decrement"/>
@@ -4469,10 +4456,306 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Addition.pAdd case 0"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p16,p17">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with x=suc(p_prev)" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p16">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pAdd expansion on goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p20">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst p_prev,y)" org.eventb.core.prHyps="p21">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p22">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dc (p_prev pMinus y=zero)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p23">
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=zero" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p6">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p17,p23"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="add zero implification on goal" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Minus"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Minus.pMinus case 0"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Add zero"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p30,p31">
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev0)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p30">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p34">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p17,p23"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Suc out of Addition on goal" org.eventb.core.prGoal="p34" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p13">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst suc(suc(p_prev pAdd p_prev0)),p_prev0)" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p37">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with pDecrement(suc(suc(p_prev pAdd p_prev0)) pMinus p_prev0)=pDecrement(suc(suc(p_prev pAdd p_prev0))) pMinus p_prev0" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p37">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pDecrement expansion on goal" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p31"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Decrement"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Decrement.pDecrement case 1"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e2,e3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x,y·pDecrement(x pMinus y)=pDecrement(x) pMinus y"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Minus"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Minus.pMinus case 1"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
 <org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
 <org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
 <org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Suc Out of Addition"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p39">
+<org.eventb.core.prRule name="r10" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="p39" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="dt induc in goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=zero" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p6">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p39" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p43"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p17,p39,p41"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="add zero implification on goal" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Minus"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Minus.pMinus case 0"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Add zero"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p30,p31">
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with y=suc(p_prev0)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p30">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p34">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p39" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p17,p39,p41"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Suc out of Addition on goal" org.eventb.core.prGoal="p34" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pMinus expansion on goal" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Instantiate Theorem(s)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p13">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ hyp (inst suc(suc(p_prev pAdd p_prev0)),p_prev0)" org.eventb.core.prHyps="p13">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p37">
+<org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with pDecrement(suc(suc(p_prev pAdd p_prev0)) pMinus p_prev0)=pDecrement(suc(suc(p_prev pAdd p_prev0))) pMinus p_prev0" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p37">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="pDecrement expansion on goal" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p4">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p31"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Decrement"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Decrement.pDecrement case 1"/>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e2,e3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x,y·pDecrement(x pMinus y)=pDecrement(x) pMinus y"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Minus"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Minus.pMinus case 1"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="Suc Out of Addition"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -4481,68 +4764,207 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="y=suc(p_prev)">
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prPredRef name=".pred" org.eventb.core.prRef="p23"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e1,e4"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".string0" org.eventb.core.prSValue="∀x,y·x pMinus y≠zero⇒suc(x) pMinus y=suc(x pMinus y)"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".ThyProject" org.eventb.core.prSValue="PeanoNaturals"/>
+<org.eventb.core.prString name=".Thy" org.eventb.core.prSValue="pNat_Addition"/>
+<org.eventb.core.prString name=".Rule" org.eventb.core.prSValue="pNat_Addition.pAdd case 1"/>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="pDecrement(suc(p_prev)) pMinus p_prev=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="suc(p_prev pAdd p_prev0) pMinus p_prev0=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="pDecrement(suc(suc(p_prev pAdd p_prev0)) pMinus p_prev0)=pDecrement(suc(suc(p_prev pAdd p_prev0))) pMinus p_prev0">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="y=suc(p_prev0)">
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="suc(p_prev pAdd suc(p_prev0)) pMinus suc(p_prev0)=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬⊥⇒suc(p_prev) pMinus y=suc(p_prev pMinus y)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="suc(x pAdd p_prev) pMinus suc(p_prev)=x">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·¬x pMinus y=(zero ⦂ pNat)⇒suc(x) pMinus y=suc(x pMinus y)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·x pMinus y≠(zero ⦂ pNat)⇒suc(x) pMinus y=suc(x pMinus y)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="suc(p_prev pAdd (zero ⦂ pNat)) pMinus (zero ⦂ pNat)=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="suc(suc(p_prev pAdd p_prev0)) pMinus suc(p_prev0)=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="suc(p_prev) pMinus suc(p_prev)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="y=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬p_prev pMinus suc(p_prev0)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬⊤⇒suc(p_prev) pMinus y=suc(p_prev pMinus y)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬p_prev pMinus y=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="y pMinus y=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="pDecrement(suc(p_prev) pMinus p_prev)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="pDecrement(suc(suc(p_prev pAdd p_prev0)) pMinus p_prev0)=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="p_prev pMinus y=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="y=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·(x pAdd y) pMinus y=x"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·pDecrement(x pMinus y)=pDecrement(x) pMinus y"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="pDecrement(suc(x pAdd p_prev) pMinus p_prev)=pDecrement(suc(x pAdd p_prev)) pMinus p_prev">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="p_prev pMinus p_prev=(zero ⦂ pNat)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="x=(zero ⦂ pNat)">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="pDecrement(suc(x pAdd p_prev)) pMinus p_prev=x">
-<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="(x pAdd (zero ⦂ pNat)) pMinus (zero ⦂ pNat)=x">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x=x">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x pMinus (zero ⦂ pNat)=x">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="y=(zero ⦂ pNat)">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="((zero ⦂ pNat) pAdd y) pMinus y=(zero ⦂ pNat)">
 <org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="(x pAdd suc(p_prev)) pMinus suc(p_prev)=x">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·(x pAdd y) pMinus y=x"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀x⦂pNat,y⦂pNat·pDecrement(x pMinus y)=pDecrement(x) pMinus y"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="suc(p_prev) pMinus (zero ⦂ pNat)=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬p_prev pMinus (zero ⦂ pNat)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="pDecrement(suc(suc(p_prev pAdd p_prev0))) pMinus p_prev0=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(zero ⦂ pNat) pMinus (zero ⦂ pNat)=(zero ⦂ pNat)"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="p_prev pMinus suc(p_prev0)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="pDecrement(suc(p_prev) pMinus p_prev)=pDecrement(suc(p_prev)) pMinus p_prev">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬p_prev pMinus y=(zero ⦂ pNat)⇒suc(p_prev) pMinus y=suc(p_prev pMinus y)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="(p_prev pAdd suc(p_prev0)) pMinus suc(p_prev0)=p_prev">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="suc(p_prev) pMinus (zero ⦂ pNat)=suc(p_prev pMinus (zero ⦂ pNat))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="(p_prev pAdd y) pMinus y=p_prev">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="x=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(x pAdd p_prev) pMinus p_prev=x">
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="suc(p_prev)=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="pDecrement(suc(x pAdd p_prev) pMinus p_prev)=x">
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="(suc(p_prev) pAdd y) pMinus y=suc(p_prev)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="(zero ⦂ pNat)=(zero ⦂ pNat)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="suc(p_prev pAdd y) pMinus y=suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="(p_prev pAdd (zero ⦂ pNat)) pMinus (zero ⦂ pNat)=p_prev">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="p_prev pMinus (zero ⦂ pNat)=(zero ⦂ pNat)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="(x pAdd y) pMinus y=x">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prExpr name="e0" org.eventb.core.expression="suc(x pAdd p_prev)">
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="suc(p_prev) pMinus y=suc(p_prev pMinus y)">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="pNat"/>
-</org.eventb.core.prExpr>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="suc(p_prev) pMinus suc(p_prev0)=suc(p_prev pMinus suc(p_prev0))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e1" org.eventb.core.expression="p_prev">
 <org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
 </org.eventb.core.prExpr>
+<org.eventb.core.prExpr name="e2" org.eventb.core.expression="suc(suc(p_prev pAdd p_prev0))">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prExpr>
+<org.eventb.core.prExpr name="e3" org.eventb.core.expression="p_prev0">
+<org.eventb.core.prIdent name="p_prev0" org.eventb.core.type="pNat"/>
+</org.eventb.core.prExpr>
+<org.eventb.core.prExpr name="e4" org.eventb.core.expression="y">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="pNat"/>
+</org.eventb.core.prExpr>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="suc(p_prev)">
+<org.eventb.core.prIdent name="p_prev" org.eventb.core.type="pNat"/>
+</org.eventb.core.prExpr>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.dtInduction"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
