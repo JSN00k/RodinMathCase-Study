@@ -79,8 +79,8 @@
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="BNumShiftLeftInternal(BNumList(n)) ↦ BNumBase(n)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="C" org.eventb.core.label="WGoodDecr" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(BNumList(n) = nil, n, BaseNDecrementInternal(BNumList(n), suc(BNumBase(n))) ↦ suc(BNumBase(n)))"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="n"/>
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="COND(prj1(xy) = nil, nil ↦ suc(suc(zero)), BaseNDecrementInternal(prj1(xy), suc(prj2(xy))) ↦ suc(prj2(xy)))"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="xy"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.importTheoryProject name="+" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat"/>
@@ -93,4 +93,5 @@
 <org.eventb.theory.core.theorem name="9" org.eventb.core.label="BNDecrementMaintainsNormality" org.eventb.core.predicate="∀num·num ∈ BNumNorm ⇒ BaseNDecrement(num) ∈ BNumNorm"/>
 <org.eventb.theory.core.theorem name="B" org.eventb.core.label="Shift left maintains normality" org.eventb.core.predicate="∀x·x ∈ BNumNorm ⇒ BNumShiftLeft(x) ∈ BNumNorm"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="WGoodDecr Maintains Normality Cororally" org.eventb.core.predicate="∀x·x∈BNumNorm ⇒ BNumList(x) ↦ suc(BNumBase(x)) ∈ BNumNorm"/>
+<org.eventb.theory.core.theorem name="D" org.eventb.core.label="WGood is closed" org.eventb.core.predicate="∀a·a ∈ BNumNorm ⇒ WGoodDecr(a) ∈ BNumNorm"/>
 </org.eventb.theory.core.theoryRoot>
