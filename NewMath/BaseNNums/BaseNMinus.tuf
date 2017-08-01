@@ -6,7 +6,7 @@
 <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="pNat" org.eventb.core.identifier="B"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="*" org.eventb.theory.core.inductiveArgument="xL">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="nil ⦂ List(pNat)"/>
-<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xH, xT)" org.eventb.theory.core.formula="COND(xH pLeq BNumLSDInternal(yL),&#10;  COND(xT = nil,&#10;    nil,&#10;&#9;COND(BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B) = nil,&#10;&#9;  nil,&#10;&#9;  COND(xH = BNumLSDInternal(yL),&#10;&#9;    cons(zero, BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B)),&#10;&#9;    COND(BaseNDecrementInternal(xT, B) = BNumShiftLeftInternal(yL),&#10;&#9;      cons((xH pAdd B) pMinus BNumLSDInternal(yL), nil),&#10; &#9;      cons((xH pAdd B) pMinus BNumLSDInternal(yL), &#10;            BaseNMinusInternal(BaseNDecrementInternal(xT, B), BNumShiftLeftInternal(yL), B)))))),&#10;  cons(xH pMinus BNumLSDInternal(yL), BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B)))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.comment="There's an extra condition added because if there&#10;are two numbers with different bases then &#10;(xH pAdd B) pMinus BNumLSDInternal(yL) doesn't have to &#10;be greater than zero." org.eventb.core.expression="cons(xH, xT)" org.eventb.theory.core.formula="COND(xH pLeq BNumLSDInternal(yL),&#10;  COND(BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B) = nil,&#10;    nil,&#10;&#9;COND(xH = BNumLSDInternal(yL),&#10;&#9;    cons(zero, BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B)),&#10;        COND((xH pAdd B) pMinus BNumLSDInternal(yL) = zero&#10;          ∧ BaseNMinusInternal(BaseNDecrementInternal(xT, B), BNumShiftLeftInternal(yL), B) = nil,&#10;&#9;&#9;  nil,&#10; &#9;      cons((xH pAdd B) pMinus BNumLSDInternal(yL), &#10;            BaseNMinusInternal(BaseNDecrementInternal(xT, B), BNumShiftLeftInternal(yL), B))))),&#10;  COND(xT = BNumShiftLeftInternal(yL), &#10;    cons(xH pMinus BNumLSDInternal(yL), nil),&#10;    COND(BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B) = nil,&#10;      nil,&#10;      cons(xH pMinus BNumLSDInternal(yL), BaseNMinusInternal(xT, BNumShiftLeftInternal(yL), B)))))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="BNumMinus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
@@ -14,19 +14,81 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="BaseNMinusInternal(BNumList(x), BNumList(y), BNumBase(x)) ↦ BNumBase(x)"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="E" org.eventb.core.label="two &lt;= B =&gt; B = suc(suc(a))" org.eventb.core.predicate="∀B·two pLeq B ⇒ (∃x·B = suc(suc(x)))"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="Zero is the end" org.eventb.core.predicate="∀x, B· x ∈ BNumNorm ⇒ ((nil ⦂ List(pNat)) ↦ B) BNumMinus x = ((nil ⦂ List(pNat)) ↦  B)"/>
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="x - 0 = x not WD" org.eventb.core.predicate="∀x, B·BaseNIsNormalInternal(x) ⇒ BaseNMinusInternal(x, nil, B) = x"/>
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="x - 0 = x" org.eventb.core.predicate="∀x, B·x ∈ BNumNorm ∧ BNumBase(x) = B ⇒ x BNumMinus ((nil ⦂ List(pNat)) ↦ B) = x"/>
+<org.eventb.theory.core.theorem name="F" org.eventb.core.label="one minus is nil" org.eventb.core.predicate="∀x, B·x ≠ nil ∧ BaseNIsNormalInternal(x) ∧ two pLeq B ⇒  BaseNMinusInternal(cons(one, nil), x, B) = nil"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="x - x = nil" org.eventb.core.predicate="∀x, y·x ∈ BNumNorm ∧ y ∈ BNumNorm ∧ BNumList(x) = BNumList(y) ⇒ x BNumMinus y = nil ↦ BNumBase(x)"/>
-<org.eventb.theory.core.theorem name="1" org.eventb.core.label="sub shift left doesn't give nil" org.eventb.core.predicate="∀x, B·BaseNIsNormalInternal(x) ∧ x ≠ nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(x), B) ≠ nil"/>
-<org.eventb.theory.core.theorem name="2" org.eventb.core.label="sub shift left doesn't give nil with Decr" org.eventb.core.predicate="∀x, B·BaseNIsNormalInternal(x) ∧ x ≠ nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(BaseNDecrementInternal(x, B)), B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="x - x = nil2" org.eventb.core.predicate="∀x, BO, Bl·(x ↦ BO) BNumMinus (x ↦ Bl) = ((nil ⦂ List(pNat)) ↦ BO)"/>
+<org.eventb.theory.core.theorem name="D" org.eventb.core.label="x /= SL(x)" org.eventb.core.predicate="∀x·x = nil ⇔  x = BNumShiftLeftInternal(x)"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="sub shift left doesn't give nil" org.eventb.core.predicate="∀B·∀x·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ x ≠ nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(x), B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="C" org.eventb.core.label="Decr shift left relation" org.eventb.core.predicate="∀x, B·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNMinusInternal(BaseNDecrementInternal(x, B), BNumShiftLeftInternal(x), B) = nil ⇒ x = nil ∨ x = cons(one, nil) ∨ (x = cons(zero, cons(one, nil)) ∧ B = two) "/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="sub shift left doesn't give nil with Decr" org.eventb.core.predicate="∀x, B·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ x ≠ nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(BaseNDecrementInternal(x, B)), B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="@" org.eventb.core.label="x - cons(xH, x) = nil" org.eventb.core.predicate="∀x, B·∀xH·BaseNIsNormalInternal(x) ⇒ BaseNMinusInternal(x, cons(xH, x), B) = nil"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="x - decr x not nil" org.eventb.core.predicate="∀x, B·x ≠ nil ∧ BaseNIsNormalInternal(x) ⇒ BaseNMinusInternal(x, BaseNDecrementInternal(x, B), B) ≠ nil "/>
-<org.eventb.theory.core.theorem name="4" org.eventb.core.label="minus a smaller number not nil" org.eventb.core.predicate="∀y, B·∀x·BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ BaseNMinusInternal(x, y, B)≠nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(y), B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="H" org.eventb.core.label="longer numbers are bigger" org.eventb.core.predicate="∀y·∀x, B·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ length(y) pLeq length(x) ∧ length(x) ≠ length(y) ⇒ BaseNMinusInternal(x, y, B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="I" org.eventb.core.label="shorter numbers are smaller" org.eventb.core.predicate="∀y·∀x, B·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ length(x) pLt length(y) ⇒ BaseNMinusInternal(x, y, B) = nil"/>
+<org.eventb.theory.core.theorem name="G" org.eventb.core.label="decr reduces less than shift" org.eventb.core.predicate="∀x·∀y, B· two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ BaseNMinusInternal(x, y, B) ≠ nil ∧ x ≠ nil ∧ x ≠ cons(one, nil) ∧ (x ≠ cons(zero, cons(one, nil)) ∨ B ≠ two) &#10;  ⇒ BaseNMinusInternal(BaseNDecrementInternal(x, B), BNumShiftLeftInternal(y), B) ≠ nil"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="minus a smaller number not nil" org.eventb.core.predicate="∀x·∀y, B·two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ BaseNMinusInternal(x, y, B)≠nil ⇒ BaseNMinusInternal(x, BNumShiftLeftInternal(y), B) ≠ nil"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="Longer Nums cororally 2" org.eventb.core.predicate="∀x, B·x ↦ B ∈ BNumNorm ⇒ (∀y, yH, yB·y ↦ yB ∈ BNumNorm &#10;  ∧ BaseNMinusInternal(x, y, B) = nil ⇒ BaseNMinusInternal(x, cons(yH, y), B) = nil)"/>
-<org.eventb.theory.core.theorem name="0" org.eventb.core.label="subtracting from small num nil" org.eventb.core.predicate="∀x, B·x↦B ∈ BNumNorm⇒(∀y, xH·x↦B ∈ BNumNorm ∧ y ↦ B ∈ BNumNorm ∧ BaseNMinusInternal(cons(xH, x), y, B) = nil ⇒ BaseNMinusInternal(x, y, B) = nil)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="subtracting from small num nil" org.eventb.core.predicate="∀x, y, B, xH·BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ two pLeq B &#10;  ∧ BaseNMinusInternal(cons(xH, x), y, B) = nil ⇒ BaseNMinusInternal(x, y, B) = nil"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="Longer Nums cororally" org.eventb.core.predicate="∀x, B·x↦B ∈ BNumNorm⇒(∀y, yH·x↦B ∈ BNumNorm ∧ y ↦ B ∈ BNumNorm ∧ BaseNMinusInternal(x, y, B) = nil ⇒ BaseNMinusInternal(x, cons(yH, y), B) = nil)"/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="Longer numbers are bigger" org.eventb.core.predicate="∀x, y·x ∈ BNumNorm ∧ y ∈ BNumNorm ∧ length(BNumList(x)) pLt length(BNumList(y)) &#10;  ⇒ x BNumMinus y = nil ↦ BNumBase(x)"/>
+<org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="x - y = nil = y - x =&gt; x = y" org.eventb.core.predicate="∀x, y, B· BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) &#10;  ⇒ (BaseNMinusInternal(x, y, B) = nil ∧ BaseNMinusInternal(y, x, B) = nil ⇔ x = y) "/>
+<org.eventb.theory.core.theorem name="B" org.eventb.core.label="cons(xH x) - cons(zero, x) = xH" org.eventb.core.predicate="∀x·∀ xH, B· xH ≠ zero ∧ two pLeq B ∧ BaseNIsNormalInternal(x) ⇒ BaseNMinusInternal(cons(xH, x), cons(zero, x), B) = cons(xH, nil)"/>
+<org.eventb.theory.core.theorem name="?" org.eventb.core.label="x - y = y - x &lt;=&gt; x = y" org.eventb.core.predicate="∀x, y, B· two pLeq B ∧ BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) &#10;  ⇒ (BaseNMinusInternal(x, y, B) = BaseNMinusInternal(y, x, B) ⇔ x = y)"/>
 <org.eventb.theory.core.importTheoryProject name="+" org.eventb.theory.core.importTheoryProject="/BaseNNums">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BaseNNums/BaseNNum.dtf|org.eventb.theory.core.deployedTheoryRoot#BaseNNum"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.theorem name="." org.eventb.core.label="Longer Nums cororally" org.eventb.core.predicate="∀x, B·x↦B ∈ BNumNorm⇒(∀y, yH·x↦B ∈ BNumNorm ∧ y ↦ B ∈ BNumNorm ∧ BaseNMinusInternal(x, y, B) = nil ⇒ BaseNMinusInternal(x, cons(yH, y), B) = nil)"/>
-<org.eventb.theory.core.theorem name="*" org.eventb.core.label="Longer numbers are bigger" org.eventb.core.predicate="∀x, y·x ∈ BNumNorm ∧ y ∈ BNumNorm ∧ length(BNumList(x)) pLt length(BNumList(y)) &#10;  ⇒ x BNumMinus y = nil ↦ BNumBase(x)"/>
+<org.eventb.theory.core.proofRulesBlock name="7" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(pNat)"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="B1" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="B2" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x - x = nil" org.eventb.theory.core.formula="(x ↦ B1) BNumMinus (x↦B2)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="nil ⦂ List(pNat) ↦ B1"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="rew3" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="nil - x = nil" org.eventb.theory.core.formula="(nil ⦂ List(pNat) ↦ B1) BNumMinus (x ↦ B2)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(nil ⦂ List(pNat) ↦ B1)"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="rew4" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x - x = nil Me!" org.eventb.theory.core.formula="BaseNMinusInternal(x, x, B1)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="nil ⦂ List(pNat)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name="9" org.eventb.core.label="rulesBlock2">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(pNat) × pNat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="rew2" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x - x = nil" org.eventb.theory.core.formula="x BNumMinus x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="nil ⦂ List(pNat) ↦ BNumBase(x)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name=":" org.eventb.core.label="inference">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="xL" org.eventb.theory.core.type="List(pNat)"/>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="xB" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="yL" org.eventb.theory.core.type="List(pNat)"/>
+<org.eventb.theory.core.metaVariable name="*" org.eventb.core.identifier="yB" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x BNumMinus y = nil">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(xL) pLt length(yL) ∧ (xL ↦ xB) ∈ BNumNorm ∧ (yL ↦ yB) ∈ BNumNorm" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="(xL ↦ xB) BNumMinus (yL ↦ yB) = nil ↦ xB"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x BNumMinus y = nil">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(xL) pLt length(yL) ∧ (xL ↦ xB) ∈ BNumNorm ∧ (yL ↦ yB) ∈ BNumNorm" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="(xL ↦ xB) BNumMinus (yL ↦ yB) = nil ↦ xB"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.proofRulesBlock name=";" org.eventb.core.label="inference2">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="xH" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="xT" org.eventb.theory.core.type="List(pNat)"/>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="tail is normal">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="BNumIsNormal(cons(xH, xT) ↦ B)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="BNumIsNormal(xT ↦ B)"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.metaVariable name="*" org.eventb.core.identifier="B" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf4" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="BNumIsNormal(cons(xH, xT) ↦ B)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="BNumIsNormal(xT ↦ B)"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.importTheoryProject name="A" org.eventb.theory.core.importTheoryProject="/ListTheory">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_ListTheorems.dtf|org.eventb.theory.core.deployedTheoryRoot#_ListTheorems"/>
+</org.eventb.theory.core.importTheoryProject>
 </org.eventb.theory.core.theoryRoot>

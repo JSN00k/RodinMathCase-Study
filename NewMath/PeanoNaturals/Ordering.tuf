@@ -47,5 +47,23 @@
 <org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="rew4" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x pLeq x" org.eventb.theory.core.formula="x pLeq x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊤"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="-" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="rew6" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remove sucs" org.eventb.theory.core.formula="suc(x) pLeq suc(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x pLeq y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="/" org.eventb.core.label="rew7" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remove sucs" org.eventb.theory.core.formula="suc(x) pLt suc(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x pLt y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="0" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="y pLeq x">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬ x pLt y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="y pLeq x"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="1" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="y pLeq x">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬ x pLt y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="y pLeq x"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="rew8" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x not Lt x" org.eventb.theory.core.formula="x pLt x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

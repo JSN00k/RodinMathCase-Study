@@ -56,4 +56,16 @@
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="DecrN in t" org.eventb.core.predicate="∀t, set, x, n·t ∈ ℙ(T) ∧ x ∈ t ∧ set ∈ Decrementer(t) ⇒ decrN(t, set, x, n) ∈ t"/>
 <org.eventb.theory.core.theorem name="2" org.eventb.core.label="DecrToZero" org.eventb.core.predicate="∀ t, Leq, infim, decr · t ∈ ℙ(T) ∧ Leq ↦ infim ↦ decr ∈ StrongDecr(t) ⇒ (∀x·x ∈ t ⇒ ∃n·decrN(t, Leq ↦ infim ↦ decr, x, n) = infim)"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Unique Infinum" org.eventb.core.predicate="∀t, set· t ∈ ℙ(T) ∧ set ∈ Decrementer(t) ⇒ (∀x·x ∈ t ∧ (∀y·y ∈ t ⇒ DALeq(t, set)(x ↦ y) = TRUE) ⇔ x = DAInfim(t, set))"/>
+<org.eventb.theory.core.proofRulesBlock name="8" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="totallity">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬ x pLeq y" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="y pLeq x"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="totallity">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="¬ x pLeq y" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="y pLeq x"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

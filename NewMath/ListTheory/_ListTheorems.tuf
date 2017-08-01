@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
 <org.eventb.theory.core.theorem name="'" org.eventb.core.label="diff_length_implies_not_equal" org.eventb.core.predicate="∀x, y·x ∈ List(T) ⇒ (length(x) ≠ length(y) ⇒ x ≠ y)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="Append Increase Length" org.eventb.core.predicate="∀x, xH·xH ∈ T ∧ suc(length(x)) = length(append(x, xH))"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="reverse maintains length" org.eventb.core.predicate="∀x·x∈List(T) ∧ length(x) = length(reverse(x))"/>
 <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
 <org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/ListTheory">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_AuxiliaryDefinitions.dtf|org.eventb.theory.core.deployedTheoryRoot#_AuxiliaryDefinitions"/>
@@ -8,10 +10,46 @@
 <org.eventb.theory.core.theorem name="*" org.eventb.core.comment="An example that I was struggling with without the theorem above." org.eventb.core.label="x_not_eqaul_cons(cons(a, cons(b, x))" org.eventb.core.predicate="∀x, a, b·x ∈ List(T)⇒x ≠ cons(a, cons(b, x))"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="append nil equality" org.eventb.core.predicate="∀x·x ∈ List(T) ⇒ appendList(x, nil) = x"/>
 <org.eventb.theory.core.theorem name="," org.eventb.core.label="heads not eaqual" org.eventb.core.predicate="∀x, y· x∈ List(T) ∧ x ≠ nil ∧ y ∈ List(T) ∧ y ≠ nil ∧ head(x) ≠ head(y) ⇒ x ≠ y"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="reverse to cons" org.eventb.core.predicate="∀x·x≠nil ⇒ (∃yH, yT·yH ∈ T ∧ reverse(x) = cons(yH, yT))"/>
 <org.eventb.theory.core.proofRulesBlock name="-" org.eventb.core.label="rulesBlock1">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="l" org.eventb.theory.core.type="List(T)"/>
 <org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="appendList(l, nil) = l" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="appendList(l, nil) = l" org.eventb.theory.core.formula="appendList(l, nil)">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="l"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains equality">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="reverse(x) = reverse(y)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x = y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="*" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains equality">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="reverse(x) = reverse(y)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x = y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="+" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains inequality">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="reverse(x) ≠ reverse(y)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x ≠ y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf4" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains inequality">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="reverse(x) ≠ reverse(y)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x ≠ y"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.metaVariable name="-" org.eventb.core.identifier="x" org.eventb.theory.core.type="List(T)"/>
+<org.eventb.theory.core.metaVariable name="." org.eventb.core.identifier="y" org.eventb.theory.core.type="List(T)"/>
+<org.eventb.theory.core.inferenceRule name="/" org.eventb.core.label="inf5" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(x) = length(y)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="length(reverse(x)) = length(reverse(y))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="0" org.eventb.core.label="inf6" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains length">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(x) = length(y)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="length(reverse(x)) = length(reverse(y))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="1" org.eventb.core.label="inf7" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains length">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(x) ≠ length(y)" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="length(reverse(x)) ≠ length(reverse(y))"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="2" org.eventb.core.label="inf8" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="reverse maintains length">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(x) ≠ length(y)" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="length(reverse(x)) ≠ length(reverse(y))"/>
+</org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="reverse maintains equality" org.eventb.core.predicate="∀x·∀y·x ∈ List(T) ⇒ (x = y ⇔ reverse(x) = reverse(y))"/>
 </org.eventb.theory.core.theoryRoot>

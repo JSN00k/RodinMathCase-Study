@@ -18,4 +18,41 @@
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="Decr into minus" org.eventb.core.predicate="∀x, y·pDecrement(x pMinus y) = pDecrement(x) pMinus y"/>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="leq minus thm" org.eventb.core.predicate="∀x, y· x pLeq y ⇔ x pMinus y = zero"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="minus Inv Addition" org.eventb.core.predicate="∀x, y· (x pAdd y) pMinus y = x"/>
+<org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="remove sucs" org.eventb.theory.core.formula="suc(x) pMinus suc(y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x pMinus y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="rew2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="decr into minus" org.eventb.theory.core.formula="pDecrement(x pMinus y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="pDecrement(x) pMinus y"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="rew3" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(x) - x /= 0" org.eventb.theory.core.formula="suc(x) pMinus x = zero">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥ "/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.inferenceRule name="," org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pMinus y ≠ zero" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="∀z·(z pAdd x) pMinus y ≠ zero "/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="-" org.eventb.core.label="inf2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pMinus y ≠ zero" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="∀z·(z pAdd x) pMinus y ≠ zero "/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="." org.eventb.core.label="rew4" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="0 - x = 0" org.eventb.theory.core.formula="zero pMinus x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="/" org.eventb.core.identifier="z" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="0" org.eventb.core.label="rew5" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="cancel first var" org.eventb.theory.core.formula="(x pAdd  y) pMinus (x pAdd z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="y pMinus z"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="1" org.eventb.core.label="rew6" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x - x = 0" org.eventb.theory.core.formula="x pMinus x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="rew7" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x - (x + y) = 0" org.eventb.theory.core.formula="x pMinus (x pAdd y)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="zero"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="increasing maintains not zero" org.eventb.core.predicate="∀x, y, z·x pMinus y ≠ zero ⇒  (z pAdd x) pMinus y ≠ zero"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="cancellation" org.eventb.core.predicate="∀x, y, z· (x pAdd  y) pMinus (x pAdd z) = y pMinus z"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="x - (x + y) = 0" org.eventb.core.predicate="∀x, y·x pMinus (x pAdd y) = zero"/>
 </org.eventb.theory.core.theoryRoot>

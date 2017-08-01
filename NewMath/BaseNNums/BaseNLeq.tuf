@@ -21,5 +21,15 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="x = y &#10;  ∨ (BNumList(x) = nil ∧ BNumList(y) = nil)&#10;  ∨ (BNumList(x) = BNumList(y) ∧ BNumBase(x) pLt BNumBase(y))&#10;  ∨ length(BNumList(x)) pLt length(BNumList(y)) &#10;  ∨ (length(BNumList(x)) = length(BNumList(y)) ∧ BNumLeqRevInternal(reverse(BNumList(x)), reverse(BNumList(y))))"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="BNumLeq_B" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="BNum" org.eventb.core.identifier="Num1"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="BNum" org.eventb.core.identifier="Num2"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="COND(Num1 BNumLeq Num2, TRUE, TRUE)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="x LeqInternal x" org.eventb.core.predicate="∀x· BNumLeqRevInternal(x, x) "/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="LeqInternalCancellation" org.eventb.core.predicate="∀x, xH1, xH2·BNumLeqRevInternal(append(x, xH1), append(x, xH2)) ⇔ xH1 pLeq xH2"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="LeqInternal Cancell Appended" org.eventb.core.predicate="∀x·∀y, xH, yH· length(x) = length(y) ∧ x ≠ y ⇒ (BNumLeqRevInternal(x, y) ⇔ BNumLeqRevInternal(append(x, xH), append(y, yH)))"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="Not Equ Append not difference right" org.eventb.core.predicate="∀x·∀y, yH·length(x) = length(y) ∧ x ≠ y ⇒ (BNumLeqRevInternal(x, y) ⇔ BNumLeqRevInternal(x, append(y, yH)))"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Leqs Equiv Cororally" org.eventb.core.predicate="∀y·∀x, B· BaseNIsNormalInternal(x) ∧ BaseNIsNormalInternal(y) ∧ two pLeq B ∧ length(x) = length(y)&#10;  ∧ BaseNMinusInternal(x, y, B) = nil ⇒ BNumLeqRevInternal(reverse(x),reverse(y))"/>
 <org.eventb.theory.core.theorem name="+" org.eventb.core.label="Leqs are equivalent" org.eventb.core.predicate="∀x, y· x ∈ BNumNorm ∧ y ∈ BNumNorm ⇒ (x BNumLeq y ⇔ x BNumLeqMinus y)"/>
 </org.eventb.theory.core.theoryRoot>
