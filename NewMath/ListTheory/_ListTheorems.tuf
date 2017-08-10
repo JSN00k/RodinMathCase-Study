@@ -50,6 +50,15 @@
 <org.eventb.theory.core.given name="'" org.eventb.core.predicate="length(x) ≠ length(y)" org.eventb.theory.core.hyp="true"/>
 <org.eventb.theory.core.infer name="(" org.eventb.core.predicate="length(reverse(x)) ≠ length(reverse(y))"/>
 </org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.rewriteRule name="3" org.eventb.core.label="length append rewrite" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="suc(length(x))" org.eventb.theory.core.formula="length(append(x, xH))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="suc(length(x))"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="4" org.eventb.core.identifier="xH" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.rewriteRule name="5" org.eventb.core.label="appendList swap yH" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="appendList(append(x, yH), yT)" org.eventb.theory.core.formula="appendList(y, cons(xH, x))">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="appendList(append(y, xH), x)"/>
+</org.eventb.theory.core.rewriteRule>
 </org.eventb.theory.core.proofRulesBlock>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="reverse maintains equality" org.eventb.core.predicate="∀x·∀y·x ∈ List(T) ⇒ (x = y ⇔ reverse(x) = reverse(y))"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="length(append(x, xH)) = suc(length(x))" org.eventb.core.predicate="∀x, xH·x ∈ List(T) ∧ length(append(x, xH)) = suc(length(x))"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="appendList swap" org.eventb.core.predicate="∀x, yH, yT·x ∈ List(T) ∧ appendList(x, cons(yH, yT)) = appendList(append(x, yH), yT)"/>
 </org.eventb.theory.core.theoryRoot>
