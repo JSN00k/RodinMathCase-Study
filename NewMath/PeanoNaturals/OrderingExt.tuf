@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Minus.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Minus"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="element1" org.eventb.core.label="NDecr Thm Cororally" org.eventb.core.predicate="∀x, g·g ∈ (pNat × pNat → pNat) ∧ (∀x, n·((x = zero ∨ n = zero) ⇒ g(x ↦ n) = x) ∧ ((x ≠ zero ∧ n ≠ zero) ⇒ g(x ↦ n) pLt x))&#10;  ⇒ (∃l·g(x ↦ l) = zero)"/>
+<org.eventb.theory.core.theorem name="element4" org.eventb.core.label="NDecr not pNat" org.eventb.core.predicate="∀x, t·∀g, len·t ∈ ℙ(T) ∧ x ∈ t ∧ len ∈ t → pNat ∧ g ∈ (t × pNat) → t &#10;      ∧ (∀x, l, m · x ∈ t ∧ g(g(x ↦ l) ↦ m) = g(x ↦ l pAdd m)) &#10;         ∧ (∀x, n·len(g(x ↦ n)) pLeq len(x)) ∧ (∀y·len(y) ≠ zero &#10;            ⇒ (∃m·len(g(y ↦ m)) pLt len(y))) &#10;   ⇒ (∃l·len(g(x ↦ l)) = zero)"/>
+<org.eventb.theory.core.theorem name="element2" org.eventb.core.label="NDecr Thm" org.eventb.core.predicate="∀x·∀g·g ∈ (pNat × pNat) → pNat ∧ (∀x, l, m · g(g(x ↦ l) ↦ m) = g(x ↦ l pAdd m)) ∧ (∀x, n·g(x ↦ n) pLeq x) ∧ (∀y·y ≠ zero ⇒ (∃m·g(y ↦ m) pLt y)) ⇒ (∃l·g(x ↦ l) = zero)"/>
+<org.eventb.theory.core.typeParameter name="element3" org.eventb.core.identifier="T"/>
+</org.eventb.theory.core.theoryRoot>

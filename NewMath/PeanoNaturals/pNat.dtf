@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="01dd1e83a1245114d7a6b2b2d26e6557" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="712650cb9891cebdbf0b4f9e73b32f9c" org.eventb.theory.core.outdated="false">
 <org.eventb.theory.core.useTheory name="pNat_Addition" org.eventb.core.scTarget="/PeanoNaturals/pNat_Addition.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Addition"/>
-<org.eventb.theory.core.useTheory name="Ordering" org.eventb.core.scTarget="/PeanoNaturals/Ordering.dtf|org.eventb.theory.core.deployedTheoryRoot#Ordering"/>
+<org.eventb.theory.core.useTheory name="OrderingExt" org.eventb.core.scTarget="/PeanoNaturals/OrderingExt.dtf|org.eventb.theory.core.deployedTheoryRoot#OrderingExt"/>
 <org.eventb.theory.core.useTheory name="pNat_Times" org.eventb.core.scTarget="/PeanoNaturals/pNat_Times.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Times"/>
-<org.eventb.theory.core.useTheory name="pNat_Decrement" org.eventb.core.scTarget="/PeanoNaturals/pNat_Decrement.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Decrement"/>
-<org.eventb.theory.core.useTheory name="pNat_Minus" org.eventb.core.scTarget="/PeanoNaturals/pNat_Minus.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Minus"/>
 </org.eventb.theory.core.deployedTheoryRoot>
