@@ -4,6 +4,7 @@
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BaseNNums/BaseNLeq.dtf|org.eventb.theory.core.deployedTheoryRoot#BaseNLeq"/>
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.theorem name="H" org.eventb.core.label="BNumMKKsN suc to append" org.eventb.core.predicate="∀n, x·BNumMkKsN(x, suc(n)) = append(BNumMkKsN(x, n), x)"/>
+<org.eventb.theory.core.theorem name="[" org.eventb.core.label="existence of appends" org.eventb.core.predicate="∀x·x ∈ List(pNat) ∧ x ≠ nil ⇒ (∃xH, xN·x = append(xH, xN))"/>
 <org.eventb.theory.core.theorem name="N" org.eventb.core.label="DecrN Expand to addition" org.eventb.core.predicate="∀m, n·∀x·BNumDecrN(x, m pAdd n) = BNumDecrN(BNumDecrN(x, m), n)"/>
 <org.eventb.theory.core.importTheoryProject name=")" org.eventb.theory.core.importTheoryProject="/Ordered">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Ordered/OrderedSets.dtf|org.eventb.theory.core.deployedTheoryRoot#OrderedSets"/>
@@ -16,7 +17,8 @@
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="Decr nil |-&gt; two = nil |-&gt; two" org.eventb.core.predicate="∀n·BNumDecrN(nil ↦ two, n) = nil ↦ two"/>
 <org.eventb.theory.core.theorem name="8" org.eventb.core.label="decr nil |-&gt; B at least once gives nil |-&gt; two" org.eventb.core.predicate="∀B, n· n≠ zero ⇒ BNumDecrN(nil ↦ B, n) = nil ↦ two"/>
 <org.eventb.theory.core.theorem name="9" org.eventb.core.label="WGoodDecr out of baseNDecr" org.eventb.core.predicate="∀n·∀x·BNumDecrN(WGoodDecr(x), n) = WGoodDecr(BNumDecrN(x, n))"/>
-<org.eventb.theory.core.theorem name="S" org.eventb.core.label="DecrN Maintains Normality" org.eventb.core.predicate="∀n·∀x, B·BaseNIsNormalInternal(x) ⇒ BaseNIsNormalInternal(BNumList(BNumDecrN(x ↦ B, n)))"/>
+<org.eventb.theory.core.theorem name="V" org.eventb.core.label="WGood Maintains Normality" org.eventb.core.predicate="∀x·∀B· B ≠ zero ∧ BaseNIsNormalInternal(x) ⇒ BaseNIsNormalInternal(BNumList(WGoodDecr(x ↦ B)))"/>
+<org.eventb.theory.core.theorem name="S" org.eventb.core.label="DecrN Maintains Normality" org.eventb.core.predicate="∀n·∀x, B·B ≠ zero ∧ BaseNIsNormalInternal(x) ⇒ BaseNIsNormalInternal(BNumList(BNumDecrN(x ↦ B, n)))"/>
 <org.eventb.theory.core.theorem name="R" org.eventb.core.label="BNumDecrN leq length" org.eventb.core.predicate="∀n·∀x, B·length(BNumList(BNumDecrN(x ↦ B, n))) pLeq length(x)"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="DecrN expansion" org.eventb.core.predicate="∀n·∀x·x ∈ BNumNorm ⇒ BNumDecrN(x, suc(n)) = BNumDecrN(BNumDecrN(x, n), one)"/>
 <org.eventb.theory.core.theorem name="=" org.eventb.core.label="length BNumDigitsLtNInternal" org.eventb.core.predicate="∀n·∀x·n pLeq length(x) ⇒  length(BNumDigitsLtNInternal(x, n)) = n"/>
@@ -31,11 +33,16 @@
 <org.eventb.theory.core.theorem name="C" org.eventb.core.label="nth Digit of split num" org.eventb.core.predicate="∀n·∀xH, xN, xT·length(xH) = n ⇒ BNumNthDigitInternal(appendList(append(xH, xN), xT), n) = xN"/>
 <org.eventb.theory.core.theorem name="?" org.eventb.core.label="Zero case Decr All Zeros" org.eventb.core.predicate="∀pH·∀pT, B· cons(pH,pT) ↦ B∈BNumNorm ∧ two pLeq length(cons(pH,pT)) &#10;⇒ BNumDecrN(cons(pH, pT) ↦ B, suc(pH)) = cons(B pAdd pH, BaseNDecrementInternal(pT, suc(B pAdd pH))) ↦ suc(B pAdd pH)"/>
 <org.eventb.theory.core.theorem name="4" org.eventb.core.label="Decr All cases" org.eventb.core.predicate="∀n·∀x, B·n pLt length(x)&#10;  ⇒ (∃m, Bm· BNumDecrN(x ↦ B, m) = appendList(BNumMkKsN(pDecrement(Bm), n), BaseNDecrementInternal(BNumDigitsGreqNInternal(x, n), Bm)) ↦ Bm)"/>
-<org.eventb.theory.core.theorem name="K" org.eventb.core.label="Last Digit isn't zero" org.eventb.core.predicate="∀x·BaseNIsNormalInternal(x) ∧ x ≠ nil ⇒ BNumNthDigitInternal(x,pDecrement(length(x)))≠zero"/>
-<org.eventb.theory.core.theorem name="L" org.eventb.core.label="Digits Greq length = nil" org.eventb.core.predicate="∀x·BNumDigitsGreqNInternal(x,length(x)) = nil"/>
 <org.eventb.theory.core.theorem name="M" org.eventb.core.label="last digit not zero =&gt; normal" org.eventb.core.predicate="∀xH, xN·xN ≠ zero ⇒ BaseNIsNormalInternal(append(xH, xN))"/>
+<org.eventb.theory.core.theorem name="K" org.eventb.core.label="Last Digit isn't zero" org.eventb.core.predicate="∀x·BaseNIsNormalInternal(x) ∧ x ≠ nil ⇔ BNumNthDigitInternal(x,pDecrement(length(x)))≠zero"/>
+<org.eventb.theory.core.theorem name="X" org.eventb.core.label="Last Digit Equivalence" org.eventb.core.predicate="∀x·x ≠ nil ⇒ BNumDigitsGreqNInternal(x,pDecrement(length(x)))=cons(BNumNthDigitInternal(x,pDecrement(length(x))),nil)"/>
+<org.eventb.theory.core.theorem name="Y" org.eventb.core.label="DecrN increases Base" org.eventb.core.predicate="∀ m ·∀x, B· &#10;&#9;&#9;&#9;    BNumList(BNumDecrN(x ↦ B,m))≠nil&#10;&#9;&#9;&#9;  ⇒&#10;&#9;&#9;&#9;    BNumBase(BNumDecrN(x ↦ B,m))=B pAdd m"/>
+<org.eventb.theory.core.theorem name="W" org.eventb.core.label="DecrN Creates Normality" org.eventb.core.predicate="∀x·∀B· two pLeq B ⇒ (∃n·BaseNIsNormalInternal(BNumList(BNumDecrN(x ↦ B, n))))"/>
+<org.eventb.theory.core.theorem name="Z" org.eventb.core.label="DecrN Creates Normality All Cases" org.eventb.core.predicate="∀x·∀B·(∃n·BaseNIsNormalInternal(BNumList(BNumDecrN(x ↦ B, n))))"/>
+<org.eventb.theory.core.theorem name="L" org.eventb.core.label="Digits Greq length = nil" org.eventb.core.predicate="∀x·BNumDigitsGreqNInternal(x,length(x)) = nil"/>
 <org.eventb.theory.core.theorem name="J" org.eventb.core.label="Decr Reduces length" org.eventb.core.predicate="∀xN·(∀B, xH·BaseNIsNormalInternal(append(xH, xN)) ⇒ (∃m·length(BNumList(BNumDecrN(append(xH, xN) ↦ B, m))) pLt length(append(xH, xN))))"/>
-<org.eventb.theory.core.theorem name="P" org.eventb.core.label="WGood Weak general" org.eventb.core.predicate="∀x, B·BaseNIsNormalInternal(x) ⇒ (∃m·BNumList(BNumDecrN(x ↦ B, m)) = nil)"/>
+<org.eventb.theory.core.theorem name="T" org.eventb.core.label="Decr Reduces Length Not Norm" org.eventb.core.predicate="∀xN·(∀B, xH·(∃m·length(BNumList(BNumDecrN(append(xH, xN) ↦ B, m))) pLt length(append(xH, xN))))"/>
+<org.eventb.theory.core.theorem name="P" org.eventb.core.label="WGood Weak general" org.eventb.core.predicate="∀x, B·(∃m·BNumList(BNumDecrN(x ↦ B, m)) = nil)"/>
 <org.eventb.theory.core.theorem name="O" org.eventb.core.label="WGood Weak" org.eventb.core.predicate="⊤ "/>
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="BNumDecrN" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.recursiveOperatorDefinition name="'" org.eventb.theory.core.inductiveArgument="n">

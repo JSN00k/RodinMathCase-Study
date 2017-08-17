@@ -251,33 +251,33 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·a⊆S∧b⊆T∧f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x∈List(a)">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="map(f,x)∈List(b)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈a → b">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·⊤∧⊤∧f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
 <org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·a⊆S∧b⊆T∧f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·⊤∧⊤∧f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="map(f,x)∈List(b)">
-<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x∈List(a)">
-<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·f∈a → b∧x∈List(a)⇒map(f,x)∈List(b)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈a → b">
-<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
-<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="map_type_thm/WD-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="a,b,f,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="S,T">
 <org.eventb.core.lang name="L">
@@ -538,39 +538,39 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·a⊆S∧b⊆T∧f∈a → b∧x∈List(a)⇒f∈S ⇸ T∧elements(x)⊆dom(f)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·⊤∧⊤∧f∈a → b∧x∈List(a)⇒f∈S ⇸ T∧elements(x)⊆dom(f)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x∈List(a)">
-<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="elements(x)⊆dom(f)">
-<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="f∈S ⇸ T∧elements(x)⊆dom(f)">
-<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
-<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·f∈a → b∧x∈List(a)⇒f∈S ⇸ T∧elements(x)⊆dom(f)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈a → b">
-<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
-<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
-<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈a → b∧x∈List(a)⇒f∈S ⇸ T∧elements(x)⊆dom(f)">
 <org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
 <org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂ℙ(S),b⦂ℙ(T),f⦂ℙ(S×T),x⦂List(S)·⊤∧⊤∧f∈a → b∧x∈List(a)⇒f∈S ⇸ T∧elements(x)⊆dom(f)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="x∈List(a)">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="f∈S ⇸ T∧elements(x)⊆dom(f)">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="elements(x)⊆dom(f)">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="List(S)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈a → b">
+<org.eventb.core.prIdent name="a" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.prIdent name="b" org.eventb.core.type="ℙ(T)"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="f∈S ⇸ T">
 <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(S×T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
