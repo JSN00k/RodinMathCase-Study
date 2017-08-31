@@ -25,6 +25,11 @@
 <org.eventb.theory.core.theorem name="5" org.eventb.core.label="pLt Transitivity" org.eventb.core.predicate="∀x, y, z·x pLt y ∧ y pLt z ⇒ x pLt z"/>
 <org.eventb.theory.core.theorem name="6" org.eventb.core.label="pLeq pLt mixed Transitivity" org.eventb.core.predicate="∀x, y, z·x pLt y ∧ y pLeq z ⇒ x pLt z"/>
 <org.eventb.theory.core.theorem name="7" org.eventb.core.label="pLeq pLt mixed Transitivity2" org.eventb.core.predicate="∀x, y, z·x pLeq y ∧ y pLt z ⇒ x pLt z"/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="x pLeq x pAdd y" org.eventb.core.predicate="∀x, y·x pLeq x pAdd y"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="x pAdd y pLeq z =&gt; x &amp; y pLeq z Cororally" org.eventb.core.predicate="∀x, y, z· x pAdd y pLeq z ⇒ x pLeq z "/>
+<org.eventb.theory.core.theorem name=":" org.eventb.core.label="x pAdd y pLeq z =&gt; x &amp; y pLeq z" org.eventb.core.predicate="∀x, y, z· x pAdd y pLeq z ⇒ x pLeq z ∧ y pLeq z "/>
+<org.eventb.theory.core.theorem name=";" org.eventb.core.label="x pAdd y pLt z =&gt; x pLt z" org.eventb.core.predicate="∀x, y, z·x pAdd y pLt z ⇒ x pLt z"/>
+<org.eventb.theory.core.theorem name="=" org.eventb.core.label="x pAdd y pLt z =&gt; x pLt z &amp; y pLt z" org.eventb.core.predicate="∀x, y, z·x pAdd y pLt z ⇒ x pLt z ∧ y pLt z"/>
 <org.eventb.theory.core.importTheoryProject name="1" org.eventb.theory.core.importTheoryProject="/Relations">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Relations/Ordering.dtf|org.eventb.theory.core.deployedTheoryRoot#Ordering"/>
 </org.eventb.theory.core.importTheoryProject>
@@ -68,5 +73,22 @@
 <org.eventb.theory.core.rewriteRule name="2" org.eventb.core.label="rew8" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x not Lt x" org.eventb.theory.core.formula="x pLt x">
 <org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="⊥"/>
 </org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="3" org.eventb.core.identifier="z" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name="4" org.eventb.core.label="inf3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x pLt z &amp; y pLt z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pAdd y pLt z" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x pLt z ∧ y pLt z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="5" org.eventb.core.label="inf4" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x pLt z &amp; y pLt z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pAdd y pLt z" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x pLt z ∧ y pLt z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="6" org.eventb.core.label="inf5" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x pLeq z &amp; y pLeq z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pAdd y pLeq z" org.eventb.theory.core.hyp="false"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x pLeq z ∧ y pLeq z"/>
+</org.eventb.theory.core.inferenceRule>
+<org.eventb.theory.core.inferenceRule name="7" org.eventb.core.label="inf6" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="x pLeq z &amp; y pLeq z">
+<org.eventb.theory.core.given name="'" org.eventb.core.predicate="x pAdd y pLeq z" org.eventb.theory.core.hyp="true"/>
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="x pLeq z ∧ y pLeq z"/>
+</org.eventb.theory.core.inferenceRule>
 </org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>

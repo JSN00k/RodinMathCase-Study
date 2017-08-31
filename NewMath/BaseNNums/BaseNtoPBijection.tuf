@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="BNumToPeanoInternal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(pNat)" org.eventb.core.identifier="L"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="B"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="L">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(LH, LT)" org.eventb.theory.core.formula="LH pAdd (B pTimes BNumToPeanoInternal(LT, B))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/BaseNNums">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/BaseNNums/BaseNNum.dtf|org.eventb.theory.core.deployedTheoryRoot#BaseNNum"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="BNumToPeanoInternal expand" org.eventb.core.predicate="∀x, B·x ≠ nil ⇒ BNumToPeanoInternal(x, B) = BNumLSDInternal(x) pAdd (B pTimes BNumToPeanoInternal(BNumShiftLeftInternal(x), B))   "/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="pNatToBNumInternal Expand" org.eventb.core.predicate="∀x, B· x ≠ zero ∧ B ≠ zero ⇒ pNatToBNumInternal(x, B) = cons(prj2((x pDivMod B)), pNatToBNumInternal(prj1(x pDivMod B), B))"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="pNatToBNumInternal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="nat"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="nat">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="(nil ⦂ List(pNat))"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.theory.core.formula="cons(prj2((suc(ns) pDivMod B)), pNatToBNumInternal(prj1(suc(ns) pDivMod B), B))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="pNat" org.eventb.core.identifier="B"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="pNatToBNum" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="nat"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="B"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="pNatToBNumInternal(nat, B) ↦ B"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="Only nil goes to Zero" org.eventb.core.predicate="∀x, B·x ↦ B ∈ BNumNorm ⇒ (BNumToPeanoInternal(x, B) = zero ⇔ x = nil) "/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="Only zero goes to nil" org.eventb.core.predicate="∀x·∀B· two pLeq B ⇒ (pNatToBNumInternal(x, B) = nil ⇔ x = zero)"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="increment Maintains normality" org.eventb.core.predicate="∀x, B·x ↦ B ∈ BNumNorm ⇒ BNumIncrementInternal(x, B) ↦ B ∈ BNumNorm"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="increment to suc" org.eventb.core.predicate="∀y·∀B·y ↦ B ∈ BNumNorm ⇒ BNumToPeanoInternal(BNumIncrementInternal(y, B), B) = suc(BNumToPeanoInternal(y, B))"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="suc to increment" org.eventb.core.predicate="∀x·∀B· two pLeq B ⇒ pNatToBNumInternal(suc(x), B) = BNumIncrementInternal(pNatToBNumInternal(x, B), B)"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="BNumToPeanoInternal(x) = BNumToPeanoInternal(y) &lt;=&gt; x = y" org.eventb.core.predicate="∀x, y·∀ B·x ↦ B ∈ BNumNorm ∧ y ↦ B ∈ BNumNorm ⇒ (BNumToPeanoInternal(x, B) = BNumToPeanoInternal(y, B) ⇔ x = y)"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Unique representation Theory" org.eventb.core.predicate="∀x·∀B·two pLeq B ⇒ (∃y·y ↦ B ∈ BNumNorm ∧  BNumToPeanoInternal(y, B) = x)"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="Unique repre is unique" org.eventb.core.predicate="∀y·∀B, z· two pLeq B ∧ y ↦ B ∈ BNumNorm ∧ z ↦ B ∈ BNumNorm ∧ BNumToPeanoInternal(y, B) = BNumToPeanoInternal(z, B) ⇒ y = z"/>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.label="Shift left is the same as divide by base" org.eventb.core.predicate="∀x·∀B·x ↦ B ∈ BNumNorm ⇒  prj1((BNumToPeanoInternal(x, B) pDivMod B)) = BNumToPeanoInternal(BNumShiftLeftInternal(x), B)"/>
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="BijectionBNumToBNu" org.eventb.core.predicate="∀x·∀ B· x ↦ B ∈ BNumNorm ⇒ pNatToBNumInternal(BNumToPeanoInternal(x, B), B) = x"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="BijectionpNatToPNat" org.eventb.core.predicate="∀x·∀ B·two pLeq B⇒ BNumToPeanoInternal(pNatToBNumInternal(x, B), B) = x"/>
+<org.eventb.theory.core.newOperatorDefinition name="." org.eventb.core.label="BNumIncrementInternal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(pNat)" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="B"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="x">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="cons(one, nil)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(xH, xT)" org.eventb.theory.core.formula="COND(suc(xH) = B, &#10;  cons(zero, BNumIncrementInternal(xT, B)), &#10;  cons(suc(xH), xT))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="4" org.eventb.theory.core.importTheoryProject="/ListTheory">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/ListTheory/_ListTheorems.dtf|org.eventb.theory.core.deployedTheoryRoot#_ListTheorems"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Times.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Times"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Minus.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Minus"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="pDivModInternal" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.comment="numerator" org.eventb.core.expression="pNat" org.eventb.core.identifier="n"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.comment="denominator" org.eventb.core.expression="pNat" org.eventb.core.identifier="d"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="n">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="c ↦ zero"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.theory.core.formula="COND(suc(ns) = d, suc(c) ↦ zero, &#10;COND(suc(ns) pMinus d = zero, c ↦ suc(ns),&#10; pDivModInternal(suc(ns) pMinus d, d, suc(c))))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+<org.eventb.theory.core.operatorArgument name="*" org.eventb.core.comment="division count" org.eventb.core.expression="pNat" org.eventb.core.identifier="c"/>
+<org.eventb.theory.core.operatorWDcondition name="+" org.eventb.core.predicate="d ≠ zero"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="pDivMod" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="n"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="d"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="pDivModInternal(n, d, zero)"/>
+<org.eventb.theory.core.operatorWDcondition name="*" org.eventb.core.predicate="d ≠ zero"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="x &lt; y x / y = zero |-&gt; x" org.eventb.core.predicate="∀x, y·x pLt y ⇒ x pDivMod y = zero ↦ x"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="x &lt; y internal" org.eventb.core.predicate="∀x, y, c· x pLt y ⇒  pDivModInternal(x, y, c) = c ↦ x"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="x / x = one |-&gt; zero" org.eventb.core.predicate="∀x·x ≠ zero ⇒ x pDivMod x = one ↦ zero"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="addition rule" org.eventb.core.predicate="∀x, y · y pLt x ⇒ (x pAdd y) pDivMod x = one ↦ y "/>
+<org.eventb.theory.core.theorem name="*" org.eventb.core.label="inverse of times" org.eventb.core.predicate="∀x, y·∀c·y ≠ zero ⇒ pDivModInternal(x pTimes y, y, c) = c pAdd x ↦ zero"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="inverse of times complete" org.eventb.core.predicate="∀x, y, z·∀c·y ≠ zero ∧ z pLt y ⇒ pDivModInternal((x pTimes y) pAdd z, y, c) = c pAdd x ↦ z"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="remainder is less than dividor" org.eventb.core.predicate="∀y·∀x·y ≠ zero ⇒ prj2(x pDivMod y) pLt y"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="dividor arithmetic" org.eventb.core.predicate="∀x, y·∀c·y ≠ zero ⇒ suc(prj1(pDivModInternal(x, y, c))) = prj1(pDivModInternal(x, y, suc(c))) &#10;  ∧ prj2(pDivModInternal(x, y, c)) = prj2(pDivModInternal(x, y, suc(c)))"/>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="Div in Addition" org.eventb.core.predicate="∀x, y, z·z≠zero ⇒ (x pAdd y) pDivMod z = (prj1(x pDivMod z) pAdd prj1(y pDivMod z) &#10;  pAdd prj1((prj2(x pDivMod z) pAdd prj2(y pDivMod z)) pDivMod z)) ↦ prj2((prj2(x pDivMod z) pAdd prj2(y pDivMod z)) pDivMod z)"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="(x * y + x) / x = suc(y)" org.eventb.core.predicate="∀x, y· x ≠ zero ⇒ ((x pTimes y) pAdd x) pDivMod x = suc(y) ↦ zero "/>
+<org.eventb.theory.core.proofRulesBlock name="3" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="rew1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="x / x = one" org.eventb.theory.core.formula="x pDivMod x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="x ≠ zero" org.eventb.theory.core.formula="one ↦ zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name=")" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="*" org.eventb.core.label="rew2" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="(x * y) / x = y" org.eventb.theory.core.formula="(x pTimes y) pDivMod x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="x ≠ zero" org.eventb.theory.core.formula="y ↦ zero"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name="+" org.eventb.core.label="rew3" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="false" org.eventb.theory.core.desc="(y * x) / x = y" org.eventb.theory.core.formula="(y pTimes x) pDivMod x">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="x ≠ zero" org.eventb.theory.core.formula="y ↦ zero"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+</org.eventb.theory.core.theoryRoot>
