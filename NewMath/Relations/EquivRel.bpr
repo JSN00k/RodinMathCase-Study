@@ -826,7 +826,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p11">
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p11,p10">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p11"/>
@@ -834,13 +834,13 @@
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13,p14"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Transitivity expansion on op∈Transitivity(t)" org.eventb.core.prHyps="p13">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Transitivity expansion on op∈Transitivity(t)" org.eventb.core.prHyps="p12">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p15">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p15"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -876,13 +876,13 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p24">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Symmetry expansion on op∈Symmetry(t)" org.eventb.core.prHyps="p12">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Symmetry expansion on op∈Symmetry(t)" org.eventb.core.prHyps="p14">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p25">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p25"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -980,13 +980,13 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p48" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p49"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Symmetry expansion on op∈Symmetry(t)" org.eventb.core.prHyps="p12">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Symmetry expansion on op∈Symmetry(t)" org.eventb.core.prHyps="p14">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p10,p25">
 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
 <org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p25"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -1166,6 +1166,10 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="op∈Reflexivity(t)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="⊤∧⊤∧⊤∧⊤∧⊤⇒op(y ↦ z)=TRUE">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
@@ -1180,10 +1184,6 @@
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="op∈Symmetry(t)">
-<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="op(y ↦ x)=TRUE">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
@@ -1205,10 +1205,6 @@
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="op∈Reflexivity(t)">
-<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="x∈t∧z∈t">
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
@@ -1220,10 +1216,6 @@
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="op∈t × t → BOOL">
-<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
-<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="op∈Transitivity(t)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
@@ -1240,11 +1232,11 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×BOOL)·op∈Transitivity(t)∧op∈Symmetry(t)∧op∈Reflexivity(t) ∣ op}">
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀t⦂ℙ(T),x⦂T,y⦂T,z⦂T,op⦂ℙ(T×T×BOOL)·t∈ℙ(T)∧x∈t∧y∈t∧z∈t∧op∈EquivRel(t)⇒x ↦ y∈dom(op)∧op∈T × T ⇸ BOOL∧(op(x ↦ y)=TRUE⇒y ↦ z∈dom(op))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="op∈Symmetry(t)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀t⦂ℙ(T),x⦂T,y⦂T,z⦂T,op⦂ℙ(T×T×BOOL)·t∈ℙ(T)∧x∈t∧y∈t∧z∈t∧op∈EquivRel(t)⇒x ↦ y∈dom(op)∧op∈T × T ⇸ BOOL∧(op(x ↦ y)=TRUE⇒y ↦ z∈dom(op))"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="op(x ↦ z)=op(y ↦ z)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
@@ -1266,6 +1258,10 @@
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="op∈{op⦂ℙ(T×T×BOOL)·op∈Transitivity(t)∧op∈Symmetry(t)∧op∈Reflexivity(t) ∣ op}">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="op∈T × T ⇸ BOOL">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
 </org.eventb.core.prPred>
@@ -1276,6 +1272,10 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="op∈Transitivity(t)">
+<org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
+<org.eventb.core.prIdent name="t" org.eventb.core.type="ℙ(T)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="op(x ↦ y)=op(y ↦ x)">
 <org.eventb.core.prIdent name="op" org.eventb.core.type="ℙ(T×T×BOOL)"/>
@@ -1309,22 +1309,22 @@
 <org.eventb.core.prExpr name="e3" org.eventb.core.expression="z">
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T"/>
 </org.eventb.core.prExpr>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
 <org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 <org.eventb.core.prReas name="r11" org.eventb.core.prRID="org.eventb.core.seqprover.allD"/>
 <org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
 <org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
-<org.eventb.core.prReas name="r13" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.theory.rbp.manualRewriteReasoner"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.doCase"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r15" org.eventb.core.prRID="org.eventb.theory.rbp.instantiateTheoremReasoner"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r12" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r14" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="transitive2/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="op,t,x,y,z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">

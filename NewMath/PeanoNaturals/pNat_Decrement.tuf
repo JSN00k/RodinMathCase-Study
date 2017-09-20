@@ -44,4 +44,5 @@
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="x = decr(y) &lt;=&gt; suc(x) = y" org.eventb.core.predicate="∀x, y· y ≠ zero ⇒ (x = pDecrement(y) ⇔ suc(x) = y)"/>
 <org.eventb.theory.core.theorem name="0" org.eventb.core.label="suc(x) = y =&gt; x = decr(y)" org.eventb.core.predicate="∀x, y·suc(x) = y ⇒ x = pDecrement(y)"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="suc(decr(x)) = x" org.eventb.core.predicate="∀x·x ≠ zero ⇒ suc(pDecrement(x)) = x"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="decrement out of addition" org.eventb.core.predicate="∀x, y·y ≠ zero ⇒  pDecrement(x pAdd y) = x pAdd pDecrement(y)"/>
 </org.eventb.theory.core.theoryRoot>

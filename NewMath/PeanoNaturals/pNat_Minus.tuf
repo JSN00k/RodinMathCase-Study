@@ -18,6 +18,7 @@
 <org.eventb.theory.core.theorem name="-" org.eventb.core.label="Decr into minus" org.eventb.core.predicate="∀x, y·pDecrement(x pMinus y) = pDecrement(x) pMinus y"/>
 <org.eventb.theory.core.theorem name=")" org.eventb.core.label="leq minus thm" org.eventb.core.predicate="∀x, y· x pLeq y ⇔ x pMinus y = zero"/>
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="minus Inv Addition" org.eventb.core.predicate="∀x, y· (x pAdd y) pMinus y = x"/>
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="Add Inv Minus " org.eventb.core.predicate="∀x, y·y pLeq x ⇒ (x pMinus y) pAdd y = x"/>
 <org.eventb.theory.core.proofRulesBlock name="0" org.eventb.core.label="rulesBlock1">
 <org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
 <org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
@@ -55,4 +56,5 @@
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="increasing maintains not zero" org.eventb.core.predicate="∀x, y, z·x pMinus y ≠ zero ⇒  (z pAdd x) pMinus y ≠ zero"/>
 <org.eventb.theory.core.theorem name="2" org.eventb.core.label="cancellation" org.eventb.core.predicate="∀x, y, z· (x pAdd  y) pMinus (x pAdd z) = y pMinus z"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="x - (x + y) = 0" org.eventb.core.predicate="∀x, y·x pMinus (x pAdd y) = zero"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="Decr is minus one" org.eventb.core.predicate="∀x· pDecrement(x) = x pMinus one"/>
 </org.eventb.theory.core.theoryRoot>

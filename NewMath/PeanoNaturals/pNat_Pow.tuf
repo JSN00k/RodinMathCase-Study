@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.newOperatorDefinition name="'" org.eventb.core.label="pPow" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="Power(one, pTimes_P, x, y)"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
+<org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="pNat" org.eventb.core.identifier="y"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Times.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Times"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.theorem name=")" org.eventb.core.comment="Even Zero" org.eventb.core.label="Anything to the zero is one" org.eventb.core.predicate="∀x·x pPow zero  = one"/>
+<org.eventb.theory.core.proofRulesBlock name="*" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="(" org.eventb.core.label="raise to zero is one" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Anything to zero is one" org.eventb.theory.core.formula="x pPow zero">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="one"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.rewriteRule name=")" org.eventb.core.label="raise to one is itself" org.eventb.theory.core.applicability="both" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="Anything to the one is itself" org.eventb.theory.core.formula="x pPow one">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="x"/>
+</org.eventb.theory.core.rewriteRule>
+<org.eventb.theory.core.metaVariable name="*" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="+" org.eventb.core.identifier="z" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.rewriteRule name="," org.eventb.core.label="Power Arith" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.complete="true" org.eventb.theory.core.desc="x^(y+z) expand" org.eventb.theory.core.formula="x pPow (y pAdd z)">
+<org.eventb.theory.core.rewriteRuleRHS name="'" org.eventb.core.label="rhs1" org.eventb.core.predicate="⊤" org.eventb.theory.core.formula="(x pPow y)  pTimes (x pPow z)"/>
+</org.eventb.theory.core.rewriteRule>
+</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="Anything to the one is itself including zero" org.eventb.core.predicate="∀x·x pPow one = x"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="zero to anything but zero" org.eventb.core.predicate="∀x·x ≠ zero ⇒ zero pPow x = zero"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="Power Arithmetic" org.eventb.core.predicate="∀x, y, z·x pPow(y pAdd z) = (x pPow y) pTimes (x pPow z)"/>
+<org.eventb.theory.core.theorem name="," org.eventb.core.label="BaseN Nines" org.eventb.core.predicate="∀a·∀B·pDecrement(B pPow suc(a)) = (pDecrement(B pPow a) pTimes B) pAdd pDecrement(B) "/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="x^n /= zero" org.eventb.core.predicate="∀x, n·x ≠ zero ⇒ x pPow n ≠ zero"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="Power Repre" org.eventb.core.predicate="∀x, B· two pLeq B ⇒ (∃c, n, r·r pLt B pPow n ∧ c pLt B ∧ (c = zero ⇒ n = zero) ∧ (c pTimes (B pPow n)) pAdd r = x)"/>
+</org.eventb.theory.core.theoryRoot>

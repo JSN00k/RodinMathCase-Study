@@ -3,7 +3,7 @@
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/PeanoNaturals">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Addition.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Addition"/>
 <org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/PeanoNaturals/OrderingExt.dtf|org.eventb.theory.core.deployedTheoryRoot#OrderingExt"/>
-<org.eventb.theory.core.importTheory name=")" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Times.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Times"/>
 <org.eventb.theory.core.importTheory name="*" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_DivMod.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_DivMod"/>
+<org.eventb.theory.core.importTheory name="+" org.eventb.theory.core.importTheory="/PeanoNaturals/pNat_Pow.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat_Pow"/>
 </org.eventb.theory.core.importTheoryProject>
 </org.eventb.theory.core.theoryRoot>
